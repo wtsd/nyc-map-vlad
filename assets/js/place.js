@@ -1,4 +1,4 @@
-let lang = localStorage.getItem("lang") || "en";
+let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
 let places = [];
 let currentPlace = null;
 let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
@@ -11,11 +11,6 @@ function getText() {
       openMap: "Open map",
       copy: "Copy",
       transit: "Transit:",
-      none: "Not set",
-      want: "Want to visit",
-      visited: "Visited",
-      favorite: "Favorite",
-      skip: "Skip",
       currentStatus: "Current status:",
       notFound: "Place not found",
       notFoundText: "The requested place does not exist.",
@@ -24,24 +19,7 @@ function getText() {
       visitedBtn: "Visited",
       favoriteBtn: "Favorite",
       skipBtn: "Skip",
-      categories: {
-        landmarks: "Landmark",
-        parks: "Park",
-        museums: "Museum",
-        food: "Food",
-        viewpoints: "Viewpoint",
-        "hidden-gems": "Hidden gem",
-        other: "Other"
-      },
-      times: {
-        short: "Under 30 min",
-        medium: "Couple of hours",
-        full: "Whole day"
-      },
-      costs: {
-        free: "Free",
-        paid: "Paid"
-      }
+      copyError: "Could not copy to clipboard"
     },
     ru: {
       subtitle: "Карта Нью-Йорка от Влада и Кати",
@@ -49,11 +27,6 @@ function getText() {
       openMap: "Открыть карту",
       copy: "Копировать",
       transit: "Транспорт:",
-      none: "Не выбрано",
-      want: "Хочу посетить",
-      visited: "Посетил",
-      favorite: "Любимое",
-      skip: "Пропустить",
       currentStatus: "Текущий статус:",
       notFound: "Место не найдено",
       notFoundText: "Запрошенное место не существует.",
@@ -62,24 +35,7 @@ function getText() {
       visitedBtn: "Был",
       favoriteBtn: "Любимое",
       skipBtn: "Пропустить",
-      categories: {
-        landmarks: "Место",
-        parks: "Парк",
-        museums: "Музей",
-        food: "Еда",
-        viewpoints: "Вид",
-        "hidden-gems": "Скрытое место",
-        other: "Другое"
-      },
-      times: {
-        short: "До 30 минут",
-        medium: "Пара часов",
-        full: "Весь день"
-      },
-      costs: {
-        free: "Бесплатно",
-        paid: "Платно"
-      }
+      copyError: "Не удалось скопировать"
     }
   };
 }
@@ -93,27 +49,19 @@ function saveChecklist() {
 }
 
 function getStatusLabel(status) {
-  const t = getText()[lang];
-  return t[status || "none"];
+  return NYCMapCommon.getStatusLabel(lang, status);
 }
 
 function getTimeLabel(time) {
-  const t = getText()[lang];
-  return t.times[time] || time || "";
+  return NYCMapCommon.getTimeLabel(lang, time);
 }
 
 function getCostLabel(cost, price) {
-  const t = getText()[lang];
-  if (cost === "free") return t.costs.free;
-  if (cost === "paid") {
-    return price ? `${t.costs.paid} ${price}` : t.costs.paid;
-  }
-  return cost || "";
+  return NYCMapCommon.getCostLabel(lang, cost, price);
 }
 
 function getCategoryLabel(category) {
-  const t = getText()[lang];
-  return t.categories[category] || category || "";
+  return NYCMapCommon.getCategoryLabel(lang, category);
 }
 
 function toggleLang() {
@@ -134,8 +82,7 @@ function renderStatus() {
   const t = getText()[lang];
   const status = checklist[currentPlace.id] || "none";
 
-  document.getElementById("placeStatus").textContent =
-    `${t.currentStatus} ${getStatusLabel(status)}`;
+  document.getElementById("placeStatus").textContent = `${t.currentStatus} ${getStatusLabel(status)}`;
 
   document.getElementById("btnWant").classList.toggle("active", status === "want");
   document.getElementById("btnVisited").classList.toggle("active", status === "visited");
@@ -143,7 +90,7 @@ function renderStatus() {
   document.getElementById("btnSkip").classList.toggle("active", status === "skip");
 }
 
-function copyCurrentPlace() {
+async function copyCurrentPlace() {
   if (!currentPlace) return;
 
   const t = getText()[lang];
@@ -160,7 +107,10 @@ function copyCurrentPlace() {
     currentPlace.summary[lang] || currentPlace.summary.en || ""
   ].join("\n");
 
-  navigator.clipboard.writeText(text);
+  const copied = await NYCMapCommon.copyText(text);
+  if (!copied) {
+    alert(t.copyError);
+  }
 }
 
 function renderNotFound() {
@@ -209,7 +159,7 @@ function render() {
   document.getElementById("placeImage").src = currentPlace.image || "assets/images/placeholders/cover.jpg";
   document.getElementById("placeImage").alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
-  document.getElementById("openMapLink").href = `index.html`;
+  document.getElementById("openMapLink").href = "index.html";
   document.getElementById("openMapLink").textContent = t.openMap;
   document.getElementById("transitLabel").textContent = t.transit;
 
@@ -228,9 +178,16 @@ function render() {
 }
 
 async function loadData() {
-  const res = await fetch("build/places.json");
-  places = await res.json();
-  render();
+  try {
+    const res = await fetch("build/places.json");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    places = await res.json();
+    render();
+  } catch (error) {
+    console.error("Failed to load place data", error);
+    renderNotFound();
+  }
 }
 
 loadData();

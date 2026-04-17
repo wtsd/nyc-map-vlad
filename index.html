@@ -9,60 +9,60 @@
 </head>
 <body>
   <header class="topbar">
-  <div class="topbar-inner">
-    <div class="brand">
-      <h1>NYC Map by Vlad and Katya</h1>
-      <p>Personal NYC spots for friends and family</p>
-    </div>
-
-    <div class="topbar-actions">
-      <div class="filters">
-        <select id="categoryFilter" onchange="render()">
-          <option value="">All categories</option>
-          <option value="landmarks">Landmarks</option>
-          <option value="parks">Parks</option>
-          <option value="museums">Museums</option>
-          <option value="food">Food</option>
-          <option value="viewpoints">Viewpoints</option>
-          <option value="hidden-gems">Hidden gems</option>
-          <option value="other">Other</option>
-        </select>
-
-        <select id="statusFilter" onchange="render()">
-          <option value="">All statuses</option>
-          <option value="want">Want</option>
-          <option value="visited">Visited</option>
-          <option value="favorite">Favorite</option>
-          <option value="skip">Skip</option>
-        </select>
+    <div class="topbar-inner">
+      <div class="brand">
+        <h1>NYC Map by Vlad and Katya</h1>
+        <p>Personal NYC spots for friends and family</p>
       </div>
 
-      <div class="header-buttons">
-        <button class="secondary-btn" onclick="copySummary()">Copy summary</button>
-        <button class="secondary-btn" onclick="toggleLang()">EN / RU</button>
+      <div class="topbar-actions">
+        <div class="filters">
+          <select id="categoryFilter" onchange="render()">
+            <option value="">All categories</option>
+            <option value="landmarks">Landmarks</option>
+            <option value="parks">Parks</option>
+            <option value="museums">Museums</option>
+            <option value="food">Food</option>
+            <option value="viewpoints">Viewpoints</option>
+            <option value="hidden-gems">Hidden gems</option>
+            <option value="other">Other</option>
+          </select>
+
+          <select id="statusFilter" onchange="render()">
+            <option value="">All statuses</option>
+            <option value="want">Want</option>
+            <option value="visited">Visited</option>
+            <option value="favorite">Favorite</option>
+            <option value="skip">Skip</option>
+          </select>
+        </div>
+
+        <div class="header-buttons">
+          <button class="secondary-btn" onclick="copySummary()">Copy summary</button>
+          <button class="secondary-btn" onclick="toggleLang()">EN / RU</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="stats-strip">
-    <div class="stat-box">
-      <div class="stat-number" id="statTotal">0</div>
-      <div class="stat-label">All places</div>
+    <div class="stats-strip">
+      <div class="stat-box">
+        <div class="stat-number" id="statTotal">0</div>
+        <div class="stat-label">All places</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" id="statWant">0</div>
+        <div class="stat-label">Want</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" id="statVisited">0</div>
+        <div class="stat-label">Visited</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" id="statFavorite">0</div>
+        <div class="stat-label">Favorite</div>
+      </div>
     </div>
-    <div class="stat-box">
-      <div class="stat-number" id="statWant">0</div>
-      <div class="stat-label">Want</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number" id="statVisited">0</div>
-      <div class="stat-label">Visited</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number" id="statFavorite">0</div>
-      <div class="stat-label">Favorite</div>
-    </div>
-  </div>
-</header>
+  </header>
 
   <main class="layout">
     <section class="sidebar-section">
@@ -90,6 +90,7 @@
   </main>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="assets/js/common.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/map.js"></script>
 </body>

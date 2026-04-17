@@ -1,4 +1,4 @@
-let lang = localStorage.getItem("lang") || "en";
+let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
 let places = [];
 let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
 
@@ -19,63 +19,27 @@ function setStatus(id, status) {
 }
 
 function getStatusLabel(status) {
-  const labels = {
-    en: {
-      none: "Not set",
-      want: "Want to visit",
-      visited: "Visited",
-      favorite: "Favorite",
-      skip: "Skip"
-    },
-    ru: {
-      none: "Не выбрано",
-      want: "Хочу посетить",
-      visited: "Посетил",
-      favorite: "Любимое",
-      skip: "Пропустить"
-    }
-  };
-  return labels[lang][status || "none"];
+  return NYCMapCommon.getStatusLabel(lang, status);
 }
 
 function getCategoryLabel(category) {
-  const labels = {
-    landmarks: { en: "Landmark", ru: "Место" },
-    parks: { en: "Park", ru: "Парк" },
-    museums: { en: "Museum", ru: "Музей" },
-    food: { en: "Food", ru: "Еда" },
-    viewpoints: { en: "Viewpoint", ru: "Вид" },
-    "hidden-gems": { en: "Hidden gem", ru: "Скрытое место" },
-    other: { en: "Other", ru: "Другое" }
-  };
-  return labels[category]?.[lang] || category;
+  return NYCMapCommon.getCategoryLabel(lang, category);
 }
 
 function getTimeLabel(time) {
-  const labels = {
-    short: { en: "Under 30 min", ru: "До 30 минут" },
-    medium: { en: "Couple of hours", ru: "Пара часов" },
-    full: { en: "Whole day", ru: "Весь день" }
-  };
-  return labels[time]?.[lang] || time;
+  return NYCMapCommon.getTimeLabel(lang, time);
 }
 
 function getCostLabel(cost, price) {
-  if (cost === "free") return lang === "ru" ? "Бесплатно" : "Free";
-  if (cost === "paid") {
-    return price
-      ? `${lang === "ru" ? "Платно" : "Paid"} ${price}`
-      : lang === "ru" ? "Платно" : "Paid";
-  }
-  return cost || "";
+  return NYCMapCommon.getCostLabel(lang, cost, price);
 }
 
 function truncate(text, max) {
   if (!text) return "";
-  return text.length > max ? text.slice(0, max).trim() + "..." : text;
+  return text.length > max ? `${text.slice(0, max).trim()}...` : text;
 }
 
-function copyPlace(id) {
+async function copyPlace(id) {
   const p = places.find(x => x.id === id);
   if (!p) return;
 
@@ -91,10 +55,13 @@ function copyPlace(id) {
     p.summary[lang] || p.summary.en || ""
   ].join("\n");
 
-  navigator.clipboard.writeText(text);
+  const copied = await NYCMapCommon.copyText(text);
+  if (!copied) {
+    alert(lang === "ru" ? "Не удалось скопировать" : "Could not copy to clipboard");
+  }
 }
 
-function copySummary() {
+async function copySummary() {
   const grouped = {
     want: [],
     visited: [],
@@ -127,20 +94,22 @@ function copySummary() {
   };
 
   const t = labels[lang];
-
   let out = `${t.title}\n\n`;
 
   ["want", "visited", "favorite", "skip"].forEach(key => {
-    if (grouped[key].length) {
-      out += `${t[key]}:\n`;
-      grouped[key].forEach(item => {
-        out += `- ${item}\n`;
-      });
-      out += `\n`;
-    }
+    if (!grouped[key].length) return;
+
+    out += `${t[key]}:\n`;
+    grouped[key].forEach(item => {
+      out += `- ${item}\n`;
+    });
+    out += "\n";
   });
 
-  navigator.clipboard.writeText(out.trim());
+  const copied = await NYCMapCommon.copyText(out.trim());
+  if (!copied) {
+    alert(lang === "ru" ? "Не удалось скопировать" : "Could not copy to clipboard");
+  }
 }
 
 function getFilteredPlaces() {
@@ -158,13 +127,13 @@ function render() {
   const container = document.getElementById("list");
   const resultsCount = document.getElementById("resultsCount");
   const filtered = getFilteredPlaces();
+
+  if (!container) return;
+
   updateStats(filtered);
 
   if (resultsCount) {
-    resultsCount.textContent =
-      lang === "ru"
-        ? `${filtered.length} мест`
-        : `${filtered.length} places`;
+    resultsCount.textContent = lang === "ru" ? `${filtered.length} мест` : `${filtered.length} places`;
   }
 
   container.innerHTML = "";
@@ -233,14 +202,26 @@ function render() {
 }
 
 async function loadData() {
-  const res = await fetch("build/places.json");
-  places = await res.json();
-  render();
-  initMap(places);
+  try {
+    const res = await fetch("build/places.json");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    places = await res.json();
+    render();
+    initMap(places);
+  } catch (error) {
+    console.error("Failed to load places.json", error);
+    const resultsCount = document.getElementById("resultsCount");
+    if (resultsCount) {
+      resultsCount.textContent = lang === "ru" ? "Ошибка загрузки" : "Failed to load data";
+    }
+  }
 }
 
 function toggleMap() {
   const wrap = document.getElementById("mapWrap");
+  if (!wrap) return;
+
   wrap.classList.toggle("hidden");
   setTimeout(() => {
     if (window.map) {
@@ -259,9 +240,9 @@ function updateStats(filtered) {
 
   filtered.forEach(p => {
     const status = checklist[p.id];
-    if (status === "want") counts.want++;
-    if (status === "visited") counts.visited++;
-    if (status === "favorite") counts.favorite++;
+    if (status === "want") counts.want += 1;
+    if (status === "visited") counts.visited += 1;
+    if (status === "favorite") counts.favorite += 1;
   });
 
   const total = document.getElementById("statTotal");
