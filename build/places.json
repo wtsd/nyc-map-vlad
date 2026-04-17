@@ -1,5 +1,302 @@
 [
   {
+    "id": "bethesda-fountain",
+    "title": {
+      "en": "Bethesda Fountain",
+      "ru": "Фонтан Bethesda"
+    },
+    "coords": [
+      40.774,
+      -73.97
+    ],
+    "category": [
+      "parks"
+    ],
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "72 St",
+      "ru": "72 St"
+    },
+    "image": "places/bethesda-fountain/cover.jpg",
+    "summary": {
+      "en": "Iconic fountain in Central Park.",
+      "ru": "Знаменитый фонтан в Центральном парке."
+    }
+  },
+  {
+    "id": "high-line",
+    "title": {
+      "en": "High Line",
+      "ru": "Хай Лайн"
+    },
+    "coords": [
+      40.7479,
+      -74.0049
+    ],
+    "category": [
+      "parks"
+    ],
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "14 St / 23 St",
+      "ru": "14 St / 23 St"
+    },
+    "image": "places/high-line/cover.jpg",
+    "summary": {
+      "en": "Elevated park built on old railway.",
+      "ru": "Парк на бывшей железной дороге."
+    }
+  },
+  {
+    "id": "one-world-trade-center",
+    "title": {
+      "en": "One World Trade Center",
+      "ru": "One World Trade Center"
+    },
+    "coords": [
+      40.7127,
+      -74.0134
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~45",
+    "transit": {
+      "en": "World Trade Center",
+      "ru": "World Trade Center"
+    },
+    "image": "places/one-world-trade-center/cover.jpg",
+    "summary": {
+      "en": "Tallest building in NYC with observation deck.",
+      "ru": "Самое высокое здание в Нью-Йорке."
+    }
+  },
+  {
+    "id": "little-island",
+    "title": {
+      "en": "Little Island",
+      "ru": "Little Island"
+    },
+    "coords": [
+      40.742,
+      -74.016
+    ],
+    "category": [
+      "parks"
+    ],
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "14 St",
+      "ru": "14 St"
+    },
+    "image": "places/little-island/cover.jpg",
+    "summary": {
+      "en": "Floating park with great views.",
+      "ru": "Парк на воде с отличными видами."
+    }
+  },
+  {
+    "id": "oculus",
+    "title": {
+      "en": "Oculus",
+      "ru": "Окулус"
+    },
+    "coords": [
+      40.7115,
+      -74.0113
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "World Trade Center",
+      "ru": "World Trade Center"
+    },
+    "image": "places/oculus/cover.jpg",
+    "summary": {
+      "en": "Futuristic transit hub and shopping center.",
+      "ru": "Футуристический транспортный узел."
+    }
+  },
+  {
+    "id": "central-park-mall",
+    "title": {
+      "en": "The Mall",
+      "ru": "Аллея The Mall"
+    },
+    "coords": [
+      40.7745,
+      -73.971
+    ],
+    "category": [
+      "parks"
+    ],
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "72 St",
+      "ru": "72 St"
+    },
+    "image": "places/central-park-mall/cover.jpg",
+    "summary": {
+      "en": "Beautiful tree-lined walkway.",
+      "ru": "Красивая аллея с деревьями."
+    }
+  },
+  {
+    "id": "memorial-911",
+    "title": {
+      "en": "9/11 Memorial",
+      "ru": "Мемориал 11 сентября"
+    },
+    "coords": [
+      40.7115,
+      -74.0134
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "World Trade Center",
+      "ru": "World Trade Center"
+    },
+    "image": "places/memorial-911/cover.jpg",
+    "summary": {
+      "en": "Powerful memorial with reflecting pools.",
+      "ru": "Трогательный мемориал с бассейнами."
+    }
+  },
+  {
+    "id": "flatiron-building",
+    "title": {
+      "en": "Flatiron Building",
+      "ru": "Флэтайрон"
+    },
+    "coords": [
+      40.7411,
+      -73.9897
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "23 St",
+      "ru": "23 St"
+    },
+    "image": "places/flatiron-building/cover.jpg",
+    "summary": {
+      "en": "Unique triangular building.",
+      "ru": "Необычное треугольное здание."
+    }
+  },
+  {
+    "id": "dumbo",
+    "title": {
+      "en": "DUMBO Waterfront",
+      "ru": "DUMBO набережная"
+    },
+    "coords": [
+      40.7033,
+      -73.9881
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "York St (F)",
+      "ru": "York St (F)"
+    },
+    "image": "places/dumbo/cover.jpg",
+    "summary": {
+      "en": "One of the best skyline views in NYC. Walk along the waterfront and enjoy the vibe.",
+      "ru": "Одно из лучших мест с видом на Манхэттен. Отлично для прогулки."
+    }
+  },
+  {
+    "id": "met-museum",
+    "title": {
+      "en": "MET Museum",
+      "ru": "Метрополитен музей"
+    },
+    "coords": [
+      40.7794,
+      -73.9632
+    ],
+    "category": [
+      "museums"
+    ],
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~30",
+    "transit": {
+      "en": "86 St",
+      "ru": "86 St"
+    },
+    "image": "places/met-museum/cover.jpg",
+    "summary": {
+      "en": "Massive museum with world-class collection.",
+      "ru": "Огромный музей с мировой коллекцией."
+    }
+  },
+  {
+    "id": "manhattan-bridge-view",
+    "title": {
+      "en": "Manhattan Bridge View",
+      "ru": "Вид на Манхэттенский мост"
+    },
+    "coords": [
+      40.7033,
+      -73.9887
+    ],
+    "category": [
+      "viewpoints"
+    ],
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "York St",
+      "ru": "York St"
+    },
+    "image": "places/manhattan-bridge-view/cover.jpg",
+    "summary": {
+      "en": "Famous photo spot with bridge framing.",
+      "ru": "Популярное место для фото с мостом."
+    }
+  },
+  {
     "id": "brooklyn-bridge",
     "title": {
       "en": "Brooklyn Bridge",
@@ -12,21 +309,18 @@
     "category": [
       "landmarks"
     ],
-    "tags": [
-      "views",
-      "walk"
-    ],
+    "tags": [],
     "time": "medium",
     "cost": "free",
-    "price": "",
+    "price": null,
     "transit": {
-      "en": "High St / Brooklyn Bridge–City Hall",
-      "ru": "High St / Brooklyn Bridge–City Hall"
+      "en": "Brooklyn Bridge–City Hall",
+      "ru": "Brooklyn Bridge–City Hall"
     },
-    "image": "assets/images/placeholders/cover.jpg",
+    "image": "places/brooklyn-bridge/cover.jpg",
     "summary": {
-      "en": "One of the most iconic walks in NYC. Best at sunset when the skyline lights up.\n\nExpect crowds, but the views are worth it. Walk from Brooklyn to Manhattan.",
-      "ru": "Один из самых культовых маршрутов в Нью-Йорке. Лучше всего идти на закате.\n\nЛюдей много, но виды того стоят."
+      "en": "Classic NYC walk. Best from Brooklyn to Manhattan.",
+      "ru": "Классическая прогулка по Нью-Йорку. Лучше идти из Бруклина."
     }
   }
 ]
