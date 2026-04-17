@@ -6,7 +6,7 @@ let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
 function getText() {
   return {
     en: {
-      subtitle: "NYC Map by Vlad",
+      subtitle: "NYC Map by Vlad and Katya",
       back: "← Back",
       openMap: "Open map",
       copy: "Copy",
@@ -44,7 +44,7 @@ function getText() {
       }
     },
     ru: {
-      subtitle: "Карта Нью-Йорка от Влада",
+      subtitle: "Карта Нью-Йорка от Влада и Кати",
       back: "← Назад",
       openMap: "Открыть карту",
       copy: "Копировать",
@@ -197,7 +197,7 @@ function render() {
     ? getCategoryLabel(currentPlace.category[0])
     : "";
 
-  document.title = `${title} | NYC Map by Vlad`;
+  document.title = `${title} | NYC Map by Vlad and Katya`;
   document.getElementById("pageTitle").textContent = title;
   document.getElementById("pageSubtitle").textContent = t.subtitle;
   document.getElementById("placeName").textContent = title;

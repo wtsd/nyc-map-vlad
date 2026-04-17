@@ -111,14 +111,14 @@ function copySummary() {
 
   const labels = {
     en: {
-      title: "Vlad's NYC Map",
+      title: "NYC Map by Vlad and Katya",
       want: "Want to visit",
       visited: "Visited",
       favorite: "Favorite",
       skip: "Skip"
     },
     ru: {
-      title: "Карта Нью-Йорка от Влада",
+      title: "Карта Нью-Йорка от Влада и Кати",
       want: "Хочу посетить",
       visited: "Посетил",
       favorite: "Любимое",
@@ -158,6 +158,7 @@ function render() {
   const container = document.getElementById("list");
   const resultsCount = document.getElementById("resultsCount");
   const filtered = getFilteredPlaces();
+  updateStats(filtered);
 
   if (resultsCount) {
     resultsCount.textContent =
@@ -246,6 +247,32 @@ function toggleMap() {
       window.map.invalidateSize();
     }
   }, 50);
+}
+
+function updateStats(filtered) {
+  const counts = {
+    total: filtered.length,
+    want: 0,
+    visited: 0,
+    favorite: 0
+  };
+
+  filtered.forEach(p => {
+    const status = checklist[p.id];
+    if (status === "want") counts.want++;
+    if (status === "visited") counts.visited++;
+    if (status === "favorite") counts.favorite++;
+  });
+
+  const total = document.getElementById("statTotal");
+  const want = document.getElementById("statWant");
+  const visited = document.getElementById("statVisited");
+  const favorite = document.getElementById("statFavorite");
+
+  if (total) total.textContent = counts.total;
+  if (want) want.textContent = counts.want;
+  if (visited) visited.textContent = counts.visited;
+  if (favorite) favorite.textContent = counts.favorite;
 }
 
 loadData();
