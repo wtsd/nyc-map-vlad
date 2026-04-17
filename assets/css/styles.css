@@ -383,3 +383,33 @@ select:hover,
     min-height: 320px;
   }
 }
+
+.place-layout {
+  grid-template-columns: minmax(320px, 860px);
+  justify-content: center;
+}
+
+.place-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.place-image-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #eef2f6, #e4e9f0);
+  overflow: hidden;
+}
+
+.place-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.place-body {
+  padding: 20px;
+}

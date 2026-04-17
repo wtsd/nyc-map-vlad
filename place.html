@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place | NYC Map by Vlad</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <h1 id="pageTitle">Place</h1>
+        <p id="pageSubtitle">NYC Map by Vlad</p>
+      </div>
+
+      <div class="header-buttons">
+        <a class="secondary-btn" href="index.html">← Back</a>
+        <button class="secondary-btn" onclick="toggleLang()">EN / RU</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout place-layout">
+    <section class="place-main">
+      <article class="place-card">
+        <div class="place-image-wrap">
+          <img id="placeImage" src="" alt="" loading="lazy"
+               onerror="this.style.display='none'; document.getElementById('placeImageFallback').classList.remove('hidden');">
+          <div id="placeImageFallback" class="card-image-fallback hidden">Photo coming later</div>
+        </div>
+
+        <div class="place-body">
+          <div class="card-topline">
+            <h2 id="placeName" class="card-title">Loading...</h2>
+            <div id="placeCategory" class="card-category"></div>
+          </div>
+
+          <div class="meta-row">
+            <span id="placeTime" class="chip"></span>
+            <span id="placeCost" class="chip"></span>
+          </div>
+
+          <p id="placeSummary" class="summary"></p>
+
+          <div class="transit-row">
+            <span id="transitLabel">Transit:</span>
+            <strong id="placeTransit"></strong>
+          </div>
+
+          <div class="status-row">
+            <button id="btnWant" class="status-btn" onclick="setStatus(currentPlace.id, 'want')">Want</button>
+            <button id="btnVisited" class="status-btn" onclick="setStatus(currentPlace.id, 'visited')">Visited</button>
+            <button id="btnFavorite" class="status-btn" onclick="setStatus(currentPlace.id, 'favorite')">Favorite</button>
+            <button id="btnSkip" class="status-btn" onclick="setStatus(currentPlace.id, 'skip')">Skip</button>
+          </div>
+
+          <div class="card-footer">
+            <div id="placeStatus" class="status-label"></div>
+            <div class="card-footer-actions">
+              <button class="copy-btn" onclick="copyCurrentPlace()">Copy</button>
+              <a class="primary-link-btn" id="openMapLink" href="index.html">Open map</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="assets/js/place.js"></script>
+</body>
+</html>
