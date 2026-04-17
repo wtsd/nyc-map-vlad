@@ -1,0 +1,32 @@
+[
+  {
+    "id": "brooklyn-bridge",
+    "title": {
+      "en": "Brooklyn Bridge",
+      "ru": "Бруклинский мост"
+    },
+    "coords": [
+      40.7061,
+      -73.9969
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "tags": [
+      "views",
+      "walk"
+    ],
+    "time": "medium",
+    "cost": "free",
+    "price": "",
+    "transit": {
+      "en": "High St / Brooklyn Bridge–City Hall",
+      "ru": "High St / Brooklyn Bridge–City Hall"
+    },
+    "image": "assets/images/placeholders/cover.jpg",
+    "summary": {
+      "en": "One of the most iconic walks in NYC. Best at sunset when the skyline lights up.\n\nExpect crowds, but the views are worth it. Walk from Brooklyn to Manhattan.",
+      "ru": "Один из самых культовых маршрутов в Нью-Йорке. Лучше всего идти на закате.\n\nЛюдей много, но виды того стоят."
+    }
+  }
+]
