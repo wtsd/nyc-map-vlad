@@ -1,0 +1,11 @@
+id: central-park-mall
+title:
+  en: The Mall
+  ru: Аллея The Mall
+coords: {lat: 40.7745, lng: -73.9710}
+category: [parks]
+time: short
+cost: free
+transit:
+  en: 72 St
+  ru: 72 St

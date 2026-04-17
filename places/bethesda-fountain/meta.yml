@@ -1,0 +1,11 @@
+id: bethesda-fountain
+title:
+  en: Bethesda Fountain
+  ru: Фонтан Bethesda
+coords: {lat: 40.7740, lng: -73.9700}
+category: [parks]
+time: short
+cost: free
+transit:
+  en: 72 St
+  ru: 72 St

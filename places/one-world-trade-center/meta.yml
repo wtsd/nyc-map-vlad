@@ -1,0 +1,12 @@
+id: one-world-trade-center
+title:
+  en: One World Trade Center
+  ru: One World Trade Center
+coords: {lat: 40.7127, lng: -74.0134}
+category: [landmarks]
+time: medium
+cost: paid
+price: ~45
+transit:
+  en: World Trade Center
+  ru: World Trade Center
