@@ -1,0 +1,11 @@
+id: brighton-beach
+title:
+  en: Brighton Beach
+  ru: Брайтон-Бич
+coords: {lat: 40.5763, lng: -73.9615}
+category: [other]
+time: medium
+cost: free
+transit:
+  en: Brighton Beach
+  ru: Brighton Beach

@@ -1,0 +1,11 @@
+id: coney-island
+title:
+  en: Coney Island
+  ru: Кони-Айленд
+coords: {lat: 40.5749, lng: -73.9850}
+category: [landmarks]
+time: full
+cost: free
+transit:
+  en: Coney Island–Stillwell Ave
+  ru: Coney Island–Stillwell Ave

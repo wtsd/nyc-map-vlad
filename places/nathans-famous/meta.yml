@@ -1,0 +1,11 @@
+id: nathans-famous
+title:
+  en: Nathan's Famous
+  ru: Nathan's Famous
+coords: {lat: 40.5755, lng: -73.9819}
+category: [food]
+time: short
+cost: paid
+transit:
+  en: Coney Island
+  ru: Coney Island

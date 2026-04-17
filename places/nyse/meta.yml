@@ -1,0 +1,11 @@
+id: nyse
+title:
+  en: New York Stock Exchange
+  ru: Нью-Йоркская фондовая биржа
+coords: {lat: 40.7069, lng: -74.0113}
+category: [landmarks]
+time: short
+cost: free
+transit:
+  en: Wall St
+  ru: Wall St

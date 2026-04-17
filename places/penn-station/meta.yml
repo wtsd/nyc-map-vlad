@@ -1,0 +1,11 @@
+id: penn-station
+title:
+  en: Penn Station
+  ru: Пенн-стейшн
+coords: {lat: 40.7506, lng: -73.9935}
+category: [other]
+time: short
+cost: free
+transit:
+  en: Penn Station
+  ru: Penn Station

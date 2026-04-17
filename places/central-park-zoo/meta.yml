@@ -1,0 +1,11 @@
+id: central-park-zoo
+title:
+  en: Central Park Zoo
+  ru: Зоопарк Центрального парка
+coords: {lat: 40.7678, lng: -73.9718}
+category: [parks]
+time: medium
+cost: paid
+transit:
+  en: 59 St
+  ru: 59 St

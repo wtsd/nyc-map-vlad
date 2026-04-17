@@ -1,0 +1,11 @@
+id: janes-carousel
+title:
+  en: Jane's Carousel
+  ru: Карусель Jane’s
+coords: {lat: 40.7034, lng: -73.9950}
+category: [other]
+time: short
+cost: paid
+transit:
+  en: DUMBO
+  ru: DUMBO
