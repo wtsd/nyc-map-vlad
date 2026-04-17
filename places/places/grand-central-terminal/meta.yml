@@ -1,0 +1,11 @@
+id: grand-central-terminal
+title:
+  en: Grand Central Terminal
+  ru: Гранд Сентрал
+coords: {lat: 40.7527, lng: -73.9772}
+category: [landmarks]
+time: medium
+cost: free
+transit:
+  en: Grand Central
+  ru: Grand Central

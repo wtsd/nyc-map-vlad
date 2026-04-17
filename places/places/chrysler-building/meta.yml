@@ -1,0 +1,11 @@
+id: chrysler-building
+title:
+  en: Chrysler Building
+  ru: Крайслер-билдинг
+coords: {lat: 40.7516, lng: -73.9755}
+category: [landmarks]
+time: short
+cost: free
+transit:
+  en: Grand Central
+  ru: Grand Central

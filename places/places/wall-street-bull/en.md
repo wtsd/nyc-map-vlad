@@ -1,0 +1,1 @@
+Famous charging bull statue.
