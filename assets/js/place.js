@@ -183,6 +183,12 @@ function render() {
   const openMapLabel = document.querySelector("#openMapLink .btn-label");
   if (openMapLabel) openMapLabel.textContent = t.openMap;
 
+  const openMapsLink = document.getElementById("openMapsLink");
+  if (openMapsLink) {
+    openMapsLink.href = getMapsUrl(currentPlace);
+    openMapsLink.textContent = lang === "ru" ? "Карта" : "Maps";
+  }
+
   renderStatus();
 }
 
@@ -197,6 +203,11 @@ async function loadData() {
     console.error("Failed to load place data", error);
     renderNotFound();
   }
+}
+
+function getMapsUrl(place) {
+  const query = place.address || place.title?.[lang] || place.title?.en || place.id;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
 loadData();

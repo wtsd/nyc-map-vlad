@@ -192,6 +192,7 @@ function render() {
               </svg>
               <span class="sr-only btn-label">${lang === "ru" ? "Копировать" : "Copy"}</span>
             </button>
+        <a class="copy-btn" href="${getMapsUrl(p)}" target="_blank" rel="noopener noreferrer">${lang === "ru" ? "Карта" : "Maps"}</a>
             <a class="primary-link-btn icon-btn icon-only-btn" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}" title="${lang === "ru" ? "Открыть" : "Open"}">
               <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M7 17 17 7"></path>
@@ -265,6 +266,12 @@ function updateStats(filtered) {
   if (want) want.textContent = counts.want;
   if (visited) visited.textContent = counts.visited;
   if (favorite) favorite.textContent = counts.favorite;
+}
+
+
+function getMapsUrl(place) {
+  const query = place.address || place.title?.[lang] || place.title?.en || place.id;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
 loadData();
