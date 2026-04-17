@@ -186,8 +186,14 @@ function render() {
         <div class="card-footer">
           <div class="status-label">${lang === "ru" ? "Текущий статус:" : "Current status:"} ${getStatusLabel(status)}</div>
           <div class="card-footer-actions">
-            <button class="copy-btn" onclick="copyPlace('${p.id}')">${lang === "ru" ? "Копировать" : "Copy"}</button>
-            <a class="primary-link-btn" href="${detailsUrl}">${lang === "ru" ? "Открыть" : "Open"}</a>
+            <button class="copy-btn icon-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}">
+              <span class="btn-icon" aria-hidden="true">📋</span>
+              <span class="btn-label">${lang === "ru" ? "Копировать" : "Copy"}</span>
+            </button>
+            <a class="primary-link-btn icon-btn" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}">
+              <span class="btn-icon" aria-hidden="true">↗</span>
+              <span class="btn-label">${lang === "ru" ? "Открыть" : "Open"}</span>
+            </a>
           </div>
         </div>
       </div>

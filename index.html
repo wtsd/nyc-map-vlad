@@ -38,8 +38,14 @@
         </div>
 
         <div class="header-buttons">
-          <button class="secondary-btn" onclick="copySummary()">Copy summary</button>
-          <button class="secondary-btn" onclick="toggleLang()">EN / RU</button>
+          <button class="secondary-btn icon-btn" onclick="copySummary()" aria-label="Copy summary">
+            <span class="btn-icon" aria-hidden="true">📋</span>
+            <span class="btn-label">Copy summary</span>
+          </button>
+          <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
+            <span class="btn-icon" aria-hidden="true">🌐</span>
+            <span class="btn-label">EN / RU</span>
+          </button>
         </div>
       </div>
     </div>
@@ -80,7 +86,10 @@
       <div class="map-card">
         <div class="map-card-header">
           <h2>Map View</h2>
-          <button class="secondary-btn mobile-map-toggle" onclick="toggleMap()">Show / hide</button>
+          <button class="secondary-btn mobile-map-toggle icon-btn" onclick="toggleMap()" aria-label="Toggle map">
+            <span class="btn-icon" aria-hidden="true">🗺️</span>
+            <span class="btn-label">Show / hide</span>
+          </button>
         </div>
         <div id="mapWrap" class="map-wrap">
           <div id="map"></div>

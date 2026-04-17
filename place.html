@@ -15,8 +15,14 @@
       </div>
 
       <div class="header-buttons">
-        <a class="secondary-btn" href="index.html">← Back</a>
-        <button class="secondary-btn" onclick="toggleLang()">EN / RU</button>
+        <a class="secondary-btn icon-btn" href="index.html" aria-label="Back to map">
+          <span class="btn-icon" aria-hidden="true">←</span>
+          <span class="btn-label">Back</span>
+        </a>
+        <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
+          <span class="btn-icon" aria-hidden="true">🌐</span>
+          <span class="btn-label">EN / RU</span>
+        </button>
       </div>
     </div>
   </header>
@@ -58,8 +64,14 @@
           <div class="card-footer">
             <div id="placeStatus" class="status-label"></div>
             <div class="card-footer-actions">
-              <button class="copy-btn" onclick="copyCurrentPlace()">Copy</button>
-              <a class="primary-link-btn" id="openMapLink" href="index.html">Open map</a>
+              <button class="copy-btn icon-btn" onclick="copyCurrentPlace()" aria-label="Copy place details">
+                <span class="btn-icon" aria-hidden="true">📋</span>
+                <span class="btn-label">Copy</span>
+              </button>
+              <a class="primary-link-btn icon-btn" id="openMapLink" href="index.html" aria-label="Open map">
+                <span class="btn-icon" aria-hidden="true">🗺️</span>
+                <span class="btn-label">Open map</span>
+              </a>
             </div>
           </div>
         </div>

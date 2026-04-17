@@ -7,7 +7,7 @@ function getText() {
   return {
     en: {
       subtitle: "NYC Map by Vlad and Katya",
-      back: "← Back",
+      back: "Back",
       openMap: "Open map",
       copy: "Copy",
       transit: "Transit:",
@@ -23,7 +23,7 @@ function getText() {
     },
     ru: {
       subtitle: "Карта Нью-Йорка от Влада и Кати",
-      back: "← Назад",
+      back: "Назад",
       openMap: "Открыть карту",
       copy: "Копировать",
       transit: "Транспорт:",
@@ -160,7 +160,6 @@ function render() {
   document.getElementById("placeImage").alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
   document.getElementById("openMapLink").href = "index.html";
-  document.getElementById("openMapLink").textContent = t.openMap;
   document.getElementById("transitLabel").textContent = t.transit;
 
   document.getElementById("btnWant").textContent = t.wantBtn;
@@ -169,10 +168,15 @@ function render() {
   document.getElementById("btnSkip").textContent = t.skipBtn;
 
   const backBtn = document.querySelector(".header-buttons a");
-  if (backBtn) backBtn.textContent = t.back;
+  const backBtnLabel = backBtn?.querySelector(".btn-label");
+  if (backBtnLabel) backBtnLabel.textContent = t.back;
 
   const copyBtn = document.querySelector(".copy-btn");
-  if (copyBtn) copyBtn.textContent = t.copy;
+  const copyBtnLabel = copyBtn?.querySelector(".btn-label");
+  if (copyBtnLabel) copyBtnLabel.textContent = t.copy;
+
+  const openMapLabel = document.querySelector("#openMapLink .btn-label");
+  if (openMapLabel) openMapLabel.textContent = t.openMap;
 
   renderStatus();
 }
