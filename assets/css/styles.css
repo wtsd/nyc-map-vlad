@@ -88,12 +88,12 @@ select {
 select,
 .secondary-btn,
 .status-btn {
-  height: 44px;
+  height: 42px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
-  border-radius: 14px;
-  padding: 0 16px;
+  border-radius: 12px;
+  padding: 0 14px;
   transition: 0.18s ease;
   box-shadow: none;
 }
@@ -108,6 +108,18 @@ select:hover,
 
 .secondary-btn {
   cursor: pointer;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-icon {
+  line-height: 1;
+  font-size: 1rem;
 }
 
 .stats-strip {
@@ -185,7 +197,7 @@ select:hover,
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 22px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
@@ -220,7 +232,7 @@ select:hover,
 }
 
 .card-body {
-  padding: 18px;
+  padding: 16px;
 }
 
 .card-topline {
@@ -267,8 +279,8 @@ select:hover,
 .summary {
   margin: 0 0 16px;
   color: #3f4653;
-  line-height: 1.58;
-  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 0.96rem;
 }
 
 .transit-row {
@@ -289,9 +301,9 @@ select:hover,
 
 .status-btn {
   cursor: pointer;
-  height: 40px;
-  padding: 0 14px;
-  border-radius: 14px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 12px;
 }
 
 .status-btn.active {
@@ -321,8 +333,8 @@ select:hover,
 .primary-link-btn,
 .copy-btn {
   border: none;
-  border-radius: 14px;
-  padding: 11px 15px;
+  border-radius: 12px;
+  padding: 9px 13px;
   cursor: pointer;
   font: inherit;
   transition: 0.18s ease;
@@ -353,7 +365,7 @@ select:hover,
   top: 180px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 14px;
   box-shadow: var(--shadow);
   padding: 16px;
 }
@@ -472,35 +484,114 @@ select:hover,
     align-items: stretch;
   }
 
-  .topbar-actions {
-    justify-content: stretch;
-  }
+  .topbar-actions { justify-content: stretch; }
 
   .filters,
   .header-buttons {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 
   .filters select,
-  .header-buttons button {
+  .header-buttons button,
+  .header-buttons a {
     width: 100%;
+    min-width: 0;
   }
 
   .stats-strip {
-    padding: 0 16px 14px;
+    padding: 0 16px 12px;
     grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .stat-box {
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+
+  .stat-number {
+    font-size: 1.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
   }
 
   .layout {
-    padding: 16px;
-    gap: 16px;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .sidebar-header,
+  .map-card-header {
+    margin-bottom: 10px;
   }
 
   .card-title {
-    font-size: 1.3rem;
+    font-size: 1.08rem;
+    line-height: 1.15;
+  }
+
+  .card-category {
+    font-size: 0.82rem;
+  }
+
+  .card-list {
+    gap: 12px;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  .meta-row {
+    margin: 10px 0;
+    gap: 6px;
+  }
+
+  .chip {
+    min-height: 28px;
+    padding: 0 9px;
+    font-size: 0.82rem;
+  }
+
+  .summary {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.44;
+  }
+
+  .transit-row {
+    margin-bottom: 10px;
+    font-size: 0.88rem;
+  }
+
+  .status-row {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .status-btn {
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 0.84rem;
+  }
+
+  .card-footer {
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .status-label {
+    font-size: 0.84rem;
   }
 
   .card-footer {
@@ -512,17 +603,27 @@ select:hover,
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
   }
 
   .copy-btn,
   .primary-link-btn {
     width: 100%;
     text-align: center;
+    min-height: 36px;
+    padding: 0 8px;
+  }
+
+  .btn-label {
+    display: none;
+  }
+
+  .icon-btn {
+    gap: 0;
   }
 
   #map {
-    height: 320px;
-    min-height: 320px;
+    height: 280px;
+    min-height: 280px;
   }
 }
