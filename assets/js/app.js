@@ -45,10 +45,10 @@ async function copyPlace(id) {
 
   const status = checklist[id] || "none";
   const text = [
-    p.title[lang] || p.title.en,
+    NYCMapCommon.getLocalizedText(lang, p.title, ""),
     `${lang === "ru" ? "Статус" : "Status"}: ${getStatusLabel(status)}`,
     "",
-    `${lang === "ru" ? "Транспорт" : "Transit"}: ${p.transit?.[lang] || p.transit?.en || ""}`,
+    `${lang === "ru" ? "Адрес" : "Address"}: ${NYCMapCommon.getPlaceAddress(p, lang)}`,
     `${lang === "ru" ? "Время" : "Time"}: ${getTimeLabel(p.time)}`,
     `${lang === "ru" ? "Цена" : "Cost"}: ${getCostLabel(p.cost, p.price)}`,
     "",
@@ -141,9 +141,9 @@ function render() {
   filtered.forEach(p => {
     const status = checklist[p.id] || "none";
     const imageSrc = p.image || "assets/images/placeholders/cover.jpg";
-    const title = p.title[lang] || p.title.en;
-    const summary = truncate(p.summary[lang] || p.summary.en || "", 180);
-    const transit = p.transit?.[lang] || p.transit?.en || "";
+    const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
+    const summary = truncate(NYCMapCommon.getLocalizedText(lang, p.summary, ""), 180);
+    const address = NYCMapCommon.getPlaceAddress(p, lang);
     const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(p.category[0]) : "";
     const detailsUrl = `place.html?id=${encodeURIComponent(p.id)}`;
 
@@ -172,8 +172,8 @@ function render() {
         <p class="summary">${summary}</p>
 
         <div class="transit-row">
-          <span>${lang === "ru" ? "Транспорт:" : "Transit:"}</span>
-          <strong>${transit}</strong>
+          <span>${lang === "ru" ? "Адрес:" : "Address:"}</span>
+          <strong>${address}</strong>
         </div>
 
         <div class="status-row">
@@ -192,7 +192,14 @@ function render() {
               </svg>
               <span class="sr-only btn-label">${lang === "ru" ? "Копировать" : "Copy"}</span>
             </button>
-        <a class="copy-btn" href="${getMapsUrl(p)}" target="_blank" rel="noopener noreferrer">${lang === "ru" ? "Карта" : "Maps"}</a>
+            <a class="copy-btn icon-btn icon-only-btn" href="${NYCMapCommon.getMapsUrl(p, lang)}" target="_blank" rel="noopener noreferrer" aria-label="${lang === "ru" ? "Открыть на карте" : "Open in Maps"}" title="${lang === "ru" ? "Карта" : "Maps"}">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M9.5 4.75a6 6 0 0 1 9 5.2c0 3.63-4.5 8.8-4.5 8.8s-4.5-5.17-4.5-8.8a6 6 0 0 1 0-5.2z"></path>
+                <circle cx="14" cy="10" r="2.2"></circle>
+                <path d="M4 7.5v11.75l6-2.25 8 2.25 2-11.75-8-2.25z"></path>
+              </svg>
+              <span class="sr-only btn-label">${lang === "ru" ? "Карта" : "Maps"}</span>
+            </a>
             <a class="primary-link-btn icon-btn icon-only-btn" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}" title="${lang === "ru" ? "Открыть" : "Open"}">
               <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path d="M7 17 17 7"></path>
@@ -267,11 +274,4 @@ function updateStats(filtered) {
   if (visited) visited.textContent = counts.visited;
   if (favorite) favorite.textContent = counts.favorite;
 }
-
-
-function getMapsUrl(place) {
-  const query = place.address || place.title?.[lang] || place.title?.en || place.id;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-}
-
 loadData();
