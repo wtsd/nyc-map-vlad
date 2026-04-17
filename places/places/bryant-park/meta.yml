@@ -1,0 +1,11 @@
+id: bryant-park
+title:
+  en: Bryant Park
+  ru: Брайант-парк
+coords: {lat: 40.7536, lng: -73.9832}
+category: [parks]
+time: short
+cost: free
+transit:
+  en: 42 St
+  ru: 42 St

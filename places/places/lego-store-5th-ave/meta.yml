@@ -1,0 +1,11 @@
+id: lego-store-5th-ave
+title:
+  en: LEGO Store (5th Ave)
+  ru: LEGO Store
+coords: {lat: 40.7605, lng: -73.9750}
+category: [other]
+time: short
+cost: free
+transit:
+  en: 5 Av/53 St
+  ru: 5 Av/53 St

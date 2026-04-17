@@ -1,0 +1,11 @@
+id: st-patricks-cathedral
+title:
+  en: St. Patrick's Cathedral
+  ru: Собор Святого Патрика
+coords: {lat: 40.7585, lng: -73.9760}
+category: [landmarks]
+time: short
+cost: free
+transit:
+  en: 5 Av/53 St
+  ru: 5 Av/53 St
