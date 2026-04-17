@@ -152,11 +152,11 @@ function render() {
     el.id = `card-${p.id}`;
 
     el.innerHTML = `
-      <div class="card-image-wrap">
+      <a class="card-image-wrap card-image-link" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}">
         <img src="${imageSrc}" alt="${title}" loading="lazy"
              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
         <div class="card-image-fallback hidden">${lang === "ru" ? "Фото будет позже" : "Photo coming later"}</div>
-      </div>
+      </a>
 
       <div class="card-body">
         <div class="card-topline">
@@ -184,15 +184,20 @@ function render() {
         </div>
 
         <div class="card-footer">
-          <div class="status-label">${lang === "ru" ? "Текущий статус:" : "Current status:"} ${getStatusLabel(status)}</div>
           <div class="card-footer-actions">
-            <button class="copy-btn icon-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}">
-              <span class="btn-icon" aria-hidden="true">📋</span>
-              <span class="btn-label">${lang === "ru" ? "Копировать" : "Copy"}</span>
+            <button class="copy-btn icon-btn icon-only-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+              </svg>
+              <span class="sr-only btn-label">${lang === "ru" ? "Копировать" : "Copy"}</span>
             </button>
-            <a class="primary-link-btn icon-btn" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}">
-              <span class="btn-icon" aria-hidden="true">↗</span>
-              <span class="btn-label">${lang === "ru" ? "Открыть" : "Open"}</span>
+            <a class="primary-link-btn icon-btn icon-only-btn" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}" title="${lang === "ru" ? "Открыть" : "Open"}">
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 17 17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+              <span class="sr-only btn-label">${lang === "ru" ? "Открыть" : "Open"}</span>
             </a>
           </div>
         </div>

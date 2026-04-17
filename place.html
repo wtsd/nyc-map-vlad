@@ -76,12 +76,18 @@
 
           <div class="card-footer">
             <div class="card-footer-actions">
-              <button class="copy-btn icon-btn" onclick="copyCurrentPlace()" aria-label="Copy place details">
-                <span class="btn-icon monochrome-icon" aria-hidden="true">⧉</span>
+              <button class="copy-btn icon-btn icon-only-btn" onclick="copyCurrentPlace()" aria-label="Copy place details">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                  <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+                </svg>
                 <span class="sr-only btn-label">Copy</span>
               </button>
-              <a class="primary-link-btn icon-btn" id="openMapLink" href="index.html" aria-label="Open map">
-                <span class="btn-icon monochrome-icon" aria-hidden="true">⌖</span>
+              <a class="primary-link-btn icon-btn icon-only-btn" id="openMapLink" href="index.html" aria-label="Open map">
+                <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7 17 17 7"></path>
+                  <path d="M7 7h10v10"></path>
+                </svg>
                 <span class="sr-only btn-label">Open map</span>
               </a>
             </div>

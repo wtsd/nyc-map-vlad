@@ -120,6 +120,14 @@ select:hover,
 .btn-icon {
   line-height: 1;
   font-size: 1rem;
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
 }
 
 .monochrome-icon {
@@ -228,10 +236,20 @@ select:hover,
 }
 
 .card-image-wrap {
+  display: block;
   position: relative;
   aspect-ratio: 16 / 9;
   background: linear-gradient(135deg, #eef2f6, #e4e9f0);
   overflow: hidden;
+}
+
+.card-image-link {
+  cursor: pointer;
+}
+
+.card-image-link:focus-visible {
+  outline: 3px solid #9fc3ff;
+  outline-offset: -3px;
 }
 
 .card-image-wrap img {
@@ -349,7 +367,7 @@ select:hover,
 .card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 12px;
   margin-top: 6px;
 }
@@ -400,6 +418,10 @@ select:hover,
   min-width: 40px;
   min-height: 40px;
   padding: 0;
+}
+
+.icon-only-btn {
+  width: 40px;
 }
 
 .map-card {
