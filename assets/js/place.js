@@ -11,7 +11,6 @@ function getText() {
       openMap: "Open map",
       copy: "Copy",
       transit: "Transit:",
-      currentStatus: "Current status:",
       notFound: "Place not found",
       notFoundText: "The requested place does not exist.",
       photoFallback: "Photo coming later",
@@ -27,7 +26,6 @@ function getText() {
       openMap: "Открыть карту",
       copy: "Копировать",
       transit: "Транспорт:",
-      currentStatus: "Текущий статус:",
       notFound: "Место не найдено",
       notFoundText: "Запрошенное место не существует.",
       photoFallback: "Фото будет позже",
@@ -81,8 +79,6 @@ function renderStatus() {
 
   const t = getText()[lang];
   const status = checklist[currentPlace.id] || "none";
-
-  document.getElementById("placeStatus").textContent = `${t.currentStatus} ${getStatusLabel(status)}`;
 
   document.getElementById("btnWant").classList.toggle("active", status === "want");
   document.getElementById("btnVisited").classList.toggle("active", status === "visited");
@@ -162,10 +158,19 @@ function render() {
   document.getElementById("openMapLink").href = "index.html";
   document.getElementById("transitLabel").textContent = t.transit;
 
-  document.getElementById("btnWant").textContent = t.wantBtn;
-  document.getElementById("btnVisited").textContent = t.visitedBtn;
-  document.getElementById("btnFavorite").textContent = t.favoriteBtn;
-  document.getElementById("btnSkip").textContent = t.skipBtn;
+  const statusButtons = [
+    { id: "btnWant", label: t.wantBtn },
+    { id: "btnVisited", label: t.visitedBtn },
+    { id: "btnFavorite", label: t.favoriteBtn },
+    { id: "btnSkip", label: t.skipBtn }
+  ];
+  statusButtons.forEach(({ id, label }) => {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.setAttribute("aria-label", label);
+    const srLabel = btn.querySelector(".sr-only");
+    if (srLabel) srLabel.textContent = label;
+  });
 
   const backBtn = document.querySelector(".header-buttons a");
   const backBtnLabel = backBtn?.querySelector(".btn-label");

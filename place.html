@@ -6,7 +6,7 @@
   <title>Place | NYC Map by Vlad and Katya</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
+<body class="place-page">
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
@@ -16,12 +16,12 @@
 
       <div class="header-buttons">
         <a class="secondary-btn icon-btn" href="index.html" aria-label="Back to map">
-          <span class="btn-icon" aria-hidden="true">←</span>
-          <span class="btn-label">Back</span>
+          <span class="btn-icon monochrome-icon" aria-hidden="true">←</span>
+          <span class="sr-only btn-label">Back</span>
         </a>
         <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
-          <span class="btn-icon" aria-hidden="true">🌐</span>
-          <span class="btn-label">EN / RU</span>
+          <span class="btn-icon monochrome-icon" aria-hidden="true">⌘</span>
+          <span class="sr-only btn-label">EN / RU</span>
         </button>
       </div>
     </div>
@@ -51,26 +51,38 @@
 
           <div class="transit-row">
             <span id="transitLabel">Transit:</span>
+            <span class="mta-icon" aria-hidden="true">MTA</span>
             <strong id="placeTransit"></strong>
           </div>
 
           <div class="status-row">
-            <button id="btnWant" class="status-btn" onclick="setStatus(currentPlace.id, 'want')">Want</button>
-            <button id="btnVisited" class="status-btn" onclick="setStatus(currentPlace.id, 'visited')">Visited</button>
-            <button id="btnFavorite" class="status-btn" onclick="setStatus(currentPlace.id, 'favorite')">Favorite</button>
-            <button id="btnSkip" class="status-btn" onclick="setStatus(currentPlace.id, 'skip')">Skip</button>
+            <button id="btnWant" class="status-btn icon-btn" onclick="setStatus(currentPlace.id, 'want')" aria-label="Want to visit">
+              <span class="btn-icon monochrome-icon" aria-hidden="true">○</span>
+              <span class="sr-only">Want</span>
+            </button>
+            <button id="btnVisited" class="status-btn icon-btn" onclick="setStatus(currentPlace.id, 'visited')" aria-label="Visited">
+              <span class="btn-icon monochrome-icon" aria-hidden="true">✓</span>
+              <span class="sr-only">Visited</span>
+            </button>
+            <button id="btnFavorite" class="status-btn icon-btn" onclick="setStatus(currentPlace.id, 'favorite')" aria-label="Favorite">
+              <span class="btn-icon monochrome-icon" aria-hidden="true">♥</span>
+              <span class="sr-only">Favorite</span>
+            </button>
+            <button id="btnSkip" class="status-btn icon-btn" onclick="setStatus(currentPlace.id, 'skip')" aria-label="Skip">
+              <span class="btn-icon monochrome-icon" aria-hidden="true">✕</span>
+              <span class="sr-only">Skip</span>
+            </button>
           </div>
 
           <div class="card-footer">
-            <div id="placeStatus" class="status-label"></div>
             <div class="card-footer-actions">
               <button class="copy-btn icon-btn" onclick="copyCurrentPlace()" aria-label="Copy place details">
-                <span class="btn-icon" aria-hidden="true">📋</span>
-                <span class="btn-label">Copy</span>
+                <span class="btn-icon monochrome-icon" aria-hidden="true">⧉</span>
+                <span class="sr-only btn-label">Copy</span>
               </button>
               <a class="primary-link-btn icon-btn" id="openMapLink" href="index.html" aria-label="Open map">
-                <span class="btn-icon" aria-hidden="true">🗺️</span>
-                <span class="btn-label">Open map</span>
+                <span class="btn-icon monochrome-icon" aria-hidden="true">⌖</span>
+                <span class="sr-only btn-label">Open map</span>
               </a>
             </div>
           </div>
