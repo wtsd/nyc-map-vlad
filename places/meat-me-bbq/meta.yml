@@ -1,0 +1,11 @@
+id: meat-me-bbq
+title:
+  en: MEAT ME BBQ
+  ru: MEAT ME BBQ
+coords: {lat: 40.7588, lng: -73.8297}
+category: [food]
+time: medium
+cost: paid
+transit:
+  en: Flushing-Main St
+  ru: Flushing-Main St

@@ -1,0 +1,11 @@
+id: mixue
+title:
+  en: MIXUE
+  ru: MIXUE
+coords: {lat: 40.7150, lng: -73.9987}
+category: [food]
+time: short
+cost: paid
+transit:
+  en: Canal St
+  ru: Canal St

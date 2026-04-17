@@ -1,0 +1,11 @@
+id: liberty-bagels-midtown
+title:
+  en: Liberty Bagels
+  ru: Liberty Bagels
+coords: {lat: 40.7640, lng: -73.9778}
+category: [food]
+time: short
+cost: paid
+transit:
+  en: 5 Av/53 St / 57 St
+  ru: 5 Av/53 St / 57 St

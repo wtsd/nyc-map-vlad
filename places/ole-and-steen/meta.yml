@@ -1,0 +1,11 @@
+id: ole-and-steen
+title:
+  en: Ole & Steen
+  ru: Ole & Steen
+coords: {lat: 40.7417, lng: -73.9894}
+category: [food]
+time: short
+cost: paid
+transit:
+  en: 23 St
+  ru: 23 St

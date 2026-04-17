@@ -1,0 +1,11 @@
+id: joes-home-of-soup-dumplings
+title:
+  en: Joe's Home of Soup Dumplings
+  ru: Joe's Home of Soup Dumplings
+coords: {lat: 40.7153, lng: -73.9975}
+category: [food]
+time: medium
+cost: paid
+transit:
+  en: Canal St
+  ru: Canal St

@@ -1,0 +1,12 @@
+id: american-museum-of-natural-history
+title:
+  en: American Museum of Natural History
+  ru: Американский музей естественной истории
+coords: {lat: 40.7813, lng: -73.9735}
+category: [museums]
+time: full
+cost: paid
+price: ~0
+transit:
+  en: 81 St - Museum of Natural History
+  ru: 81 St - Museum of Natural History
