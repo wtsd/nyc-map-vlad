@@ -1,0 +1,26 @@
+id: brooklyn-bridge
+
+title:
+  en: Brooklyn Bridge
+  ru: Бруклинский мост
+
+coords:
+  lat: 40.7061
+  lng: -73.9969
+
+category:
+  - landmarks
+
+tags:
+  - views
+  - walk
+
+time: medium
+cost: free
+price: ""
+
+transit:
+  en: High St / Brooklyn Bridge–City Hall
+  ru: High St / Brooklyn Bridge–City Hall
+
+featured: true
