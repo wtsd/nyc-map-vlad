@@ -1,0 +1,11 @@
+id: new-yorker-hotel
+title:
+  en: The New Yorker Hotel
+  ru: Отель The New Yorker
+coords: {lat: 40.7528, lng: -73.9935}
+category: [landmarks]
+time: short
+cost: free
+transit:
+  en: Penn Station
+  ru: Penn Station

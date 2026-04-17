@@ -1,0 +1,12 @@
+id: roosevelt-island-tram
+title:
+  en: Roosevelt Island Tram
+  ru: Канатка на Рузвельт-Айленд
+coords: {lat: 40.7619, lng: -73.9640}
+category: [landmarks]
+time: medium
+cost: paid
+price: MetroCard / OMNY fare
+transit:
+  en: Lexington Av/59 St
+  ru: Lexington Av/59 St

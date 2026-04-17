@@ -1,0 +1,11 @@
+id: united-nations
+title:
+  en: United Nations Headquarters
+  ru: Штаб-квартира ООН
+coords: {lat: 40.7498, lng: -73.9680}
+category: [landmarks]
+time: short
+cost: free
+transit:
+  en: Grand Central
+  ru: Grand Central

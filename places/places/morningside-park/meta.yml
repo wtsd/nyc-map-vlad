@@ -1,0 +1,11 @@
+id: morningside-park
+title:
+  en: Morningside Park
+  ru: Морнингсайд-парк
+coords: {lat: 40.8018, lng: -73.9595}
+category: [parks]
+time: short
+cost: free
+transit:
+  en: 110 St
+  ru: 110 St

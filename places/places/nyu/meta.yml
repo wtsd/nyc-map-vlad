@@ -1,0 +1,11 @@
+id: nyu
+title:
+  en: NYU Area
+  ru: Район NYU
+coords: {lat: 40.7295, lng: -73.9965}
+category: [other]
+time: short
+cost: free
+transit:
+  en: W 4 St / Astor Pl
+  ru: W 4 St / Astor Pl

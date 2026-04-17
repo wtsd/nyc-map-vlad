@@ -1,0 +1,11 @@
+id: tashkent-supermarket
+title:
+  en: Tashkent Supermarket
+  ru: Супермаркет Ташкент
+coords: {lat: 40.7312, lng: -73.9952}
+category: [food]
+time: short
+cost: paid
+transit:
+  en: W 4 St
+  ru: W 4 St

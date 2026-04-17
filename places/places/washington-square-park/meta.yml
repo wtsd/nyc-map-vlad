@@ -1,0 +1,11 @@
+id: washington-square-park
+title:
+  en: Washington Square Park
+  ru: Вашингтон-сквер-парк
+coords: {lat: 40.7308, lng: -73.9973}
+category: [parks]
+time: medium
+cost: free
+transit:
+  en: W 4 St
+  ru: W 4 St

@@ -1,0 +1,11 @@
+id: socrates-sculpture-park
+title:
+  en: Socrates Sculpture Park
+  ru: Парк скульптур Сократа
+coords: {lat: 40.7678, lng: -73.9368}
+category: [hidden-gems]
+time: medium
+cost: free
+transit:
+  en: Broadway / 31 St + bus or ferry nearby
+  ru: Broadway / 31 St + bus or ferry nearby
