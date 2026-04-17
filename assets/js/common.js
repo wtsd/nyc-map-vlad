@@ -1,0 +1,77 @@
+(() => {
+  const DEFAULT_LANG = "en";
+
+  const STATUS_LABELS = {
+    none: { en: "Not set", ru: "Не выбрано" },
+    want: { en: "Want to visit", ru: "Хочу посетить" },
+    visited: { en: "Visited", ru: "Посетил" },
+    favorite: { en: "Favorite", ru: "Любимое" },
+    skip: { en: "Skip", ru: "Пропустить" }
+  };
+
+  const CATEGORY_LABELS = {
+    landmarks: { en: "Landmark", ru: "Место" },
+    parks: { en: "Park", ru: "Парк" },
+    museums: { en: "Museum", ru: "Музей" },
+    food: { en: "Food", ru: "Еда" },
+    viewpoints: { en: "Viewpoint", ru: "Вид" },
+    "hidden-gems": { en: "Hidden gem", ru: "Скрытое место" },
+    other: { en: "Other", ru: "Другое" }
+  };
+
+  const TIME_LABELS = {
+    short: { en: "Under 30 min", ru: "До 30 минут" },
+    medium: { en: "Couple of hours", ru: "Пара часов" },
+    full: { en: "Whole day", ru: "Весь день" }
+  };
+
+  const COST_LABELS = {
+    free: { en: "Free", ru: "Бесплатно" },
+    paid: { en: "Paid", ru: "Платно" }
+  };
+
+  function normalizeLang(lang) {
+    return lang === "ru" ? "ru" : DEFAULT_LANG;
+  }
+
+  function getStatusLabel(lang, status) {
+    const safeStatus = status || "none";
+    return STATUS_LABELS[safeStatus]?.[normalizeLang(lang)] || safeStatus;
+  }
+
+  function getCategoryLabel(lang, category) {
+    return CATEGORY_LABELS[category]?.[normalizeLang(lang)] || category || "";
+  }
+
+  function getTimeLabel(lang, time) {
+    return TIME_LABELS[time]?.[normalizeLang(lang)] || time || "";
+  }
+
+  function getCostLabel(lang, cost, price) {
+    if (cost === "free") return COST_LABELS.free[normalizeLang(lang)];
+    if (cost === "paid") {
+      const base = COST_LABELS.paid[normalizeLang(lang)];
+      return price ? `${base} ${price}` : base;
+    }
+    return cost || "";
+  }
+
+  async function copyText(text) {
+    if (!navigator.clipboard?.writeText) return false;
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  window.NYCMapCommon = {
+    normalizeLang,
+    getStatusLabel,
+    getCategoryLabel,
+    getTimeLabel,
+    getCostLabel,
+    copyText
+  };
+})();
