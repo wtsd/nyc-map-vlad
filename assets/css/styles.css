@@ -761,7 +761,8 @@ input[type="search"] {
     background: var(--surface);
     color: var(--text);
     border-radius: 10px;
-    padding: 8px;
+    padding: 5px 8px;
+    font-size: 0.8rem;
     font-weight: 600;
   }
 

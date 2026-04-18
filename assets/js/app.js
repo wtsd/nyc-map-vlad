@@ -178,9 +178,9 @@ function renderPagination(totalItems, totalPages) {
   const prevDisabled = currentPage === 1 ? "disabled" : "";
   const nextDisabled = currentPage === totalPages ? "disabled" : "";
   const html = `
-    <button class="page-btn" onclick="goToPage(${currentPage - 1})" ${prevDisabled} aria-label="Previous page">${lang === "ru" ? "Назад" : "Prev"}</button>
-    <span class="page-info">${lang === "ru" ? "Страница" : "Page"} ${currentPage} / ${totalPages}</span>
-    <button class="page-btn" onclick="goToPage(${currentPage + 1})" ${nextDisabled} aria-label="Next page">${lang === "ru" ? "Вперед" : "Next"}</button>
+    <button class="page-btn" onclick="goToPage(${currentPage - 1})" ${prevDisabled} aria-label="Previous page">${lang === "ru" ? "←" : "←"}</button>
+    <span class="page-info">${currentPage} / ${totalPages}</span>
+    <button class="page-btn" onclick="goToPage(${currentPage + 1})" ${nextDisabled} aria-label="Next page">${lang === "ru" ? "→" : "→"}</button>
   `;
 
   paginations.forEach(pagination => {
@@ -219,7 +219,7 @@ function render() {
     if (locateLabel) locateLabel.textContent = lang === "ru" ? "Где я" : "Locate me";
   }
   if (searchFilter) {
-    searchFilter.placeholder = lang === "ru" ? "Поиск мест" : "Search places";
+    searchFilter.placeholder = lang === "ru" ? "Поиск" : "Search";
   }
   if (shareLabel) shareLabel.textContent = lang === "ru" ? "Поделиться" : "Share";
   if (langLabel) langLabel.textContent = lang === "ru" ? "Язык" : "Language";
@@ -298,9 +298,9 @@ function render() {
 
         <div class="status-row">
           <div class="status-toggle-wrap">
-            <button class="status-btn ${status === "want" ? "active" : ""} ${status !== "none" && status !== "want" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'want')">➕ ${lang === "ru" ? "Хочу" : "Want"}</button>
-            <button class="status-btn ${status === "visited" ? "active" : ""} ${status !== "none" && status !== "visited" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
-            <button class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫 ${lang === "ru" ? "Пропустить" : "Skip"}</button>
+            <button class="status-btn ${status === "want" ? "active" : ""} ${status !== "none" && status !== "want" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'want')">${lang === "ru" ? "Хочу" : "Want"}</button>
+            <button class="status-btn ${status === "visited" ? "active" : ""} ${status !== "none" && status !== "visited" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'visited')">${lang === "ru" ? "Был" : "Visited"}</button>
+            <button class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">${lang === "ru" ? "Пропустить" : "Skip"}</button>
           </div>
         </div>
 
