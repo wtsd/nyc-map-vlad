@@ -5,7 +5,6 @@
     none: { en: "Not set", ru: "Не выбрано" },
     want: { en: "Want to visit", ru: "Хочу посетить" },
     visited: { en: "Visited", ru: "Посетил" },
-    favorite: { en: "Favorite", ru: "Любимое" },
     skip: { en: "Skip", ru: "Пропустить" }
   };
 

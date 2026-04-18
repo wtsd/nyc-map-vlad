@@ -1,8 +1,12 @@
 let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
 let places = [];
 let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
+Object.keys(checklist).forEach(id => {
+  if (checklist[id] === "favorite") checklist[id] = null;
+});
 let mobileView = "list";
 let currentPage = 1;
+let currentStatusFilter = "";
 const pageSize = 25;
 
 function toggleLang() {
@@ -68,7 +72,6 @@ async function copySummary() {
   const grouped = {
     want: [],
     visited: [],
-    favorite: [],
     skip: []
   };
 
@@ -84,14 +87,12 @@ async function copySummary() {
       title: "NYC Map by Vlad and Katya",
       want: "Want to visit",
       visited: "Visited",
-      favorite: "Favorite",
       skip: "Skip"
     },
     ru: {
       title: "Карта Нью-Йорка от Влада и Кати",
       want: "Хочу посетить",
       visited: "Посетил",
-      favorite: "Любимое",
       skip: "Пропустить"
     }
   };
@@ -99,7 +100,7 @@ async function copySummary() {
   const t = labels[lang];
   let out = `${t.title}\n\n`;
 
-  ["want", "visited", "favorite", "skip"].forEach(key => {
+  ["want", "visited", "skip"].forEach(key => {
     if (!grouped[key].length) return;
 
     out += `${t[key]}:\n`;
@@ -117,7 +118,7 @@ async function copySummary() {
 
 function getFilteredPlaces() {
   const category = document.getElementById("categoryFilter")?.value || "";
-  const status = document.getElementById("statusFilter")?.value || "";
+  const status = currentStatusFilter;
   const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
 
   return places.filter(p => {
@@ -139,6 +140,19 @@ function onFiltersChanged() {
   render();
 }
 
+function setStatusFilter(status) {
+  currentStatusFilter = status;
+
+  const tabs = document.querySelectorAll(".status-filter-tab");
+  tabs.forEach(tab => {
+    const isActive = tab.dataset.status === status;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
+
+  onFiltersChanged();
+}
+
 function goToPage(page) {
   const totalPages = Math.max(1, Math.ceil(getFilteredPlaces().length / pageSize));
   currentPage = Math.min(Math.max(page, 1), totalPages);
@@ -146,24 +160,33 @@ function goToPage(page) {
 }
 
 function renderPagination(totalItems, totalPages) {
-  const pagination = document.getElementById("pagination");
-  if (!pagination) return;
+  const paginations = [
+    document.getElementById("paginationTop"),
+    document.getElementById("pagination")
+  ].filter(Boolean);
+
+  if (!paginations.length) return;
 
   if (totalItems <= pageSize) {
-    pagination.innerHTML = "";
-    pagination.classList.add("hidden");
+    paginations.forEach(pagination => {
+      pagination.innerHTML = "";
+      pagination.classList.add("hidden");
+    });
     return;
   }
 
-  pagination.classList.remove("hidden");
   const prevDisabled = currentPage === 1 ? "disabled" : "";
   const nextDisabled = currentPage === totalPages ? "disabled" : "";
-
-  pagination.innerHTML = `
+  const html = `
     <button class="page-btn" onclick="goToPage(${currentPage - 1})" ${prevDisabled} aria-label="Previous page">${lang === "ru" ? "Назад" : "Prev"}</button>
     <span class="page-info">${lang === "ru" ? "Страница" : "Page"} ${currentPage} / ${totalPages}</span>
     <button class="page-btn" onclick="goToPage(${currentPage + 1})" ${nextDisabled} aria-label="Next page">${lang === "ru" ? "Вперед" : "Next"}</button>
   `;
+
+  paginations.forEach(pagination => {
+    pagination.classList.remove("hidden");
+    pagination.innerHTML = html;
+  });
 }
 
 function render() {
@@ -175,7 +198,6 @@ function render() {
   const searchFilter = document.getElementById("searchFilter");
   const statWantLabel = document.getElementById("statWantLabel");
   const statVisitedLabel = document.getElementById("statVisitedLabel");
-  const statFavoriteLabel = document.getElementById("statFavoriteLabel");
   const filtered = getFilteredPlaces();
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
 
@@ -202,9 +224,19 @@ function render() {
   if (searchFilter) {
     searchFilter.placeholder = lang === "ru" ? "Поиск мест" : "Search places";
   }
+  const statusFilterTabs = document.querySelectorAll(".status-filter-tab");
+  const statusTabLabels = lang === "ru"
+    ? { "": "Все места", want: "Хочу", skip: "Пропустить", visited: "Был" }
+    : { "": "All places", want: "Want", skip: "Skip", visited: "Visited" };
+  statusFilterTabs.forEach(tab => {
+    const statusKey = tab.dataset.status || "";
+    tab.textContent = statusTabLabels[statusKey] || tab.textContent;
+    const isActive = statusKey === currentStatusFilter;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
   if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "➕ Хочу" : "➕ Want";
   if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "✅ Был" : "✅ Visited";
-  if (statFavoriteLabel) statFavoriteLabel.textContent = lang === "ru" ? "❤️ Любимое" : "❤️ Favorite";
 
   container.innerHTML = "";
 
@@ -261,10 +293,9 @@ function render() {
 
         <div class="status-row">
           <div class="status-toggle-wrap">
-            <button class="status-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">➕ ${lang === "ru" ? "Хочу" : "Want"}</button>
-            <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
-            <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">❤️</button>
-            <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫</button>
+            <button class="status-btn ${status === "want" ? "active" : ""} ${status !== "none" && status !== "want" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'want')">➕ ${lang === "ru" ? "Хочу" : "Want"}</button>
+            <button class="status-btn ${status === "visited" ? "active" : ""} ${status !== "none" && status !== "visited" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
+            <button class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫 ${lang === "ru" ? "Пропустить" : "Skip"}</button>
           </div>
         </div>
 
@@ -344,26 +375,22 @@ function updateStats(filtered) {
   const counts = {
     total: filtered.length,
     want: 0,
-    visited: 0,
-    favorite: 0
+    visited: 0
   };
 
   filtered.forEach(p => {
     const status = checklist[p.id];
     if (status === "want") counts.want += 1;
     if (status === "visited") counts.visited += 1;
-    if (status === "favorite") counts.favorite += 1;
   });
 
   const total = document.getElementById("statTotal");
   const want = document.getElementById("statWant");
   const visited = document.getElementById("statVisited");
-  const favorite = document.getElementById("statFavorite");
 
   if (total) total.textContent = counts.total;
   if (want) want.textContent = counts.want;
   if (visited) visited.textContent = counts.visited;
-  if (favorite) favorite.textContent = counts.favorite;
 }
 loadData();
 applyMobileTabState();
