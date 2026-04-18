@@ -235,7 +235,11 @@ function render() {
               <a class="card-title-link" href="${detailsUrl}">${title}</a>
             </h3>
             <button class="copy-btn card-copy-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
-              ${lang === "ru" ? "Копировать" : "Copy"}
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
+              </svg>
+              <span class="sr-only">${lang === "ru" ? "Копировать" : "Copy"}</span>
             </button>
           </div>
           <div class="card-category">${category}</div>

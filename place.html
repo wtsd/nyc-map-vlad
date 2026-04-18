@@ -29,29 +29,31 @@
 
   <main class="layout place-layout">
     <section class="place-main">
-      <article class="place-card">
+      <article class="place-card card">
         <div class="place-image-wrap">
           <img id="placeImage" src="" alt="" loading="lazy"
                onerror="this.style.display='none'; document.getElementById('placeImageFallback').classList.remove('hidden');">
           <div id="placeImageFallback" class="card-image-fallback hidden">Photo coming later</div>
         </div>
 
-        <div class="place-body">
+        <div class="place-body card-body">
           <div class="card-topline">
             <h2 id="placeName" class="card-title">Loading...</h2>
             <div id="placeCategory" class="card-category"></div>
           </div>
 
-          <div class="meta-row">
-            <span id="placeTime" class="chip"></span>
-            <span id="placeCost" class="chip"></span>
+          <div class="transit-row">
+            <a id="placeTransitLink" class="address-btn" href="#" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">📍</span>
+              <span id="placeTransit"></span>
+            </a>
           </div>
 
           <p id="placeSummary" class="summary"></p>
 
-          <div class="transit-row">
-            <span id="transitLabel">Address:</span>
-            <strong id="placeTransit"></strong>
+          <div class="meta-row">
+            <span id="placeTime" class="chip"></span>
+            <span id="placeCost" class="chip"></span>
           </div>
 
           <div class="status-row">

@@ -319,7 +319,14 @@ input[type="search"] {
 .card-title-wrap {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+}
+
+.card-title-wrap .card-title {
+  flex: 1;
   min-width: 0;
 }
 
@@ -341,13 +348,14 @@ input[type="search"] {
 }
 
 .card-copy-btn {
-  min-width: auto;
-  min-height: auto;
-  padding: 6px 10px;
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  min-height: 34px;
+  padding: 0;
   border: 1px solid var(--border);
   background: transparent;
   color: var(--muted);
-  font-size: 0.84rem;
 }
 
 .card-copy-btn:hover {
@@ -511,12 +519,6 @@ input[type="search"] {
   min-width: 40px;
   min-height: 40px;
   padding: 0;
-}
-
-.card-copy-btn {
-  min-width: auto;
-  min-height: auto;
-  padding: 6px 10px;
 }
 
 .icon-only-btn {
@@ -780,11 +782,7 @@ input[type="search"] {
 }
 
 .place-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
+  border-radius: 18px;
 }
 
 .place-image-wrap {
@@ -801,7 +799,20 @@ input[type="search"] {
 }
 
 .place-body {
-  padding: 20px;
+  padding: 16px;
+}
+
+.place-page .card-topline {
+  align-items: flex-start;
+}
+
+.place-page .card-category {
+  padding-top: 0;
+}
+
+.place-page .meta-row {
+  margin-top: 0;
+  justify-content: flex-end;
 }
 
 
