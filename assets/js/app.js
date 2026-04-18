@@ -172,6 +172,9 @@ function render() {
   const tabList = document.getElementById("tabList");
   const tabMap = document.getElementById("tabMap");
   const searchFilter = document.getElementById("searchFilter");
+  const statWantLabel = document.getElementById("statWantLabel");
+  const statVisitedLabel = document.getElementById("statVisitedLabel");
+  const statFavoriteLabel = document.getElementById("statFavoriteLabel");
   const filtered = getFilteredPlaces();
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
 
@@ -193,6 +196,9 @@ function render() {
   if (searchFilter) {
     searchFilter.placeholder = lang === "ru" ? "Поиск мест" : "Search places";
   }
+  if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "➕ Хочу" : "➕ Want";
+  if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "✅ Был" : "✅ Visited";
+  if (statFavoriteLabel) statFavoriteLabel.textContent = lang === "ru" ? "❤️ Любимое" : "❤️ Favorite";
 
   container.innerHTML = "";
 
@@ -218,7 +224,14 @@ function render() {
 
       <div class="card-body">
         <div class="card-topline">
-          <h3 class="card-title">${title}</h3>
+          <div class="card-title-wrap">
+            <h3 class="card-title">
+              <a class="card-title-link" href="${detailsUrl}">${title}</a>
+            </h3>
+            <button class="copy-btn card-copy-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
+              ${lang === "ru" ? "Копировать" : "Copy"}
+            </button>
+          </div>
           <div class="card-category">${category}</div>
         </div>
 
@@ -242,30 +255,6 @@ function render() {
             <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
             <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">❤️</button>
             <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫</button>
-          </div>
-          <div class="status-actions-wrap">
-            <button class="copy-btn icon-btn icon-only-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
-              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
-                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
-              </svg>
-              <span class="sr-only btn-label">${lang === "ru" ? "Копировать" : "Copy"}</span>
-            </button>
-            <a class="copy-btn icon-btn icon-only-btn" href="${NYCMapCommon.getMapsUrl(p, lang)}" target="_blank" rel="noopener noreferrer" aria-label="${lang === "ru" ? "Открыть на карте" : "Open in Maps"}" title="${lang === "ru" ? "Карта" : "Maps"}">
-              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M9.5 4.75a6 6 0 0 1 9 5.2c0 3.63-4.5 8.8-4.5 8.8s-4.5-5.17-4.5-8.8a6 6 0 0 1 0-5.2z"></path>
-                <circle cx="14" cy="10" r="2.2"></circle>
-                <path d="M4 7.5v11.75l6-2.25 8 2.25 2-11.75-8-2.25z"></path>
-              </svg>
-              <span class="sr-only btn-label">${lang === "ru" ? "Карта" : "Maps"}</span>
-            </a>
-            <a class="primary-link-btn icon-btn icon-only-btn" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}" title="${lang === "ru" ? "Открыть" : "Open"}">
-              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M7 17 17 7"></path>
-                <path d="M7 7h10v10"></path>
-              </svg>
-              <span class="sr-only btn-label">${lang === "ru" ? "Открыть" : "Open"}</span>
-            </a>
           </div>
         </div>
 
