@@ -116,11 +116,19 @@ async function copySummary() {
 function getFilteredPlaces() {
   const category = document.getElementById("categoryFilter")?.value || "";
   const status = document.getElementById("statusFilter")?.value || "";
+  const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
 
   return places.filter(p => {
     const categoryOk = !category || (Array.isArray(p.category) && p.category.includes(category));
     const statusOk = !status || checklist[p.id] === status;
-    return categoryOk && statusOk;
+    if (!categoryOk || !statusOk) return false;
+    if (!search) return true;
+
+    const title = `${p.title?.en || ""} ${p.title?.ru || ""}`.toLowerCase();
+    const summary = `${p.summary?.en || ""} ${p.summary?.ru || ""}`.toLowerCase();
+    const address = `${p.address?.en || ""} ${p.address?.ru || ""}`.toLowerCase();
+    const categories = (p.category || []).join(" ").toLowerCase();
+    return title.includes(search) || summary.includes(search) || address.includes(search) || categories.includes(search);
   });
 }
 
@@ -129,6 +137,7 @@ function render() {
   const resultsCount = document.getElementById("resultsCount");
   const tabList = document.getElementById("tabList");
   const tabMap = document.getElementById("tabMap");
+  const searchFilter = document.getElementById("searchFilter");
   const filtered = getFilteredPlaces();
 
   if (!container) return;
@@ -140,6 +149,9 @@ function render() {
   }
   if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
   if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
+  if (searchFilter) {
+    searchFilter.placeholder = lang === "ru" ? "Поиск мест" : "Search places";
+  }
 
   container.innerHTML = "";
 
@@ -179,19 +191,13 @@ function render() {
         <p class="summary">${summary}</p>
 
         <div class="status-row">
-          <button class="status-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">➕ ${lang === "ru" ? "Хочу" : "Want"}</button>
-          <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
-          <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">⭐ ${lang === "ru" ? "Любимое" : "Favorite"}</button>
-          <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫 ${lang === "ru" ? "Пропустить" : "Skip"}</button>
-        </div>
-
-        <div class="meta-row">
-          <span class="chip">${getTimeLabel(p.time)}</span>
-          <span class="chip">${getCostLabel(p.cost, p.price)}</span>
-        </div>
-
-        <div class="card-footer">
-          <div class="card-footer-actions">
+          <div class="status-toggle-wrap">
+            <button class="status-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">➕ ${lang === "ru" ? "Хочу" : "Want"}</button>
+            <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
+            <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">⭐ ${lang === "ru" ? "Любимое" : "Favorite"}</button>
+            <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫 ${lang === "ru" ? "Пропустить" : "Skip"}</button>
+          </div>
+          <div class="status-actions-wrap">
             <button class="copy-btn icon-btn icon-only-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
               <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <rect x="9" y="9" width="11" height="11" rx="2"></rect>
@@ -215,6 +221,11 @@ function render() {
               <span class="sr-only btn-label">${lang === "ru" ? "Открыть" : "Open"}</span>
             </a>
           </div>
+        </div>
+
+        <div class="meta-row">
+          <span class="chip ${p.time === "short" ? "is-muted" : ""}">${getTimeLabel(p.time)}</span>
+          <span class="chip ${p.cost === "free" ? "is-muted" : ""}">${getCostLabel(p.cost, p.price)}</span>
         </div>
       </div>
     `;

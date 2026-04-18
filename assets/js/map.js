@@ -4,14 +4,16 @@ let markersById = {};
 
 function initMap(allPlaces) {
   map = L.map("map", {
-    zoomControl: true
+    zoomControl: true,
+    preferCanvas: true
   }).setView([40.7128, -74.0060], 11);
 
   window.map = map;
 
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: "&copy; OpenStreetMap"
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    maxZoom: 20,
+    subdomains: "abcd",
+    attribution: "&copy; OpenStreetMap &copy; CARTO"
   }).addTo(map);
 
   markersLayer = L.layerGroup().addTo(map);
@@ -26,7 +28,13 @@ function refreshMap(currentPlaces) {
 
   currentPlaces.forEach(p => {
     const title = p.title?.[lang] || p.title?.en || p.id;
-    const marker = L.marker(p.coords);
+    const marker = L.circleMarker(p.coords, {
+      radius: 8,
+      color: "#0f172a",
+      weight: 2,
+      fillColor: "#3b82f6",
+      fillOpacity: 0.92
+    });
 
     marker.bindPopup(`
       <strong>${title}</strong><br>
