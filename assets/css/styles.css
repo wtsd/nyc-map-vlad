@@ -25,6 +25,8 @@ html, body {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -151,30 +153,33 @@ select:hover,
 .stats-strip {
   max-width: 1480px;
   margin: 0 auto;
-  padding: 0 24px 16px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  padding: 0 24px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .stat-box {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 14px 16px;
-  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+  border-radius: 999px;
+  padding: 4px 10px;
+  box-shadow: none;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
 .stat-number {
-  font-size: 1.45rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 .stat-label {
-  margin-top: 4px;
+  margin-top: 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.8rem;
 }
 
 .header-buttons {
@@ -190,6 +195,8 @@ select:hover,
   grid-template-columns: minmax(420px, 1.05fr) minmax(360px, 0.95fr);
   gap: 24px;
   align-items: start;
+  width: 100%;
+  flex: 1;
 }
 
 .sidebar-header,
@@ -320,12 +327,25 @@ select:hover,
 }
 
 .transit-row {
-  display: flex;
-  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.address-btn {
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 16px;
-  color: var(--muted);
-  font-size: 0.98rem;
+  gap: 8px;
+  text-decoration: none;
+  color: #0f2f67;
+  background: #eef3ff;
+  border: 1px solid #dce7ff;
+  border-radius: 10px;
+  padding: 7px 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.address-btn:hover {
+  background: #e6edff;
 }
 
 .mta-icon {
@@ -356,6 +376,7 @@ select:hover,
   min-width: 40px;
   padding: 0 10px;
   border-radius: 12px;
+  background: transparent;
 }
 
 .status-btn.active {
@@ -450,8 +471,38 @@ select:hover,
   display: none;
 }
 
+.mobile-tabs {
+  display: none;
+}
+
 .hidden {
   display: none;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: #fff;
+  margin-top: 10px;
+}
+
+.site-footer-inner {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer-inner a {
+  color: #1f3b72;
+  text-decoration: none;
 }
 
 @media (max-width: 1100px) {
@@ -469,6 +520,67 @@ select:hover,
 }
 
 @media (max-width: 760px) {
+  .topbar-inner {
+    padding: 12px 14px;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand h1 {
+    font-size: 1.2rem;
+  }
+
+  .brand p {
+    font-size: 0.82rem;
+    margin-top: 4px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .filters {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header-buttons .secondary-btn {
+    height: 38px;
+    min-height: 38px;
+  }
+
+  .stats-strip {
+    padding: 0 14px 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 6px;
+  }
+
+  .mobile-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px 12px 0;
+  }
+
+  .mobile-tab {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: 600;
+  }
+
+  .mobile-tab.active {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+  }
+
   .place-page .topbar-inner {
     padding: 12px 14px;
     align-items: center;
@@ -497,7 +609,7 @@ select:hover,
   }
 
   .mobile-map-toggle {
-    display: inline-flex;
+    display: none;
     align-items: center;
   }
 
@@ -583,22 +695,21 @@ select:hover,
   }
 
   .stats-strip {
-    padding: 0 16px 12px;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    padding: 0 14px 10px;
+    gap: 6px;
   }
 
   .stat-box {
-    border-radius: 12px;
-    padding: 10px 12px;
+    border-radius: 999px;
+    padding: 4px 8px;
   }
 
   .stat-number {
-    font-size: 1.2rem;
+    font-size: 0.88rem;
   }
 
   .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.76rem;
   }
 
   .layout {
@@ -654,6 +765,11 @@ select:hover,
     font-size: 0.88rem;
   }
 
+  .address-btn {
+    font-size: 0.86rem;
+    padding: 6px 8px;
+  }
+
   .status-row {
     gap: 6px;
     margin-bottom: 10px;
@@ -696,5 +812,12 @@ select:hover,
   #map {
     height: 280px;
     min-height: 280px;
+  }
+
+  .site-footer-inner {
+    padding: 12px;
+    font-size: 0.8rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
