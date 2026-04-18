@@ -139,6 +139,7 @@ function render() {
   const title = NYCMapCommon.getLocalizedText(lang, currentPlace.title, "");
   const summary = NYCMapCommon.getLocalizedText(lang, currentPlace.summary, "");
   const address = NYCMapCommon.getPlaceAddress(currentPlace, lang);
+  const mapsUrl = NYCMapCommon.getMapsUrl(currentPlace, lang);
   const category = Array.isArray(currentPlace.category) && currentPlace.category.length
     ? getCategoryLabel(currentPlace.category[0])
     : "";
@@ -152,13 +153,17 @@ function render() {
   document.getElementById("placeCost").textContent = getCostLabel(currentPlace.cost, currentPlace.price);
   document.getElementById("placeSummary").textContent = summary;
   document.getElementById("placeTransit").textContent = address;
-  document.getElementById("placeImage").src = currentPlace.image || "assets/images/placeholders/cover.jpg";
-  document.getElementById("placeImage").alt = title;
+  const placeImage = document.getElementById("placeImage");
+  const placeImageFallback = document.getElementById("placeImageFallback");
+  placeImage.style.display = "block";
+  placeImageFallback.classList.add("hidden");
+  placeImage.src = currentPlace.image || "assets/images/placeholders/cover.jpg";
+  placeImage.alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
-  document.getElementById("openMapLink").href = NYCMapCommon.getMapsUrl(currentPlace, lang);
+  document.getElementById("placeTransitLink").href = mapsUrl;
+  document.getElementById("openMapLink").href = mapsUrl;
   document.getElementById("openMapLink").setAttribute("target", "_blank");
   document.getElementById("openMapLink").setAttribute("rel", "noopener noreferrer");
-  document.getElementById("transitLabel").textContent = t.address;
 
   const statusButtons = [
     { id: "btnWant", label: t.wantBtn },
