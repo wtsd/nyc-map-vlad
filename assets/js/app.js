@@ -2,6 +2,8 @@ let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
 let places = [];
 let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
 let mobileView = "list";
+let currentPage = 1;
+const pageSize = 25;
 
 function toggleLang() {
   lang = lang === "en" ? "ru" : "en";
@@ -132,6 +134,38 @@ function getFilteredPlaces() {
   });
 }
 
+function onFiltersChanged() {
+  currentPage = 1;
+  render();
+}
+
+function goToPage(page) {
+  const totalPages = Math.max(1, Math.ceil(getFilteredPlaces().length / pageSize));
+  currentPage = Math.min(Math.max(page, 1), totalPages);
+  render();
+}
+
+function renderPagination(totalItems, totalPages) {
+  const pagination = document.getElementById("pagination");
+  if (!pagination) return;
+
+  if (totalItems <= pageSize) {
+    pagination.innerHTML = "";
+    pagination.classList.add("hidden");
+    return;
+  }
+
+  pagination.classList.remove("hidden");
+  const prevDisabled = currentPage === 1 ? "disabled" : "";
+  const nextDisabled = currentPage === totalPages ? "disabled" : "";
+
+  pagination.innerHTML = `
+    <button class="page-btn" onclick="goToPage(${currentPage - 1})" ${prevDisabled} aria-label="Previous page">${lang === "ru" ? "Назад" : "Prev"}</button>
+    <span class="page-info">${lang === "ru" ? "Страница" : "Page"} ${currentPage} / ${totalPages}</span>
+    <button class="page-btn" onclick="goToPage(${currentPage + 1})" ${nextDisabled} aria-label="Next page">${lang === "ru" ? "Вперед" : "Next"}</button>
+  `;
+}
+
 function render() {
   const container = document.getElementById("list");
   const resultsCount = document.getElementById("resultsCount");
@@ -139,13 +173,20 @@ function render() {
   const tabMap = document.getElementById("tabMap");
   const searchFilter = document.getElementById("searchFilter");
   const filtered = getFilteredPlaces();
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+
+  if (currentPage > totalPages) currentPage = totalPages;
+  const pageStart = (currentPage - 1) * pageSize;
+  const paginatedPlaces = filtered.slice(pageStart, pageStart + pageSize);
 
   if (!container) return;
 
   updateStats(filtered);
 
   if (resultsCount) {
-    resultsCount.textContent = lang === "ru" ? `${filtered.length} мест` : `${filtered.length} places`;
+    resultsCount.textContent = lang === "ru"
+      ? `${filtered.length} мест • стр. ${currentPage}/${totalPages}`
+      : `${filtered.length} places • page ${currentPage}/${totalPages}`;
   }
   if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
   if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
@@ -155,7 +196,7 @@ function render() {
 
   container.innerHTML = "";
 
-  filtered.forEach(p => {
+  paginatedPlaces.forEach(p => {
     const status = checklist[p.id] || "none";
     const imageSrc = p.image || "assets/images/placeholders/cover.jpg";
     const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
@@ -190,12 +231,17 @@ function render() {
 
         <p class="summary">${summary}</p>
 
+        <div class="meta-row">
+          <span class="chip ${p.time === "short" ? "is-muted" : ""}">${getTimeLabel(p.time)}</span>
+          <span class="chip ${p.cost === "free" ? "is-muted" : ""}">${getCostLabel(p.cost, p.price)}</span>
+        </div>
+
         <div class="status-row">
           <div class="status-toggle-wrap">
             <button class="status-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">➕ ${lang === "ru" ? "Хочу" : "Want"}</button>
             <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
-            <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">⭐ ${lang === "ru" ? "Любимое" : "Favorite"}</button>
-            <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫 ${lang === "ru" ? "Пропустить" : "Skip"}</button>
+            <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">❤️</button>
+            <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫</button>
           </div>
           <div class="status-actions-wrap">
             <button class="copy-btn icon-btn icon-only-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
@@ -223,10 +269,6 @@ function render() {
           </div>
         </div>
 
-        <div class="meta-row">
-          <span class="chip ${p.time === "short" ? "is-muted" : ""}">${getTimeLabel(p.time)}</span>
-          <span class="chip ${p.cost === "free" ? "is-muted" : ""}">${getCostLabel(p.cost, p.price)}</span>
-        </div>
       </div>
     `;
 
@@ -236,6 +278,8 @@ function render() {
   if (typeof refreshMap === "function") {
     refreshMap(filtered);
   }
+
+  renderPagination(filtered.length, totalPages);
 
   applyMobileTabState();
 }
