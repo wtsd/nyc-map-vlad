@@ -17,8 +17,8 @@
 
       <div class="topbar-actions">
         <div class="filters">
-          <input id="searchFilter" type="search" placeholder="Search places" oninput="render()" aria-label="Search places" />
-          <select id="categoryFilter" onchange="render()">
+          <input id="searchFilter" type="search" placeholder="Search places" oninput="onFiltersChanged()" aria-label="Search places" />
+          <select id="categoryFilter" onchange="onFiltersChanged()">
             <option value="">All categories</option>
             <option value="landmarks">Landmarks</option>
             <option value="parks">Parks</option>
@@ -29,7 +29,7 @@
             <option value="other">Other</option>
           </select>
 
-          <select id="statusFilter" onchange="render()">
+          <select id="statusFilter" onchange="onFiltersChanged()">
             <option value="">All statuses</option>
             <option value="want">Want</option>
             <option value="visited">Visited</option>
@@ -40,8 +40,10 @@
 
         <div class="header-buttons">
           <button class="secondary-btn icon-btn" onclick="copySummary()" aria-label="Copy summary">
-            <span class="btn-icon" aria-hidden="true">📋</span>
-            <span class="btn-label">Summary</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M16 8a3 3 0 1 0-2.83-4H13a3 3 0 0 0 .17 1l-6.2 3.1a3 3 0 1 0 0 7.8l6.2 3.1A3 3 0 1 0 14 17a2.9 2.9 0 0 0-.83.12l-6.2-3.1a3.08 3.08 0 0 0 0-4.04l6.2-3.1A2.9 2.9 0 0 0 14 7a3 3 0 0 0 2-.77z"></path>
+            </svg>
+            <span class="sr-only btn-label">Summary</span>
           </button>
           <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
             <span class="btn-icon" aria-hidden="true">🌐</span>
@@ -69,12 +71,11 @@
         <div class="stat-label">Favorite</div>
       </div>
     </div>
+    <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
+      <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>
+      <button id="tabMap" class="mobile-tab" onclick="switchMobileView('map')" role="tab" aria-selected="false">Map</button>
+    </div>
   </header>
-
-  <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
-    <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>
-    <button id="tabMap" class="mobile-tab" onclick="switchMobileView('map')" role="tab" aria-selected="false">Map</button>
-  </div>
 
   <main class="layout">
     <section id="listSection" class="sidebar-section">
@@ -86,6 +87,7 @@
       </div>
 
       <div id="list" class="card-list"></div>
+      <div id="pagination" class="pagination"></div>
     </section>
 
     <aside id="mapSection" class="map-section">
