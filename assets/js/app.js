@@ -171,6 +171,7 @@ function render() {
   const resultsCount = document.getElementById("resultsCount");
   const tabList = document.getElementById("tabList");
   const tabMap = document.getElementById("tabMap");
+  const locateBtn = document.getElementById("locateBtn");
   const searchFilter = document.getElementById("searchFilter");
   const statWantLabel = document.getElementById("statWantLabel");
   const statVisitedLabel = document.getElementById("statVisitedLabel");
@@ -193,6 +194,11 @@ function render() {
   }
   if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
   if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
+  if (locateBtn) {
+    locateBtn.setAttribute("aria-label", lang === "ru" ? "Показать мое местоположение" : "Show my location");
+    const locateLabel = locateBtn.querySelector(".btn-label");
+    if (locateLabel) locateLabel.textContent = lang === "ru" ? "Где я" : "Locate me";
+  }
   if (searchFilter) {
     searchFilter.placeholder = lang === "ru" ? "Поиск мест" : "Search places";
   }

@@ -1,6 +1,8 @@
 let map;
 let markersLayer;
 let markersById = {};
+let userLocationMarker;
+let userLocationAccuracyCircle;
 
 function initMap(allPlaces) {
   map = L.map("map", {
@@ -62,4 +64,64 @@ function scrollToCard(id) {
     el.style.outline = "";
     el.style.outlineOffset = "";
   }, 1500);
+}
+
+function locateUser() {
+  if (!map) return;
+
+  if (!navigator.geolocation) {
+    alert(lang === "ru" ? "Геолокация не поддерживается браузером" : "Geolocation is not supported by your browser");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude, accuracy } = position.coords;
+      const userLatLng = [latitude, longitude];
+
+      if (userLocationMarker) {
+        userLocationMarker.setLatLng(userLatLng);
+      } else {
+        userLocationMarker = L.circleMarker(userLatLng, {
+          radius: 9,
+          color: "#1d4ed8",
+          weight: 3,
+          fillColor: "#60a5fa",
+          fillOpacity: 0.95
+        }).addTo(map);
+      }
+
+      if (userLocationAccuracyCircle) {
+        userLocationAccuracyCircle.setLatLng(userLatLng);
+        userLocationAccuracyCircle.setRadius(accuracy);
+      } else {
+        userLocationAccuracyCircle = L.circle(userLatLng, {
+          radius: accuracy,
+          color: "#3b82f6",
+          weight: 1,
+          fillColor: "#93c5fd",
+          fillOpacity: 0.22
+        }).addTo(map);
+      }
+
+      userLocationMarker.bindPopup(
+        `${lang === "ru" ? "Вы здесь" : "You are here"}<br>${lang === "ru" ? "Точность" : "Accuracy"}: ±${Math.round(accuracy)}m`
+      );
+      userLocationMarker.openPopup();
+      map.setView(userLatLng, Math.max(map.getZoom(), 14));
+    },
+    (error) => {
+      const messages = {
+        1: lang === "ru" ? "Доступ к геолокации запрещен" : "Location access was denied",
+        2: lang === "ru" ? "Не удалось определить местоположение" : "Could not determine location",
+        3: lang === "ru" ? "Время ожидания геолокации истекло" : "Location request timed out"
+      };
+      alert(messages[error.code] || (lang === "ru" ? "Ошибка геолокации" : "Geolocation error"));
+    },
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 60000
+    }
+  );
 }
