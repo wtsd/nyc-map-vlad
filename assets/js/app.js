@@ -1,6 +1,7 @@
 let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
 let places = [];
 let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
+let mobileView = "list";
 
 function toggleLang() {
   lang = lang === "en" ? "ru" : "en";
@@ -126,6 +127,8 @@ function getFilteredPlaces() {
 function render() {
   const container = document.getElementById("list");
   const resultsCount = document.getElementById("resultsCount");
+  const tabList = document.getElementById("tabList");
+  const tabMap = document.getElementById("tabMap");
   const filtered = getFilteredPlaces();
 
   if (!container) return;
@@ -135,6 +138,8 @@ function render() {
   if (resultsCount) {
     resultsCount.textContent = lang === "ru" ? `${filtered.length} мест` : `${filtered.length} places`;
   }
+  if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
+  if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
 
   container.innerHTML = "";
 
@@ -164,23 +169,25 @@ function render() {
           <div class="card-category">${category}</div>
         </div>
 
-        <div class="meta-row">
-          <span class="chip">${getTimeLabel(p.time)}</span>
-          <span class="chip">${getCostLabel(p.cost, p.price)}</span>
+        <div class="transit-row">
+          <a class="address-btn" href="${NYCMapCommon.getMapsUrl(p, lang)}" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">📍</span>
+            <span>${address}</span>
+          </a>
         </div>
 
         <p class="summary">${summary}</p>
 
-        <div class="transit-row">
-          <span>${lang === "ru" ? "Адрес:" : "Address:"}</span>
-          <strong>${address}</strong>
+        <div class="status-row">
+          <button class="status-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">➕ ${lang === "ru" ? "Хочу" : "Want"}</button>
+          <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">✅ ${lang === "ru" ? "Был" : "Visited"}</button>
+          <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">⭐ ${lang === "ru" ? "Любимое" : "Favorite"}</button>
+          <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">🚫 ${lang === "ru" ? "Пропустить" : "Skip"}</button>
         </div>
 
-        <div class="status-row">
-          <button class="status-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">${lang === "ru" ? "Хочу" : "Want"}</button>
-          <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">${lang === "ru" ? "Был" : "Visited"}</button>
-          <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">${lang === "ru" ? "Любимое" : "Favorite"}</button>
-          <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">${lang === "ru" ? "Пропустить" : "Skip"}</button>
+        <div class="meta-row">
+          <span class="chip">${getTimeLabel(p.time)}</span>
+          <span class="chip">${getCostLabel(p.cost, p.price)}</span>
         </div>
 
         <div class="card-footer">
@@ -218,6 +225,8 @@ function render() {
   if (typeof refreshMap === "function") {
     refreshMap(filtered);
   }
+
+  applyMobileTabState();
 }
 
 async function loadData() {
@@ -249,6 +258,34 @@ function toggleMap() {
   }, 50);
 }
 
+function switchMobileView(view) {
+  mobileView = view === "map" ? "map" : "list";
+  applyMobileTabState();
+}
+
+function applyMobileTabState() {
+  const listSection = document.getElementById("listSection");
+  const mapSection = document.getElementById("mapSection");
+  const tabList = document.getElementById("tabList");
+  const tabMap = document.getElementById("tabMap");
+  const mobile = window.matchMedia("(max-width: 760px)").matches;
+
+  if (!listSection || !mapSection || !tabList || !tabMap) return;
+
+  if (!mobile) {
+    listSection.classList.remove("mobile-hidden");
+    mapSection.classList.remove("mobile-hidden");
+  } else {
+    listSection.classList.toggle("mobile-hidden", mobileView === "map");
+    mapSection.classList.toggle("mobile-hidden", mobileView !== "map");
+  }
+
+  tabList.classList.toggle("active", mobileView === "list");
+  tabMap.classList.toggle("active", mobileView === "map");
+  tabList.setAttribute("aria-selected", String(mobileView === "list"));
+  tabMap.setAttribute("aria-selected", String(mobileView === "map"));
+}
+
 function updateStats(filtered) {
   const counts = {
     total: filtered.length,
@@ -275,3 +312,7 @@ function updateStats(filtered) {
   if (favorite) favorite.textContent = counts.favorite;
 }
 loadData();
+applyMobileTabState();
+window.addEventListener("resize", applyMobileTabState);
+const yearEl = document.getElementById("footerYear");
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
