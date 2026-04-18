@@ -600,8 +600,8 @@ input[type="search"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin: 6px 0 14px;
+  gap: 8px;
+  margin: 4px 0 10px;
 }
 
 .page-btn {
@@ -609,7 +609,8 @@ input[type="search"] {
   background: var(--surface);
   color: var(--text);
   border-radius: 10px;
-  padding: 6px 12px;
+  padding: 4px 10px;
+  font-size: 0.88rem;
   cursor: pointer;
 }
 
@@ -620,7 +621,7 @@ input[type="search"] {
 
 .page-info {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.84rem;
 }
 
 .hidden {
