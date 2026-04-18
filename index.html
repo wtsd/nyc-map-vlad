@@ -60,15 +60,15 @@
       </div>
       <div class="stat-box">
         <div class="stat-number" id="statWant">0</div>
-        <div class="stat-label">Want</div>
+        <div class="stat-label" id="statWantLabel">➕ Want</div>
       </div>
       <div class="stat-box">
         <div class="stat-number" id="statVisited">0</div>
-        <div class="stat-label">Visited</div>
+        <div class="stat-label" id="statVisitedLabel">✅ Visited</div>
       </div>
       <div class="stat-box">
         <div class="stat-number" id="statFavorite">0</div>
-        <div class="stat-label">Favorite</div>
+        <div class="stat-label" id="statFavoriteLabel">❤️ Favorite</div>
       </div>
     </div>
     <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
@@ -81,7 +81,6 @@
     <section id="listSection" class="sidebar-section">
       <div class="sidebar-header">
         <div>
-          <h2>Places</h2>
           <p id="resultsCount">Loading...</p>
         </div>
       </div>
@@ -93,7 +92,6 @@
     <aside id="mapSection" class="map-section">
       <div class="map-card">
         <div class="map-card-header">
-          <h2>Map View</h2>
           <button class="secondary-btn mobile-map-toggle icon-btn" onclick="toggleMap()" aria-label="Toggle map">
             <span class="btn-icon" aria-hidden="true">🗺️</span>
             <span class="btn-label">Show / hide</span>

@@ -316,12 +316,42 @@ input[type="search"] {
   margin-bottom: 10px;
 }
 
+.card-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .card-title {
   margin: 0;
   font-size: 1.65rem;
   line-height: 1.1;
   letter-spacing: -0.035em;
   font-weight: 800;
+}
+
+.card-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title-link:hover {
+  text-decoration: underline;
+}
+
+.card-copy-btn {
+  min-width: auto;
+  min-height: auto;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.card-copy-btn:hover {
+  background: rgba(229, 234, 240, 0.38);
 }
 
 .card-category {
@@ -404,14 +434,6 @@ input[type="search"] {
   flex-wrap: wrap;
   margin-bottom: 14px;
   align-items: center;
-  justify-content: space-between;
-}
-
-.status-actions-wrap {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
 .status-toggle-wrap {
@@ -489,6 +511,12 @@ input[type="search"] {
   min-width: 40px;
   min-height: 40px;
   padding: 0;
+}
+
+.card-copy-btn {
+  min-width: auto;
+  min-height: auto;
+  padding: 6px 10px;
 }
 
 .icon-only-btn {
