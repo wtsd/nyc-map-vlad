@@ -225,19 +225,13 @@ function render() {
   if (langLabel) langLabel.textContent = lang === "ru" ? "Язык" : "Language";
   const statusFilterTabs = document.querySelectorAll(".status-filter-tab");
   const statusTabLabels = lang === "ru"
-    ? { "": "Все места", want: "Хочу", skip: "Пропустить", visited: "Был" }
-    : { "": "All places", want: "Want", skip: "Skip", visited: "Visited" };
+    ? { "": "Все", want: "Хочу", skip: "Пропустить", visited: "Был" }
+    : { "": "All", want: "Want", skip: "Skip", visited: "Visited" };
   statusFilterTabs.forEach(tab => {
     const statusKey = tab.dataset.status || "";
     const label = tab.querySelector(".stat-filter-label");
     if (label) {
-      const prefixByStatus = {
-        want: "➕ ",
-        skip: "🚫 ",
-        visited: "✅ "
-      };
-      const prefix = prefixByStatus[statusKey] || "";
-      label.textContent = `${prefix}${statusTabLabels[statusKey] || ""}`.trim();
+      label.textContent = statusTabLabels[statusKey] || "";
     } else {
       tab.textContent = statusTabLabels[statusKey] || tab.textContent;
     }
@@ -245,9 +239,9 @@ function render() {
     tab.classList.toggle("active", isActive);
     tab.setAttribute("aria-selected", String(isActive));
   });
-  if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "➕ Хочу" : "➕ Want";
-  if (statSkipLabel) statSkipLabel.textContent = lang === "ru" ? "🚫 Пропустить" : "🚫 Skip";
-  if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "✅ Был" : "✅ Visited";
+  if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "Хочу" : "Want";
+  if (statSkipLabel) statSkipLabel.textContent = lang === "ru" ? "Пропустить" : "Skip";
+  if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "Был" : "Visited";
 
   container.innerHTML = "";
 
