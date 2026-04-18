@@ -118,9 +118,20 @@ async function copySummary() {
 
 function getFilteredPlaces() {
   const category = document.getElementById("categoryFilter")?.value || "";
+  const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
   const status = currentStatusFilter;
+
+  return filterPlaces(category, search, status);
+}
+
+function getPlacesForStats() {
+  const category = document.getElementById("categoryFilter")?.value || "";
   const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
 
+  return filterPlaces(category, search, "");
+}
+
+function filterPlaces(category, search, status) {
   return places.filter(p => {
     const categoryOk = !category || (Array.isArray(p.category) && p.category.includes(category));
     const statusOk = !status || checklist[p.id] === status;
@@ -209,7 +220,7 @@ function render() {
 
   if (!container) return;
 
-  updateStats(filtered);
+  updateStats(getPlacesForStats());
 
   if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
   if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
