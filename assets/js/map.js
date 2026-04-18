@@ -84,9 +84,9 @@ function locateUser() {
       } else {
         userLocationMarker = L.circleMarker(userLatLng, {
           radius: 9,
-          color: "#1d4ed8",
+          color: "#b91c1c",
           weight: 3,
-          fillColor: "#60a5fa",
+          fillColor: "#f97316",
           fillOpacity: 0.95
         }).addTo(map);
       }
@@ -97,10 +97,10 @@ function locateUser() {
       } else {
         userLocationAccuracyCircle = L.circle(userLatLng, {
           radius: accuracy,
-          color: "#3b82f6",
+          color: "#fb923c",
           weight: 1,
-          fillColor: "#93c5fd",
-          fillOpacity: 0.22
+          fillColor: "#fed7aa",
+          fillOpacity: 0.28
         }).addTo(map);
       }
 

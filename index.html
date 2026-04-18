@@ -28,13 +28,6 @@
             <option value="hidden-gems">Hidden gems</option>
             <option value="other">Other</option>
           </select>
-
-          <div class="status-filter-tabs" role="tablist" aria-label="Status filters">
-            <button class="status-filter-tab active" type="button" data-status="" onclick="setStatusFilter('')">All places</button>
-            <button class="status-filter-tab" type="button" data-status="want" onclick="setStatusFilter('want')">Want</button>
-            <button class="status-filter-tab" type="button" data-status="skip" onclick="setStatusFilter('skip')">Skip</button>
-            <button class="status-filter-tab" type="button" data-status="visited" onclick="setStatusFilter('visited')">Visited</button>
-          </div>
         </div>
 
         <div class="header-buttons">
@@ -42,30 +35,35 @@
             <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M16 8a3 3 0 1 0-2.83-4H13a3 3 0 0 0 .17 1l-6.2 3.1a3 3 0 1 0 0 7.8l6.2 3.1A3 3 0 1 0 14 17a2.9 2.9 0 0 0-.83.12l-6.2-3.1a3.08 3.08 0 0 0 0-4.04l6.2-3.1A2.9 2.9 0 0 0 14 7a3 3 0 0 0 2-.77z"></path>
             </svg>
-            <span class="sr-only btn-label">Summary</span>
+            <span class="btn-label">Share</span>
           </button>
           <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
             <span class="btn-icon" aria-hidden="true">🌐</span>
-            <span class="sr-only btn-label">Switch language</span>
+            <span class="btn-label">Language</span>
           </button>
         </div>
       </div>
     </div>
 
     <div class="stats-strip">
-      <div class="stat-box">
-        <div class="stat-number" id="statTotal">0</div>
-        <div class="stat-label">All places</div>
+      <div class="status-filter-tabs" role="tablist" aria-label="Status filters">
+        <button class="status-filter-tab stat-filter-btn active" type="button" data-status="" onclick="setStatusFilter('')">
+          <span class="stat-number" id="statTotal">0</span>
+          <span class="stat-filter-label">All places</span>
+        </button>
+        <button class="status-filter-tab stat-filter-btn" type="button" data-status="want" onclick="setStatusFilter('want')">
+          <span class="stat-number" id="statWant">0</span>
+          <span class="stat-filter-label" id="statWantLabel">➕ Want</span>
+        </button>
+        <button class="status-filter-tab stat-filter-btn" type="button" data-status="skip" onclick="setStatusFilter('skip')">
+          <span class="stat-number" id="statSkip">0</span>
+          <span class="stat-filter-label" id="statSkipLabel">🚫 Skip</span>
+        </button>
+        <button class="status-filter-tab stat-filter-btn" type="button" data-status="visited" onclick="setStatusFilter('visited')">
+          <span class="stat-number" id="statVisited">0</span>
+          <span class="stat-filter-label" id="statVisitedLabel">✅ Visited</span>
+        </button>
       </div>
-      <div class="stat-box">
-        <div class="stat-number" id="statWant">0</div>
-        <div class="stat-label" id="statWantLabel">➕ Want</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number" id="statVisited">0</div>
-        <div class="stat-label" id="statVisitedLabel">✅ Visited</div>
-      </div>
-
     </div>
     <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
       <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>
@@ -75,12 +73,6 @@
 
   <main class="layout">
     <section id="listSection" class="sidebar-section">
-      <div class="sidebar-header">
-        <div>
-          <p id="resultsCount">Loading...</p>
-        </div>
-      </div>
-
       <div id="paginationTop" class="pagination"></div>
       <div id="list" class="card-list"></div>
       <div id="pagination" class="pagination"></div>

@@ -191,12 +191,14 @@ function renderPagination(totalItems, totalPages) {
 
 function render() {
   const container = document.getElementById("list");
-  const resultsCount = document.getElementById("resultsCount");
   const tabList = document.getElementById("tabList");
   const tabMap = document.getElementById("tabMap");
   const locateBtn = document.getElementById("locateBtn");
   const searchFilter = document.getElementById("searchFilter");
+  const shareLabel = document.querySelector(".header-buttons button[onclick='copySummary()'] .btn-label");
+  const langLabel = document.querySelector(".header-buttons button[onclick='toggleLang()'] .btn-label");
   const statWantLabel = document.getElementById("statWantLabel");
+  const statSkipLabel = document.getElementById("statSkipLabel");
   const statVisitedLabel = document.getElementById("statVisitedLabel");
   const filtered = getFilteredPlaces();
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
@@ -209,11 +211,6 @@ function render() {
 
   updateStats(filtered);
 
-  if (resultsCount) {
-    resultsCount.textContent = lang === "ru"
-      ? `${filtered.length} мест • стр. ${currentPage}/${totalPages}`
-      : `${filtered.length} places • page ${currentPage}/${totalPages}`;
-  }
   if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
   if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
   if (locateBtn) {
@@ -224,18 +221,32 @@ function render() {
   if (searchFilter) {
     searchFilter.placeholder = lang === "ru" ? "Поиск мест" : "Search places";
   }
+  if (shareLabel) shareLabel.textContent = lang === "ru" ? "Поделиться" : "Share";
+  if (langLabel) langLabel.textContent = lang === "ru" ? "Язык" : "Language";
   const statusFilterTabs = document.querySelectorAll(".status-filter-tab");
   const statusTabLabels = lang === "ru"
     ? { "": "Все места", want: "Хочу", skip: "Пропустить", visited: "Был" }
     : { "": "All places", want: "Want", skip: "Skip", visited: "Visited" };
   statusFilterTabs.forEach(tab => {
     const statusKey = tab.dataset.status || "";
-    tab.textContent = statusTabLabels[statusKey] || tab.textContent;
+    const label = tab.querySelector(".stat-filter-label");
+    if (label) {
+      const prefixByStatus = {
+        want: "➕ ",
+        skip: "🚫 ",
+        visited: "✅ "
+      };
+      const prefix = prefixByStatus[statusKey] || "";
+      label.textContent = `${prefix}${statusTabLabels[statusKey] || ""}`.trim();
+    } else {
+      tab.textContent = statusTabLabels[statusKey] || tab.textContent;
+    }
     const isActive = statusKey === currentStatusFilter;
     tab.classList.toggle("active", isActive);
     tab.setAttribute("aria-selected", String(isActive));
   });
   if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "➕ Хочу" : "➕ Want";
+  if (statSkipLabel) statSkipLabel.textContent = lang === "ru" ? "🚫 Пропустить" : "🚫 Skip";
   if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "✅ Был" : "✅ Visited";
 
   container.innerHTML = "";
@@ -324,9 +335,9 @@ async function loadData() {
     initMap(places);
   } catch (error) {
     console.error("Failed to load places.json", error);
-    const resultsCount = document.getElementById("resultsCount");
-    if (resultsCount) {
-      resultsCount.textContent = lang === "ru" ? "Ошибка загрузки" : "Failed to load data";
+    const list = document.getElementById("list");
+    if (list) {
+      list.innerHTML = `<p>${lang === "ru" ? "Ошибка загрузки" : "Failed to load data"}</p>`;
     }
   }
 }
@@ -375,21 +386,25 @@ function updateStats(filtered) {
   const counts = {
     total: filtered.length,
     want: 0,
+    skip: 0,
     visited: 0
   };
 
   filtered.forEach(p => {
     const status = checklist[p.id];
     if (status === "want") counts.want += 1;
+    if (status === "skip") counts.skip += 1;
     if (status === "visited") counts.visited += 1;
   });
 
   const total = document.getElementById("statTotal");
   const want = document.getElementById("statWant");
+  const skip = document.getElementById("statSkip");
   const visited = document.getElementById("statVisited");
 
   if (total) total.textContent = counts.total;
   if (want) want.textContent = counts.want;
+  if (skip) skip.textContent = counts.skip;
   if (visited) visited.textContent = counts.visited;
 }
 loadData();
