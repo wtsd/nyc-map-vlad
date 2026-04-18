@@ -2,6 +2,9 @@ let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
 let places = [];
 let currentPlace = null;
 let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
+Object.keys(checklist).forEach(id => {
+  if (checklist[id] === "favorite") checklist[id] = null;
+});
 
 function getText() {
   return {
@@ -16,7 +19,6 @@ function getText() {
       photoFallback: "Photo coming later",
       wantBtn: "Want",
       visitedBtn: "Visited",
-      favoriteBtn: "Favorite",
       skipBtn: "Skip",
       copyError: "Could not copy to clipboard"
     },
@@ -31,7 +33,6 @@ function getText() {
       photoFallback: "Фото будет позже",
       wantBtn: "Хочу",
       visitedBtn: "Был",
-      favoriteBtn: "Любимое",
       skipBtn: "Пропустить",
       copyError: "Не удалось скопировать"
     }
@@ -82,7 +83,6 @@ function renderStatus() {
 
   document.getElementById("btnWant").classList.toggle("active", status === "want");
   document.getElementById("btnVisited").classList.toggle("active", status === "visited");
-  document.getElementById("btnFavorite").classList.toggle("active", status === "favorite");
   document.getElementById("btnSkip").classList.toggle("active", status === "skip");
 }
 
@@ -168,7 +168,6 @@ function render() {
   const statusButtons = [
     { id: "btnWant", label: t.wantBtn },
     { id: "btnVisited", label: t.visitedBtn },
-    { id: "btnFavorite", label: t.favoriteBtn },
     { id: "btnSkip", label: t.skipBtn }
   ];
   statusButtons.forEach(({ id, label }) => {

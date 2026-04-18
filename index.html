@@ -29,13 +29,12 @@
             <option value="other">Other</option>
           </select>
 
-          <select id="statusFilter" onchange="onFiltersChanged()">
-            <option value="">All statuses</option>
-            <option value="want">Want</option>
-            <option value="visited">Visited</option>
-            <option value="favorite">Favorite</option>
-            <option value="skip">Skip</option>
-          </select>
+          <div class="status-filter-tabs" role="tablist" aria-label="Status filters">
+            <button class="status-filter-tab active" type="button" data-status="" onclick="setStatusFilter('')">All places</button>
+            <button class="status-filter-tab" type="button" data-status="want" onclick="setStatusFilter('want')">Want</button>
+            <button class="status-filter-tab" type="button" data-status="skip" onclick="setStatusFilter('skip')">Skip</button>
+            <button class="status-filter-tab" type="button" data-status="visited" onclick="setStatusFilter('visited')">Visited</button>
+          </div>
         </div>
 
         <div class="header-buttons">
@@ -66,10 +65,7 @@
         <div class="stat-number" id="statVisited">0</div>
         <div class="stat-label" id="statVisitedLabel">✅ Visited</div>
       </div>
-      <div class="stat-box">
-        <div class="stat-number" id="statFavorite">0</div>
-        <div class="stat-label" id="statFavoriteLabel">❤️ Favorite</div>
-      </div>
+
     </div>
     <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
       <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>
@@ -85,6 +81,7 @@
         </div>
       </div>
 
+      <div id="paginationTop" class="pagination"></div>
       <div id="list" class="card-list"></div>
       <div id="pagination" class="pagination"></div>
     </section>
