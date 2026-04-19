@@ -25,7 +25,7 @@
         <div class="header-buttons">
           <button id="filtersToggle" class="secondary-btn icon-btn filters-toggle" onclick="toggleFiltersPanel()" aria-expanded="false" aria-controls="secondaryControls">
             <span class="btn-icon" aria-hidden="true">☰</span>
-            <span class="btn-label sr-only">Filters</span>
+            <span class="btn-label">Filters</span>
           </button>
           <button class="secondary-btn icon-btn" onclick="copySummary()" aria-label="Copy summary">
             <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -39,8 +39,14 @@
       </div>
     </div>
 
-    <div id="secondaryControls" class="secondary-controls">
+    <div id="secondaryControls" class="secondary-controls" aria-label="Additional filters">
       <div class="stats-strip">
+        <div class="secondary-controls-header">
+          <strong>Filters</strong>
+          <button class="secondary-btn icon-btn secondary-controls-close" type="button" onclick="toggleFiltersPanel()" aria-label="Close filters">
+            <span class="btn-icon" aria-hidden="true">✕</span>
+          </button>
+        </div>
         <div id="categoryFilterGroup" class="filters secondary-filters category-filter-group" role="group" aria-label="Category filters">
           <label class="category-filter-chip">
             <input type="checkbox" value="landmarks" onchange="onFiltersChanged()">
@@ -101,6 +107,7 @@
       </div>
     </div>
     </div>
+    <button id="filtersBackdrop" class="filters-backdrop" type="button" onclick="toggleFiltersPanel()" aria-label="Close filters panel"></button>
     <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
       <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>
       <button id="tabMap" class="mobile-tab" onclick="switchMobileView('map')" role="tab" aria-selected="false">Map</button>
@@ -150,6 +157,8 @@
   <script src="assets/js/url-state.js?v=a4710438eb"></script>
   <script src="assets/js/data-loader.js?v=a4710438eb"></script>
   <script src="assets/js/list-view.js?v=a4710438eb"></script>
+  <script src="assets/js/data-bootstrap.js?v=a4710438eb"></script>
+  <script src="assets/js/ui-shell.js?v=a4710438eb"></script>
   <script src="assets/js/app.js?v=a4710438eb"></script>
   <script src="assets/js/map.js?v=a4710438eb"></script>
 </body>

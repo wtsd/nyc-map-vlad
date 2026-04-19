@@ -253,6 +253,22 @@ input[type="search"] {
   transition: max-height 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
+.secondary-controls.is-collapsed {
+  display: none;
+}
+
+.secondary-controls-header {
+  display: none;
+}
+
+.secondary-controls-close {
+  display: none;
+}
+
+.filters-backdrop {
+  display: none;
+}
+
 .secondary-filters {
   margin-bottom: 10px;
 }
@@ -995,12 +1011,8 @@ input[type="search"] {
 
   .primary-filters {
     width: 100%;
-    display: none;
-    gap: 6px;
-  }
-
-  body.mobile-search-open .primary-filters {
     display: flex;
+    gap: 6px;
   }
 
   .filters input[type="search"] {
@@ -1027,16 +1039,60 @@ input[type="search"] {
   }
 
   .secondary-controls {
-    overflow: hidden;
-    max-height: 420px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(92vw, 380px);
+    overflow-y: auto;
+    max-height: none;
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(102%);
+    background: #fff;
+    z-index: 2105;
+    border-left: 1px solid var(--border);
+    box-shadow: -18px 0 40px rgba(15, 23, 42, 0.2);
+    transition: transform 0.2s ease;
   }
 
-  .secondary-controls.is-collapsed {
-    max-height: 0;
+  .secondary-controls.is-open {
+    transform: translateX(0);
+  }
+
+  .secondary-controls-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .secondary-controls-close {
+    display: inline-flex;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    padding: 0 10px;
+  }
+
+  .filters-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    border: 0;
+    background: rgba(15, 23, 42, 0.36);
     opacity: 0;
-    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 2100;
+  }
+
+  .filters-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.filters-panel-open {
+    overflow: hidden;
   }
 
   .category-filter-group {
@@ -1062,8 +1118,8 @@ input[type="search"] {
   }
 
   .stats-strip {
-    padding: 0 14px 10px;
-    overflow-x: auto;
+    padding: 14px;
+    overflow: visible;
   }
 
   .mobile-tabs {

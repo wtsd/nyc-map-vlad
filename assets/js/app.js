@@ -3,6 +3,8 @@
   const filters = window.NYCMapFilters;
   const listView = window.NYCMapListView;
   const urlState = window.NYCMapUrlState;
+  const uiShell = window.NYCMapUIShell;
+  const dataBootstrap = window.NYCMapDataBootstrap;
 
   function render() {
     listView.render(state, filters);
@@ -25,11 +27,6 @@
     onFiltersChanged();
   }
 
-  function setPersonalFilter(personal) {
-    state.setCurrentPersonalFilter(Array.isArray(personal) ? personal : []);
-    onFiltersChanged();
-  }
-
   function onPersonalToggleChanged() {
     const selected = Array.from(document.querySelectorAll(".personal-toggle-chip input:checked")).map((input) => input.value);
     state.setCurrentPersonalFilter(selected);
@@ -47,138 +44,57 @@
     render();
   }
 
-  function renderListState(kind) {
-    const list = document.getElementById("list");
-    if (!list) return;
-    const text = NYCMapUIText.getUIText(state.getLang());
-    if (kind === "loading") {
-      list.innerHTML = `<article class="empty-state-card is-loading"><h3>${text.loading.title}</h3><p>${text.loading.body}</p></article>`;
-      return;
-    }
-    if (kind === "error") {
-      list.innerHTML = `<article class="empty-state-card"><h3>${text.copy.loadFailed}</h3><p>${text.loading.body}</p></article>`;
-    }
+  function setupGlobalActions() {
+    window.toggleLang = toggleLang;
+    window.copySummary = () => listView.copySummary(state);
+    window.copyPlace = (id) => listView.copyPlace(state, id);
+    window.setStatus = setStatus;
+    window.onFiltersChanged = onFiltersChanged;
+    window.setStatusFilter = setStatusFilter;
+    window.onPersonalToggleChanged = onPersonalToggleChanged;
+    window.goToPage = goToPage;
+    window.switchMobileView = (view) => uiShell.switchMobileView(state, listView, view);
+    window.toggleMap = uiShell.toggleMap;
+    window.toggleFiltersPanel = uiShell.toggleFiltersPanel;
   }
 
-  function setSecondaryControlsExpanded(expanded) {
-    const controls = document.getElementById("secondaryControls");
-    const toggle = document.getElementById("filtersToggle");
-    if (!controls || !toggle) return;
-    controls.classList.toggle("is-collapsed", !expanded);
-    toggle.setAttribute("aria-expanded", String(expanded));
-    const isMobile = window.matchMedia("(max-width: 760px)").matches;
-    document.body.classList.toggle("mobile-search-open", isMobile && expanded);
+  function setupEventListeners() {
+    window.addEventListener("popstate", () => {
+      urlState.applyFiltersFromUrl(state, filters);
+      state.setCurrentPage(1);
+      render();
+    });
+
+    window.addEventListener("resize", () => {
+      listView.applyMobileTabState(state);
+      uiShell.setFiltersPanelExpanded(!uiShell.isMobile());
+      uiShell.syncViewportOffsets();
+    });
   }
 
-  function toggleFiltersPanel() {
-    const controls = document.getElementById("secondaryControls");
-    if (!controls) return;
-    setSecondaryControlsExpanded(controls.classList.contains("is-collapsed"));
-  }
+  async function boot() {
+    setupGlobalActions();
+    setupEventListeners();
+    uiShell.setupViewportObservers();
+    dataBootstrap.registerServiceWorker();
 
-  function syncViewportOffsets() {
-    const topbar = document.querySelector(".topbar");
-    const footer = document.querySelector(".site-footer");
-    const topbarHeight = topbar ? Math.ceil(topbar.getBoundingClientRect().height) : 0;
-    const footerHeight = footer ? Math.ceil(footer.getBoundingClientRect().height) : 0;
-    document.documentElement.style.setProperty("--topbar-height", `${topbarHeight}px`);
-    document.documentElement.style.setProperty("--footer-height", `${footerHeight}px`);
-  }
+    urlState.applyFiltersFromUrl(state, filters);
+    listView.applyMobileTabState(state);
+    uiShell.setFiltersPanelExpanded(!uiShell.isMobile());
+    uiShell.syncViewportOffsets();
 
-  async function loadData() {
-    renderListState("loading");
+    const yearEl = document.getElementById("footerYear");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
     try {
-      const manifest = await NYCMapDataLoader.loadManifest();
-      const placesPath = NYCMapDataLoader.resolveAssetPath(manifest, "places", "build/places.json");
-      const searchPath = NYCMapDataLoader.resolveAssetPath(manifest, "searchIndex", "build/search-index.json");
-
-      const [placesRes, searchRes] = await Promise.all([
-        fetch(placesPath),
-        fetch(searchPath).catch(() => null)
-      ]);
-      if (!placesRes.ok) throw new Error(`HTTP ${placesRes.status}`);
-
-      const places = await placesRes.json();
-      state.setPlaces(places);
-
-      if (searchRes && searchRes.ok) {
-        const searchIndex = await searchRes.json();
-        state.setSearchIndex(searchIndex);
-      } else {
-        state.setSearchIndex([]);
-      }
-
+      const places = await dataBootstrap.loadData(state);
       render();
       if (typeof initMap === "function") initMap(places);
     } catch (error) {
       console.error("Failed to load places data", error);
-      renderListState("error");
+      dataBootstrap.renderListState(state, "error");
     }
   }
 
-  function registerServiceWorker() {
-    if (!("serviceWorker" in navigator)) return;
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("sw.js").catch((error) => {
-        console.warn("Service worker registration failed", error);
-      });
-    });
-  }
-
-  function switchMobileView(view) {
-    state.setMobileView(view);
-    listView.applyMobileTabState(state);
-  }
-
-  function toggleMap() {
-    const wrap = document.getElementById("mapWrap");
-    if (!wrap) return;
-    wrap.classList.toggle("hidden");
-    setTimeout(() => {
-      if (window.map) window.map.invalidateSize();
-    }, 50);
-  }
-
-  window.toggleLang = toggleLang;
-  window.copySummary = () => listView.copySummary(state);
-  window.copyPlace = (id) => listView.copyPlace(state, id);
-  window.setStatus = setStatus;
-  window.onFiltersChanged = onFiltersChanged;
-  window.setStatusFilter = setStatusFilter;
-  window.setPersonalFilter = setPersonalFilter;
-  window.onPersonalToggleChanged = onPersonalToggleChanged;
-  window.goToPage = goToPage;
-  window.switchMobileView = switchMobileView;
-  window.toggleMap = toggleMap;
-  window.toggleFiltersPanel = toggleFiltersPanel;
-
-  registerServiceWorker();
-  loadData();
-  urlState.applyFiltersFromUrl(state, filters);
-  listView.applyMobileTabState(state);
-  setSecondaryControlsExpanded(!window.matchMedia("(max-width: 760px)").matches);
-  syncViewportOffsets();
-
-  window.addEventListener("popstate", () => {
-    urlState.applyFiltersFromUrl(state, filters);
-    state.setCurrentPage(1);
-    render();
-  });
-
-  window.addEventListener("resize", () => {
-    listView.applyMobileTabState(state);
-    setSecondaryControlsExpanded(!window.matchMedia("(max-width: 760px)").matches);
-    syncViewportOffsets();
-  });
-
-  const topbar = document.querySelector(".topbar");
-  const footer = document.querySelector(".site-footer");
-  if (typeof ResizeObserver !== "undefined") {
-    const resizeObserver = new ResizeObserver(() => syncViewportOffsets());
-    if (topbar) resizeObserver.observe(topbar);
-    if (footer) resizeObserver.observe(footer);
-  }
-
-  const yearEl = document.getElementById("footerYear");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  boot();
 })();
