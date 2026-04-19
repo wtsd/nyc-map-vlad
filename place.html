@@ -65,18 +65,12 @@
           </div>
 
           <div class="status-row">
-            <button id="btnWant" class="status-btn icon-btn" onclick="setStatus(currentPlace.id, 'want')" aria-label="Want to visit">
-              <span class="btn-icon monochrome-icon" aria-hidden="true">○</span>
-              <span class="sr-only">Want</span>
-            </button>
-            <button id="btnVisited" class="status-btn icon-btn" onclick="setStatus(currentPlace.id, 'visited')" aria-label="Visited">
-              <span class="btn-icon monochrome-icon" aria-hidden="true">✓</span>
-              <span class="sr-only">Visited</span>
-            </button>
-            <button id="btnSkip" class="status-btn icon-btn" onclick="setStatus(currentPlace.id, 'skip')" aria-label="Skip">
-              <span class="btn-icon monochrome-icon" aria-hidden="true">✕</span>
-              <span class="sr-only">Skip</span>
-            </button>
+            <span class="status-row-title">Choose one status</span>
+            <div class="status-toggle-wrap" role="radiogroup" aria-label="Choose one status">
+              <button id="btnWant" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'want')" aria-label="Want to visit">Want</button>
+              <button id="btnVisited" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'visited')" aria-label="Visited">Visited</button>
+              <button id="btnSkip" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'skip')" aria-label="Skip">Skip</button>
+            </div>
           </div>
 
           <div class="card-footer">

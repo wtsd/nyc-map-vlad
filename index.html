@@ -18,21 +18,15 @@
       </div>
 
       <div class="topbar-actions">
-        <div class="filters">
+        <div class="filters primary-filters">
           <input id="searchFilter" type="search" placeholder="Search" oninput="onFiltersChanged()" aria-label="Search" />
-          <select id="categoryFilter" onchange="onFiltersChanged()">
-            <option value="">All</option>
-            <option value="landmarks">Landmarks</option>
-            <option value="parks">Parks</option>
-            <option value="museums">Museums</option>
-            <option value="food">Food</option>
-            <option value="viewpoints">Viewpoints</option>
-            <option value="hidden-gems">Hidden gems</option>
-            <option value="other">Other</option>
-          </select>
         </div>
 
         <div class="header-buttons">
+          <button id="filtersToggle" class="secondary-btn icon-btn filters-toggle" onclick="toggleFiltersPanel()" aria-expanded="false" aria-controls="secondaryControls">
+            <span class="btn-icon" aria-hidden="true">⚙️</span>
+            <span class="btn-label">Filters</span>
+          </button>
           <button class="secondary-btn icon-btn" onclick="copySummary()" aria-label="Copy summary">
             <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M16 8a3 3 0 1 0-2.83-4H13a3 3 0 0 0 .17 1l-6.2 3.1a3 3 0 1 0 0 7.8l6.2 3.1A3 3 0 1 0 14 17a2.9 2.9 0 0 0-.83.12l-6.2-3.1a3.08 3.08 0 0 0 0-4.04l6.2-3.1A2.9 2.9 0 0 0 14 7a3 3 0 0 0 2-.77z"></path>
@@ -45,7 +39,20 @@
       </div>
     </div>
 
-    <div class="stats-strip">
+    <div id="secondaryControls" class="secondary-controls">
+      <div class="stats-strip">
+        <div class="filters secondary-filters">
+          <select id="categoryFilter" onchange="onFiltersChanged()">
+            <option value="">All categories</option>
+            <option value="landmarks">Landmarks</option>
+            <option value="parks">Parks</option>
+            <option value="museums">Museums</option>
+            <option value="food">Food</option>
+            <option value="viewpoints">Viewpoints</option>
+            <option value="hidden-gems">Hidden gems</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
       <div class="status-filter-tabs" role="tablist" aria-label="Status filters">
         <button class="status-filter-tab stat-filter-btn active" type="button" data-status="" onclick="setStatusFilter('')">
           <span class="stat-number" id="statTotal">0</span>
@@ -81,6 +88,7 @@
           <span id="personalRecommendLabel">Highly recommend</span>
         </button>
       </div>
+    </div>
     </div>
     <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
       <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>

@@ -84,9 +84,11 @@ function initMap(allPlaces) {
 
 function renderPopupContent(place, lang, title) {
   const buttonText = lang === "ru" ? "К карточке" : "Show card";
+  const subtitle = NYCMapCommon.getCategoryLabel(lang, Array.isArray(place.category) ? place.category[0] : "");
   return `
     <div class="map-popup">
       <strong class="map-popup-title">${title}</strong>
+      <span class="map-popup-subtitle">${subtitle}</span>
       <button type="button" class="secondary-btn map-popup-btn" onclick="scrollToCard('${place.id}', true)">${buttonText}</button>
     </div>
   `;

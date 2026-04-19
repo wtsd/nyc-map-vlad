@@ -21,6 +21,7 @@ function getText() {
       wantBtn: "Want",
       visitedBtn: "Visited",
       skipBtn: "Skip",
+      statusHint: "Choose one status",
       copyError: "Could not copy to clipboard"
     },
     ru: {
@@ -36,6 +37,7 @@ function getText() {
       wantBtn: "Хочу",
       visitedBtn: "Был",
       skipBtn: "Пропустить",
+      statusHint: "Выберите один статус",
       copyError: "Не удалось скопировать"
     }
   };
@@ -86,6 +88,9 @@ function renderStatus() {
   document.getElementById("btnWant").classList.toggle("active", status === "want");
   document.getElementById("btnVisited").classList.toggle("active", status === "visited");
   document.getElementById("btnSkip").classList.toggle("active", status === "skip");
+  document.getElementById("btnWant").setAttribute("aria-checked", String(status === "want"));
+  document.getElementById("btnVisited").setAttribute("aria-checked", String(status === "visited"));
+  document.getElementById("btnSkip").setAttribute("aria-checked", String(status === "skip"));
 }
 
 async function copyCurrentPlace() {
@@ -199,9 +204,12 @@ function render() {
     const btn = document.getElementById(id);
     if (!btn) return;
     btn.setAttribute("aria-label", label);
-    const srLabel = btn.querySelector(".sr-only");
-    if (srLabel) srLabel.textContent = label;
+    btn.textContent = label;
   });
+  const statusHint = document.querySelector(".status-row-title");
+  if (statusHint) statusHint.textContent = t.statusHint;
+  const statusGroup = document.querySelector(".status-toggle-wrap");
+  if (statusGroup) statusGroup.setAttribute("aria-label", t.statusHint);
 
   const backBtn = document.querySelector(".header-buttons a");
   const backBtnLabel = backBtn?.querySelector(".btn-label");

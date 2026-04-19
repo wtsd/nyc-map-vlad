@@ -40,7 +40,35 @@
     render();
   }
 
+  function renderListState(kind) {
+    const list = document.getElementById("list");
+    if (!list) return;
+    const text = NYCMapUIText.getUIText(state.getLang());
+    if (kind === "loading") {
+      list.innerHTML = `<article class="empty-state-card is-loading"><h3>${text.loading.title}</h3><p>${text.loading.body}</p></article>`;
+      return;
+    }
+    if (kind === "error") {
+      list.innerHTML = `<article class="empty-state-card"><h3>${text.copy.loadFailed}</h3><p>${text.loading.body}</p></article>`;
+    }
+  }
+
+  function setSecondaryControlsExpanded(expanded) {
+    const controls = document.getElementById("secondaryControls");
+    const toggle = document.getElementById("filtersToggle");
+    if (!controls || !toggle) return;
+    controls.classList.toggle("is-collapsed", !expanded);
+    toggle.setAttribute("aria-expanded", String(expanded));
+  }
+
+  function toggleFiltersPanel() {
+    const controls = document.getElementById("secondaryControls");
+    if (!controls) return;
+    setSecondaryControlsExpanded(controls.classList.contains("is-collapsed"));
+  }
+
   async function loadData() {
+    renderListState("loading");
     try {
       const res = await fetch("build/places.json");
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -51,10 +79,7 @@
       if (typeof initMap === "function") initMap(places);
     } catch (error) {
       console.error("Failed to load places.json", error);
-      const list = document.getElementById("list");
-      if (list) {
-        list.innerHTML = `<p>${NYCMapUIText.getUIText(state.getLang()).copy.loadFailed}</p>`;
-      }
+      renderListState("error");
     }
   }
 
@@ -82,10 +107,12 @@
   window.goToPage = goToPage;
   window.switchMobileView = switchMobileView;
   window.toggleMap = toggleMap;
+  window.toggleFiltersPanel = toggleFiltersPanel;
 
   loadData();
   urlState.applyFiltersFromUrl(state, filters);
   listView.applyMobileTabState(state);
+  setSecondaryControlsExpanded(!window.matchMedia("(max-width: 760px)").matches);
 
   window.addEventListener("popstate", () => {
     urlState.applyFiltersFromUrl(state, filters);
@@ -93,7 +120,10 @@
     render();
   });
 
-  window.addEventListener("resize", () => listView.applyMobileTabState(state));
+  window.addEventListener("resize", () => {
+    listView.applyMobileTabState(state);
+    setSecondaryControlsExpanded(!window.matchMedia("(max-width: 760px)").matches);
+  });
 
   const yearEl = document.getElementById("footerYear");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
