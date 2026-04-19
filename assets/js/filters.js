@@ -16,12 +16,22 @@
       if (!categoryOk || !statusOk || !personalOk) return false;
       if (!search) return true;
 
-      const title = `${p.title?.en || ""} ${p.title?.ru || ""}`.toLowerCase();
-      const summary = `${p.summary?.en || ""} ${p.summary?.ru || ""}`.toLowerCase();
-      const address = `${p.address?.en || ""} ${p.address?.ru || ""}`.toLowerCase();
+      const title = [p.title?.en, p.title?.ru].filter(Boolean).join(" ").toLowerCase();
+      const summary = [p.summary?.en, p.summary?.ru].filter(Boolean).join(" ").toLowerCase();
+      const address = getSearchableAddress(p.address);
       const categories = (p.category || []).join(" ").toLowerCase();
       return title.includes(search) || summary.includes(search) || address.includes(search) || categories.includes(search);
     });
+  }
+
+  function getSearchableAddress(addressValue) {
+    if (!addressValue) return "";
+    if (typeof addressValue === "string") return addressValue.toLowerCase();
+    if (typeof addressValue !== "object") return "";
+    return Object.values(addressValue)
+      .filter((v) => typeof v === "string" && v)
+      .join(" ")
+      .toLowerCase();
   }
 
   function getFilteredPlaces(state) {
