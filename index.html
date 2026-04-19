@@ -71,18 +71,18 @@
           <span class="stat-filter-label" id="statVisitedLabel">Visited</span>
         </button>
       </div>
-      <div class="quick-filter-row" aria-label="Quick filters">
-        <label class="compact-check" title="Visited only">
-          <input id="visitedFilter" type="checkbox" onchange="onFiltersChanged()" />
-          <span aria-hidden="true">✅</span>
-          <span class="sr-only">Visited only</span>
-        </label>
-        <select id="priceFilter" onchange="onFiltersChanged()" title="Price level" aria-label="Price level">
-          <option value="">$</option>
-          <option value="$">$</option>
-          <option value="$$">$$</option>
-          <option value="$$$">$$$</option>
-        </select>
+      <div class="personal-filter-tabs" role="tablist" aria-label="Rating filters">
+        <button class="personal-filter-tab active" type="button" data-personal="" onclick="setPersonalFilter('')">
+          <span id="personalAllLabel">All</span>
+        </button>
+        <button class="personal-filter-tab" type="button" data-personal="want-to-go" onclick="setPersonalFilter('want-to-go')">
+          <span aria-hidden="true">🟦</span>
+          <span id="personalWantLabel">Want</span>
+        </button>
+        <button class="personal-filter-tab" type="button" data-personal="highly-recommend" onclick="setPersonalFilter('highly-recommend')">
+          <span aria-hidden="true">🟩</span>
+          <span id="personalRecommendLabel">Top</span>
+        </button>
       </div>
     </div>
     </div>

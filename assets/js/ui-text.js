@@ -11,19 +11,27 @@
       filters: "Filters",
       statusTabs: { "": "All", want: "Want", skip: "Skip", visited: "Visited" },
       statLabels: { want: "Want", skip: "Skip", visited: "Visited" },
+      personalTabs: {
+        all: "All",
+        wantToGo: "Want",
+        recommend: "Top"
+      },
       card: {
         openDetails: "Open place details",
         copyDetails: "Copy place details",
         copy: "Copy",
+        statusWant: "Want",
         statusVisited: "Visited",
-        price: "Price",
+        statusSkip: "Skip",
+        statusHint: "Choose one status",
         emptyTitle: "No places found",
         emptyBody: "Try clearing filters or changing search keywords."
       },
       copy: {
         status: "Status",
         address: "Address",
-        price: "Price",
+        time: "Time",
+        cost: "Cost",
         failed: "Could not copy to clipboard",
         loadFailed: "Failed to load data"
       },
@@ -49,19 +57,27 @@
       filters: "Фильтры",
       statusTabs: { "": "Все", want: "Хочу", skip: "Пропустить", visited: "Был" },
       statLabels: { want: "Хочу", skip: "Пропустить", visited: "Был" },
+      personalTabs: {
+        all: "Все",
+        wantToGo: "Хочу сходить",
+        recommend: "Советую"
+      },
       card: {
         openDetails: "Открыть карточку места",
         copyDetails: "Скопировать карточку",
         copy: "Копировать",
+        statusWant: "Хочу",
         statusVisited: "Был",
-        price: "Цена",
+        statusSkip: "Пропустить",
+        statusHint: "Выберите один статус",
         emptyTitle: "Ничего не найдено",
         emptyBody: "Попробуйте сбросить фильтры или изменить запрос."
       },
       copy: {
         status: "Статус",
         address: "Адрес",
-        price: "Цена",
+        time: "Время",
+        cost: "Цена",
         failed: "Не удалось скопировать",
         loadFailed: "Ошибка загрузки"
       },
