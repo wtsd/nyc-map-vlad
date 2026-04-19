@@ -7,11 +7,6 @@ coords:
   lng: -73.9855
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: Times Sq–42 St
-  ru: Times Sq–42 St
 address: Times Square, New York, NY 10036
 borough: Manhattan
 neighborhood: Midtown West
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

@@ -7,11 +7,6 @@ coords:
   lng: -74.007
 category:
 - hidden-gems
-time: short
-cost: free
-transit:
-  en: Wall St
-  ru: Wall St
 address: 55 Water St, New York, NY 10041
 borough: Manhattan
 neighborhood: Financial District
@@ -29,3 +24,4 @@ best_for:
 - photos
 external_link: ''
 personal: want-to-go
+price: $$

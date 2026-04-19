@@ -7,11 +7,6 @@ coords:
   lng: -73.985
 category:
 - landmarks
-time: full
-cost: free
-transit:
-  en: Coney Island–Stillwell Ave
-  ru: Coney Island–Stillwell Ave
 address: Surf Ave & Stillwell Ave, Brooklyn, NY 11224
 borough: Brooklyn
 neighborhood: Coney Island
@@ -36,3 +31,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

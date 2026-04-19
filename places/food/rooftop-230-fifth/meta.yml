@@ -7,11 +7,6 @@ coords:
   lng: -73.9889
 category:
 - food
-time: medium
-cost: paid
-transit:
-  en: 23 St / 28 St
-  ru: 23 St / 28 St
 address: 230 5th Ave, New York, NY 10001
 borough: Manhattan
 neighborhood: Flatiron / NoMad
@@ -36,3 +31,4 @@ best_for:
 - photos
 external_link: ''
 personal: want-to-go
+price: $$

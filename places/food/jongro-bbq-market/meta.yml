@@ -7,14 +7,7 @@ coords:
   lng: -73.9873042
 category:
 - food
-tags: []
-time: medium
-cost: paid
-price: $10 special
-transit:
-  en: 34 St-Herald Sq
-  ru: 34 St-Herald Sq
+price: $$
 address: 39 W 32nd St 1st Fl, New York, NY 10001
 external_link: https://www.tiktok.com/t/ZP8gHRqMM
-featured: false
 personal: want-to-go

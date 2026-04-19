@@ -7,11 +7,6 @@ coords:
   lng: -73.975
 category:
 - parks
-time: medium
-cost: paid
-transit:
-  en: Coney Island
-  ru: Coney Island
 address: 602 Surf Ave, Brooklyn, NY 11224
 borough: Brooklyn
 neighborhood: Coney Island
@@ -35,3 +30,4 @@ best_for:
 - families
 external_link: ''
 personal: want-to-go
+price: $$

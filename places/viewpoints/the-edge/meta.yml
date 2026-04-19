@@ -7,12 +7,7 @@ coords:
   lng: -74.0027
 category:
 - viewpoints
-time: medium
-cost: paid
-price: ~0
-transit:
-  en: 34 St Hudson Yards
-  ru: 34 St Hudson Yards
+price: $$
 address: 30 Hudson Yards, New York, NY 10001
 borough: Manhattan
 neighborhood: Chelsea

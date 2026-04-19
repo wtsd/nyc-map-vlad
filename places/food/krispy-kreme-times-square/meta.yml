@@ -7,11 +7,6 @@ coords:
   lng: -73.9863
 category:
 - food
-time: short
-cost: paid
-transit:
-  en: Times Sq - 42 St
-  ru: Times Sq - 42 St
 address: 1601 Broadway, New York, NY 10019
 borough: Manhattan
 neighborhood: Midtown West
@@ -30,3 +25,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

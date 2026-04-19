@@ -7,12 +7,7 @@ coords:
   lng: -73.9624
 category:
 - parks
-time: full
-cost: paid
-price: ~2
-transit:
-  en: Eastern Pkwy-Brooklyn Museum
-  ru: Eastern Pkwy-Brooklyn Museum
+price: $$
 address: 990 Washington Ave, Brooklyn, NY 11225
 borough: Brooklyn
 neighborhood: Prospect Heights

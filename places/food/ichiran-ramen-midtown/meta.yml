@@ -7,14 +7,7 @@ coords:
   lng: -73.9832897
 category:
 - food
-tags: []
-time: medium
-cost: paid
-price: ''
-transit:
-  en: 50 St / Times Sq-42 St
-  ru: 50 St / Times Sq-42 St
+price: $$
 address: 152 W 49th St, New York, NY 10020
 external_link: https://www.tiktok.com/t/ZP8gHfRJU
-featured: false
 personal: want-to-go

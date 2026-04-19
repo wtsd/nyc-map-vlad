@@ -7,14 +7,7 @@ coords:
   lng: -73.9601005
 category:
 - food
-tags: []
-time: medium
-cost: paid
-price: ''
-transit:
-  en: Lexington Ave/63 St / Upper East Side
-  ru: Lexington Ave/63 St / Upper East Side
+price: $$
 address: 1138 1st Ave, New York, NY 10065
 external_link: https://www.tiktok.com/t/ZP8gH71p4
-featured: false
 personal: want-to-go

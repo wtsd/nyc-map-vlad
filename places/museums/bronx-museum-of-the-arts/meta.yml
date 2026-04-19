@@ -7,11 +7,6 @@ coords:
   lng: -73.9197
 category:
 - museums
-time: medium
-cost: free
-transit:
-  en: 167 St
-  ru: 167 St
 address: 1040 Grand Concourse, Bronx, NY 10456
 borough: Bronx
 neighborhood: South Bronx
@@ -29,3 +24,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

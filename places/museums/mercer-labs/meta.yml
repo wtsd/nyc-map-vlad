@@ -7,12 +7,7 @@ coords:
   lng: -74.0087
 category:
 - museums
-time: medium
-cost: paid
-price: ~0+
-transit:
-  en: Fulton St / World Trade Center
-  ru: Fulton St / World Trade Center
+price: $$
 address: 21 Dey St, New York, NY 10007
 borough: Manhattan
 neighborhood: Financial District

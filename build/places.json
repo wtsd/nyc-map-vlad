@@ -14,14 +14,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "89A Bayard St, New York, NY 10013",
     "external_link": "https://www.tiktok.com/t/ZP8gHFrEV",
     "image": "",
@@ -39,21 +32,14 @@
       "ru": "Annapurna Thakali Kitchen"
     },
     "coords": [
-      0.0,
-      0.0
+      40.74661,
+      -73.893265
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "74 St-Broadway / Jackson Heights-Roosevelt Ave",
-      "ru": "74 St-Broadway / Jackson Heights-Roosevelt Ave"
-    },
+    "price": "$$",
     "address": "72-24 Roosevelt Ave, Jackson Heights, NY 11372",
     "external_link": "https://www.tiktok.com/t/ZP8gHmvYG",
     "image": "",
@@ -78,14 +64,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "28 St / 33 St",
-      "ru": "28 St / 33 St"
-    },
+    "price": "$$",
     "address": "230 Park Ave South, New York, NY 10003",
     "external_link": "",
     "image": "",
@@ -110,14 +89,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "50 St",
-      "ru": "50 St"
-    },
+    "price": "$$",
     "address": "350 W 50th St, New York, NY 10019",
     "external_link": "https://www.tiktok.com/t/ZP8gHTnFd",
     "image": "",
@@ -142,14 +114,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Bedford-Nostrand Avs / Marcus Garvey Blvd area",
-      "ru": "район Bedford-Nostrand Avs / Marcus Garvey Blvd"
-    },
+    "price": "$$",
     "address": "471 Marcus Garvey Blvd, Brooklyn, NY 11216",
     "external_link": "https://www.tiktok.com/t/ZP8gHaMvJ",
     "image": "",
@@ -167,21 +132,14 @@
       "ru": "Cafe 2by2"
     },
     "coords": [
-      0.0,
-      0.0
+      40.730861,
+      -73.989922
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Astor Pl / 8 St-NYU",
-      "ru": "Astor Pl / 8 St-NYU"
-    },
+    "price": "$$",
     "address": "84 E 10th St 2nd FL, New York, NY 10003",
     "external_link": "https://www.tiktok.com/t/ZP8gHRw9k",
     "image": "",
@@ -206,14 +164,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "1 Av / Delancey-Essex area",
-      "ru": "1 Av / район Delancey-Essex"
-    },
+    "price": "$$",
     "address": "66 Loisaida Ave, New York, NY 10009",
     "external_link": "https://www.tiktok.com/t/ZP8gHyVRN",
     "image": "",
@@ -238,14 +189,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "14 St",
-      "ru": "14 St"
-    },
+    "price": "$$",
     "address": "75 9th Ave, New York, NY 10011",
     "external_link": "",
     "image": "",
@@ -270,14 +214,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Astor Pl / 8 St-NYU",
-      "ru": "Astor Pl / 8 St-NYU"
-    },
+    "price": "$$",
     "address": "103 2nd Ave, New York, NY 10003",
     "external_link": "https://www.tiktok.com/t/ZP8gHgP1u",
     "image": "",
@@ -302,14 +239,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Wall St",
-      "ru": "Wall St"
-    },
+    "price": "$$",
     "address": "6 Hanover St, New York, NY 10005",
     "external_link": "",
     "image": "",
@@ -334,14 +264,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Delancey St-Essex St",
-      "ru": "Delancey St-Essex St"
-    },
+    "price": "$$",
     "address": "102 Suffolk St, New York, NY 10002",
     "external_link": "https://www.tiktok.com/t/ZP8gHtnVu",
     "image": "",
@@ -359,21 +282,14 @@
       "ru": "Din Soup Dumplings"
     },
     "coords": [
-      0.0,
-      0.0
+      40.694152,
+      -73.992819
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Court St / Borough Hall",
-      "ru": "Court St / Borough Hall"
-    },
+    "price": "$$",
     "address": "162 Montague St Fl 2, Brooklyn, NY 11201",
     "external_link": "https://www.tiktok.com/t/ZP8gHNPXb",
     "image": "",
@@ -398,14 +314,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Franklin Ave / Park Pl",
-      "ru": "Franklin Ave / Park Pl"
-    },
+    "price": "$$",
     "address": "634 Park Pl, Brooklyn, NY 11238",
     "external_link": "https://www.tiktok.com/t/ZP8gH3PUt",
     "image": "",
@@ -430,14 +339,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Clark St",
-      "ru": "Clark St"
-    },
+    "price": "$$",
     "address": "57 Clark St, Brooklyn, NY 11201",
     "external_link": "https://www.tiktok.com/t/ZP8gHk4uy",
     "image": "",
@@ -462,14 +364,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "East Broadway",
-      "ru": "East Broadway"
-    },
+    "price": "$$",
     "address": "88 E Broadway, New York, NY 10002",
     "external_link": "https://www.tiktok.com/t/ZP8gHmxPC",
     "image": "",
@@ -494,14 +389,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "28 St / 33 St",
-      "ru": "28 St / 33 St"
-    },
+    "price": "$$",
     "address": "29 E 30th St, New York, NY 10016",
     "external_link": "https://www.tiktok.com/t/ZP8gHkcvp",
     "image": "",
@@ -526,14 +414,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "$6",
-    "transit": {
-      "en": "Flushing-Main St",
-      "ru": "Flushing-Main St"
-    },
+    "price": "$$",
     "address": "135-45 Roosevelt Ave, Flushing, NY 11354",
     "external_link": "https://www.tiktok.com/t/ZP8gHPEb7",
     "image": "",
@@ -558,14 +439,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "16 Bowery, New York, NY 10013",
     "external_link": "https://www.tiktok.com/t/ZP8gHNCvS",
     "image": "",
@@ -590,14 +464,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Grand St / Bowery",
-      "ru": "Grand St / Bowery"
-    },
+    "price": "$$",
     "address": "135 Bowery, New York, NY 10002",
     "external_link": "https://www.tiktok.com/t/ZP8gHcgxC",
     "image": "",
@@ -615,21 +482,14 @@
       "ru": "Hamido Seafood"
     },
     "coords": [
-      0.0,
-      0.0
+      40.77565,
+      -73.909508
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Astoria-Ditmars Blvd",
-      "ru": "Astoria-Ditmars Blvd"
-    },
+    "price": "$$",
     "address": "31-29 Ditmars Blvd, Astoria, NY 11105",
     "external_link": "https://www.tiktok.com/t/ZP8gH4D1u",
     "image": "",
@@ -654,14 +514,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "28 St / Penn Station area",
-      "ru": "28 St / район Penn Station"
-    },
+    "price": "$$",
     "address": "143 W 29th St, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gH6P7f",
     "image": "",
@@ -686,14 +539,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "81 Mott St, New York, NY 10013",
     "external_link": "https://www.tiktok.com/t/ZP8gHy6dX",
     "image": "",
@@ -718,14 +564,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "50 St / Times Sq-42 St",
-      "ru": "50 St / Times Sq-42 St"
-    },
+    "price": "$$",
     "address": "152 W 49th St, New York, NY 10020",
     "external_link": "https://www.tiktok.com/t/ZP8gHfRJU",
     "image": "",
@@ -743,21 +582,14 @@
       "ru": "Jiang Nan"
     },
     "coords": [
-      0.0,
-      0.0
+      40.635353,
+      -74.035395
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Flushing-Main St",
-      "ru": "Flushing-Main St"
-    },
+    "price": "$$",
     "address": "133-42 39th Ave STE 101, Flushing, NY 11354",
     "external_link": "https://www.tiktok.com/t/ZP8gHbCNY",
     "image": "",
@@ -782,14 +614,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "24 W 56th St, New York, NY 10019",
     "external_link": "",
     "image": "",
@@ -807,21 +632,14 @@
       "ru": "Jongro BBQ Market"
     },
     "coords": [
-      0.0,
-      0.0
+      40.7481659,
+      -73.9873042
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "$10 special",
-    "transit": {
-      "en": "34 St-Herald Sq",
-      "ru": "34 St-Herald Sq"
-    },
+    "price": "$$",
     "address": "39 W 32nd St 1st Fl, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gHRqMM",
     "image": "",
@@ -846,14 +664,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Times Sq - 42 St",
-      "ru": "Times Sq - 42 St"
-    },
+    "price": "$$",
     "address": "1601 Broadway, New York, NY 10019",
     "external_link": "",
     "image": "",
@@ -878,14 +689,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Prince St / Spring St",
-      "ru": "Prince St / Spring St"
-    },
+    "price": "$$",
     "address": "398 W Broadway, New York, NY 10012",
     "external_link": "https://www.tiktok.com/t/ZP8gHdHAu",
     "image": "",
@@ -910,14 +714,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Bleecker St / Broadway-Lafayette",
-      "ru": "Bleecker St / Broadway-Lafayette"
-    },
+    "price": "$$",
     "address": "380 Lafayette St, New York, NY 10003",
     "external_link": "https://www.tiktok.com/t/ZP8gHmSRS",
     "image": "",
@@ -942,14 +739,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Myrtle-Willoughby Avs / DeKalb Ave area",
-      "ru": "Myrtle-Willoughby Avs / район DeKalb Ave"
-    },
+    "price": "$$",
     "address": "387 Myrtle Ave, Brooklyn, NY 11205",
     "external_link": "https://www.tiktok.com/t/ZP8gHKMEW",
     "image": "",
@@ -974,14 +764,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "5 Av/53 St / 57 St",
-      "ru": "5 Av/53 St / 57 St"
-    },
+    "price": "$$",
     "address": "260 W 35th St, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -1006,14 +789,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "28 St / 34 St",
-      "ru": "28 St / 34 St"
-    },
+    "price": "$$",
     "address": "800 6th Ave, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gHNV8U",
     "image": "",
@@ -1038,14 +814,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "York St / DUMBO",
-      "ru": "York St / DUMBO"
-    },
+    "price": "$$",
     "address": "151 Front St, Brooklyn, NY 11201",
     "external_link": "https://www.tiktok.com/t/ZP8gHKqG2",
     "image": "",
@@ -1070,14 +839,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "$20",
-    "transit": {
-      "en": "28 St",
-      "ru": "28 St"
-    },
+    "price": "$$",
     "address": "105 W 27th St, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gH41WH",
     "image": "",
@@ -1102,14 +864,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Flushing-Main St",
-      "ru": "Flushing-Main St"
-    },
+    "price": "$$",
     "address": "136-20 Roosevelt Ave, Flushing, NY 11354",
     "external_link": "",
     "image": "",
@@ -1134,14 +889,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "41 Mott St, New York, NY 10013",
     "external_link": "https://www.tiktok.com/t/ZP8gHmWwe",
     "image": "",
@@ -1166,14 +914,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "54 Bayard St, New York, NY 10013",
     "external_link": "",
     "image": "",
@@ -1198,14 +939,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Delancey St-Essex St",
-      "ru": "Delancey St-Essex St"
-    },
+    "price": "$$",
     "address": "85 Stanton St, New York, NY 10002",
     "external_link": "https://www.tiktok.com/t/ZP8gHM7S7",
     "image": "",
@@ -1230,14 +964,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Coney Island",
-      "ru": "Coney Island"
-    },
+    "price": "$$",
     "address": "1310 Surf Ave, Brooklyn, NY 11224",
     "external_link": "",
     "image": "",
@@ -1262,14 +989,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Grand St",
-      "ru": "Grand St"
-    },
+    "price": "$$",
     "address": "83 Chrystie St, New York, NY 10002",
     "external_link": "https://www.tiktok.com/t/ZP8gHjkrX",
     "image": "",
@@ -1294,14 +1014,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "13 Doyers St, New York, NY 10013",
     "external_link": "https://www.tiktok.com/t/ZP8gHrW8A",
     "image": "",
@@ -1326,14 +1039,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "St George Ferry Terminal",
-      "ru": "St George Ferry Terminal"
-    },
+    "price": "$$",
     "address": "27 Hyatt St, Staten Island, NY 10301",
     "external_link": "",
     "image": "",
@@ -1358,14 +1064,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "23 St",
-      "ru": "23 St"
-    },
+    "price": "$$",
     "address": "80 W 40th St, New York, NY 10018",
     "external_link": "",
     "image": "",
@@ -1390,14 +1089,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "pricey",
-    "transit": {
-      "en": "Atlantic Terminal / Clinton-Washington Avs",
-      "ru": "Atlantic Terminal / Clinton-Washington Avs"
-    },
+    "price": "$$",
     "address": "635 Vanderbilt Ave, Brooklyn, NY 11238",
     "external_link": "https://www.tiktok.com/t/ZP8gHvpq3",
     "image": "",
@@ -1422,14 +1114,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "1 Av / Avenue B",
-      "ru": "1 Av / Avenue B"
-    },
+    "price": "$$",
     "address": "199 Avenue B, New York, NY 10009",
     "external_link": "https://www.tiktok.com/t/ZP8gHvweN",
     "image": "",
@@ -1454,14 +1139,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Greenpoint Ave / Manhattan Ave",
-      "ru": "Greenpoint Ave / Manhattan Ave"
-    },
+    "price": "$$",
     "address": "1011 Manhattan Ave, Brooklyn, NY 11222",
     "external_link": "https://www.tiktok.com/t/ZP8gHqrKc",
     "image": "",
@@ -1486,14 +1164,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "23 St / 28 St",
-      "ru": "23 St / 28 St"
-    },
+    "price": "$$",
     "address": "230 5th Ave, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -1518,14 +1189,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Lexington Ave/63 St / Upper East Side",
-      "ru": "Lexington Ave/63 St / Upper East Side"
-    },
+    "price": "$$",
     "address": "1138 1st Ave, New York, NY 10065",
     "external_link": "https://www.tiktok.com/t/ZP8gH71p4",
     "image": "",
@@ -1550,14 +1214,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "86 St / Upper East Side",
-      "ru": "86 St / Upper East Side"
-    },
+    "price": "$$",
     "address": "1559 2nd Ave, New York, NY 10028",
     "external_link": "https://www.tiktok.com/t/ZP8gHbXVB",
     "image": "",
@@ -1575,21 +1232,14 @@
       "ru": "Sendo"
     },
     "coords": [
-      0.0,
-      0.0
+      40.747963,
+      -73.988992
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "28 St / Herald Sq",
-      "ru": "28 St / Herald Sq"
-    },
+    "price": "$$",
     "address": "876 6th Ave 2nd Floor, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gHHAtG",
     "image": "",
@@ -1614,14 +1264,7 @@
       "food"
     ],
     "personal": "highly-recommend",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "28 St / 34 St-Herald Sq",
-      "ru": "28 St / 34 St-Herald Sq"
-    },
+    "price": "$$",
     "address": "835 6th Ave, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gHkxCm",
     "image": "",
@@ -1646,14 +1289,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "$5 burgers",
-    "transit": {
-      "en": "14 St-Union Sq",
-      "ru": "14 St-Union Sq"
-    },
+    "price": "$$",
     "address": "42 Union Sq E, New York, NY 10003",
     "external_link": "https://www.tiktok.com/t/ZP8gHspcy",
     "image": "",
@@ -1678,14 +1314,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Red Hook area",
-      "ru": "район Red Hook"
-    },
+    "price": "$$",
     "address": "185 Van Dyke St, Brooklyn, NY 11231",
     "external_link": "https://www.tiktok.com/t/ZP8gH6ydb",
     "image": "",
@@ -1710,14 +1339,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "$12 / 3 hand rolls",
-    "transit": {
-      "en": "Christopher St-Sheridan Sq",
-      "ru": "Christopher St-Sheridan Sq"
-    },
+    "price": "$$",
     "address": "119 Christopher St, New York, NY 10014",
     "external_link": "https://www.tiktok.com/t/ZP8gHUcGF",
     "image": "",
@@ -1742,14 +1364,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "15 St-Prospect Park / Prospect Park West",
-      "ru": "15 St-Prospect Park / Prospect Park West"
-    },
+    "price": "$$",
     "address": "214A Prospect Park W, Brooklyn, NY 11215",
     "external_link": "https://www.tiktok.com/t/ZP8gHaxeR",
     "image": "",
@@ -1774,14 +1389,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "W 4 St",
-      "ru": "W 4 St"
-    },
+    "price": "$$",
     "address": "378 6th Ave, New York, NY 10011",
     "external_link": "",
     "image": "",
@@ -1806,14 +1414,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "$100+",
-    "transit": {
-      "en": "Astor Pl / 2 Av",
-      "ru": "Astor Pl / 2 Av"
-    },
+    "price": "$$",
     "address": "120A St Marks Pl, New York, NY 10009",
     "external_link": "https://www.tiktok.com/t/ZP8gHgceb",
     "image": "",
@@ -1838,14 +1439,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "23 St / 28 St",
-      "ru": "23 St / 28 St"
-    },
+    "price": "$$",
     "address": "230 5th Ave, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gHPF2g",
     "image": "",
@@ -1870,14 +1464,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Carroll St / Red Hook edge",
-      "ru": "Carroll St / ближе к Red Hook"
-    },
+    "price": "$$",
     "address": "359 Sackett St, Brooklyn, NY 11231",
     "external_link": "https://www.tiktok.com/t/ZP8gHQ8mt",
     "image": "",
@@ -1902,14 +1489,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "$80 pp",
-    "transit": {
-      "en": "Bedford Ave / Williamsburg waterfront",
-      "ru": "Bedford Ave / набережная Williamsburg"
-    },
+    "price": "$$",
     "address": "237 Kent Ave, Brooklyn, NY 11249",
     "external_link": "https://www.tiktok.com/t/ZP8gHGbog",
     "image": "",
@@ -1927,21 +1507,14 @@
       "ru": "Xiang La Hot Pot"
     },
     "coords": [
-      0.0,
-      0.0
+      40.7476986,
+      -73.9873436
     ],
     "category": [
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "$19 lunch",
-    "transit": {
-      "en": "34 St-Herald Sq",
-      "ru": "34 St-Herald Sq"
-    },
+    "price": "$$",
     "address": "34 W 32nd St #2F, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gHYhuh",
     "image": "",
@@ -1966,14 +1539,7 @@
       "food"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "46 Grand St, New York, NY 10013",
     "external_link": "https://www.tiktok.com/t/ZP8gHMkFT",
     "image": "",
@@ -1998,14 +1564,7 @@
       "hidden-gems"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "57 St / 7 Av",
-      "ru": "57 St / 7 Av"
-    },
+    "price": "$$",
     "address": "180 W 58th St, New York, NY 10019",
     "external_link": "",
     "image": "",
@@ -2030,14 +1589,7 @@
       "hidden-gems"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Wall St",
-      "ru": "Wall St"
-    },
+    "price": "$$",
     "address": "55 Water St, New York, NY 10041",
     "external_link": "",
     "image": "",
@@ -2062,14 +1614,7 @@
       "hidden-gems"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "14 N Moore St, New York, NY 10013",
     "external_link": "",
     "image": "",
@@ -2094,14 +1639,7 @@
       "hidden-gems"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Broadway / 31 St + bus or ferry nearby",
-      "ru": "Broadway / 31 St + bus or ferry nearby"
-    },
+    "price": "$$",
     "address": "32-01 Vernon Blvd, Queens, NY 11106",
     "external_link": "",
     "image": "",
@@ -2126,14 +1664,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Brooklyn Bridge–City Hall",
-      "ru": "Brooklyn Bridge–City Hall"
-    },
+    "price": "$$",
     "address": "Brooklyn Bridge Pedestrian Entrance, New York, NY 10038",
     "external_link": "",
     "image": "",
@@ -2158,14 +1689,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "110 St Cathedral Pkwy",
-      "ru": "110 St Cathedral Pkwy"
-    },
+    "price": "$$",
     "address": "1047 Amsterdam Ave, New York, NY 10025",
     "external_link": "",
     "image": "",
@@ -2190,14 +1714,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "Canal St & Mott St, New York, NY 10013",
     "external_link": "",
     "image": "",
@@ -2222,14 +1739,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Grand Central",
-      "ru": "Grand Central"
-    },
+    "price": "$$",
     "address": "405 Lexington Ave, New York, NY 10174",
     "external_link": "",
     "image": "",
@@ -2254,14 +1764,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Coney Island–Stillwell Ave",
-      "ru": "Coney Island–Stillwell Ave"
-    },
+    "price": "$$",
     "address": "Surf Ave & Stillwell Ave, Brooklyn, NY 11224",
     "external_link": "",
     "image": "",
@@ -2286,14 +1789,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "York St (F)",
-      "ru": "York St (F)"
-    },
+    "price": "$$",
     "address": "Washington St & Water St, Brooklyn, NY 11201",
     "external_link": "",
     "image": "",
@@ -2318,14 +1814,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "~5",
-    "transit": {
-      "en": "34 St Herald Sq",
-      "ru": "34 St Herald Sq"
-    },
+    "price": "$$",
     "address": "20 W 34th St, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -2350,14 +1839,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Wall St",
-      "ru": "Wall St"
-    },
+    "price": "$$",
     "address": "33 Liberty St, New York, NY 10045",
     "external_link": "",
     "image": "",
@@ -2382,14 +1864,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "23 St",
-      "ru": "23 St"
-    },
+    "price": "$$",
     "address": "175 5th Ave, New York, NY 10010",
     "external_link": "",
     "image": "",
@@ -2414,14 +1889,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Grand Central",
-      "ru": "Grand Central"
-    },
+    "price": "$$",
     "address": "89 E 42nd St, New York, NY 10017",
     "external_link": "",
     "image": "",
@@ -2446,14 +1914,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "34 St Hudson Yards",
-      "ru": "34 St Hudson Yards"
-    },
+    "price": "$$",
     "address": "20 Hudson Yards, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -2478,14 +1939,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "66 St - Lincoln Center",
-      "ru": "66 St - Lincoln Center"
-    },
+    "price": "$$",
     "address": "Lincoln Center Plaza, New York, NY 10023",
     "external_link": "",
     "image": "",
@@ -2510,14 +1964,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Canal St / Spring St",
-      "ru": "Canal St / Spring St"
-    },
+    "price": "$$",
     "address": "Mulberry St & Grand St, New York, NY 10013",
     "external_link": "",
     "image": "",
@@ -2542,14 +1989,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Penn Station",
-      "ru": "Penn Station"
-    },
+    "price": "$$",
     "address": "4 Pennsylvania Plaza, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -2574,14 +2014,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "World Trade Center",
-      "ru": "World Trade Center"
-    },
+    "price": "$$",
     "address": "180 Greenwich St, New York, NY 10007",
     "external_link": "",
     "image": "",
@@ -2606,14 +2039,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Penn Station",
-      "ru": "Penn Station"
-    },
+    "price": "$$",
     "address": "481 8th Ave, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -2638,14 +2064,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "42 St",
-      "ru": "42 St"
-    },
+    "price": "$$",
     "address": "476 5th Ave, New York, NY 10018",
     "external_link": "",
     "image": "",
@@ -2670,14 +2089,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Wall St",
-      "ru": "Wall St"
-    },
+    "price": "$$",
     "address": "11 Wall St, New York, NY 10005",
     "external_link": "",
     "image": "",
@@ -2702,14 +2114,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "World Trade Center",
-      "ru": "World Trade Center"
-    },
+    "price": "$$",
     "address": "185 Greenwich St, New York, NY 10007",
     "external_link": "",
     "image": "",
@@ -2734,14 +2139,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "~45",
-    "transit": {
-      "en": "World Trade Center",
-      "ru": "World Trade Center"
-    },
+    "price": "$$",
     "address": "285 Fulton St, New York, NY 10007",
     "external_link": "",
     "image": "",
@@ -2766,14 +2164,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "47-50 St",
-      "ru": "47-50 St"
-    },
+    "price": "$$",
     "address": "45 Rockefeller Plaza, New York, NY 10111",
     "external_link": "",
     "image": "",
@@ -2798,14 +2189,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "MetroCard / OMNY fare",
-    "transit": {
-      "en": "Lexington Av/59 St",
-      "ru": "Lexington Av/59 St"
-    },
+    "price": "$$",
     "address": "254 E 60th St, New York, NY 10022",
     "external_link": "",
     "image": "",
@@ -2830,14 +2214,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Prince St / Spring St",
-      "ru": "Prince St / Spring St"
-    },
+    "price": "$$",
     "address": "Broadway & Prince St, New York, NY 10012",
     "external_link": "",
     "image": "",
@@ -2862,14 +2239,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "5 Av/53 St",
-      "ru": "5 Av/53 St"
-    },
+    "price": "$$",
     "address": "5th Ave & E 51st St, New York, NY 10022",
     "external_link": "",
     "image": "",
@@ -2894,11 +2264,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~5",
-    "transit": null,
+    "price": "$$",
     "address": "Liberty Island, New York, NY 10004",
     "external_link": "",
     "image": "",
@@ -2923,14 +2289,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "34 St Hudson Yards",
-      "ru": "34 St Hudson Yards"
-    },
+    "price": "$$",
     "address": "20 Hudson Yards, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -2955,14 +2314,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Times Sq–42 St",
-      "ru": "Times Sq–42 St"
-    },
+    "price": "$$",
     "address": "Times Square, New York, NY 10036",
     "external_link": "",
     "image": "",
@@ -2987,14 +2339,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Wall St",
-      "ru": "Wall St"
-    },
+    "price": "$$",
     "address": "89 Broadway, New York, NY 10006",
     "external_link": "",
     "image": "",
@@ -3019,14 +2364,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Mets-Willets Point",
-      "ru": "Mets-Willets Point"
-    },
+    "price": "$$",
     "address": "Flushing Meadows Corona Park, Queens, NY 11368",
     "external_link": "",
     "image": "",
@@ -3051,14 +2389,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Grand Central",
-      "ru": "Grand Central"
-    },
+    "price": "$$",
     "address": "405 E 42nd St, New York, NY 10017",
     "external_link": "",
     "image": "",
@@ -3083,14 +2414,7 @@
       "landmarks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Bowling Green",
-      "ru": "Bowling Green"
-    },
+    "price": "$$",
     "address": "Bowling Green, New York, NY 10004",
     "external_link": "",
     "image": "places/landmarks/wall-street-bull/cover.jpg",
@@ -3115,14 +2439,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~0",
-    "transit": {
-      "en": "81 St - Museum of Natural History",
-      "ru": "81 St - Museum of Natural History"
-    },
+    "price": "$$",
     "address": "200 Central Park W, New York, NY 10024",
     "external_link": "",
     "image": "",
@@ -3147,14 +2464,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "167 St",
-      "ru": "167 St"
-    },
+    "price": "$$",
     "address": "1040 Grand Concourse, Bronx, NY 10456",
     "external_link": "",
     "image": "",
@@ -3179,14 +2489,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~0",
-    "transit": {
-      "en": "Eastern Pkwy-Brooklyn Museum",
-      "ru": "Eastern Pkwy-Brooklyn Museum"
-    },
+    "price": "$$",
     "address": "200 Eastern Pkwy, Brooklyn, NY 11238",
     "external_link": "",
     "image": "",
@@ -3211,14 +2514,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Same ferry as Statue of Liberty",
-      "ru": "Тот же паром"
-    },
+    "price": "$$",
     "address": "Ellis Island, New York, NY 10004",
     "external_link": "",
     "image": "",
@@ -3243,14 +2539,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "~0",
-    "transit": {
-      "en": "86 St",
-      "ru": "86 St"
-    },
+    "price": "$$",
     "address": "1071 5th Ave, New York, NY 10128",
     "external_link": "",
     "image": "",
@@ -3275,14 +2564,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~6",
-    "transit": {
-      "en": "50 St / 42 St + walk",
-      "ru": "50 St / 42 St + walk"
-    },
+    "price": "$$",
     "address": "Pier 86, W 46th St, New York, NY 10036",
     "external_link": "",
     "image": "",
@@ -3307,14 +2589,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "~0+",
-    "transit": {
-      "en": "Fulton St / World Trade Center",
-      "ru": "Fulton St / World Trade Center"
-    },
+    "price": "$$",
     "address": "21 Dey St, New York, NY 10007",
     "external_link": "",
     "image": "",
@@ -3339,14 +2614,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~30",
-    "transit": {
-      "en": "86 St",
-      "ru": "86 St"
-    },
+    "price": "$$",
     "address": "1000 5th Ave, New York, NY 10028",
     "external_link": "",
     "image": "",
@@ -3371,14 +2639,7 @@
       "museums"
     ],
     "personal": "highly-recommend",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~0",
-    "transit": {
-      "en": "5 Av/53 St",
-      "ru": "5 Av/53 St"
-    },
+    "price": "$$",
     "address": "11 W 53rd St, New York, NY 10019",
     "external_link": "",
     "image": "",
@@ -3403,14 +2664,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "~3",
-    "transit": {
-      "en": "103 St / 6 train",
-      "ru": "103 St / 6 train"
-    },
+    "price": "$$",
     "address": "1220 5th Ave, New York, NY 10029",
     "external_link": "",
     "image": "",
@@ -3435,14 +2689,7 @@
       "museums"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "~0",
-    "transit": {
-      "en": "14 St / 8 Av",
-      "ru": "14 St / 8 Av"
-    },
+    "price": "$$",
     "address": "99 Gansevoort St, New York, NY 10014",
     "external_link": "",
     "image": "",
@@ -3467,14 +2714,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Houston St / Christopher St",
-      "ru": "Houston St / Christopher St"
-    },
+    "price": "$$",
     "address": "64 Downing St, New York, NY 10014",
     "external_link": "https://www.tiktok.com/t/ZP8gHr1Wn",
     "image": "",
@@ -3499,14 +2739,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Brighton Beach",
-      "ru": "Brighton Beach"
-    },
+    "price": "$$",
     "address": "Brighton Beach Ave & Boardwalk, Brooklyn, NY 11235",
     "external_link": "",
     "image": "",
@@ -3531,14 +2764,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Bowery / Grand St",
-      "ru": "Bowery / Grand St"
-    },
+    "price": "$$",
     "address": "207 Bowery, New York, NY 10002",
     "external_link": "https://www.tiktok.com/t/ZP8gHGcoY",
     "image": "",
@@ -3563,14 +2789,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "23 St",
-      "ru": "23 St"
-    },
+    "price": "$$",
     "address": "935 Broadway, New York, NY 10010",
     "external_link": "",
     "image": "",
@@ -3595,14 +2814,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "DUMBO",
-      "ru": "DUMBO"
-    },
+    "price": "$$",
     "address": "1 Old Dock St, Brooklyn, NY 11201",
     "external_link": "",
     "image": "",
@@ -3627,14 +2839,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "5 Av/53 St",
-      "ru": "5 Av/53 St"
-    },
+    "price": "$$",
     "address": "636 5th Ave, New York, NY 10020",
     "external_link": "",
     "image": "",
@@ -3659,14 +2864,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "5 Av/53 St",
-      "ru": "5 Av/53 St"
-    },
+    "price": "$$",
     "address": "1 E 57th St, New York, NY 10022",
     "external_link": "",
     "image": "",
@@ -3691,14 +2889,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Coney Island",
-      "ru": "Coney Island"
-    },
+    "price": "$$",
     "address": "1000 Surf Ave, Brooklyn, NY 11224",
     "external_link": "",
     "image": "",
@@ -3723,14 +2914,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Times Sq–42 St",
-      "ru": "Times Sq–42 St"
-    },
+    "price": "$$",
     "address": "1600 Broadway, New York, NY 10019",
     "external_link": "",
     "image": "places/other/mms-store/cover.jpg",
@@ -3755,14 +2939,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "W 4 St / Astor Pl",
-      "ru": "W 4 St / Astor Pl"
-    },
+    "price": "$$",
     "address": "Washington Square Park area, New York, NY 10012",
     "external_link": "",
     "image": "",
@@ -3787,14 +2964,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Penn Station",
-      "ru": "Penn Station"
-    },
+    "price": "$$",
     "address": "8th Ave & W 31st St, New York, NY 10001",
     "external_link": "",
     "image": "",
@@ -3819,14 +2989,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "",
-    "transit": {
-      "en": "Canal St",
-      "ru": "Canal St"
-    },
+    "price": "$$",
     "address": "77 Walker St, New York, NY 10013",
     "external_link": "https://www.tiktok.com/t/ZP8gHPCFp",
     "image": "",
@@ -3851,14 +3014,7 @@
       "other"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Bowling Green",
-      "ru": "Bowling Green"
-    },
+    "price": "$$",
     "address": "State St & Battery Pl, New York, NY 10004",
     "external_link": "",
     "image": "",
@@ -3883,14 +3039,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "72 St",
-      "ru": "72 St"
-    },
+    "price": "$$",
     "address": "Central Park, Terrace Dr, New York, NY 10021",
     "external_link": "",
     "image": "places/parks/bethesda-fountain/cover.jpg",
@@ -3915,14 +3064,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~0+",
-    "transit": {
-      "en": "West Farms Sq / E Tremont Av",
-      "ru": "West Farms Sq / E Tremont Av"
-    },
+    "price": "$$",
     "address": "2300 Southern Blvd, Bronx, NY 10460",
     "external_link": "",
     "image": "",
@@ -3947,14 +3089,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "paid",
-    "price": "~2",
-    "transit": {
-      "en": "Eastern Pkwy-Brooklyn Museum",
-      "ru": "Eastern Pkwy-Brooklyn Museum"
-    },
+    "price": "$$",
     "address": "990 Washington Ave, Brooklyn, NY 11225",
     "external_link": "",
     "image": "",
@@ -3979,14 +3114,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "42 St",
-      "ru": "42 St"
-    },
+    "price": "$$",
     "address": "Bryant Park, New York, NY 10018",
     "external_link": "",
     "image": "",
@@ -4011,14 +3139,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "72 St",
-      "ru": "72 St"
-    },
+    "price": "$$",
     "address": "The Mall, Central Park, New York, NY 10022",
     "external_link": "",
     "image": "",
@@ -4043,14 +3164,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "59 St",
-      "ru": "59 St"
-    },
+    "price": "$$",
     "address": "East 64th St, New York, NY 10021",
     "external_link": "",
     "image": "",
@@ -4075,14 +3189,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "full",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Ferry from Manhattan/Brooklyn",
-      "ru": "Паром"
-    },
+    "price": "$$",
     "address": "Governors Island Ferry Terminal, New York, NY 10004",
     "external_link": "",
     "image": "",
@@ -4107,14 +3214,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "14 St / 23 St",
-      "ru": "14 St / 23 St"
-    },
+    "price": "$$",
     "address": "Gansevoort St Entrance, New York, NY 10014",
     "external_link": "",
     "image": "",
@@ -4139,14 +3239,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "14 St",
-      "ru": "14 St"
-    },
+    "price": "$$",
     "address": "Pier 55, Hudson River Greenway, New York, NY 10014",
     "external_link": "",
     "image": "",
@@ -4171,14 +3264,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "110 St",
-      "ru": "110 St"
-    },
+    "price": "$$",
     "address": "Morningside Ave & W 114th St, New York, NY 10027",
     "external_link": "",
     "image": "",
@@ -4203,14 +3289,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": null,
-    "transit": {
-      "en": "Coney Island",
-      "ru": "Coney Island"
-    },
+    "price": "$$",
     "address": "602 Surf Ave, Brooklyn, NY 11224",
     "external_link": "",
     "image": "",
@@ -4235,14 +3314,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "Roosevelt Island Tram / F train",
-      "ru": "Roosevelt Island Tram / F train"
-    },
+    "price": "$$",
     "address": "Roosevelt Island, New York, NY 10044",
     "external_link": "",
     "image": "places/parks/roosevelt-island/cover.jpg",
@@ -4267,14 +3339,7 @@
       "parks"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "W 4 St",
-      "ru": "W 4 St"
-    },
+    "price": "$$",
     "address": "Washington Square, New York, NY 10012",
     "external_link": "",
     "image": "",
@@ -4299,14 +3364,7 @@
       "viewpoints"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "short",
-    "cost": "free",
-    "price": null,
-    "transit": {
-      "en": "York St",
-      "ru": "York St"
-    },
+    "price": "$$",
     "address": "Washington St & Front St, Brooklyn, NY 11201",
     "external_link": "",
     "image": "",
@@ -4331,14 +3389,7 @@
       "viewpoints"
     ],
     "personal": "want-to-go",
-    "tags": [],
-    "time": "medium",
-    "cost": "paid",
-    "price": "~0",
-    "transit": {
-      "en": "34 St Hudson Yards",
-      "ru": "34 St Hudson Yards"
-    },
+    "price": "$$",
     "address": "30 Hudson Yards, New York, NY 10001",
     "external_link": "",
     "image": "",

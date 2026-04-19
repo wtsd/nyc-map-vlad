@@ -7,14 +7,7 @@ coords:
   lng: -73.9981968
 category:
 - food
-tags: []
-time: medium
-cost: paid
-price: ''
-transit:
-  en: Canal St
-  ru: Canal St
+price: $$
 address: 13 Doyers St, New York, NY 10013
 external_link: https://www.tiktok.com/t/ZP8gHrW8A
-featured: false
 personal: want-to-go

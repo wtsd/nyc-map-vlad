@@ -7,11 +7,6 @@ coords:
   lng: -73.9835
 category:
 - landmarks
-time: medium
-cost: free
-transit:
-  en: 66 St - Lincoln Center
-  ru: 66 St - Lincoln Center
 address: Lincoln Center Plaza, New York, NY 10023
 borough: Manhattan
 neighborhood: Upper West Side
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

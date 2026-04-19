@@ -7,11 +7,6 @@ coords:
   lng: -73.9975
 category:
 - food
-time: medium
-cost: paid
-transit:
-  en: Canal St
-  ru: Canal St
 address: 24 W 56th St, New York, NY 10019
 borough: Manhattan
 neighborhood: Chinatown / Little Italy
@@ -30,3 +25,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

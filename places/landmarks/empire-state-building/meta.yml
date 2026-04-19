@@ -7,12 +7,7 @@ coords:
   lng: -73.9857
 category:
 - landmarks
-time: medium
-cost: paid
-price: ~5
-transit:
-  en: 34 St Herald Sq
-  ru: 34 St Herald Sq
+price: $$
 address: 20 W 34th St, New York, NY 10001
 borough: Manhattan
 neighborhood: Flatiron / NoMad

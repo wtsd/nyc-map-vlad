@@ -7,11 +7,6 @@ coords:
   lng: -73.9935
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: Penn Station
-  ru: Penn Station
 address: 481 8th Ave, New York, NY 10001
 borough: Manhattan
 neighborhood: Chelsea
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

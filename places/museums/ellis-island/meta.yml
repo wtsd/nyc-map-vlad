@@ -7,11 +7,6 @@ coords:
   lng: -74.0396
 category:
 - museums
-time: medium
-cost: paid
-transit:
-  en: Same ferry as Statue of Liberty
-  ru: Тот же паром
 address: Ellis Island, New York, NY 10004
 route_types:
 - culture
@@ -31,3 +26,4 @@ vibes:
 best_for: []
 external_link: ''
 personal: want-to-go
+price: $$

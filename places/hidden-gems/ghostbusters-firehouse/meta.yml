@@ -7,11 +7,6 @@ coords:
   lng: -74.0065
 category:
 - hidden-gems
-time: short
-cost: free
-transit:
-  en: Canal St
-  ru: Canal St
 address: 14 N Moore St, New York, NY 10013
 borough: Manhattan
 neighborhood: SoHo / Nolita
@@ -29,3 +24,4 @@ best_for:
 - photos
 external_link: ''
 personal: want-to-go
+price: $$

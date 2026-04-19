@@ -7,11 +7,6 @@ coords:
   lng: -73.9595
 category:
 - parks
-time: short
-cost: free
-transit:
-  en: 110 St
-  ru: 110 St
 address: Morningside Ave & W 114th St, New York, NY 10027
 borough: Manhattan
 neighborhood: Morningside Heights
@@ -32,3 +27,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

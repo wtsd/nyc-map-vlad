@@ -7,11 +7,6 @@ coords:
   lng: -74.0109
 category:
 - food
-time: short
-cost: paid
-transit:
-  en: Wall St
-  ru: Wall St
 address: 6 Hanover St, New York, NY 10005
 borough: Manhattan
 neighborhood: Financial District
@@ -38,3 +33,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

@@ -7,12 +7,7 @@ coords:
   lng: -73.9632
 category:
 - museums
-time: full
-cost: paid
-price: ~30
-transit:
-  en: 86 St
-  ru: 86 St
+price: $$
 address: 1000 5th Ave, New York, NY 10028
 borough: Manhattan
 neighborhood: Upper East Side

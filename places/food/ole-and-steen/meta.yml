@@ -7,11 +7,6 @@ coords:
   lng: -73.9894
 category:
 - food
-time: short
-cost: paid
-transit:
-  en: 23 St
-  ru: 23 St
 address: 80 W 40th St, New York, NY 10018
 borough: Manhattan
 neighborhood: Flatiron / NoMad
@@ -30,3 +25,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

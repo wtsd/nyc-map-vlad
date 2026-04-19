@@ -7,11 +7,6 @@ coords:
   lng: -74.0103
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: Wall St
-  ru: Wall St
 address: 33 Liberty St, New York, NY 10045
 borough: Manhattan
 neighborhood: Financial District
@@ -31,3 +26,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

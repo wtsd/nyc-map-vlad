@@ -7,11 +7,6 @@ coords:
   lng: -73.9787
 category:
 - landmarks
-time: medium
-cost: free
-transit:
-  en: 47-50 St
-  ru: 47-50 St
 address: 45 Rockefeller Plaza, New York, NY 10111
 borough: Manhattan
 neighborhood: Midtown East
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

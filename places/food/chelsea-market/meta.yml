@@ -7,11 +7,6 @@ coords:
   lng: -74.006
 category:
 - food
-time: medium
-cost: paid
-transit:
-  en: 14 St
-  ru: 14 St
 address: 75 9th Ave, New York, NY 10011
 borough: Manhattan
 neighborhood: Chelsea
@@ -31,3 +26,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

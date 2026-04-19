@@ -7,11 +7,6 @@ coords:
   lng: -74.0168
 category:
 - parks
-time: full
-cost: free
-transit:
-  en: Ferry from Manhattan/Brooklyn
-  ru: Паром
 address: Governors Island Ferry Terminal, New York, NY 10004
 route_types:
 - anchor-stop
@@ -33,3 +28,4 @@ best_for:
 - photos
 external_link: ''
 personal: want-to-go
+price: $$

@@ -7,11 +7,6 @@ coords:
   lng: -73.8458
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: Mets-Willets Point
-  ru: Mets-Willets Point
 address: Flushing Meadows Corona Park, Queens, NY 11368
 route_types:
 - architecture
@@ -28,3 +23,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

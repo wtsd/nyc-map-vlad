@@ -7,14 +7,7 @@ coords:
   lng: -73.994395
 category:
 - food
-tags: []
-time: medium
-cost: paid
-price: ''
-transit:
-  en: East Broadway
-  ru: East Broadway
+price: $$
 address: 88 E Broadway, New York, NY 10002
 external_link: https://www.tiktok.com/t/ZP8gHmxPC
-featured: false
 personal: want-to-go

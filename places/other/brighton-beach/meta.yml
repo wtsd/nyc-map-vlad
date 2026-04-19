@@ -7,11 +7,6 @@ coords:
   lng: -73.9615
 category:
 - other
-time: medium
-cost: free
-transit:
-  en: Brighton Beach
-  ru: Brighton Beach
 address: Brighton Beach Ave & Boardwalk, Brooklyn, NY 11235
 borough: Brooklyn
 neighborhood: Brighton Beach
@@ -24,3 +19,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

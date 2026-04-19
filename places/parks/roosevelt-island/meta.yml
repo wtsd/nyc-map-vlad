@@ -7,11 +7,6 @@ coords:
   lng: -73.9496
 category:
 - parks
-time: medium
-cost: free
-transit:
-  en: Roosevelt Island Tram / F train
-  ru: Roosevelt Island Tram / F train
 address: Roosevelt Island, New York, NY 10044
 route_types:
 - budget-friendly
@@ -33,3 +28,4 @@ best_for:
 - photos
 external_link: ''
 personal: want-to-go
+price: $$

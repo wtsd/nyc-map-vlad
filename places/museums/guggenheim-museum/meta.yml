@@ -7,12 +7,7 @@ coords:
   lng: -73.959
 category:
 - museums
-time: medium
-cost: paid
-price: ~0
-transit:
-  en: 86 St
-  ru: 86 St
+price: $$
 address: 1071 5th Ave, New York, NY 10128
 borough: Manhattan
 neighborhood: Upper East Side

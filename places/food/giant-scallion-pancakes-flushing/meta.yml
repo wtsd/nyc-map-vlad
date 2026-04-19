@@ -7,14 +7,7 @@ coords:
   lng: -73.8304846
 category:
 - food
-tags: []
-time: short
-cost: paid
-price: $6
-transit:
-  en: Flushing-Main St
-  ru: Flushing-Main St
+price: $$
 address: 135-45 Roosevelt Ave, Flushing, NY 11354
 external_link: https://www.tiktok.com/t/ZP8gHPEb7
-featured: false
 personal: want-to-go
