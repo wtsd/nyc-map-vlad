@@ -14,6 +14,7 @@ function getText() {
       maps: "Maps",
       copy: "Copy",
       address: "Address:",
+      external: "Open link",
       notFound: "Place not found",
       notFoundText: "The requested place does not exist.",
       photoFallback: "Photo coming later",
@@ -28,6 +29,7 @@ function getText() {
       maps: "Карта",
       copy: "Копировать",
       address: "Адрес:",
+      external: "Открыть ссылку",
       notFound: "Место не найдено",
       notFoundText: "Запрошенное место не существует.",
       photoFallback: "Фото будет позже",
@@ -140,6 +142,7 @@ function render() {
   const summary = NYCMapCommon.getLocalizedText(lang, currentPlace.summary, "");
   const address = NYCMapCommon.getPlaceAddress(currentPlace, lang);
   const mapsUrl = NYCMapCommon.getMapsUrl(currentPlace, lang);
+  const externalUrl = currentPlace.external_link || currentPlace.external_url || "";
   const category = Array.isArray(currentPlace.category) && currentPlace.category.length
     ? getCategoryLabel(currentPlace.category[0])
     : "";
@@ -161,6 +164,18 @@ function render() {
   placeImage.alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
   document.getElementById("placeTransitLink").href = mapsUrl;
+  const externalRow = document.getElementById("placeExternalRow");
+  const externalLink = document.getElementById("placeExternalLink");
+  const externalLabel = document.getElementById("placeExternalLabel");
+  if (externalUrl) {
+    externalRow.classList.remove("hidden");
+    externalLink.href = externalUrl;
+    externalLabel.textContent = t.external;
+  } else {
+    externalRow.classList.add("hidden");
+    externalLink.href = "#";
+    externalLabel.textContent = "";
+  }
   document.getElementById("openMapLink").href = mapsUrl;
   document.getElementById("openMapLink").setAttribute("target", "_blank");
   document.getElementById("openMapLink").setAttribute("rel", "noopener noreferrer");

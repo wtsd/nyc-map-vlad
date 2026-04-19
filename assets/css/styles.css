@@ -424,6 +424,10 @@ input[type="search"] {
   margin-bottom: 12px;
 }
 
+.external-row {
+  margin: -4px 0 14px;
+}
+
 .address-btn {
   display: inline-flex;
   align-items: center;
@@ -440,6 +444,12 @@ input[type="search"] {
 
 .address-btn:hover {
   background: #e6edff;
+}
+
+.external-btn {
+  color: #2c3e66;
+  background: #f3f6fd;
+  border-color: #dee6f6;
 }
 
 .mta-icon {
