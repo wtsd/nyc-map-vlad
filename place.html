@@ -14,15 +14,17 @@
         <p id="pageSubtitle">NYC Map by Vlad and Katya</p>
       </div>
 
-      <div class="header-buttons">
-        <a class="secondary-btn icon-btn" href="index.html" aria-label="Back to map">
-          <span class="btn-icon monochrome-icon" aria-hidden="true">←</span>
-          <span class="sr-only btn-label">Back</span>
-        </a>
-        <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
-          <span class="btn-icon monochrome-icon" aria-hidden="true">⌘</span>
-          <span class="sr-only btn-label">EN / RU</span>
-        </button>
+      <div class="topbar-actions">
+        <div class="header-buttons">
+          <a class="secondary-btn icon-btn" href="index.html" aria-label="Back to map">
+            <span class="btn-icon" aria-hidden="true">←</span>
+            <span class="sr-only btn-label">Back</span>
+          </a>
+          <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
+            <span class="btn-icon" aria-hidden="true">🌎</span>
+            <span class="sr-only btn-label">EN / RU</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -50,6 +52,12 @@
           </div>
 
           <p id="placeSummary" class="summary"></p>
+          <div id="placeExternalRow" class="external-row hidden">
+            <a id="placeExternalLink" class="address-btn external-btn" href="#" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">↗</span>
+              <span id="placeExternalLabel"></span>
+            </a>
+          </div>
 
           <div class="meta-row">
             <span id="placeTime" class="chip"></span>
