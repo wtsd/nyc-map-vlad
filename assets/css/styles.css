@@ -24,10 +24,11 @@ html, body {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body.place-page {
@@ -267,11 +268,11 @@ input[type="search"] {
   width: 100%;
   flex: 1;
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .sidebar-section {
-  max-height: 100%;
+  max-height: calc(100vh - 220px);
   overflow-y: auto;
   padding-right: 6px;
 }

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 import time
 import json
@@ -96,12 +97,57 @@ def get_place_key(meta_path: Path) -> str:
     # places/food/mei-lai-wah/meta.yml -> food/mei-lai-wah
     return str(meta_path.parent.relative_to(PLACES_DIR)).replace("\\", "/")
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Backfill external links and coordinates in places metadata."
+    )
+    parser.add_argument(
+        "--category",
+        help="Limit to a specific category (e.g. food, parks).",
+    )
+    parser.add_argument(
+        "--place",
+        action="append",
+        default=[],
+        help=(
+            "Limit to one or more places. Accepts 'category/id' or plain id. "
+            "Can be passed multiple times."
+        ),
+    )
+    parser.add_argument(
+        "--update-all-coords",
+        action="store_true",
+        help="Force coordinate refresh for all selected places (not only missing/0,0).",
+    )
+    parser.add_argument(
+        "--skip-external-link",
+        action="store_true",
+        help="Do not backfill external_link fields.",
+    )
+    return parser.parse_args()
+
+def normalize_place_filters(raw_values: list[str]) -> tuple[set[str], set[str]]:
+    place_keys: set[str] = set()
+    place_ids: set[str] = set()
+    for raw in raw_values:
+        value = str(raw or "").strip().strip("/")
+        if not value:
+            continue
+        if "/" in value:
+            place_keys.add(value.lower())
+        else:
+            place_ids.add(value.lower())
+    return place_keys, place_ids
+
 def main() -> None:
+    args = parse_args()
     updated_external = []
     updated_coords = []
     geocode_failures = []
+    skipped = []
 
     meta_files = sorted(PLACES_DIR.rglob("meta.yml"))
+    place_keys_filter, place_ids_filter = normalize_place_filters(args.place)
 
     if not meta_files:
         print("No meta.yml files found under places/")
@@ -109,15 +155,27 @@ def main() -> None:
 
     for meta_path in meta_files:
         place_key = get_place_key(meta_path)
+        category = place_key.split("/", 1)[0].lower()
+        place_id = meta_path.parent.name.lower()
+
+        if args.category and category != args.category.strip().lower():
+            skipped.append((place_key, "category filter"))
+            continue
+        if place_keys_filter or place_ids_filter:
+            if place_key.lower() not in place_keys_filter and place_id not in place_ids_filter:
+                skipped.append((place_key, "place filter"))
+                continue
+
         data = load_yaml(meta_path)
         changed = False
 
-        if has_missing_external_link(data):
+        if not args.skip_external_link and has_missing_external_link(data):
             data["external_link"] = ""
             updated_external.append(place_key)
             changed = True
 
-        if coords_missing_or_zero(data):
+        should_update_coords = args.update_all_coords or coords_missing_or_zero(data)
+        if should_update_coords:
             if place_key in OVERRIDES:
                 lat, lng = OVERRIDES[place_key]
                 data["coords"] = {"lat": float(lat), "lng": float(lng)}
@@ -145,7 +203,7 @@ def main() -> None:
 
     print()
     print("Done.")
-    print(f"Scanned {len(meta_files)} meta.yml files.")
+    print(f"Scanned {len(meta_files)} meta.yml files. Selected {len(meta_files) - len(skipped)}.")
     print(f"Added empty external_link to {len(updated_external)} places.")
     print(f"Updated coordinates for {len(updated_coords)} places.")
     print()
@@ -166,6 +224,10 @@ def main() -> None:
         print("geocode failures:")
         for place_key, query, reason in geocode_failures:
             print(f"  - {place_key}: {reason} | query={query}")
+        print()
+
+    if skipped:
+        print(f"Skipped {len(skipped)} places due to filters.")
         print()
 
     print("Closed / out-of-business check:")
