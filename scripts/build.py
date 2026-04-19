@@ -46,6 +46,7 @@ for place_id in os.listdir(PLACES_DIR):
         "price": meta.get("price"),
         "transit": meta.get("transit"),
         "address": meta.get("address", ""),
+        "external_link": meta.get("external_link", ""),
         "image": image_path,
         "summary": {
             "en": en_text,

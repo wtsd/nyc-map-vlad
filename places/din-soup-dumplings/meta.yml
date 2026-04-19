@@ -1,0 +1,27 @@
+id: din-soup-dumplings
+
+title:
+  en: Din Soup Dumplings
+  ru: Din Soup Dumplings
+
+coords:
+  lat: 0.0
+  lng: 0.0
+
+category:
+  - food
+
+tags: []
+
+time: medium
+cost: paid
+price: ""
+
+transit:
+  en: Court St / Borough Hall
+  ru: Court St / Borough Hall
+
+address: "162 Montague St Fl 2, Brooklyn, NY 11201"
+external_link: "https://www.tiktok.com/t/ZP8gHNPXb"
+
+featured: false

@@ -1,0 +1,27 @@
+id: annapurna-thakali-kitchen
+
+title:
+  en: Annapurna Thakali Kitchen
+  ru: Annapurna Thakali Kitchen
+
+coords:
+  lat: 0.0
+  lng: 0.0
+
+category:
+  - food
+
+tags: []
+
+time: medium
+cost: paid
+price: ""
+
+transit:
+  en: 74 St-Broadway / Jackson Heights-Roosevelt Ave
+  ru: 74 St-Broadway / Jackson Heights-Roosevelt Ave
+
+address: "72-24 Roosevelt Ave, Jackson Heights, NY 11372"
+external_link: "https://www.tiktok.com/t/ZP8gHmvYG"
+
+featured: false

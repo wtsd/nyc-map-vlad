@@ -1,0 +1,27 @@
+id: birds-jazz
+
+title:
+  en: Birds
+  ru: Birds
+
+coords:
+  lat: 0.0
+  lng: 0.0
+
+category:
+  - other
+
+tags: []
+
+time: medium
+cost: paid
+price: ""
+
+transit:
+  en: Houston St / Christopher St
+  ru: Houston St / Christopher St
+
+address: "64 Downing St, New York, NY 10014"
+external_link: "https://www.tiktok.com/t/ZP8gHr1Wn"
+
+featured: false

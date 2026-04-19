@@ -1,0 +1,27 @@
+id: new-kim-tuong
+
+title:
+  en: New Kim Tuong
+  ru: New Kim Tuong
+
+coords:
+  lat: 0.0
+  lng: 0.0
+
+category:
+  - food
+
+tags: []
+
+time: medium
+cost: paid
+price: ""
+
+transit:
+  en: Grand St
+  ru: Grand St
+
+address: "83 Chrystie St, New York, NY 10002"
+external_link: "https://www.tiktok.com/t/ZP8gHjkrX"
+
+featured: false

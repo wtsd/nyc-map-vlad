@@ -1,0 +1,27 @@
+id: mojo-east
+
+title:
+  en: Mojo East
+  ru: Mojo East
+
+coords:
+  lat: 0.0
+  lng: 0.0
+
+category:
+  - food
+
+tags: []
+
+time: medium
+cost: paid
+price: ""
+
+transit:
+  en: Delancey St-Essex St
+  ru: Delancey St-Essex St
+
+address: "85 Stanton St, New York, NY 10002"
+external_link: "https://www.tiktok.com/t/ZP8gHM7S7"
+
+featured: false

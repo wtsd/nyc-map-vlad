@@ -1,0 +1,27 @@
+id: jongro-bbq-market
+
+title:
+  en: Jongro BBQ Market
+  ru: Jongro BBQ Market
+
+coords:
+  lat: 0.0
+  lng: 0.0
+
+category:
+  - food
+
+tags: []
+
+time: medium
+cost: paid
+price: "$10 special"
+
+transit:
+  en: 34 St-Herald Sq
+  ru: 34 St-Herald Sq
+
+address: "39 W 32nd St 1st Fl, New York, NY 10001"
+external_link: "https://www.tiktok.com/t/ZP8gHRqMM"
+
+featured: false
