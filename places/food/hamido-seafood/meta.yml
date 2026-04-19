@@ -1,0 +1,20 @@
+id: hamido-seafood
+title:
+  en: Hamido Seafood
+  ru: Hamido Seafood
+coords:
+  lat: 0.0
+  lng: 0.0
+category:
+  - food
+tags: []
+time: medium
+cost: paid
+price: ""
+transit:
+  en: Astoria-Ditmars Blvd
+  ru: Astoria-Ditmars Blvd
+address: 31-29 Ditmars Blvd, Astoria, NY 11105
+external_link: https://www.tiktok.com/t/ZP8gH4D1u
+featured: false
+personal: want-to-go

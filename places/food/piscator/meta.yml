@@ -1,0 +1,20 @@
+id: piscator
+title:
+  en: Piscator
+  ru: Piscator
+coords:
+  lat: 40.733463
+  lng: -73.9550346
+category:
+- food
+tags: []
+time: medium
+cost: paid
+price: ''
+transit:
+  en: Greenpoint Ave / Manhattan Ave
+  ru: Greenpoint Ave / Manhattan Ave
+address: 1011 Manhattan Ave, Brooklyn, NY 11222
+external_link: https://www.tiktok.com/t/ZP8gHqrKc
+featured: false
+personal: want-to-go

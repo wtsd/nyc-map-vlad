@@ -1,0 +1,20 @@
+id: lucky-rabbit-noodles
+title:
+  en: Lucky Rabbit Noodles
+  ru: Lucky Rabbit Noodles
+coords:
+  lat: 40.7025371
+  lng: -73.9868994
+category:
+- food
+tags: []
+time: medium
+cost: paid
+price: ''
+transit:
+  en: York St / DUMBO
+  ru: York St / DUMBO
+address: 151 Front St, Brooklyn, NY 11201
+external_link: https://www.tiktok.com/t/ZP8gHKqG2
+featured: false
+personal: want-to-go
