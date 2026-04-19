@@ -90,6 +90,36 @@
     }
   },
   {
+    "id": "baires-grill",
+    "title": {
+      "en": "Baires Grill",
+      "ru": "Baires Grill"
+    },
+    "coords": [
+      40.7627443,
+      -73.9878936
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "50 St",
+      "ru": "50 St"
+    },
+    "address": "350 W 50th St, New York, NY 10019",
+    "external_link": "https://www.tiktok.com/t/ZP8gHTnFd",
+    "image": "places/food/baires-grill/cover.jpg",
+    "summary": {
+      "en": "Steak option in Hell’s Kitchen / Midtown West.",
+      "ru": "Вариант со steak в районе Hell’s Kitchen / Midtown West."
+    }
+  },
+  {
     "id": "bakery-je-taime",
     "title": {
       "en": "Bakery Je T’Aime",
@@ -210,6 +240,36 @@
     }
   },
   {
+    "id": "chirokuro",
+    "title": {
+      "en": "Chirokuro",
+      "ru": "Chirokuro"
+    },
+    "coords": [
+      40.727627,
+      -73.988718
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Astor Pl / 8 St-NYU",
+      "ru": "Astor Pl / 8 St-NYU"
+    },
+    "address": "103 2nd Ave, New York, NY 10003",
+    "external_link": "https://www.tiktok.com/t/ZP8gHgP1u",
+    "image": "places/food/chirokuro/cover.jpg",
+    "summary": {
+      "en": "Sushi spot with a stylized 2D restaurant concept.",
+      "ru": "Суши-место с 2D-концепцией интерьера."
+    }
+  },
+  {
     "id": "conwell-coffee-hall",
     "title": {
       "en": "Conwell Coffee Hall",
@@ -240,6 +300,36 @@
     }
   },
   {
+    "id": "davelle",
+    "title": {
+      "en": "Davelle",
+      "ru": "Davelle"
+    },
+    "coords": [
+      40.7184628,
+      -73.9860923
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Delancey St-Essex St",
+      "ru": "Delancey St-Essex St"
+    },
+    "address": "102 Suffolk St, New York, NY 10002",
+    "external_link": "https://www.tiktok.com/t/ZP8gHtnVu",
+    "image": "places/food/davelle/cover.jpg",
+    "summary": {
+      "en": "Japanese café / small bites place on the Lower East Side.",
+      "ru": "Японское кафе с small bites на Lower East Side."
+    }
+  },
+  {
     "id": "din-soup-dumplings",
     "title": {
       "en": "Din Soup Dumplings",
@@ -267,6 +357,36 @@
     "summary": {
       "en": "Brooklyn Heights dumpling stop, noted for the fun mini-dumpling format.",
       "ru": "Место в Brooklyn Heights, отмечено за интересный формат мини-димсамов и soup dumplings."
+    }
+  },
+  {
+    "id": "don-udon",
+    "title": {
+      "en": "Don Udon",
+      "ru": "Don Udon"
+    },
+    "coords": [
+      40.6741008,
+      -73.9571564
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Franklin Ave / Park Pl",
+      "ru": "Franklin Ave / Park Pl"
+    },
+    "address": "634 Park Pl, Brooklyn, NY 11238",
+    "external_link": "https://www.tiktok.com/t/ZP8gH3PUt",
+    "image": "places/food/don-udon/cover.jpg",
+    "summary": {
+      "en": "Brooklyn Japanese spot for udon and fish.",
+      "ru": "Японское место в Бруклине ради udon и рыбы."
     }
   },
   {
@@ -420,6 +540,66 @@
     }
   },
   {
+    "id": "gyu-ichiro",
+    "title": {
+      "en": "GYU Ichiro",
+      "ru": "GYU Ichiro"
+    },
+    "coords": [
+      40.7186613,
+      -73.9943363
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Grand St / Bowery",
+      "ru": "Grand St / Bowery"
+    },
+    "address": "135 Bowery, New York, NY 10002",
+    "external_link": "https://www.tiktok.com/t/ZP8gHcgxC",
+    "image": "places/food/gyu-ichiro/cover.jpg",
+    "summary": {
+      "en": "All-you-can-eat BBQ and sushi option.",
+      "ru": "Вариант all-you-can-eat BBQ и sushi."
+    }
+  },
+  {
+    "id": "hamido-seafood",
+    "title": {
+      "en": "Hamido Seafood",
+      "ru": "Hamido Seafood"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Astoria-Ditmars Blvd",
+      "ru": "Astoria-Ditmars Blvd"
+    },
+    "address": "31-29 Ditmars Blvd, Astoria, NY 11105",
+    "external_link": "https://www.tiktok.com/t/ZP8gH4D1u",
+    "image": "places/food/hamido-seafood/cover.jpg",
+    "summary": {
+      "en": "Egyptian seafood stop in Astoria.",
+      "ru": "Место с египетской seafood-кухней в Astoria."
+    }
+  },
+  {
     "id": "hanamizuki-cafe",
     "title": {
       "en": "Hanamizuki Cafe",
@@ -507,6 +687,36 @@
     "summary": {
       "en": "Midtown ramen stop from Katya’s list.",
       "ru": "Рамен-точка в Мидтауне из Катиного списка."
+    }
+  },
+  {
+    "id": "jiang-nan-flushing",
+    "title": {
+      "en": "Jiang Nan",
+      "ru": "Jiang Nan"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Flushing-Main St",
+      "ru": "Flushing-Main St"
+    },
+    "address": "133-42 39th Ave STE 101, Flushing, NY 11354",
+    "external_link": "https://www.tiktok.com/t/ZP8gHbCNY",
+    "image": "places/food/jiang-nan-flushing/cover.jpg",
+    "summary": {
+      "en": "Flushing option known here for Peking duck.",
+      "ru": "Место во Flushing, отмеченное здесь ради Peking duck."
     }
   },
   {
@@ -660,6 +870,36 @@
     }
   },
   {
+    "id": "larina",
+    "title": {
+      "en": "Larina",
+      "ru": "Larina"
+    },
+    "coords": [
+      40.6933068,
+      -73.9704183
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Myrtle-Willoughby Avs / DeKalb Ave area",
+      "ru": "Myrtle-Willoughby Avs / район DeKalb Ave"
+    },
+    "address": "387 Myrtle Ave, Brooklyn, NY 11205",
+    "external_link": "https://www.tiktok.com/t/ZP8gHKMEW",
+    "image": "places/food/larina/cover.jpg",
+    "summary": {
+      "en": "Brooklyn pasta spot from Katya’s list.",
+      "ru": "Паста-место в Бруклине из Катиного списка."
+    }
+  },
+  {
     "id": "liberty-bagels-midtown",
     "title": {
       "en": "Liberty Bagels",
@@ -717,6 +957,66 @@
     "summary": {
       "en": "Chinese coffee chain stop in Midtown.",
       "ru": "Точка китайской кофейной сети в Мидтауне."
+    }
+  },
+  {
+    "id": "lucky-rabbit-noodles",
+    "title": {
+      "en": "Lucky Rabbit Noodles",
+      "ru": "Lucky Rabbit Noodles"
+    },
+    "coords": [
+      40.7025371,
+      -73.9868994
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "York St / DUMBO",
+      "ru": "York St / DUMBO"
+    },
+    "address": "151 Front St, Brooklyn, NY 11201",
+    "external_link": "https://www.tiktok.com/t/ZP8gHKqG2",
+    "image": "places/food/lucky-rabbit-noodles/cover.jpg",
+    "summary": {
+      "en": "Fusion noodle stop in DUMBO.",
+      "ru": "Fusion noodle-место в DUMBO."
+    }
+  },
+  {
+    "id": "mala-panda",
+    "title": {
+      "en": "Mala Panda",
+      "ru": "Mala Panda"
+    },
+    "coords": [
+      40.7458049,
+      -73.9913459
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "$20",
+    "transit": {
+      "en": "28 St",
+      "ru": "28 St"
+    },
+    "address": "105 W 27th St, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gH41WH",
+    "image": "places/food/mala-panda/cover.jpg",
+    "summary": {
+      "en": "Chinese option in Midtown South, noted here around the $20 mark.",
+      "ru": "Китайское место в Midtown South, здесь отмечено как вариант примерно за $20."
     }
   },
   {
@@ -990,6 +1290,96 @@
     }
   },
   {
+    "id": "ozakaya",
+    "title": {
+      "en": "Ozakaya",
+      "ru": "Ozakaya"
+    },
+    "coords": [
+      40.6780491,
+      -73.9684471
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "pricey",
+    "transit": {
+      "en": "Atlantic Terminal / Clinton-Washington Avs",
+      "ru": "Atlantic Terminal / Clinton-Washington Avs"
+    },
+    "address": "635 Vanderbilt Ave, Brooklyn, NY 11238",
+    "external_link": "https://www.tiktok.com/t/ZP8gHvpq3",
+    "image": "places/food/ozakaya/cover.jpg",
+    "summary": {
+      "en": "Japanese restaurant in Brooklyn, marked here as a pricier option.",
+      "ru": "Японский ресторан в Бруклине, отмечен здесь как более дорогой вариант."
+    }
+  },
+  {
+    "id": "pavlo-mochi",
+    "title": {
+      "en": "Pavlo Mochi",
+      "ru": "Pavlo Mochi"
+    },
+    "coords": [
+      40.7282807,
+      -73.9786656
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "1 Av / Avenue B",
+      "ru": "1 Av / Avenue B"
+    },
+    "address": "199 Avenue B, New York, NY 10009",
+    "external_link": "https://www.tiktok.com/t/ZP8gHvweN",
+    "image": "places/food/pavlo-mochi/cover.jpg",
+    "summary": {
+      "en": "Dessert stop from Katya’s list, centered around mochi.",
+      "ru": "Десертная точка из Катиного списка, отмечена ради mochi."
+    }
+  },
+  {
+    "id": "piscator",
+    "title": {
+      "en": "Piscator",
+      "ru": "Piscator"
+    },
+    "coords": [
+      40.733463,
+      -73.9550346
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Greenpoint Ave / Manhattan Ave",
+      "ru": "Greenpoint Ave / Manhattan Ave"
+    },
+    "address": "1011 Manhattan Ave, Brooklyn, NY 11222",
+    "external_link": "https://www.tiktok.com/t/ZP8gHqrKc",
+    "image": "places/food/piscator/cover.jpg",
+    "summary": {
+      "en": "Fish-focused pop-up style stop in Greenpoint.",
+      "ru": "Место с акцентом на рыбу в стиле pop-up в Greenpoint."
+    }
+  },
+  {
     "id": "rooftop-230-fifth",
     "title": {
       "en": "230 Fifth Rooftop Bar",
@@ -1020,6 +1410,96 @@
     }
   },
   {
+    "id": "roy-fish-market",
+    "title": {
+      "en": "Roy Fish Market",
+      "ru": "Roy Fish Market"
+    },
+    "coords": [
+      40.7617216,
+      -73.9601005
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Lexington Ave/63 St / Upper East Side",
+      "ru": "Lexington Ave/63 St / Upper East Side"
+    },
+    "address": "1138 1st Ave, New York, NY 10065",
+    "external_link": "https://www.tiktok.com/t/ZP8gH71p4",
+    "image": "places/food/roy-fish-market/cover.jpg",
+    "summary": {
+      "en": "Upper East Side sushi stop from Katya’s list.",
+      "ru": "Суши-точка на Upper East Side из Катиного списка."
+    }
+  },
+  {
+    "id": "san-matteo-upper-east-side",
+    "title": {
+      "en": "San Matteo",
+      "ru": "San Matteo"
+    },
+    "coords": [
+      40.774651,
+      -73.9543326
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "86 St / Upper East Side",
+      "ru": "86 St / Upper East Side"
+    },
+    "address": "1559 2nd Ave, New York, NY 10028",
+    "external_link": "https://www.tiktok.com/t/ZP8gHbXVB",
+    "image": "places/food/san-matteo-upper-east-side/cover.jpg",
+    "summary": {
+      "en": "Upper East Side pizza stop from Katya’s list.",
+      "ru": "Пицца-место на Upper East Side из Катиного списка."
+    }
+  },
+  {
+    "id": "sendo",
+    "title": {
+      "en": "Sendo",
+      "ru": "Sendo"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "28 St / Herald Sq",
+      "ru": "28 St / Herald Sq"
+    },
+    "address": "876 6th Ave 2nd Floor, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gHHAtG",
+    "image": "places/food/sendo/cover.jpg",
+    "summary": {
+      "en": "Sushi spot in Midtown South.",
+      "ru": "Суши-место в Midtown South."
+    }
+  },
+  {
     "id": "skirt-steak",
     "title": {
       "en": "Skirt Steak",
@@ -1047,6 +1527,36 @@
     "summary": {
       "en": "Steak-and-fries stop in Midtown South.",
       "ru": "Место со steak and fries в Midtown South."
+    }
+  },
+  {
+    "id": "smashy-burger-union-square",
+    "title": {
+      "en": "Smashy Burger",
+      "ru": "Smashy Burger"
+    },
+    "coords": [
+      40.7361989,
+      -73.98901
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "$5 burgers",
+    "transit": {
+      "en": "14 St-Union Sq",
+      "ru": "14 St-Union Sq"
+    },
+    "address": "42 Union Sq E, New York, NY 10003",
+    "external_link": "https://www.tiktok.com/t/ZP8gHspcy",
+    "image": "places/food/smashy-burger-union-square/cover.jpg",
+    "summary": {
+      "en": "Burger stop by Union Square, noted here for low-price smash burgers.",
+      "ru": "Бургерная у Union Square, отмечена здесь из-за недорогих smash burgers."
     }
   },
   {
@@ -1170,6 +1680,36 @@
     }
   },
   {
+    "id": "the-office-of-mr-motto",
+    "title": {
+      "en": "The Office of Mr. Motto",
+      "ru": "The Office of Mr. Motto"
+    },
+    "coords": [
+      40.7271325,
+      -73.9841985
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "$100+",
+    "transit": {
+      "en": "Astor Pl / 2 Av",
+      "ru": "Astor Pl / 2 Av"
+    },
+    "address": "120A St Marks Pl, New York, NY 10009",
+    "external_link": "https://www.tiktok.com/t/ZP8gHgceb",
+    "image": "places/food/the-office-of-mr-motto/cover.jpg",
+    "summary": {
+      "en": "Higher-end Japanese option in the East Village area.",
+      "ru": "Более дорогой японский вариант в районе East Village."
+    }
+  },
+  {
     "id": "this-bowl",
     "title": {
       "en": "This Bowl",
@@ -1197,6 +1737,66 @@
     "summary": {
       "en": "Bowl-focused stop for poke and similar quick meals.",
       "ru": "Точка с bowl-форматом, включая poke и другие быстрые блюда."
+    }
+  },
+  {
+    "id": "tortelli",
+    "title": {
+      "en": "Tortelli",
+      "ru": "Tortelli"
+    },
+    "coords": [
+      40.6822688,
+      -73.9931502
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Carroll St / Red Hook edge",
+      "ru": "Carroll St / ближе к Red Hook"
+    },
+    "address": "359 Sackett St, Brooklyn, NY 11231",
+    "external_link": "https://www.tiktok.com/t/ZP8gHQ8mt",
+    "image": "places/food/tortelli/cover.jpg",
+    "summary": {
+      "en": "Pasta spot in Brooklyn from Katya’s list.",
+      "ru": "Паста-место в Бруклине из Катиного списка."
+    }
+  },
+  {
+    "id": "ume",
+    "title": {
+      "en": "Ume",
+      "ru": "Ume"
+    },
+    "coords": [
+      40.7165079,
+      -73.9654572
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "$80 pp",
+    "transit": {
+      "en": "Bedford Ave / Williamsburg waterfront",
+      "ru": "Bedford Ave / набережная Williamsburg"
+    },
+    "address": "237 Kent Ave, Brooklyn, NY 11249",
+    "external_link": "https://www.tiktok.com/t/ZP8gHGbog",
+    "image": "places/food/ume/cover.jpg",
+    "summary": {
+      "en": "More upscale Japanese option in Williamsburg.",
+      "ru": "Более нарядный японский ресторан в Williamsburg."
     }
   },
   {
@@ -2694,6 +3294,36 @@
     "summary": {
       "en": "Russian-speaking neighborhood with a unique vibe.",
       "ru": "Русскоязычный район с особой атмосферой."
+    }
+  },
+  {
+    "id": "champagne-problems",
+    "title": {
+      "en": "Champagne Problems",
+      "ru": "Champagne Problems"
+    },
+    "coords": [
+      40.721237,
+      -73.9932953
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Bowery / Grand St",
+      "ru": "Bowery / Grand St"
+    },
+    "address": "207 Bowery, New York, NY 10002",
+    "external_link": "https://www.tiktok.com/t/ZP8gHGcoY",
+    "image": "places/other/champagne-problems/cover.jpg",
+    "summary": {
+      "en": "Speakeasy-style stop from Katya’s list.",
+      "ru": "Speakeasy-точка из Катиного списка."
     }
   },
   {
