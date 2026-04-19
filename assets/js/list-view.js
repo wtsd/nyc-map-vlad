@@ -130,11 +130,9 @@
 
     const personalAllLabel = document.getElementById("personalAllLabel");
     const personalWantLabel = document.getElementById("personalWantLabel");
-    const personalNotImpressedLabel = document.getElementById("personalNotImpressedLabel");
     const personalRecommendLabel = document.getElementById("personalRecommendLabel");
     if (personalAllLabel) personalAllLabel.textContent = text.personalTabs.all;
     if (personalWantLabel) personalWantLabel.textContent = text.personalTabs.wantToGo;
-    if (personalNotImpressedLabel) personalNotImpressedLabel.textContent = text.personalTabs.notImpressed;
     if (personalRecommendLabel) personalRecommendLabel.textContent = text.personalTabs.recommend;
 
     const personalTabs = document.querySelectorAll(".personal-filter-tab");
