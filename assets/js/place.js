@@ -22,6 +22,7 @@ function getText() {
       external: "Open source link",
       openInMaps: "Open in maps",
       backToList: "Back to list",
+      home: "Home",
       noTransit: "Not specified",
       notFound: "Place not found",
       notFoundText: "The requested place does not exist.",
@@ -46,6 +47,7 @@ function getText() {
       external: "Открыть источник",
       openInMaps: "Открыть в картах",
       backToList: "Назад к списку",
+      home: "Главная",
       noTransit: "Не указано",
       notFound: "Место не найдено",
       notFoundText: "Запрошенное место не существует.",
@@ -199,8 +201,6 @@ function render() {
   document.getElementById("pageSubtitle").textContent = t.subtitle;
   document.getElementById("placeName").textContent = fullTitle;
   document.getElementById("placeCategory").textContent = category;
-  document.getElementById("placeTime").textContent = getTimeLabel(currentPlace.time);
-  document.getElementById("placeCost").textContent = getCostLabel(currentPlace.cost, currentPlace.price);
   document.getElementById("placeSummary").textContent = summary;
   document.getElementById("placeAddress").textContent = address;
   document.getElementById("placeTransit").textContent = transit;
@@ -218,13 +218,12 @@ function render() {
   placeImage.alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
   document.getElementById("placeAddressLink").href = mapsUrl;
-  const personalRow = document.getElementById("placePersonalRow");
   const personalEl = document.getElementById("placePersonal");
   if (personal) {
-    personalRow.classList.remove("hidden");
+    personalEl.classList.remove("hidden");
     personalEl.textContent = personal;
   } else {
-    personalRow.classList.add("hidden");
+    personalEl.classList.add("hidden");
     personalEl.textContent = "";
   }
   const externalRow = document.getElementById("placeExternalRow");
@@ -240,6 +239,16 @@ function render() {
     externalLabel.textContent = "";
   }
   document.getElementById("openMapLink").href = mapsUrl;
+  const breadcrumbs = document.getElementById("placeBreadcrumbs");
+  if (breadcrumbs) {
+    breadcrumbs.innerHTML = `
+      <a href="index.html">${t.home}</a>
+      <span aria-hidden="true">→</span>
+      <span>${category || "—"}</span>
+      <span aria-hidden="true">→</span>
+      <span aria-current="page">${fullTitle}</span>
+    `;
+  }
   const metaDescription = document.getElementById("placeMetaDescription");
   if (metaDescription) {
     metaDescription.setAttribute("content", summary || title);
@@ -271,18 +280,10 @@ function render() {
 
   const openMapLabel = document.querySelector("#openMapLink .btn-label");
   if (openMapLabel) openMapLabel.textContent = t.openInMaps;
-  const backToListLabel = document.querySelector("#backToListLink .btn-label");
-  if (backToListLabel) backToListLabel.textContent = t.backToList;
-  const metaAddressLabel = document.getElementById("metaAddressLabel");
-  if (metaAddressLabel) metaAddressLabel.textContent = t.address;
+  const backToListTopLabel = document.querySelector("#backToListTopLink .btn-label");
+  if (backToListTopLabel) backToListTopLabel.textContent = t.backToList;
   const metaTransitLabel = document.getElementById("metaTransitLabel");
   if (metaTransitLabel) metaTransitLabel.textContent = t.transit;
-  const metaCostLabel = document.getElementById("metaCostLabel");
-  if (metaCostLabel) metaCostLabel.textContent = t.cost;
-  const metaTimeLabel = document.getElementById("metaTimeLabel");
-  if (metaTimeLabel) metaTimeLabel.textContent = t.time;
-  const metaPersonalLabel = document.getElementById("metaPersonalLabel");
-  if (metaPersonalLabel) metaPersonalLabel.textContent = t.personal;
 
   renderStatus();
 }

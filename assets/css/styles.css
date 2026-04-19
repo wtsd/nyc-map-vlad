@@ -1126,6 +1126,35 @@ input[type="search"] {
   overflow: visible;
 }
 
+.place-main {
+  display: grid;
+  gap: 10px;
+}
+
+.place-nav-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.place-breadcrumbs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 2px 4px;
+}
+
+.place-breadcrumbs a {
+  color: #0f2f67;
+  text-decoration: none;
+}
+
+.place-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
 .place-card {
   border-radius: 18px;
 }
