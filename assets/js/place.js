@@ -15,7 +15,6 @@ function getText() {
       copy: "Copy summary",
       copied: "Summary copied",
       address: "Address:",
-      transit: "Transit:",
       cost: "Cost:",
       time: "Time:",
       personal: "Personal rating:",
@@ -30,7 +29,6 @@ function getText() {
       wantBtn: "Want",
       visitedBtn: "Visited",
       skipBtn: "Skip",
-      statusHint: "Choose one status",
       copyError: "Could not copy to clipboard"
     },
     ru: {
@@ -40,7 +38,6 @@ function getText() {
       copy: "Копировать описание",
       copied: "Описание скопировано",
       address: "Адрес:",
-      transit: "Транспорт:",
       cost: "Цена:",
       time: "Время:",
       personal: "Личная оценка:",
@@ -55,7 +52,6 @@ function getText() {
       wantBtn: "Хочу",
       visitedBtn: "Был",
       skipBtn: "Пропустить",
-      statusHint: "Выберите один статус",
       copyError: "Не удалось скопировать"
     }
   };
@@ -106,9 +102,6 @@ function renderStatus() {
   document.getElementById("btnWant").classList.toggle("active", status === "want");
   document.getElementById("btnVisited").classList.toggle("active", status === "visited");
   document.getElementById("btnSkip").classList.toggle("active", status === "skip");
-  document.getElementById("btnWant").setAttribute("aria-checked", String(status === "want"));
-  document.getElementById("btnVisited").setAttribute("aria-checked", String(status === "visited"));
-  document.getElementById("btnSkip").setAttribute("aria-checked", String(status === "skip"));
 }
 
 async function copyCurrentPlace() {
@@ -123,7 +116,6 @@ async function copyCurrentPlace() {
     `${lang === "ru" ? "Статус" : "Status"}: ${getStatusLabel(status)}`,
     "",
     `${t.address} ${NYCMapCommon.getPlaceAddress(currentPlace, lang)}`,
-    `${t.transit} ${NYCMapCommon.getLocalizedText(lang, currentPlace.transit, t.noTransit)}`,
     `${lang === "ru" ? "Время" : "Time"}: ${getTimeLabel(currentPlace.time)}`,
     `${lang === "ru" ? "Цена" : "Cost"}: ${getCostLabel(currentPlace.cost, currentPlace.price)}`,
     "",
@@ -188,7 +180,6 @@ function render() {
   const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
   const summary = NYCMapCommon.getLocalizedText(lang, currentPlace.summary, "");
   const address = NYCMapCommon.getPlaceAddress(currentPlace, lang);
-  const transit = NYCMapCommon.getLocalizedText(lang, currentPlace.transit, t.noTransit);
   const personal = NYCMapCommon.getPersonalLabel(lang, currentPlace.personal);
   const mapsUrl = NYCMapCommon.getMapsUrl(currentPlace, lang);
   const externalUrl = currentPlace.external_link || currentPlace.external_url || "";
@@ -203,7 +194,6 @@ function render() {
   document.getElementById("placeCategory").textContent = category;
   document.getElementById("placeSummary").textContent = summary;
   document.getElementById("placeAddress").textContent = address;
-  document.getElementById("placeTransit").textContent = transit;
   const placeImage = document.getElementById("placeImage");
   const placeImageFallback = document.getElementById("placeImageFallback");
   if (currentPlace.image) {
@@ -239,12 +229,14 @@ function render() {
     externalLabel.textContent = "";
   }
   document.getElementById("openMapLink").href = mapsUrl;
+  const primaryCategory = Array.isArray(currentPlace.category) && currentPlace.category.length ? currentPlace.category[0] : "";
+  const categoryHref = primaryCategory ? `index.html?categories=${encodeURIComponent(primaryCategory)}` : "index.html";
   const breadcrumbs = document.getElementById("placeBreadcrumbs");
   if (breadcrumbs) {
     breadcrumbs.innerHTML = `
       <a href="index.html">${t.home}</a>
       <span aria-hidden="true">→</span>
-      <span>${category || "—"}</span>
+      <a href="${categoryHref}">${category || "—"}</a>
       <span aria-hidden="true">→</span>
       <span aria-current="page">${fullTitle}</span>
     `;
@@ -265,11 +257,6 @@ function render() {
     btn.setAttribute("aria-label", label);
     btn.textContent = label;
   });
-  const statusHint = document.querySelector(".status-row-title");
-  if (statusHint) statusHint.textContent = t.statusHint;
-  const statusGroup = document.querySelector(".status-toggle-wrap");
-  if (statusGroup) statusGroup.setAttribute("aria-label", t.statusHint);
-
   const backBtn = document.querySelector(".header-buttons a");
   const backBtnLabel = backBtn?.querySelector(".btn-label");
   if (backBtnLabel) backBtnLabel.textContent = t.back;
@@ -282,9 +269,6 @@ function render() {
   if (openMapLabel) openMapLabel.textContent = t.openInMaps;
   const backToListTopLabel = document.querySelector("#backToListTopLink .btn-label");
   if (backToListTopLabel) backToListTopLabel.textContent = t.backToList;
-  const metaTransitLabel = document.getElementById("metaTransitLabel");
-  if (metaTransitLabel) metaTransitLabel.textContent = t.transit;
-
   renderStatus();
 }
 

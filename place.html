@@ -61,7 +61,6 @@
               <span id="placeAddress"></span>
             </a>
           </div>
-          <p id="placeTransitRow" class="meta-text"><span id="metaTransitLabel">Transit</span>: <span id="placeTransit"></span></p>
 
           <p id="placeSummary" class="summary"></p>
           <div id="placeExternalRow" class="external-row hidden">
@@ -72,11 +71,10 @@
           </div>
 
           <div class="status-row">
-            <span class="status-row-title">Choose one status</span>
-            <div class="status-toggle-wrap" role="radiogroup" aria-label="Choose one status">
-              <button id="btnWant" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'want')" aria-label="Want to visit">Want</button>
-              <button id="btnVisited" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'visited')" aria-label="Visited">Visited</button>
-              <button id="btnSkip" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'skip')" aria-label="Skip">Skip</button>
+            <div class="card-status-actions" role="group" aria-label="User status">
+              <button id="btnWant" type="button" class="status-chip-btn" onclick="setStatus(currentPlace.id, 'want')" aria-label="Want to visit">Want</button>
+              <button id="btnVisited" type="button" class="status-chip-btn" onclick="setStatus(currentPlace.id, 'visited')" aria-label="Visited">Visited</button>
+              <button id="btnSkip" type="button" class="status-chip-btn" onclick="setStatus(currentPlace.id, 'skip')" aria-label="Skip">Skip</button>
             </div>
           </div>
 

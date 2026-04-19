@@ -15,7 +15,8 @@
   }
 
   function setStatus(id, status) {
-    state.setChecklistStatus(id, status);
+    const nextStatus = state.getChecklist()[id] === status ? null : status;
+    state.setChecklistStatus(id, nextStatus);
     render();
   }
 
