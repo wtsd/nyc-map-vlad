@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Place | NYC Map by Vlad and Katya</title>
+  <meta id="placeMetaDescription" name="description" content="NYC Map place details by Vlad and Katya." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="place-page">
@@ -44,11 +45,30 @@
             <div id="placeCategory" class="card-category"></div>
           </div>
 
-          <div class="transit-row">
-            <a id="placeTransitLink" class="address-btn" href="#" target="_blank" rel="noopener noreferrer">
-              <span aria-hidden="true">📍</span>
-              <span id="placeTransit"></span>
-            </a>
+          <div class="meta-details" aria-label="Place metadata">
+            <div class="meta-item">
+              <span class="meta-item-label" id="metaAddressLabel">Address</span>
+              <a id="placeAddressLink" class="meta-item-value address-btn" href="#" target="_blank" rel="noopener noreferrer">
+                <span aria-hidden="true">📍</span>
+                <span id="placeAddress"></span>
+              </a>
+            </div>
+            <div id="placeTransitRow" class="meta-item">
+              <span class="meta-item-label" id="metaTransitLabel">Transit</span>
+              <span id="placeTransit" class="meta-item-value meta-text"></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-item-label" id="metaCostLabel">Cost</span>
+              <span id="placeCost" class="chip"></span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-item-label" id="metaTimeLabel">Time</span>
+              <span id="placeTime" class="chip"></span>
+            </div>
+            <div id="placePersonalRow" class="meta-item hidden">
+              <span class="meta-item-label" id="metaPersonalLabel">Personal rating</span>
+              <span id="placePersonal" class="chip personal-rating-chip"></span>
+            </div>
           </div>
 
           <p id="placeSummary" class="summary"></p>
@@ -57,11 +77,6 @@
               <span aria-hidden="true">↗</span>
               <span id="placeExternalLabel"></span>
             </a>
-          </div>
-
-          <div class="meta-row">
-            <span id="placeTime" class="chip"></span>
-            <span id="placeCost" class="chip"></span>
           </div>
 
           <div class="status-row">
@@ -75,20 +90,24 @@
 
           <div class="card-footer">
             <div class="card-footer-actions">
-              <button class="copy-btn icon-btn icon-only-btn" onclick="copyCurrentPlace()" aria-label="Copy place details">
+              <button class="copy-btn icon-btn" onclick="copyCurrentPlace()" aria-label="Copy place summary">
                 <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <rect x="9" y="9" width="11" height="11" rx="2"></rect>
                   <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
                 </svg>
-                <span class="sr-only btn-label">Copy</span>
+                <span class="btn-label">Copy summary</span>
               </button>
-              <a class="primary-link-btn icon-btn icon-only-btn" id="openMapLink" href="index.html" aria-label="Open map">
+              <a class="primary-link-btn icon-btn" id="openMapLink" href="index.html" aria-label="Open in maps" target="_blank" rel="noopener noreferrer">
                 <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M9.5 4.75a6 6 0 0 1 9 5.2c0 3.63-4.5 8.8-4.5 8.8s-4.5-5.17-4.5-8.8a6 6 0 0 1 0-5.2z"></path>
                   <circle cx="14" cy="10" r="2.2"></circle>
                   <path d="M4 7.5v11.75l6-2.25 8 2.25 2-11.75-8-2.25z"></path>
                 </svg>
-                <span class="sr-only btn-label">Maps</span>
+                <span class="btn-label">Open in Maps</span>
+              </a>
+              <a class="secondary-btn icon-btn" id="backToListLink" href="index.html" aria-label="Back to list">
+                <span class="btn-icon" aria-hidden="true">←</span>
+                <span class="btn-label">Back to list</span>
               </a>
             </div>
           </div>
