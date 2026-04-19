@@ -1,9 +1,11 @@
 (() => {
-  const VALID_PERSONAL = ["want-to-go", "highly-recommend", "highly-recommended"];
+  const VALID_PERSONAL = ["to-do", "visited", "want-to-go", "highly-recommend", "highly-recommended"];
   const VALID_STATUS = ["", "want", "skip", "visited"];
 
   function normalizePersonal(personal) {
-    return personal === "highly-recommended" ? "highly-recommend" : personal;
+    if (personal === "highly-recommended" || personal === "highly-recommend") return "visited";
+    if (personal === "want-to-go" || !personal) return "to-do";
+    return personal;
   }
 
   function readFilterInputs() {
@@ -61,8 +63,10 @@
       input.checked = categories.includes(input.value);
     });
 
-    const validPersonal = personal.filter((value) => VALID_PERSONAL.includes(value));
-    state.setCurrentPersonalFilter(validPersonal);
+    const validPersonal = personal
+      .filter((value) => VALID_PERSONAL.includes(value))
+      .map((value) => normalizePersonal(value));
+    state.setCurrentPersonalFilter(Array.from(new Set(validPersonal)));
     const personalInputs = Array.from(document.querySelectorAll(".personal-toggle-chip input"));
     personalInputs.forEach((input) => {
       input.checked = validPersonal.includes(input.value);

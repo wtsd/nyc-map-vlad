@@ -9,15 +9,5 @@ category:
 - museums
 price: $$
 address: 1220 5th Ave, New York, NY 10029
-route_types:
-- culture
-- easy-stop
-- rainy-day
-best_time:
-- afternoon
-- midday
-vibes:
-- curious
-best_for: []
 external_link: ''
-personal: want-to-go
+personal: to-do

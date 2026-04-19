@@ -8,23 +8,6 @@ coords:
 category:
 - parks
 address: Washington Square, New York, NY 10012
-borough: Manhattan
-neighborhood: Greenwich Village
-route_types:
-- budget-friendly
-- easy-stop
-- outdoors
-- relaxing
-- scenic
-best_time:
-- afternoon
-- golden-hour
-- morning
-vibes:
-- photogenic
-- slow
-best_for:
-- budget
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

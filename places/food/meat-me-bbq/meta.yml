@@ -8,19 +8,6 @@ coords:
 category:
 - food
 address: 136-20 Roosevelt Ave, Flushing, NY 11354
-route_types:
-- date-night
-- easy-stop
-- foodie
-best_time:
-- dinner
-- evening
-- late-afternoon
-- lunch
-vibes:
-- tasty
-best_for:
-- couples
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

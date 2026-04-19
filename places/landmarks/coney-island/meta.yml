@@ -8,27 +8,6 @@ coords:
 category:
 - landmarks
 address: Surf Ave & Stillwell Ave, Brooklyn, NY 11224
-borough: Brooklyn
-neighborhood: Coney Island
-route_types:
-- anchor-stop
-- architecture
-- budget-friendly
-- culture
-- day-trip
-- outdoors
-- scenic
-- touristy
-best_time:
-- afternoon
-- golden-hour
-- midday
-- morning
-vibes:
-- curious
-- photogenic
-best_for:
-- budget
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

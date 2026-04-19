@@ -6,9 +6,8 @@ coords:
   lat: 40.746807
   lng: -73.990083
 category:
-  - food
-personal: highly-recommend
-
+- food
+personal: visited
 price: $$
 address: 835 6th Ave, New York, NY 10001
 external_link: https://www.tiktok.com/t/ZP8gHkxCm

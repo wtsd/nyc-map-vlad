@@ -8,22 +8,6 @@ coords:
 category:
 - food
 address: 378 6th Ave, New York, NY 10011
-borough: Manhattan
-neighborhood: Greenwich Village
-route_types:
-- date-night
-- easy-stop
-- foodie
-- shopping
-best_time:
-- dinner
-- evening
-- late-afternoon
-- lunch
-vibes:
-- tasty
-best_for:
-- couples
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

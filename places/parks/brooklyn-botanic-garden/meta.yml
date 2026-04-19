@@ -9,20 +9,5 @@ category:
 - parks
 price: $$
 address: 990 Washington Ave, Brooklyn, NY 11225
-borough: Brooklyn
-neighborhood: Prospect Heights
-route_types:
-- anchor-stop
-- outdoors
-- relaxing
-- scenic
-best_time:
-- afternoon
-- golden-hour
-- morning
-vibes:
-- photogenic
-- slow
-best_for: []
 external_link: ''
-personal: want-to-go
+personal: to-do

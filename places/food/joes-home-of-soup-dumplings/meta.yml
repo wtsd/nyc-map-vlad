@@ -8,21 +8,6 @@ coords:
 category:
 - food
 address: 24 W 56th St, New York, NY 10019
-borough: Manhattan
-neighborhood: Chinatown / Little Italy
-route_types:
-- date-night
-- easy-stop
-- foodie
-best_time:
-- dinner
-- evening
-- late-afternoon
-- lunch
-vibes:
-- tasty
-best_for:
-- couples
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

@@ -8,27 +8,6 @@ coords:
 category:
 - food
 address: 230 5th Ave, New York, NY 10001
-borough: Manhattan
-neighborhood: Flatiron / NoMad
-route_types:
-- date-night
-- easy-stop
-- foodie
-- photography
-- scenic
-best_time:
-- dinner
-- evening
-- golden-hour
-- late-afternoon
-- lunch
-- morning
-vibes:
-- photogenic
-- tasty
-best_for:
-- couples
-- photos
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

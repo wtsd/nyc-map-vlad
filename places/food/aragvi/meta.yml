@@ -8,24 +8,6 @@ coords:
 category:
 - food
 address: 230 Park Ave South, New York, NY 10003
-borough: Manhattan
-neighborhood: Flatiron / NoMad
-route_types:
-- date-night
-- easy-stop
-- family
-- foodie
-- kids
-best_time:
-- dinner
-- evening
-- late-afternoon
-- lunch
-vibes:
-- tasty
-best_for:
-- couples
-- families
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$
