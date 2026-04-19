@@ -1,27 +1,19 @@
 id: laduree-soho
-
 title:
   en: Ladurée SoHo
   ru: Ladurée SoHo
-
 coords:
-  lat: 0.0
-  lng: 0.0
-
+  lat: 40.7243189
+  lng: -74.0024359
 category:
-  - food
-
+- food
 tags: []
-
 time: medium
 cost: paid
-price: ""
-
+price: ''
 transit:
   en: Prince St / Spring St
   ru: Prince St / Spring St
-
-address: "398 W Broadway, New York, NY 10012"
-external_link: "https://www.tiktok.com/t/ZP8gHdHAu"
-
+address: 398 W Broadway, New York, NY 10012
+external_link: https://www.tiktok.com/t/ZP8gHdHAu
 featured: false
