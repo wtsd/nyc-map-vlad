@@ -170,6 +170,7 @@
       const el = document.createElement("article");
       el.className = "card";
       el.id = `card-${p.id}`;
+      el.dataset.placeId = p.id;
       el.innerHTML = `
         ${imageBlock}
         <div class="card-body">
@@ -202,6 +203,10 @@
             <button class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">${text.card.statusSkip}</button>
           </div></div>
         </div>`;
+      el.addEventListener("click", (event) => {
+        if (event.target.closest("button, a, input, select, textarea")) return;
+        if (typeof focusMarkerFromCard === "function") focusMarkerFromCard(p.id, false);
+      });
       container.appendChild(el);
     });
   }

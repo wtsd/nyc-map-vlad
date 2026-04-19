@@ -1,6 +1,8 @@
 let map;
 let markersLayer;
 let markersById = {};
+let activeMarkerId = "";
+let activeCardId = "";
 let userLocationMarker;
 let userLocationAccuracyCircle;
 const CATEGORY_COLORS = {
@@ -54,10 +56,11 @@ function renderLegend(mode) {
 }
 
 function initMap(allPlaces) {
+  const isMobile = window.matchMedia("(max-width: 760px)").matches;
   map = L.map("map", {
     zoomControl: true,
     preferCanvas: true
-  }).setView([40.7128, -74.0060], 11);
+  }).setView([40.7128, -74.0060], isMobile ? 10 : 11);
 
   window.map = map;
 
@@ -67,56 +70,129 @@ function initMap(allPlaces) {
     attribution: "&copy; OpenStreetMap &copy; CARTO"
   }).addTo(map);
 
-  markersLayer = L.layerGroup().addTo(map);
+  markersLayer = L.markerClusterGroup({
+    chunkedLoading: true,
+    chunkInterval: 120,
+    chunkDelay: 24,
+    maxClusterRadius: (zoom) => (zoom < 11 ? 56 : 40),
+    disableClusteringAtZoom: 15,
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: false
+  }).addTo(map);
   refreshMap(allPlaces);
+}
+
+function renderPopupContent(place, lang, title) {
+  const buttonText = lang === "ru" ? "К карточке" : "Show card";
+  return `
+    <div class="map-popup">
+      <strong class="map-popup-title">${title}</strong>
+      <button type="button" class="secondary-btn map-popup-btn" onclick="scrollToCard('${place.id}', true)">${buttonText}</button>
+    </div>
+  `;
+}
+
+function setMarkerActiveState(id, isActive) {
+  const marker = markersById[id];
+  if (!marker) return;
+
+  const markerMode = getMarkerMode();
+  const place = marker.__placeData;
+  const markerColor = getColorByMode(place, markerMode);
+  marker.setStyle({
+    radius: isActive ? 10 : 8,
+    weight: isActive ? 3 : 2,
+    color: isActive ? "#111827" : "#0f172a",
+    fillColor: markerColor,
+    fillOpacity: isActive ? 1 : 0.92
+  });
+}
+
+function clearActiveCard() {
+  if (!activeCardId) return;
+  const current = document.getElementById(`card-${activeCardId}`);
+  if (current) current.classList.remove("card-map-active");
+  activeCardId = "";
+}
+
+function setActiveCard(id) {
+  clearActiveCard();
+  const card = document.getElementById(`card-${id}`);
+  if (!card) return;
+  card.classList.add("card-map-active");
+  activeCardId = id;
+}
+
+function setActiveMarker(id, { openPopup = false, panTo = false } = {}) {
+  if (activeMarkerId && activeMarkerId !== id) setMarkerActiveState(activeMarkerId, false);
+  activeMarkerId = id || "";
+  if (!id) return;
+
+  setMarkerActiveState(id, true);
+  const marker = markersById[id];
+  if (!marker) return;
+
+  if (panTo) map.panTo(marker.getLatLng(), { animate: true, duration: 0.35 });
+  if (openPopup) marker.openPopup();
 }
 
 function refreshMap(currentPlaces) {
   if (!map || !markersLayer) return;
 
   markersLayer.clearLayers();
-  markersById = {};
   const markerMode = getMarkerMode();
   renderLegend(markerMode);
+  const bounds = [];
 
   currentPlaces.forEach(p => {
     const lang = NYCMapState.getLang();
     const title = p.title?.[lang] || p.title?.en || p.id;
-    const markerColor = getColorByMode(p, markerMode);
-    const marker = L.circleMarker(p.coords, {
-      radius: 8,
-      color: "#0f172a",
-      weight: 2,
-      fillColor: markerColor,
-      fillOpacity: 0.92
-    });
+    let marker = markersById[p.id];
+    if (!marker) {
+      marker = L.circleMarker(p.coords, {});
+      marker.on("click", () => {
+        setActiveCard(p.id);
+        setActiveMarker(p.id, { openPopup: false });
+        scrollToCard(p.id, false);
+      });
+      markersById[p.id] = marker;
+    }
 
-    marker.bindPopup(`
-      <strong>${title}</strong><br>
-      <button onclick="scrollToCard('${p.id}')" style="margin-top:8px; cursor:pointer;">${NYCMapState.getLang() === "ru" ? "К карточке" : "Show card"}</button>
-    `);
-
-    marker.on("click", () => {
-      scrollToCard(p.id);
-    });
-
+    marker.__placeData = p;
+    marker.setLatLng(p.coords);
+    marker.bindPopup(renderPopupContent(p, lang, title));
+    setMarkerActiveState(p.id, activeMarkerId === p.id);
     marker.addTo(markersLayer);
-    markersById[p.id] = marker;
+    bounds.push(p.coords);
   });
+
+  if (activeMarkerId && !currentPlaces.find((p) => p.id === activeMarkerId)) {
+    activeMarkerId = "";
+  }
+
+  if (!map.__hasAutoFit && bounds.length) {
+    map.fitBounds(bounds, {
+      padding: [24, 24],
+      maxZoom: window.matchMedia("(max-width: 760px)").matches ? 12 : 13
+    });
+    map.__hasAutoFit = true;
+  }
 }
 
-function scrollToCard(id) {
+function scrollToCard(id, shouldOpenPopup = false) {
   const el = document.getElementById(`card-${id}`);
   if (!el) return;
 
+  setActiveCard(id);
+  setActiveMarker(id, { openPopup: shouldOpenPopup, panTo: false });
   el.scrollIntoView({ behavior: "smooth", block: "center" });
-  el.style.outline = "2px solid #111827";
-  el.style.outlineOffset = "2px";
+}
 
-  setTimeout(() => {
-    el.style.outline = "";
-    el.style.outlineOffset = "";
-  }, 1500);
+function focusMarkerFromCard(id, shouldOpenPopup = true) {
+  const marker = markersById[id];
+  if (!marker) return;
+  setActiveCard(id);
+  setActiveMarker(id, { openPopup: shouldOpenPopup, panTo: true });
 }
 
 function locateUser() {
@@ -178,3 +254,5 @@ function locateUser() {
     }
   );
 }
+
+window.focusMarkerFromCard = focusMarkerFromCard;
