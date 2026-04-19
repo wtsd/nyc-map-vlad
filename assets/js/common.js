@@ -20,12 +20,14 @@
 
   const PERSONAL_LABELS = {
     "want-to-go": { en: "Want to go", ru: "Хочу сходить" },
-    "highly-recommend": { en: "Highly recommend", ru: "Советую" }
+    "highly-recommend": { en: "Highly recommend", ru: "Советую" },
+    "highly-recommended": { en: "Highly recommend", ru: "Советую" }
   };
 
   const PERSONAL_EMOJIS = {
     "want-to-go": "🟦",
-    "highly-recommend": "🟩"
+    "highly-recommend": "🟩",
+    "highly-recommended": "🟩"
   };
 
   const TIME_LABELS = {
