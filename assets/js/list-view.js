@@ -213,8 +213,7 @@
           </div>
           <p class="summary">${summary}</p>
           <div class="status-row">
-            <span class="status-row-title">${text.card.userFilterLabel}</span>
-            <div class="card-status-actions" role="group" aria-label="${text.card.userFilterLabel}">
+            <div class="card-status-actions" role="group" aria-label="User status">
               <button type="button" class="status-chip-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">${text.card.statusWant}</button>
               <button type="button" class="status-chip-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">${text.card.statusSkip}</button>
               <button type="button" class="status-chip-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">${text.card.statusVisited}</button>

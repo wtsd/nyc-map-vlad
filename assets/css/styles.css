@@ -988,7 +988,7 @@ input[type="search"] {
 
   .topbar-actions {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
   }
@@ -1023,6 +1023,7 @@ input[type="search"] {
 
   .filters-toggle {
     display: inline-flex;
+    order: -1;
   }
 
   .secondary-controls {
@@ -1040,6 +1041,12 @@ input[type="search"] {
 
   .category-filter-group {
     width: 100%;
+  }
+
+  .category-filter-chip {
+    font-size: 0.76rem;
+    height: 30px;
+    padding: 0 10px;
   }
 
   .status-filter-tab {
@@ -1319,7 +1326,7 @@ input[type="search"] {
     margin-bottom: 10px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   .status-actions-wrap {

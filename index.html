@@ -24,7 +24,7 @@
 
         <div class="header-buttons">
           <button id="filtersToggle" class="secondary-btn icon-btn filters-toggle" onclick="toggleFiltersPanel()" aria-expanded="false" aria-controls="secondaryControls">
-            <span class="btn-icon" aria-hidden="true">🧰</span>
+            <span class="btn-icon" aria-hidden="true">☰</span>
             <span class="btn-label sr-only">Filters</span>
           </button>
           <button class="secondary-btn icon-btn" onclick="copySummary()" aria-label="Copy summary">
@@ -75,10 +75,6 @@
         <label class="personal-toggle-chip" title="Visited by Katya and Vlad">
           <input id="personalVisitedToggle" type="checkbox" value="visited" aria-label="Visited by Katya and Vlad" onchange="onPersonalToggleChanged()">
           <span>✅</span>
-        </label>
-        <label class="personal-toggle-chip">
-          <input id="personalTodoToggle" type="checkbox" value="to-do" onchange="onPersonalToggleChanged()">
-          <span>❔</span>
         </label>
       </div>
       <div class="status-filter-tabs" role="tablist" aria-label="Status filters">
