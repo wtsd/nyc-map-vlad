@@ -7,7 +7,6 @@
   function getStatusLabel(lang, status) { return NYCMapCommon.getStatusLabel(lang, status); }
   function getCategoryLabel(lang, category) { return NYCMapCommon.getCategoryLabel(lang, category); }
   function getTimeLabel(lang, time) { return NYCMapCommon.getTimeLabel(lang, time); }
-  function getPersonalEmoji(personal) { return NYCMapCommon.getPersonalEmoji(personal); }
   function getPersonalLabel(lang, personal) { return NYCMapCommon.getPersonalLabel(lang, personal); }
   function getCostLabel(lang, cost, price) { return NYCMapCommon.getCostLabel(lang, cost, price); }
 
@@ -158,12 +157,15 @@
     places.forEach((p) => {
       const status = checklist[p.id] || "none";
       const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
-      const personalEmoji = getPersonalEmoji(p.personal);
       const summary = truncate(NYCMapCommon.getLocalizedText(lang, p.summary, ""), 180);
       const address = NYCMapCommon.getPlaceAddress(p, lang);
       const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(lang, p.category[0]) : "";
       const detailsUrl = NYCMapCommon.getPlaceDetailsUrl(p);
-      const priceLabel = p.price ? `$${"$".repeat(Math.max(0, Number(p.price) - 1))}` : "";
+      const numericPrice = Number(p.price);
+      const priceTier = Number.isFinite(numericPrice) && numericPrice > 0
+        ? Math.max(1, Math.min(3, numericPrice))
+        : 0;
+      const priceLabel = priceTier ? "$".repeat(priceTier) : "";
       const visitedIcon = status === "visited" ? "✅" : "";
       const imageUrl = p.thumbnail || p.image;
       const imageBlock = imageUrl
@@ -205,23 +207,15 @@
             </a>
           </div>
           <div class="status-row">
-            <label class="status-row-title" for="status-select-${p.id}">${text.card.statusHint}</label>
+            <span class="status-row-title">${text.card.personalLabel}: ${getPersonalLabel(lang, p.personal) || "—"}</span>
             <select id="status-select-${p.id}" class="card-status-select" onchange="setStatus('${p.id}', this.value)">
-              <option value="none" ${status === "none" ? "selected" : ""}>---</option>
+              <option value="none" ${status === "none" ? "selected" : ""}>${text.card.statusPlaceholder}</option>
               <option value="want" ${status === "want" ? "selected" : ""}>${text.card.statusWant}</option>
               <option value="skip" ${status === "skip" ? "selected" : ""}>${text.card.statusSkip}</option>
               <option value="visited" ${status === "visited" ? "selected" : ""}>${text.card.statusVisited}</option>
             </select>
           </div>
           <p class="summary">${summary}</p>
-          <div class="meta-row">
-            <span class="chip ${p.time === "short" ? "is-muted" : ""}">${getTimeLabel(lang, p.time)}</span>
-            <span class="chip ${p.cost === "free" ? "is-muted" : ""}">${getCostLabel(lang, p.cost, p.price)}</span>
-            <span class="chip personal-rating-chip">
-              <span aria-hidden="true">${personalEmoji || "•"}</span>
-              <span>${getPersonalLabel(lang, p.personal) || category}</span>
-            </span>
-          </div>
         </div>`;
       el.addEventListener("click", (event) => {
         if (event.target.closest("button, a, input, select, textarea")) return;
