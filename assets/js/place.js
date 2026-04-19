@@ -12,9 +12,17 @@ function getText() {
       subtitle: "NYC Map by Vlad and Katya",
       back: "Back",
       maps: "Maps",
-      copy: "Copy",
+      copy: "Copy summary",
+      copied: "Summary copied",
       address: "Address:",
-      external: "Open link",
+      transit: "Transit:",
+      cost: "Cost:",
+      time: "Time:",
+      personal: "Personal rating:",
+      external: "Open source link",
+      openInMaps: "Open in maps",
+      backToList: "Back to list",
+      noTransit: "Not specified",
       notFound: "Place not found",
       notFoundText: "The requested place does not exist.",
       photoFallback: "Photo coming later",
@@ -28,9 +36,17 @@ function getText() {
       subtitle: "Карта Нью-Йорка от Влада и Кати",
       back: "Назад",
       maps: "Карта",
-      copy: "Копировать",
+      copy: "Копировать описание",
+      copied: "Описание скопировано",
       address: "Адрес:",
-      external: "Открыть ссылку",
+      transit: "Транспорт:",
+      cost: "Цена:",
+      time: "Время:",
+      personal: "Личная оценка:",
+      external: "Открыть источник",
+      openInMaps: "Открыть в картах",
+      backToList: "Назад к списку",
+      noTransit: "Не указано",
       notFound: "Место не найдено",
       notFoundText: "Запрошенное место не существует.",
       photoFallback: "Фото будет позже",
@@ -99,21 +115,35 @@ async function copyCurrentPlace() {
   const t = getText()[lang];
   const status = checklist[currentPlace.id] || "none";
 
-  const text = [
+  const externalUrl = currentPlace.external_link || currentPlace.external_url || "";
+  const lines = [
     currentPlace.title[lang] || currentPlace.title.en,
     `${lang === "ru" ? "Статус" : "Status"}: ${getStatusLabel(status)}`,
     "",
     `${t.address} ${NYCMapCommon.getPlaceAddress(currentPlace, lang)}`,
+    `${t.transit} ${NYCMapCommon.getLocalizedText(lang, currentPlace.transit, t.noTransit)}`,
     `${lang === "ru" ? "Время" : "Time"}: ${getTimeLabel(currentPlace.time)}`,
     `${lang === "ru" ? "Цена" : "Cost"}: ${getCostLabel(currentPlace.cost, currentPlace.price)}`,
     "",
     currentPlace.summary[lang] || currentPlace.summary.en || ""
-  ].join("\n");
+  ];
+  if (externalUrl) lines.push("", `${t.external}: ${externalUrl}`);
+  const text = lines.join("\n");
 
   const copied = await NYCMapCommon.copyText(text);
   if (!copied) {
     alert(t.copyError);
+    return;
   }
+  const copyBtnLabel = document.querySelector(".copy-btn .btn-label");
+  if (!copyBtnLabel) return;
+  const original = t.copy;
+  copyBtnLabel.textContent = t.copied;
+  setTimeout(() => {
+    if (copyBtnLabel.textContent === t.copied) {
+      copyBtnLabel.textContent = original;
+    }
+  }, 1400);
 }
 
 function renderNotFound() {
@@ -156,6 +186,8 @@ function render() {
   const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
   const summary = NYCMapCommon.getLocalizedText(lang, currentPlace.summary, "");
   const address = NYCMapCommon.getPlaceAddress(currentPlace, lang);
+  const transit = NYCMapCommon.getLocalizedText(lang, currentPlace.transit, t.noTransit);
+  const personal = NYCMapCommon.getPersonalLabel(lang, currentPlace.personal);
   const mapsUrl = NYCMapCommon.getMapsUrl(currentPlace, lang);
   const externalUrl = currentPlace.external_link || currentPlace.external_url || "";
   const category = Array.isArray(currentPlace.category) && currentPlace.category.length
@@ -170,7 +202,8 @@ function render() {
   document.getElementById("placeTime").textContent = getTimeLabel(currentPlace.time);
   document.getElementById("placeCost").textContent = getCostLabel(currentPlace.cost, currentPlace.price);
   document.getElementById("placeSummary").textContent = summary;
-  document.getElementById("placeTransit").textContent = address;
+  document.getElementById("placeAddress").textContent = address;
+  document.getElementById("placeTransit").textContent = transit;
   const placeImage = document.getElementById("placeImage");
   const placeImageFallback = document.getElementById("placeImageFallback");
   placeImage.style.display = "block";
@@ -178,7 +211,16 @@ function render() {
   placeImage.src = currentPlace.image || "assets/images/placeholders/cover.jpg";
   placeImage.alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
-  document.getElementById("placeTransitLink").href = mapsUrl;
+  document.getElementById("placeAddressLink").href = mapsUrl;
+  const personalRow = document.getElementById("placePersonalRow");
+  const personalEl = document.getElementById("placePersonal");
+  if (personal) {
+    personalRow.classList.remove("hidden");
+    personalEl.textContent = personal;
+  } else {
+    personalRow.classList.add("hidden");
+    personalEl.textContent = "";
+  }
   const externalRow = document.getElementById("placeExternalRow");
   const externalLink = document.getElementById("placeExternalLink");
   const externalLabel = document.getElementById("placeExternalLabel");
@@ -192,8 +234,10 @@ function render() {
     externalLabel.textContent = "";
   }
   document.getElementById("openMapLink").href = mapsUrl;
-  document.getElementById("openMapLink").setAttribute("target", "_blank");
-  document.getElementById("openMapLink").setAttribute("rel", "noopener noreferrer");
+  const metaDescription = document.getElementById("placeMetaDescription");
+  if (metaDescription) {
+    metaDescription.setAttribute("content", summary || title);
+  }
 
   const statusButtons = [
     { id: "btnWant", label: t.wantBtn },
@@ -220,7 +264,19 @@ function render() {
   if (copyBtnLabel) copyBtnLabel.textContent = t.copy;
 
   const openMapLabel = document.querySelector("#openMapLink .btn-label");
-  if (openMapLabel) openMapLabel.textContent = t.maps;
+  if (openMapLabel) openMapLabel.textContent = t.openInMaps;
+  const backToListLabel = document.querySelector("#backToListLink .btn-label");
+  if (backToListLabel) backToListLabel.textContent = t.backToList;
+  const metaAddressLabel = document.getElementById("metaAddressLabel");
+  if (metaAddressLabel) metaAddressLabel.textContent = t.address;
+  const metaTransitLabel = document.getElementById("metaTransitLabel");
+  if (metaTransitLabel) metaTransitLabel.textContent = t.transit;
+  const metaCostLabel = document.getElementById("metaCostLabel");
+  if (metaCostLabel) metaCostLabel.textContent = t.cost;
+  const metaTimeLabel = document.getElementById("metaTimeLabel");
+  if (metaTimeLabel) metaTimeLabel.textContent = t.time;
+  const metaPersonalLabel = document.getElementById("metaPersonalLabel");
+  if (metaPersonalLabel) metaPersonalLabel.textContent = t.personal;
 
   renderStatus();
 }
