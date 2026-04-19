@@ -41,18 +41,46 @@
 
     <div id="secondaryControls" class="secondary-controls">
       <div class="stats-strip">
-        <div class="filters secondary-filters">
-          <select id="categoryFilter" onchange="onFiltersChanged()">
-            <option value="">All categories</option>
-            <option value="landmarks">Landmarks</option>
-            <option value="parks">Parks</option>
-            <option value="museums">Museums</option>
-            <option value="food">Food</option>
-            <option value="viewpoints">Viewpoints</option>
-            <option value="hidden-gems">Hidden gems</option>
-            <option value="other">Other</option>
-          </select>
+        <div id="categoryFilterGroup" class="filters secondary-filters category-filter-group" role="group" aria-label="Category filters">
+          <label class="category-filter-chip">
+            <input type="checkbox" value="landmarks" onchange="onFiltersChanged()">
+            <span>Landmarks</span>
+          </label>
+          <label class="category-filter-chip">
+            <input type="checkbox" value="parks" onchange="onFiltersChanged()">
+            <span>Parks</span>
+          </label>
+          <label class="category-filter-chip">
+            <input type="checkbox" value="museums" onchange="onFiltersChanged()">
+            <span>Museums</span>
+          </label>
+          <label class="category-filter-chip">
+            <input type="checkbox" value="food" onchange="onFiltersChanged()">
+            <span>Food</span>
+          </label>
+          <label class="category-filter-chip">
+            <input type="checkbox" value="viewpoints" onchange="onFiltersChanged()">
+            <span>Viewpoints</span>
+          </label>
+          <label class="category-filter-chip">
+            <input type="checkbox" value="hidden-gems" onchange="onFiltersChanged()">
+            <span>Hidden gems</span>
+          </label>
+          <label class="category-filter-chip">
+            <input type="checkbox" value="other" onchange="onFiltersChanged()">
+            <span>Other</span>
+          </label>
         </div>
+      <div class="personal-toggle-group" role="group" aria-label="Personal filters">
+        <label class="personal-toggle-chip">
+          <input id="personalRecommendToggle" type="checkbox" value="highly-recommend" onchange="onPersonalToggleChanged()">
+          <span>✅</span>
+        </label>
+        <label class="personal-toggle-chip">
+          <input id="personalWantToggle" type="checkbox" value="want-to-go" onchange="onPersonalToggleChanged()">
+          <span>❔</span>
+        </label>
+      </div>
       <div class="status-filter-tabs" role="tablist" aria-label="Status filters">
         <button class="status-filter-tab stat-filter-btn active" type="button" data-status="" onclick="setStatusFilter('')">
           <span class="stat-number" id="statTotal">0</span>
@@ -69,19 +97,6 @@
         <button class="status-filter-tab stat-filter-btn" type="button" data-status="visited" onclick="setStatusFilter('visited')">
           <span class="stat-number" id="statVisited">0</span>
           <span class="stat-filter-label" id="statVisitedLabel">Visited</span>
-        </button>
-      </div>
-      <div class="personal-filter-tabs" role="tablist" aria-label="Rating filters">
-        <button class="personal-filter-tab active" type="button" data-personal="" onclick="setPersonalFilter('')">
-          <span id="personalAllLabel">All</span>
-        </button>
-        <button class="personal-filter-tab" type="button" data-personal="want-to-go" onclick="setPersonalFilter('want-to-go')">
-          <span aria-hidden="true">🟦</span>
-          <span id="personalWantLabel">Want</span>
-        </button>
-        <button class="personal-filter-tab" type="button" data-personal="highly-recommend" onclick="setPersonalFilter('highly-recommend')">
-          <span aria-hidden="true">🟩</span>
-          <span id="personalRecommendLabel">Top</span>
         </button>
       </div>
     </div>
@@ -102,16 +117,16 @@
     <aside id="mapSection" class="map-section">
       <div class="map-card">
         <div class="map-card-header">
-          <button id="locateBtn" class="secondary-btn icon-btn" onclick="locateUser()" aria-label="Show my location">
-            <span class="btn-icon" aria-hidden="true">📍</span>
-            <span class="btn-label">Locate me</span>
-          </button>
           <button class="secondary-btn mobile-map-toggle icon-btn" onclick="toggleMap()" aria-label="Toggle map">
             <span class="btn-icon" aria-hidden="true">🗺️</span>
             <span class="btn-label">Show / hide</span>
           </button>
         </div>
         <div id="mapWrap" class="map-wrap">
+          <button id="locateBtn" class="secondary-btn icon-btn map-locate-btn" onclick="locateUser()" aria-label="Show my location">
+            <span class="btn-icon" aria-hidden="true">📍</span>
+            <span class="btn-label">Locate me</span>
+          </button>
           <div id="map"></div>
         </div>
         <div id="mapLegend" class="map-legend" aria-live="polite"></div>

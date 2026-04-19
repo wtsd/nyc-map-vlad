@@ -8,7 +8,7 @@
     mobileView: "list",
     currentPage: 1,
     currentStatusFilter: "",
-    currentPersonalFilter: "",
+    currentPersonalFilter: [],
     searchIndexById: {}
   };
 
@@ -63,7 +63,11 @@
   }
 
   function setChecklistStatus(id, status) {
-    state.checklist[id] = state.checklist[id] === status ? null : status;
+    if (!status || status === "none") {
+      state.checklist[id] = null;
+    } else {
+      state.checklist[id] = status;
+    }
     localStorage.setItem("checklist", JSON.stringify(state.checklist));
   }
 
@@ -84,7 +88,7 @@
   }
 
   function setCurrentPersonalFilter(personal) {
-    state.currentPersonalFilter = personal || "";
+    state.currentPersonalFilter = Array.isArray(personal) ? personal.filter(Boolean) : [];
   }
 
   function getCurrentPersonalFilter() {
