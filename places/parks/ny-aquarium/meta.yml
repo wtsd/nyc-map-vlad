@@ -8,26 +8,6 @@ coords:
 category:
 - parks
 address: 602 Surf Ave, Brooklyn, NY 11224
-borough: Brooklyn
-neighborhood: Coney Island
-route_types:
-- easy-stop
-- family
-- kids
-- outdoors
-- rainy-day
-- relaxing
-- scenic
-best_time:
-- afternoon
-- golden-hour
-- midday
-- morning
-vibes:
-- photogenic
-- slow
-best_for:
-- families
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

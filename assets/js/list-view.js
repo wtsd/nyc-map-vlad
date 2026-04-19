@@ -8,6 +8,9 @@
   function getCategoryLabel(lang, category) { return NYCMapCommon.getCategoryLabel(lang, category); }
   function getTimeLabel(lang, time) { return NYCMapCommon.getTimeLabel(lang, time); }
   function getCostLabel(lang, cost, price) { return NYCMapCommon.getCostLabel(lang, cost, price); }
+  function getPersonalLabel(text, personal) {
+    return personal === "visited" ? text.card.personalVisited : text.card.personalTodo;
+  }
 
   function updateStats(state, filtered) {
     const checklist = state.getChecklist();
@@ -167,6 +170,8 @@
       const priceLabel = priceTier ? "$".repeat(priceTier) : "";
       const visitedIcon = status === "visited" ? "✅" : "";
       const imageUrl = p.thumbnail || p.image;
+      const normalizedPersonal = p.personal === "visited" ? "visited" : "to-do";
+      const personalIcon = normalizedPersonal === "visited" ? "✅" : "❔";
       const imageBlock = imageUrl
         ? `
         <a class="card-image-wrap card-image-link" href="${detailsUrl}" aria-label="${text.card.openDetails}">
@@ -197,6 +202,7 @@
                 </svg>
                 <span class="sr-only">${text.card.copy}</span>
               </button>
+              <span class="chip personal-rating-chip" title="${text.card.personalLabel}: ${getPersonalLabel(text, normalizedPersonal)}">${personalIcon}</span>
               <span class="card-category">${category}</span>
             </div>
           </div>
@@ -207,12 +213,12 @@
           </div>
           <p class="summary">${summary}</p>
           <div class="status-row">
-            <select id="status-select-${p.id}" class="card-status-select" onchange="setStatus('${p.id}', this.value)">
-              <option value="none" ${status === "none" ? "selected" : ""}>${text.card.statusPlaceholder}</option>
-              <option value="want" ${status === "want" ? "selected" : ""}>${text.card.statusWant}</option>
-              <option value="skip" ${status === "skip" ? "selected" : ""}>${text.card.statusSkip}</option>
-              <option value="visited" ${status === "visited" ? "selected" : ""}>${text.card.statusVisited}</option>
-            </select>
+            <span class="status-row-title">${text.card.userFilterLabel}</span>
+            <div class="card-status-actions" role="group" aria-label="${text.card.userFilterLabel}">
+              <button type="button" class="status-chip-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">${text.card.statusWant}</button>
+              <button type="button" class="status-chip-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">${text.card.statusSkip}</button>
+              <button type="button" class="status-chip-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">${text.card.statusVisited}</button>
+            </div>
           </div>
         </div>`;
       el.addEventListener("click", (event) => {

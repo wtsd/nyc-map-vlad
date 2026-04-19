@@ -21,7 +21,7 @@ SEARCH_INDEX_FILE = BUILD_DIR / "search-index.json"
 MANIFEST_FILE = BUILD_DIR / "manifest.json"
 THUMBS_DIR = BUILD_DIR / "thumbs"
 
-VALID_PERSONAL = {"", "want-to-go", "been-not-impressed", "highly-recommend"}
+VALID_PERSONAL = {"to-do", "visited", "want-to-go", "been-not-impressed", "highly-recommend", "highly-recommended", ""}
 
 REQUIRED_META_FIELDS = [
     "id",
@@ -187,8 +187,8 @@ def build_place(meta, place_path):
         "title": meta["title"],
         "coords": [meta["coords"]["lat"], meta["coords"]["lng"]],
         "category": categories,
-        "personal": meta.get("personal", ""),
-        "price": meta.get("price"),
+        "personal": meta.get("personal", "to-do") or "to-do",
+        "price": meta.get("price", "$$") or "$$",
         "address": meta.get("address", ""),
         "external_link": meta.get("external_link", ""),
         "image": image_path,

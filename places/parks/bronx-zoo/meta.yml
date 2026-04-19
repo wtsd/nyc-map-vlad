@@ -9,21 +9,5 @@ category:
 - parks
 price: $$
 address: 2300 Southern Blvd, Bronx, NY 10460
-route_types:
-- anchor-stop
-- family
-- kids
-- outdoors
-- relaxing
-- scenic
-best_time:
-- afternoon
-- golden-hour
-- morning
-vibes:
-- photogenic
-- slow
-best_for:
-- families
 external_link: ''
-personal: want-to-go
+personal: to-do

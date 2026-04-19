@@ -3,26 +3,11 @@ title:
   en: Nonna's of the World
   ru: Nonna's of the World
 coords:
-  lat: 40.64200
+  lat: 40.642
   lng: -74.07729
 category:
 - food
 address: 27 Hyatt St, Staten Island, NY 10301
-borough: Staten Island
-neighborhood: Staten Island
-route_types:
-- date-night
-- easy-stop
-- foodie
-best_time:
-- dinner
-- evening
-- late-afternoon
-- lunch
-vibes:
-- tasty
-best_for:
-- couples
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

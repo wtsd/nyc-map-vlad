@@ -8,29 +8,6 @@ coords:
 category:
 - food
 address: 6 Hanover St, New York, NY 10005
-borough: Manhattan
-neighborhood: Financial District
-route_types:
-- coffee
-- culture
-- date-night
-- easy-stop
-- foodie
-- history
-- quick-bite
-best_time:
-- afternoon
-- dinner
-- evening
-- late-afternoon
-- lunch
-- midday
-- morning
-vibes:
-- curious
-- tasty
-best_for:
-- couples
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

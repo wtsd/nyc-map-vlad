@@ -8,21 +8,6 @@ coords:
 category:
 - landmarks
 address: 175 5th Ave, New York, NY 10010
-borough: Manhattan
-neighborhood: Flatiron / NoMad
-route_types:
-- architecture
-- budget-friendly
-- culture
-- easy-stop
-- touristy
-best_time:
-- afternoon
-- midday
-vibes:
-- curious
-best_for:
-- budget
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

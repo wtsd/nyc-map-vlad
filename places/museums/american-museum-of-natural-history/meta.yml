@@ -9,17 +9,5 @@ category:
 - museums
 price: $$
 address: 200 Central Park W, New York, NY 10024
-borough: Manhattan
-neighborhood: Upper West Side
-route_types:
-- anchor-stop
-- culture
-- rainy-day
-best_time:
-- afternoon
-- midday
-vibes:
-- curious
-best_for: []
 external_link: ''
-personal: want-to-go
+personal: to-do

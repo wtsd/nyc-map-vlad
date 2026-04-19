@@ -8,22 +8,6 @@ coords:
 category:
 - museums
 address: Ellis Island, New York, NY 10004
-route_types:
-- culture
-- day-trip
-- easy-stop
-- outdoors
-- rainy-day
-- scenic
-best_time:
-- afternoon
-- golden-hour
-- midday
-- morning
-vibes:
-- curious
-- photogenic
-best_for: []
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

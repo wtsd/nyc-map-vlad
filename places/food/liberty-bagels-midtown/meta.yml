@@ -8,22 +8,6 @@ coords:
 category:
 - food
 address: 260 W 35th St, New York, NY 10001
-borough: Manhattan
-neighborhood: Midtown West
-route_types:
-- date-night
-- easy-stop
-- foodie
-- quick-bite
-best_time:
-- dinner
-- evening
-- late-afternoon
-- lunch
-vibes:
-- tasty
-best_for:
-- couples
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

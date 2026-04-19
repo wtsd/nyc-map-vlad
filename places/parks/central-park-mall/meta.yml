@@ -8,23 +8,6 @@ coords:
 category:
 - parks
 address: The Mall, Central Park, New York, NY 10022
-borough: Manhattan
-neighborhood: Upper West Side
-route_types:
-- budget-friendly
-- easy-stop
-- outdoors
-- relaxing
-- scenic
-best_time:
-- afternoon
-- golden-hour
-- morning
-vibes:
-- photogenic
-- slow
-best_for:
-- budget
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

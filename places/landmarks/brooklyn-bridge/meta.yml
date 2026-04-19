@@ -8,27 +8,6 @@ coords:
 category:
 - landmarks
 address: Brooklyn Bridge Pedestrian Entrance, New York, NY 10038
-borough: Brooklyn
-neighborhood: DUMBO
-route_types:
-- architecture
-- budget-friendly
-- culture
-- easy-stop
-- photography
-- scenic
-- touristy
-best_time:
-- afternoon
-- golden-hour
-- midday
-- morning
-vibes:
-- curious
-- photogenic
-best_for:
-- budget
-- photos
 external_link: ''
-personal: want-to-go
+personal: to-do
 price: $$

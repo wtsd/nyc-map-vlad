@@ -7,25 +7,7 @@ coords:
   lng: -74.016
 category:
 - parks
-personal: want-to-go
+personal: to-do
 price: $$
 address: Pier 55, Hudson River Greenway, New York, NY 10014
-route_types:
-- budget-friendly
-- day-trip
-- easy-stop
-- outdoors
-- photography
-- relaxing
-- scenic
-best_time:
-- afternoon
-- golden-hour
-- morning
-vibes:
-- photogenic
-- slow
-best_for:
-- budget
-- photos
-external_link: ""
+external_link: ''
