@@ -1,0 +1,37 @@
+id: grand-central-terminal
+title:
+  en: Grand Central Terminal
+  ru: Гранд Сентрал
+coords:
+  lat: 40.7527
+  lng: -73.9772
+category:
+- landmarks
+time: medium
+cost: free
+transit:
+  en: Grand Central
+  ru: Grand Central
+address: 89 E 42nd St, New York, NY 10017
+borough: Manhattan
+neighborhood: Midtown East
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- history
+- photography
+- touristy
+best_time:
+- afternoon
+- golden-hour
+- midday
+- morning
+vibes:
+- curious
+best_for:
+- budget
+- photos
+external_link: ''
+personal: want-to-go

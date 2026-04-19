@@ -193,6 +193,10 @@ def load_yaml(path: Path) -> dict[str, Any]:
     return data
 
 
+def iter_place_dirs(places_dir: Path) -> list[Path]:
+    return sorted(meta_path.parent for meta_path in places_dir.rglob("meta.yml"))
+
+
 def dump_yaml(data: dict[str, Any]) -> str:
     return yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=100)
 
@@ -343,10 +347,8 @@ def process_repo(repo_root: Path, write: bool, backup: bool) -> dict[str, Any]:
         raise FileNotFoundError(f"places directory not found under {repo_root}")
 
     report: dict[str, Any] = {"changed": [], "unchanged": [], "errors": []}
-    for place_dir in sorted(path for path in places_dir.iterdir() if path.is_dir()):
+    for place_dir in iter_place_dirs(places_dir):
         meta_path = place_dir / "meta.yml"
-        if not meta_path.exists():
-            continue
         try:
             original = load_yaml(meta_path)
             enriched = enrich_meta(original, place_dir)

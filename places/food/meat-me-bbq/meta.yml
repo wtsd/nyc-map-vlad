@@ -1,0 +1,30 @@
+id: meat-me-bbq
+title:
+  en: MEAT ME BBQ
+  ru: MEAT ME BBQ
+coords:
+  lat: 40.7588
+  lng: -73.8297
+category:
+- food
+time: medium
+cost: paid
+transit:
+  en: Flushing-Main St
+  ru: Flushing-Main St
+address: 136-20 Roosevelt Ave, Flushing, NY 11354
+route_types:
+- date-night
+- easy-stop
+- foodie
+best_time:
+- dinner
+- evening
+- late-afternoon
+- lunch
+vibes:
+- tasty
+best_for:
+- couples
+external_link: ''
+personal: want-to-go

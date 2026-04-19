@@ -1,0 +1,32 @@
+id: mixue
+title:
+  en: MIXUE
+  ru: MIXUE
+coords:
+  lat: 40.715
+  lng: -73.9987
+category:
+- food
+time: short
+cost: paid
+transit:
+  en: Canal St
+  ru: Canal St
+address: 54 Bayard St, New York, NY 10013
+borough: Manhattan
+neighborhood: Chinatown / Little Italy
+route_types:
+- date-night
+- easy-stop
+- foodie
+best_time:
+- dinner
+- evening
+- late-afternoon
+- lunch
+vibes:
+- tasty
+best_for:
+- couples
+external_link: ''
+personal: want-to-go

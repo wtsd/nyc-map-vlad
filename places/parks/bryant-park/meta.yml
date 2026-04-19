@@ -1,0 +1,34 @@
+id: bryant-park
+title:
+  en: Bryant Park
+  ru: Брайант-парк
+coords:
+  lat: 40.7536
+  lng: -73.9832
+category:
+- parks
+time: short
+cost: free
+transit:
+  en: 42 St
+  ru: 42 St
+address: Bryant Park, New York, NY 10018
+borough: Manhattan
+neighborhood: Midtown East
+route_types:
+- budget-friendly
+- easy-stop
+- outdoors
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

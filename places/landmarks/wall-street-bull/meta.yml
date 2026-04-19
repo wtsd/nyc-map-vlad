@@ -1,0 +1,32 @@
+id: wall-street-bull
+title:
+  en: Wall Street Bull
+  ru: Бык на Уолл-стрит
+coords:
+  lat: 40.7055
+  lng: -74.0134
+category:
+- landmarks
+time: short
+cost: free
+transit:
+  en: Bowling Green
+  ru: Bowling Green
+address: Bowling Green, New York, NY 10004
+borough: Manhattan
+neighborhood: Financial District
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

@@ -1,0 +1,33 @@
+id: brooklyn-botanic-garden
+title:
+  en: Brooklyn Botanic Garden
+  ru: Бруклинский ботанический сад
+coords:
+  lat: 40.6694
+  lng: -73.9624
+category:
+- parks
+time: full
+cost: paid
+price: ~2
+transit:
+  en: Eastern Pkwy-Brooklyn Museum
+  ru: Eastern Pkwy-Brooklyn Museum
+address: 990 Washington Ave, Brooklyn, NY 11225
+borough: Brooklyn
+neighborhood: Prospect Heights
+route_types:
+- anchor-stop
+- outdoors
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for: []
+external_link: ''
+personal: want-to-go

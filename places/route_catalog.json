@@ -1,63 +1,43 @@
 {
   "places": [
     {
-      "id": "alwyn-court",
-      "title": "Alwyn Court",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown West",
+      "id": "alimama-tea",
+      "title": "Alimama Tea",
+      "borough": null,
+      "neighborhood": null,
       "category": [
-        "hidden-gems"
+        "food"
       ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "hidden-gem",
-        "photography"
-      ],
-      "best_time": [
-        "golden-hour",
-        "morning"
-      ],
+      "route_types": [],
+      "best_time": [],
       "vibes": [],
-      "best_for": [
-        "budget",
-        "photos"
-      ],
+      "best_for": [],
       "time": "short",
-      "cost": "free",
-      "address": "180 W 58th St, New York, NY 10019",
+      "cost": "paid",
+      "address": "89A Bayard St, New York, NY 10013",
       "coords": [
-        40.7656,
-        -73.9804
+        0.0,
+        0.0
       ]
     },
     {
-      "id": "american-museum-of-natural-history",
-      "title": "American Museum of Natural History",
-      "borough": "Manhattan",
-      "neighborhood": "Upper West Side",
+      "id": "annapurna-thakali-kitchen",
+      "title": "Annapurna Thakali Kitchen",
+      "borough": null,
+      "neighborhood": null,
       "category": [
-        "museums"
+        "food"
       ],
-      "route_types": [
-        "anchor-stop",
-        "culture",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
       "best_for": [],
-      "time": "full",
+      "time": "medium",
       "cost": "paid",
-      "address": "200 Central Park W, New York, NY 10024",
+      "address": "72-24 Roosevelt Ave, Jackson Heights, NY 11372",
       "coords": [
-        40.7813,
-        -73.9735
+        0.0,
+        0.0
       ]
     },
     {
@@ -97,110 +77,1065 @@
       ]
     },
     {
-      "id": "bethesda-fountain",
-      "title": "Bethesda Fountain",
-      "borough": "Manhattan",
-      "neighborhood": "Upper East Side",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "Central Park, Terrace Dr, New York, NY 10021",
-      "coords": [
-        40.774,
-        -73.97
-      ]
-    },
-    {
-      "id": "brighton-beach",
-      "title": "Brighton Beach",
-      "borough": "Brooklyn",
-      "neighborhood": "Brighton Beach",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [
-        "budget"
-      ],
-      "time": "medium",
-      "cost": "free",
-      "address": "Brighton Beach Ave & Boardwalk, Brooklyn, NY 11235",
-      "coords": [
-        40.5763,
-        -73.9615
-      ]
-    },
-    {
-      "id": "bronx-museum-of-the-arts",
-      "title": "The Bronx Museum of the Arts",
-      "borough": "Bronx",
-      "neighborhood": "South Bronx",
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "culture",
-        "easy-stop",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [
-        "budget"
-      ],
-      "time": "medium",
-      "cost": "free",
-      "address": "1040 Grand Concourse, Bronx, NY 10456",
-      "coords": [
-        40.831,
-        -73.9197
-      ]
-    },
-    {
-      "id": "bronx-zoo",
-      "title": "Bronx Zoo",
+      "id": "bakery-je-taime",
+      "title": "Bakery Je T’Aime",
       "borough": null,
       "neighborhood": null,
       "category": [
-        "parks"
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "471 Marcus Garvey Blvd, Brooklyn, NY 11216",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "cafe-2by2",
+      "title": "Cafe 2by2",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "84 E 10th St 2nd FL, New York, NY 10003",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "casa-adela",
+      "title": "Casa Adela",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "66 Loisaida Ave, New York, NY 10009",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "chelsea-market",
+      "title": "Chelsea Market",
+      "borough": "Manhattan",
+      "neighborhood": "Chelsea",
+      "category": [
+        "food"
       ],
       "route_types": [
-        "anchor-stop",
-        "family",
-        "kids",
+        "date-night",
+        "easy-stop",
+        "foodie",
+        "shopping"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "medium",
+      "cost": "paid",
+      "address": "75 9th Ave, New York, NY 10011",
+      "coords": [
+        40.7423,
+        -74.006
+      ]
+    },
+    {
+      "id": "conwell-coffee-hall",
+      "title": "Conwell Coffee Hall",
+      "borough": "Manhattan",
+      "neighborhood": "Financial District",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "coffee",
+        "culture",
+        "date-night",
+        "easy-stop",
+        "foodie",
+        "history",
+        "quick-bite"
+      ],
+      "best_time": [
+        "afternoon",
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch",
+        "midday",
+        "morning"
+      ],
+      "vibes": [
+        "curious",
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "6 Hanover St, New York, NY 10005",
+      "coords": [
+        40.7075,
+        -74.0109
+      ]
+    },
+    {
+      "id": "din-soup-dumplings",
+      "title": "Din Soup Dumplings",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "162 Montague St Fl 2, Brooklyn, NY 11201",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ferrane",
+      "title": "Ferrane",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "57 Clark St, Brooklyn, NY 11201",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "fu-zhou-wei-zhong-wei-jia-xiang-feng-wei",
+      "title": "Fu Zhou Wei Zhong Wei Jia Xiang Feng Wei",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "88 E Broadway, New York, NY 10002",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "gan-hoo-bbq",
+      "title": "Gan Hoo BBQ",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "29 E 30th St, New York, NY 10016",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "giant-scallion-pancakes-flushing",
+      "title": "Giant Scallion Pancakes",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "135-45 Roosevelt Ave, Flushing, NY 11354",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "golden-manna-bakery",
+      "title": "Golden Manna Bakery",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "16 Bowery, New York, NY 10013",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "hanamizuki-cafe",
+      "title": "Hanamizuki Cafe",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "143 W 29th St, New York, NY 10001",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "hay-hay-roasted",
+      "title": "Hay Hay Roasted",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "81 Mott St, New York, NY 10013",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "ichiran-ramen-midtown",
+      "title": "Ichiran Ramen",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "152 W 49th St, New York, NY 10020",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "joes-home-of-soup-dumplings",
+      "title": "Joe's Home of Soup Dumplings",
+      "borough": "Manhattan",
+      "neighborhood": "Chinatown / Little Italy",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "medium",
+      "cost": "paid",
+      "address": "24 W 56th St, New York, NY 10019",
+      "coords": [
+        40.7153,
+        -73.9975
+      ]
+    },
+    {
+      "id": "jongro-bbq-market",
+      "title": "Jongro BBQ Market",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "39 W 32nd St 1st Fl, New York, NY 10001",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "krispy-kreme-times-square",
+      "title": "Krispy Kreme (Times Square)",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown West",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "1601 Broadway, New York, NY 10019",
+      "coords": [
+        40.7569,
+        -73.9863
+      ]
+    },
+    {
+      "id": "laduree-soho",
+      "title": "Ladurée SoHo",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "398 W Broadway, New York, NY 10012",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "lafayette-grand-cafe-bakery",
+      "title": "Lafayette Grand Café & Bakery",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "380 Lafayette St, New York, NY 10003",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "liberty-bagels-midtown",
+      "title": "Liberty Bagels",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown West",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie",
+        "quick-bite"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "260 W 35th St, New York, NY 10001",
+      "coords": [
+        40.764,
+        -73.9778
+      ]
+    },
+    {
+      "id": "luckin-coffee-6th-ave",
+      "title": "Luckin Coffee",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "800 6th Ave, New York, NY 10001",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "meat-me-bbq",
+      "title": "MEAT ME BBQ",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "medium",
+      "cost": "paid",
+      "address": "136-20 Roosevelt Ave, Flushing, NY 11354",
+      "coords": [
+        40.7588,
+        -73.8297
+      ]
+    },
+    {
+      "id": "mei-lai-wah",
+      "title": "Mei Lai Wah",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "41 Mott St, New York, NY 10013",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "mixue",
+      "title": "MIXUE",
+      "borough": "Manhattan",
+      "neighborhood": "Chinatown / Little Italy",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "54 Bayard St, New York, NY 10013",
+      "coords": [
+        40.715,
+        -73.9987
+      ]
+    },
+    {
+      "id": "mojo-east",
+      "title": "Mojo East",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "85 Stanton St, New York, NY 10002",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "nathans-famous",
+      "title": "Nathan's Famous",
+      "borough": "Brooklyn",
+      "neighborhood": "Coney Island",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "1310 Surf Ave, Brooklyn, NY 11224",
+      "coords": [
+        40.5755,
+        -73.9819
+      ]
+    },
+    {
+      "id": "new-kim-tuong",
+      "title": "New Kim Tuong",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "83 Chrystie St, New York, NY 10002",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "nom-wah-tea-parlor",
+      "title": "Nom Wah Tea Parlor",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "13 Doyers St, New York, NY 10013",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "nonnas-of-the-world",
+      "title": "Nonna's of the World",
+      "borough": "Manhattan",
+      "neighborhood": "Chinatown / Little Italy",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "medium",
+      "cost": "paid",
+      "address": "75 Kenmare St, New York, NY 10012",
+      "coords": [
+        40.7198,
+        -73.9906
+      ]
+    },
+    {
+      "id": "ole-and-steen",
+      "title": "Ole & Steen",
+      "borough": "Manhattan",
+      "neighborhood": "Flatiron / NoMad",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "80 W 40th St, New York, NY 10018",
+      "coords": [
+        40.7417,
+        -73.9894
+      ]
+    },
+    {
+      "id": "rooftop-230-fifth",
+      "title": "230 Fifth Rooftop Bar",
+      "borough": "Manhattan",
+      "neighborhood": "Flatiron / NoMad",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie",
+        "photography",
+        "scenic"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "golden-hour",
+        "late-afternoon",
+        "lunch",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "tasty"
+      ],
+      "best_for": [
+        "couples",
+        "photos"
+      ],
+      "time": "medium",
+      "cost": "paid",
+      "address": "230 5th Ave, New York, NY 10001",
+      "coords": [
+        40.7442,
+        -73.9889
+      ]
+    },
+    {
+      "id": "skirt-steak",
+      "title": "Skirt Steak",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "835 6th Ave, New York, NY 10001",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "steves-authentic-key-lime-pie",
+      "title": "Steve’s Authentic Key Lime Pie",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "185 Van Dyke St, Brooklyn, NY 11231",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "sushi-counter",
+      "title": "Sushi Counter",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "119 Christopher St, New York, NY 10014",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "syko",
+      "title": "Syko",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "214A Prospect Park W, Brooklyn, NY 11215",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "tashkent-supermarket",
+      "title": "Tashkent Supermarket",
+      "borough": "Manhattan",
+      "neighborhood": "Greenwich Village",
+      "category": [
+        "food"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "foodie",
+        "shopping"
+      ],
+      "best_time": [
+        "dinner",
+        "evening",
+        "late-afternoon",
+        "lunch"
+      ],
+      "vibes": [
+        "tasty"
+      ],
+      "best_for": [
+        "couples"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "378 6th Ave, New York, NY 10011",
+      "coords": [
+        40.7312,
+        -73.9952
+      ]
+    },
+    {
+      "id": "this-bowl",
+      "title": "This Bowl",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "230 5th Ave, New York, NY 10001",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "xiang-la-hot-pot",
+      "title": "Xiang La Hot Pot",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "34 W 32nd St #2F, New York, NY 10001",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "yubu",
+      "title": "Yubu",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "food"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "46 Grand St, New York, NY 10013",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "alwyn-court",
+      "title": "Alwyn Court",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown West",
+      "category": [
+        "hidden-gems"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "hidden-gem",
+        "photography"
+      ],
+      "best_time": [
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [],
+      "best_for": [
+        "budget",
+        "photos"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "180 W 58th St, New York, NY 10019",
+      "coords": [
+        40.7656,
+        -73.9804
+      ]
+    },
+    {
+      "id": "elevated-acre",
+      "title": "Elevated Acre",
+      "borough": "Manhattan",
+      "neighborhood": "Financial District",
+      "category": [
+        "hidden-gems"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "hidden-gem",
+        "photography"
+      ],
+      "best_time": [
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [],
+      "best_for": [
+        "budget",
+        "photos"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "55 Water St, New York, NY 10041",
+      "coords": [
+        40.704,
+        -74.007
+      ]
+    },
+    {
+      "id": "ghostbusters-firehouse",
+      "title": "Ghostbusters Firehouse",
+      "borough": "Manhattan",
+      "neighborhood": "SoHo / Nolita",
+      "category": [
+        "hidden-gems"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "hidden-gem",
+        "photography"
+      ],
+      "best_time": [
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [],
+      "best_for": [
+        "budget",
+        "photos"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "14 N Moore St, New York, NY 10013",
+      "coords": [
+        40.7195,
+        -74.0065
+      ]
+    },
+    {
+      "id": "socrates-sculpture-park",
+      "title": "Socrates Sculpture Park",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "hidden-gems"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "hidden-gem",
         "outdoors",
+        "photography",
         "relaxing",
         "scenic"
       ],
@@ -214,46 +1149,15 @@
         "slow"
       ],
       "best_for": [
-        "families"
+        "budget",
+        "photos"
       ],
-      "time": "full",
-      "cost": "paid",
-      "address": "2300 Southern Blvd, Bronx, NY 10460",
+      "time": "medium",
+      "cost": "free",
+      "address": "32-01 Vernon Blvd, Queens, NY 11106",
       "coords": [
-        40.8506,
-        -73.8769
-      ]
-    },
-    {
-      "id": "brooklyn-botanic-garden",
-      "title": "Brooklyn Botanic Garden",
-      "borough": "Brooklyn",
-      "neighborhood": "Prospect Heights",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "anchor-stop",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [],
-      "time": "full",
-      "cost": "paid",
-      "address": "990 Washington Ave, Brooklyn, NY 11225",
-      "coords": [
-        40.6694,
-        -73.9624
+        40.7678,
+        -73.9368
       ]
     },
     {
@@ -296,70 +1200,6 @@
       ]
     },
     {
-      "id": "brooklyn-museum",
-      "title": "Brooklyn Museum",
-      "borough": "Brooklyn",
-      "neighborhood": "Prospect Heights",
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "anchor-stop",
-        "culture",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [],
-      "time": "full",
-      "cost": "paid",
-      "address": "200 Eastern Pkwy, Brooklyn, NY 11238",
-      "coords": [
-        40.6712,
-        -73.9636
-      ]
-    },
-    {
-      "id": "bryant-park",
-      "title": "Bryant Park",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown East",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "Bryant Park, New York, NY 10018",
-      "coords": [
-        40.7536,
-        -73.9832
-      ]
-    },
-    {
       "id": "cathedral-of-st-john-the-divine",
       "title": "Cathedral of St. John the Divine",
       "borough": "Manhattan",
@@ -391,111 +1231,6 @@
       "coords": [
         40.8038,
         -73.9619
-      ]
-    },
-    {
-      "id": "central-park-mall",
-      "title": "The Mall",
-      "borough": "Manhattan",
-      "neighborhood": "Upper West Side",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "The Mall, Central Park, New York, NY 10022",
-      "coords": [
-        40.7745,
-        -73.971
-      ]
-    },
-    {
-      "id": "central-park-zoo",
-      "title": "Central Park Zoo",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown West",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "easy-stop",
-        "family",
-        "kids",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "families"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "East 64th St, New York, NY 10021",
-      "coords": [
-        40.7678,
-        -73.9718
-      ]
-    },
-    {
-      "id": "chelsea-market",
-      "title": "Chelsea Market",
-      "borough": "Manhattan",
-      "neighborhood": "Chelsea",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie",
-        "shopping"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "75 9th Ave, New York, NY 10011",
-      "coords": [
-        40.7423,
-        -74.006
       ]
     },
     {
@@ -604,47 +1339,6 @@
       ]
     },
     {
-      "id": "conwell-coffee-hall",
-      "title": "Conwell Coffee Hall",
-      "borough": "Manhattan",
-      "neighborhood": "Financial District",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "coffee",
-        "culture",
-        "date-night",
-        "easy-stop",
-        "foodie",
-        "history",
-        "quick-bite"
-      ],
-      "best_time": [
-        "afternoon",
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch",
-        "midday",
-        "morning"
-      ],
-      "vibes": [
-        "curious",
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "6 Hanover St, New York, NY 10005",
-      "coords": [
-        40.7075,
-        -74.0109
-      ]
-    },
-    {
       "id": "dumbo",
       "title": "DUMBO Waterfront",
       "borough": "Brooklyn",
@@ -681,72 +1375,6 @@
       "coords": [
         40.7033,
         -73.9881
-      ]
-    },
-    {
-      "id": "elevated-acre",
-      "title": "Elevated Acre",
-      "borough": "Manhattan",
-      "neighborhood": "Financial District",
-      "category": [
-        "hidden-gems"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "hidden-gem",
-        "photography"
-      ],
-      "best_time": [
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [],
-      "best_for": [
-        "budget",
-        "photos"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "55 Water St, New York, NY 10041",
-      "coords": [
-        40.704,
-        -74.007
-      ]
-    },
-    {
-      "id": "ellis-island",
-      "title": "Ellis Island",
-      "borough": null,
-      "neighborhood": null,
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "culture",
-        "day-trip",
-        "easy-stop",
-        "outdoors",
-        "rainy-day",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "midday",
-        "morning"
-      ],
-      "vibes": [
-        "curious",
-        "photogenic"
-      ],
-      "best_for": [],
-      "time": "medium",
-      "cost": "paid",
-      "address": "Ellis Island, New York, NY 10004",
-      "coords": [
-        40.6995,
-        -74.0396
       ]
     },
     {
@@ -854,75 +1482,6 @@
       ]
     },
     {
-      "id": "ghostbusters-firehouse",
-      "title": "Ghostbusters Firehouse",
-      "borough": "Manhattan",
-      "neighborhood": "SoHo / Nolita",
-      "category": [
-        "hidden-gems"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "hidden-gem",
-        "photography"
-      ],
-      "best_time": [
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [],
-      "best_for": [
-        "budget",
-        "photos"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "14 N Moore St, New York, NY 10013",
-      "coords": [
-        40.7195,
-        -74.0065
-      ]
-    },
-    {
-      "id": "governors-island",
-      "title": "Governors Island",
-      "borough": null,
-      "neighborhood": null,
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "anchor-stop",
-        "budget-friendly",
-        "day-trip",
-        "outdoors",
-        "photography",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget",
-        "photos"
-      ],
-      "time": "full",
-      "cost": "free",
-      "address": "Governors Island Ferry Terminal, New York, NY 10004",
-      "coords": [
-        40.6895,
-        -74.0168
-      ]
-    },
-    {
       "id": "grand-central-terminal",
       "title": "Grand Central Terminal",
       "borough": "Manhattan",
@@ -958,96 +1517,6 @@
       "coords": [
         40.7527,
         -73.9772
-      ]
-    },
-    {
-      "id": "guggenheim-museum",
-      "title": "Guggenheim Museum",
-      "borough": "Manhattan",
-      "neighborhood": "Upper East Side",
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "culture",
-        "easy-stop",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [],
-      "time": "medium",
-      "cost": "paid",
-      "address": "1071 5th Ave, New York, NY 10128",
-      "coords": [
-        40.783,
-        -73.959
-      ]
-    },
-    {
-      "id": "harry-potter-store",
-      "title": "Harry Potter Store",
-      "borough": "Manhattan",
-      "neighborhood": "Flatiron / NoMad",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "shopping"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "935 Broadway, New York, NY 10010",
-      "coords": [
-        40.742,
-        -73.989
-      ]
-    },
-    {
-      "id": "high-line",
-      "title": "High Line",
-      "borough": "Manhattan",
-      "neighborhood": "Chelsea",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget"
-      ],
-      "time": "medium",
-      "cost": "free",
-      "address": "Gansevoort St Entrance, New York, NY 10014",
-      "coords": [
-        40.7479,
-        -74.0049
       ]
     },
     {
@@ -1090,192 +1559,6 @@
       ]
     },
     {
-      "id": "intrepid-museum",
-      "title": "Intrepid Museum",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown West",
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "anchor-stop",
-        "culture",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [],
-      "time": "full",
-      "cost": "paid",
-      "address": "Pier 86, W 46th St, New York, NY 10036",
-      "coords": [
-        40.7645,
-        -73.9996
-      ]
-    },
-    {
-      "id": "janes-carousel",
-      "title": "Jane's Carousel",
-      "borough": "Brooklyn",
-      "neighborhood": "DUMBO",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "easy-stop",
-        "photography",
-        "scenic"
-      ],
-      "best_time": [
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic"
-      ],
-      "best_for": [
-        "photos"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "1 Old Dock St, Brooklyn, NY 11201",
-      "coords": [
-        40.7034,
-        -73.995
-      ]
-    },
-    {
-      "id": "joes-home-of-soup-dumplings",
-      "title": "Joe's Home of Soup Dumplings",
-      "borough": "Manhattan",
-      "neighborhood": "Chinatown / Little Italy",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "24 W 56th St, New York, NY 10019",
-      "coords": [
-        40.7153,
-        -73.9975
-      ]
-    },
-    {
-      "id": "krispy-kreme-times-square",
-      "title": "Krispy Kreme (Times Square)",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown West",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "1601 Broadway, New York, NY 10019",
-      "coords": [
-        40.7569,
-        -73.9863
-      ]
-    },
-    {
-      "id": "lego-store-5th-ave",
-      "title": "LEGO Store (5th Ave)",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown East",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "shopping"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "636 5th Ave, New York, NY 10020",
-      "coords": [
-        40.7605,
-        -73.975
-      ]
-    },
-    {
-      "id": "liberty-bagels-midtown",
-      "title": "Liberty Bagels",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown West",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie",
-        "quick-bite"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "260 W 35th St, New York, NY 10001",
-      "coords": [
-        40.764,
-        -73.9778
-      ]
-    },
-    {
       "id": "lincoln-center",
       "title": "Lincoln Center",
       "borough": "Manhattan",
@@ -1306,44 +1589,6 @@
       "coords": [
         40.7725,
         -73.9835
-      ]
-    },
-    {
-      "id": "little-island",
-      "title": "Little Island",
-      "borough": null,
-      "neighborhood": null,
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "day-trip",
-        "easy-stop",
-        "outdoors",
-        "photography",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget",
-        "photos"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "Pier 55, Hudson River Greenway, New York, NY 10014",
-      "coords": [
-        40.742,
-        -74.016
       ]
     },
     {
@@ -1380,63 +1625,6 @@
       ]
     },
     {
-      "id": "louis-vuitton-5th-ave",
-      "title": "Louis Vuitton (5th Ave)",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown East",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "1 E 57th St, New York, NY 10022",
-      "coords": [
-        40.7607,
-        -73.975
-      ]
-    },
-    {
-      "id": "luna-park",
-      "title": "Luna Park",
-      "borough": "Brooklyn",
-      "neighborhood": "Coney Island",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "easy-stop",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [],
-      "time": "medium",
-      "cost": "paid",
-      "address": "1000 Surf Ave, Brooklyn, NY 11224",
-      "coords": [
-        40.5755,
-        -73.978
-      ]
-    },
-    {
       "id": "madison-square-garden",
       "title": "Madison Square Garden",
       "borough": "Manhattan",
@@ -1464,77 +1652,6 @@
       "coords": [
         40.7505,
         -73.9934
-      ]
-    },
-    {
-      "id": "manhattan-bridge-view",
-      "title": "Manhattan Bridge View",
-      "borough": "Brooklyn",
-      "neighborhood": "DUMBO",
-      "category": [
-        "viewpoints"
-      ],
-      "route_types": [
-        "architecture",
-        "budget-friendly",
-        "date-night",
-        "easy-stop",
-        "photography",
-        "scenic"
-      ],
-      "best_time": [
-        "evening",
-        "golden-hour",
-        "late-afternoon",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic"
-      ],
-      "best_for": [
-        "budget",
-        "couples",
-        "photos"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "Washington St & Front St, Brooklyn, NY 11201",
-      "coords": [
-        40.7033,
-        -73.9887
-      ]
-    },
-    {
-      "id": "meat-me-bbq",
-      "title": "MEAT ME BBQ",
-      "borough": null,
-      "neighborhood": null,
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "136-20 Roosevelt Ave, Flushing, NY 11354",
-      "coords": [
-        40.7588,
-        -73.8297
       ]
     },
     {
@@ -1571,249 +1688,6 @@
       ]
     },
     {
-      "id": "mercer-labs",
-      "title": "Mercer Labs",
-      "borough": "Manhattan",
-      "neighborhood": "Financial District",
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "culture",
-        "easy-stop",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [],
-      "time": "medium",
-      "cost": "paid",
-      "address": "21 Dey St, New York, NY 10007",
-      "coords": [
-        40.7103,
-        -74.0087
-      ]
-    },
-    {
-      "id": "met-museum",
-      "title": "MET Museum",
-      "borough": "Manhattan",
-      "neighborhood": "Upper East Side",
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "anchor-stop",
-        "culture",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [],
-      "time": "full",
-      "cost": "paid",
-      "address": "1000 5th Ave, New York, NY 10028",
-      "coords": [
-        40.7794,
-        -73.9632
-      ]
-    },
-    {
-      "id": "mixue",
-      "title": "MIXUE",
-      "borough": "Manhattan",
-      "neighborhood": "Chinatown / Little Italy",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "54 Bayard St, New York, NY 10013",
-      "coords": [
-        40.715,
-        -73.9987
-      ]
-    },
-    {
-      "id": "mms-store",
-      "title": "M&M's Store",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown West",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "shopping"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "1600 Broadway, New York, NY 10019",
-      "coords": [
-        40.7587,
-        -73.9851
-      ]
-    },
-    {
-      "id": "moma",
-      "title": "MoMA",
-      "borough": "Manhattan",
-      "neighborhood": "Midtown West",
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "anchor-stop",
-        "culture",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [],
-      "time": "full",
-      "cost": "paid",
-      "address": "11 W 53rd St, New York, NY 10019",
-      "coords": [
-        40.7614,
-        -73.9776
-      ]
-    },
-    {
-      "id": "morningside-park",
-      "title": "Morningside Park",
-      "borough": "Manhattan",
-      "neighborhood": "Morningside Heights",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "outdoors",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "Morningside Ave & W 114th St, New York, NY 10027",
-      "coords": [
-        40.8018,
-        -73.9595
-      ]
-    },
-    {
-      "id": "museum-of-the-city-of-new-york",
-      "title": "Museum of the City of New York",
-      "borough": null,
-      "neighborhood": null,
-      "category": [
-        "museums"
-      ],
-      "route_types": [
-        "culture",
-        "easy-stop",
-        "rainy-day"
-      ],
-      "best_time": [
-        "afternoon",
-        "midday"
-      ],
-      "vibes": [
-        "curious"
-      ],
-      "best_for": [],
-      "time": "medium",
-      "cost": "paid",
-      "address": "1220 5th Ave, New York, NY 10029",
-      "coords": [
-        40.7925,
-        -73.9519
-      ]
-    },
-    {
-      "id": "nathans-famous",
-      "title": "Nathan's Famous",
-      "borough": "Brooklyn",
-      "neighborhood": "Coney Island",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "1310 Surf Ave, Brooklyn, NY 11224",
-      "coords": [
-        40.5755,
-        -73.9819
-      ]
-    },
-    {
       "id": "new-yorker-hotel",
       "title": "The New Yorker Hotel",
       "borough": "Manhattan",
@@ -1844,77 +1718,6 @@
       "coords": [
         40.7528,
         -73.9935
-      ]
-    },
-    {
-      "id": "nonnas-of-the-world",
-      "title": "Nonna's of the World",
-      "borough": "Manhattan",
-      "neighborhood": "Chinatown / Little Italy",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "75 Kenmare St, New York, NY 10012",
-      "coords": [
-        40.7198,
-        -73.9906
-      ]
-    },
-    {
-      "id": "ny-aquarium",
-      "title": "New York Aquarium",
-      "borough": "Brooklyn",
-      "neighborhood": "Coney Island",
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "easy-stop",
-        "family",
-        "kids",
-        "outdoors",
-        "rainy-day",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "midday",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "families"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "602 Surf Ave, Brooklyn, NY 11224",
-      "coords": [
-        40.5755,
-        -73.975
       ]
     },
     {
@@ -1986,31 +1789,6 @@
       ]
     },
     {
-      "id": "nyu",
-      "title": "NYU Area",
-      "borough": "Manhattan",
-      "neighborhood": "Greenwich Village",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "Washington Square Park area, New York, NY 10012",
-      "coords": [
-        40.7295,
-        -73.9965
-      ]
-    },
-    {
       "id": "oculus",
       "title": "Oculus",
       "borough": "Manhattan",
@@ -2044,39 +1822,6 @@
       ]
     },
     {
-      "id": "ole-and-steen",
-      "title": "Ole & Steen",
-      "borough": "Manhattan",
-      "neighborhood": "Flatiron / NoMad",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "80 W 40th St, New York, NY 10018",
-      "coords": [
-        40.7417,
-        -73.9894
-      ]
-    },
-    {
       "id": "one-world-trade-center",
       "title": "One World Trade Center",
       "borough": "Manhattan",
@@ -2104,31 +1849,6 @@
       "coords": [
         40.7127,
         -74.0134
-      ]
-    },
-    {
-      "id": "penn-station",
-      "title": "Penn Station",
-      "borough": "Manhattan",
-      "neighborhood": "Chelsea",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [
-        "budget"
-      ],
-      "time": "short",
-      "cost": "free",
-      "address": "8th Ave & W 31st St, New York, NY 10001",
-      "coords": [
-        40.7506,
-        -73.9935
       ]
     },
     {
@@ -2165,83 +1885,6 @@
       ]
     },
     {
-      "id": "rooftop-230-fifth",
-      "title": "230 Fifth Rooftop Bar",
-      "borough": "Manhattan",
-      "neighborhood": "Flatiron / NoMad",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie",
-        "photography",
-        "scenic"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "golden-hour",
-        "late-afternoon",
-        "lunch",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "tasty"
-      ],
-      "best_for": [
-        "couples",
-        "photos"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "230 5th Ave, New York, NY 10001",
-      "coords": [
-        40.7442,
-        -73.9889
-      ]
-    },
-    {
-      "id": "roosevelt-island",
-      "title": "Roosevelt Island",
-      "borough": null,
-      "neighborhood": null,
-      "category": [
-        "parks"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "day-trip",
-        "easy-stop",
-        "outdoors",
-        "photography",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget",
-        "photos"
-      ],
-      "time": "medium",
-      "cost": "free",
-      "address": "Roosevelt Island, New York, NY 10044",
-      "coords": [
-        40.7612,
-        -73.9496
-      ]
-    },
-    {
       "id": "roosevelt-island-tram",
       "title": "Roosevelt Island Tram",
       "borough": null,
@@ -2275,66 +1918,6 @@
       "coords": [
         40.7619,
         -73.964
-      ]
-    },
-    {
-      "id": "seaglass-carousel",
-      "title": "SeaGlass Carousel",
-      "borough": "Manhattan",
-      "neighborhood": "Financial District",
-      "category": [
-        "other"
-      ],
-      "route_types": [
-        "easy-stop"
-      ],
-      "best_time": [],
-      "vibes": [],
-      "best_for": [],
-      "time": "short",
-      "cost": "paid",
-      "address": "State St & Battery Pl, New York, NY 10004",
-      "coords": [
-        40.7033,
-        -74.017
-      ]
-    },
-    {
-      "id": "socrates-sculpture-park",
-      "title": "Socrates Sculpture Park",
-      "borough": null,
-      "neighborhood": null,
-      "category": [
-        "hidden-gems"
-      ],
-      "route_types": [
-        "budget-friendly",
-        "easy-stop",
-        "hidden-gem",
-        "outdoors",
-        "photography",
-        "relaxing",
-        "scenic"
-      ],
-      "best_time": [
-        "afternoon",
-        "golden-hour",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic",
-        "slow"
-      ],
-      "best_for": [
-        "budget",
-        "photos"
-      ],
-      "time": "medium",
-      "cost": "free",
-      "address": "32-01 Vernon Blvd, Queens, NY 11106",
-      "coords": [
-        40.7678,
-        -73.9368
       ]
     },
     {
@@ -2432,75 +2015,6 @@
       "coords": [
         40.6892,
         -74.0445
-      ]
-    },
-    {
-      "id": "tashkent-supermarket",
-      "title": "Tashkent Supermarket",
-      "borough": "Manhattan",
-      "neighborhood": "Greenwich Village",
-      "category": [
-        "food"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "foodie",
-        "shopping"
-      ],
-      "best_time": [
-        "dinner",
-        "evening",
-        "late-afternoon",
-        "lunch"
-      ],
-      "vibes": [
-        "tasty"
-      ],
-      "best_for": [
-        "couples"
-      ],
-      "time": "short",
-      "cost": "paid",
-      "address": "378 6th Ave, New York, NY 10011",
-      "coords": [
-        40.7312,
-        -73.9952
-      ]
-    },
-    {
-      "id": "the-edge",
-      "title": "The Edge",
-      "borough": "Manhattan",
-      "neighborhood": "Chelsea",
-      "category": [
-        "viewpoints"
-      ],
-      "route_types": [
-        "date-night",
-        "easy-stop",
-        "photography",
-        "scenic"
-      ],
-      "best_time": [
-        "evening",
-        "golden-hour",
-        "late-afternoon",
-        "morning"
-      ],
-      "vibes": [
-        "photogenic"
-      ],
-      "best_for": [
-        "couples",
-        "photos"
-      ],
-      "time": "medium",
-      "cost": "paid",
-      "address": "30 Hudson Yards, New York, NY 10001",
-      "coords": [
-        40.7539,
-        -74.0027
       ]
     },
     {
@@ -2703,6 +2217,1068 @@
       ]
     },
     {
+      "id": "american-museum-of-natural-history",
+      "title": "American Museum of Natural History",
+      "borough": "Manhattan",
+      "neighborhood": "Upper West Side",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "culture",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "full",
+      "cost": "paid",
+      "address": "200 Central Park W, New York, NY 10024",
+      "coords": [
+        40.7813,
+        -73.9735
+      ]
+    },
+    {
+      "id": "bronx-museum-of-the-arts",
+      "title": "The Bronx Museum of the Arts",
+      "borough": "Bronx",
+      "neighborhood": "South Bronx",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "culture",
+        "easy-stop",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "time": "medium",
+      "cost": "free",
+      "address": "1040 Grand Concourse, Bronx, NY 10456",
+      "coords": [
+        40.831,
+        -73.9197
+      ]
+    },
+    {
+      "id": "brooklyn-museum",
+      "title": "Brooklyn Museum",
+      "borough": "Brooklyn",
+      "neighborhood": "Prospect Heights",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "culture",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "full",
+      "cost": "paid",
+      "address": "200 Eastern Pkwy, Brooklyn, NY 11238",
+      "coords": [
+        40.6712,
+        -73.9636
+      ]
+    },
+    {
+      "id": "ellis-island",
+      "title": "Ellis Island",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "culture",
+        "day-trip",
+        "easy-stop",
+        "outdoors",
+        "rainy-day",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "midday",
+        "morning"
+      ],
+      "vibes": [
+        "curious",
+        "photogenic"
+      ],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "Ellis Island, New York, NY 10004",
+      "coords": [
+        40.6995,
+        -74.0396
+      ]
+    },
+    {
+      "id": "guggenheim-museum",
+      "title": "Guggenheim Museum",
+      "borough": "Manhattan",
+      "neighborhood": "Upper East Side",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "culture",
+        "easy-stop",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "1071 5th Ave, New York, NY 10128",
+      "coords": [
+        40.783,
+        -73.959
+      ]
+    },
+    {
+      "id": "intrepid-museum",
+      "title": "Intrepid Museum",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown West",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "culture",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "full",
+      "cost": "paid",
+      "address": "Pier 86, W 46th St, New York, NY 10036",
+      "coords": [
+        40.7645,
+        -73.9996
+      ]
+    },
+    {
+      "id": "mercer-labs",
+      "title": "Mercer Labs",
+      "borough": "Manhattan",
+      "neighborhood": "Financial District",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "culture",
+        "easy-stop",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "21 Dey St, New York, NY 10007",
+      "coords": [
+        40.7103,
+        -74.0087
+      ]
+    },
+    {
+      "id": "met-museum",
+      "title": "MET Museum",
+      "borough": "Manhattan",
+      "neighborhood": "Upper East Side",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "culture",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "full",
+      "cost": "paid",
+      "address": "1000 5th Ave, New York, NY 10028",
+      "coords": [
+        40.7794,
+        -73.9632
+      ]
+    },
+    {
+      "id": "moma",
+      "title": "MoMA",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown West",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "culture",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "full",
+      "cost": "paid",
+      "address": "11 W 53rd St, New York, NY 10019",
+      "coords": [
+        40.7614,
+        -73.9776
+      ]
+    },
+    {
+      "id": "museum-of-the-city-of-new-york",
+      "title": "Museum of the City of New York",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "culture",
+        "easy-stop",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "1220 5th Ave, New York, NY 10029",
+      "coords": [
+        40.7925,
+        -73.9519
+      ]
+    },
+    {
+      "id": "whitney-museum",
+      "title": "Whitney Museum",
+      "borough": "Manhattan",
+      "neighborhood": "Greenwich Village",
+      "category": [
+        "museums"
+      ],
+      "route_types": [
+        "culture",
+        "easy-stop",
+        "rainy-day"
+      ],
+      "best_time": [
+        "afternoon",
+        "midday"
+      ],
+      "vibes": [
+        "curious"
+      ],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "99 Gansevoort St, New York, NY 10014",
+      "coords": [
+        40.7396,
+        -74.0089
+      ]
+    },
+    {
+      "id": "birds-jazz",
+      "title": "Birds",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "other"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "64 Downing St, New York, NY 10014",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "brighton-beach",
+      "title": "Brighton Beach",
+      "borough": "Brooklyn",
+      "neighborhood": "Brighton Beach",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [
+        "budget"
+      ],
+      "time": "medium",
+      "cost": "free",
+      "address": "Brighton Beach Ave & Boardwalk, Brooklyn, NY 11235",
+      "coords": [
+        40.5763,
+        -73.9615
+      ]
+    },
+    {
+      "id": "harry-potter-store",
+      "title": "Harry Potter Store",
+      "borough": "Manhattan",
+      "neighborhood": "Flatiron / NoMad",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "shopping"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "935 Broadway, New York, NY 10010",
+      "coords": [
+        40.742,
+        -73.989
+      ]
+    },
+    {
+      "id": "janes-carousel",
+      "title": "Jane's Carousel",
+      "borough": "Brooklyn",
+      "neighborhood": "DUMBO",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "easy-stop",
+        "photography",
+        "scenic"
+      ],
+      "best_time": [
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic"
+      ],
+      "best_for": [
+        "photos"
+      ],
+      "time": "short",
+      "cost": "paid",
+      "address": "1 Old Dock St, Brooklyn, NY 11201",
+      "coords": [
+        40.7034,
+        -73.995
+      ]
+    },
+    {
+      "id": "lego-store-5th-ave",
+      "title": "LEGO Store (5th Ave)",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown East",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "shopping"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "636 5th Ave, New York, NY 10020",
+      "coords": [
+        40.7605,
+        -73.975
+      ]
+    },
+    {
+      "id": "louis-vuitton-5th-ave",
+      "title": "Louis Vuitton (5th Ave)",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown East",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "1 E 57th St, New York, NY 10022",
+      "coords": [
+        40.7607,
+        -73.975
+      ]
+    },
+    {
+      "id": "luna-park",
+      "title": "Luna Park",
+      "borough": "Brooklyn",
+      "neighborhood": "Coney Island",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "easy-stop",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "1000 Surf Ave, Brooklyn, NY 11224",
+      "coords": [
+        40.5755,
+        -73.978
+      ]
+    },
+    {
+      "id": "mms-store",
+      "title": "M&M's Store",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown West",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "shopping"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "1600 Broadway, New York, NY 10019",
+      "coords": [
+        40.7587,
+        -73.9851
+      ]
+    },
+    {
+      "id": "nyu",
+      "title": "NYU Area",
+      "borough": "Manhattan",
+      "neighborhood": "Greenwich Village",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "Washington Square Park area, New York, NY 10012",
+      "coords": [
+        40.7295,
+        -73.9965
+      ]
+    },
+    {
+      "id": "penn-station",
+      "title": "Penn Station",
+      "borough": "Manhattan",
+      "neighborhood": "Chelsea",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "8th Ave & W 31st St, New York, NY 10001",
+      "coords": [
+        40.7506,
+        -73.9935
+      ]
+    },
+    {
+      "id": "saint-tuesday",
+      "title": "Saint Tuesday",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "other"
+      ],
+      "route_types": [],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "medium",
+      "cost": "paid",
+      "address": "77 Walker St, New York, NY 10013",
+      "coords": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "id": "seaglass-carousel",
+      "title": "SeaGlass Carousel",
+      "borough": "Manhattan",
+      "neighborhood": "Financial District",
+      "category": [
+        "other"
+      ],
+      "route_types": [
+        "easy-stop"
+      ],
+      "best_time": [],
+      "vibes": [],
+      "best_for": [],
+      "time": "short",
+      "cost": "paid",
+      "address": "State St & Battery Pl, New York, NY 10004",
+      "coords": [
+        40.7033,
+        -74.017
+      ]
+    },
+    {
+      "id": "bethesda-fountain",
+      "title": "Bethesda Fountain",
+      "borough": "Manhattan",
+      "neighborhood": "Upper East Side",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "Central Park, Terrace Dr, New York, NY 10021",
+      "coords": [
+        40.774,
+        -73.97
+      ]
+    },
+    {
+      "id": "bronx-zoo",
+      "title": "Bronx Zoo",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "family",
+        "kids",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "families"
+      ],
+      "time": "full",
+      "cost": "paid",
+      "address": "2300 Southern Blvd, Bronx, NY 10460",
+      "coords": [
+        40.8506,
+        -73.8769
+      ]
+    },
+    {
+      "id": "brooklyn-botanic-garden",
+      "title": "Brooklyn Botanic Garden",
+      "borough": "Brooklyn",
+      "neighborhood": "Prospect Heights",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [],
+      "time": "full",
+      "cost": "paid",
+      "address": "990 Washington Ave, Brooklyn, NY 11225",
+      "coords": [
+        40.6694,
+        -73.9624
+      ]
+    },
+    {
+      "id": "bryant-park",
+      "title": "Bryant Park",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown East",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "Bryant Park, New York, NY 10018",
+      "coords": [
+        40.7536,
+        -73.9832
+      ]
+    },
+    {
+      "id": "central-park-mall",
+      "title": "The Mall",
+      "borough": "Manhattan",
+      "neighborhood": "Upper West Side",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "The Mall, Central Park, New York, NY 10022",
+      "coords": [
+        40.7745,
+        -73.971
+      ]
+    },
+    {
+      "id": "central-park-zoo",
+      "title": "Central Park Zoo",
+      "borough": "Manhattan",
+      "neighborhood": "Midtown West",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "easy-stop",
+        "family",
+        "kids",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "families"
+      ],
+      "time": "medium",
+      "cost": "paid",
+      "address": "East 64th St, New York, NY 10021",
+      "coords": [
+        40.7678,
+        -73.9718
+      ]
+    },
+    {
+      "id": "governors-island",
+      "title": "Governors Island",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "anchor-stop",
+        "budget-friendly",
+        "day-trip",
+        "outdoors",
+        "photography",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget",
+        "photos"
+      ],
+      "time": "full",
+      "cost": "free",
+      "address": "Governors Island Ferry Terminal, New York, NY 10004",
+      "coords": [
+        40.6895,
+        -74.0168
+      ]
+    },
+    {
+      "id": "high-line",
+      "title": "High Line",
+      "borough": "Manhattan",
+      "neighborhood": "Chelsea",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "time": "medium",
+      "cost": "free",
+      "address": "Gansevoort St Entrance, New York, NY 10014",
+      "coords": [
+        40.7479,
+        -74.0049
+      ]
+    },
+    {
+      "id": "little-island",
+      "title": "Little Island",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "day-trip",
+        "easy-stop",
+        "outdoors",
+        "photography",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget",
+        "photos"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "Pier 55, Hudson River Greenway, New York, NY 10014",
+      "coords": [
+        40.742,
+        -74.016
+      ]
+    },
+    {
+      "id": "morningside-park",
+      "title": "Morningside Park",
+      "borough": "Manhattan",
+      "neighborhood": "Morningside Heights",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "easy-stop",
+        "outdoors",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "Morningside Ave & W 114th St, New York, NY 10027",
+      "coords": [
+        40.8018,
+        -73.9595
+      ]
+    },
+    {
+      "id": "ny-aquarium",
+      "title": "New York Aquarium",
+      "borough": "Brooklyn",
+      "neighborhood": "Coney Island",
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "easy-stop",
+        "family",
+        "kids",
+        "outdoors",
+        "rainy-day",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "midday",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "families"
+      ],
+      "time": "medium",
+      "cost": "paid",
+      "address": "602 Surf Ave, Brooklyn, NY 11224",
+      "coords": [
+        40.5755,
+        -73.975
+      ]
+    },
+    {
+      "id": "roosevelt-island",
+      "title": "Roosevelt Island",
+      "borough": null,
+      "neighborhood": null,
+      "category": [
+        "parks"
+      ],
+      "route_types": [
+        "budget-friendly",
+        "day-trip",
+        "easy-stop",
+        "outdoors",
+        "photography",
+        "relaxing",
+        "scenic"
+      ],
+      "best_time": [
+        "afternoon",
+        "golden-hour",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic",
+        "slow"
+      ],
+      "best_for": [
+        "budget",
+        "photos"
+      ],
+      "time": "medium",
+      "cost": "free",
+      "address": "Roosevelt Island, New York, NY 10044",
+      "coords": [
+        40.7612,
+        -73.9496
+      ]
+    },
+    {
       "id": "washington-square-park",
       "title": "Washington Square Park",
       "borough": "Manhattan",
@@ -2738,32 +3314,76 @@
       ]
     },
     {
-      "id": "whitney-museum",
-      "title": "Whitney Museum",
-      "borough": "Manhattan",
-      "neighborhood": "Greenwich Village",
+      "id": "manhattan-bridge-view",
+      "title": "Manhattan Bridge View",
+      "borough": "Brooklyn",
+      "neighborhood": "DUMBO",
       "category": [
-        "museums"
+        "viewpoints"
       ],
       "route_types": [
-        "culture",
+        "architecture",
+        "budget-friendly",
+        "date-night",
         "easy-stop",
-        "rainy-day"
+        "photography",
+        "scenic"
       ],
       "best_time": [
-        "afternoon",
-        "midday"
+        "evening",
+        "golden-hour",
+        "late-afternoon",
+        "morning"
       ],
       "vibes": [
-        "curious"
+        "photogenic"
       ],
-      "best_for": [],
+      "best_for": [
+        "budget",
+        "couples",
+        "photos"
+      ],
+      "time": "short",
+      "cost": "free",
+      "address": "Washington St & Front St, Brooklyn, NY 11201",
+      "coords": [
+        40.7033,
+        -73.9887
+      ]
+    },
+    {
+      "id": "the-edge",
+      "title": "The Edge",
+      "borough": "Manhattan",
+      "neighborhood": "Chelsea",
+      "category": [
+        "viewpoints"
+      ],
+      "route_types": [
+        "date-night",
+        "easy-stop",
+        "photography",
+        "scenic"
+      ],
+      "best_time": [
+        "evening",
+        "golden-hour",
+        "late-afternoon",
+        "morning"
+      ],
+      "vibes": [
+        "photogenic"
+      ],
+      "best_for": [
+        "couples",
+        "photos"
+      ],
       "time": "medium",
       "cost": "paid",
-      "address": "99 Gansevoort St, New York, NY 10014",
+      "address": "30 Hudson Yards, New York, NY 10001",
       "coords": [
-        40.7396,
-        -74.0089
+        40.7539,
+        -74.0027
       ]
     }
   ],

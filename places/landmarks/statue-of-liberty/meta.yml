@@ -1,0 +1,26 @@
+id: statue-of-liberty
+title:
+  en: Statue of Liberty
+  ru: Статуя Свободы
+coords:
+  lat: 40.6892
+  lng: -74.0445
+category:
+- landmarks
+time: full
+cost: paid
+price: ~5
+address: Liberty Island, New York, NY 10004
+route_types:
+- anchor-stop
+- architecture
+- culture
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for: []
+external_link: ''
+personal: want-to-go

@@ -1,0 +1,20 @@
+id: this-bowl
+title:
+  en: This Bowl
+  ru: This Bowl
+coords:
+  lat: 40.7439412
+  lng: -73.988134
+category:
+- food
+tags: []
+time: short
+cost: paid
+price: ''
+transit:
+  en: 23 St / 28 St
+  ru: 23 St / 28 St
+address: 230 5th Ave, New York, NY 10001
+external_link: https://www.tiktok.com/t/ZP8gHPF2g
+featured: false
+personal: want-to-go

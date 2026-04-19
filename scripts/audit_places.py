@@ -26,6 +26,10 @@ def load_yaml(path: Path) -> dict[str, Any]:
     return data
 
 
+def iter_place_dirs(places_dir: Path) -> list[Path]:
+    return sorted(meta_path.parent for meta_path in places_dir.rglob("meta.yml"))
+
+
 def main() -> int:
     args = parse_args()
     places_dir = args.repo_root / "places"
@@ -37,10 +41,8 @@ def main() -> int:
         "missing_cover": [],
     }
 
-    for place_dir in sorted(path for path in places_dir.iterdir() if path.is_dir()):
+    for place_dir in iter_place_dirs(places_dir):
         meta_path = place_dir / "meta.yml"
-        if not meta_path.exists():
-            continue
         report["total_places"] += 1
         meta = load_yaml(meta_path)
 

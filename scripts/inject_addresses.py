@@ -101,9 +101,16 @@ def upsert_address(text: str, address: str) -> str:
 def main() -> None:
     updated = []
     missing = []
+    meta_by_id = {
+        path.parent.name: path
+        for path in PLACES_DIR.rglob("meta.yml")
+    }
 
     for place_id, address in ADDRESSES.items():
-        meta_path = PLACES_DIR / place_id / "meta.yml"
+        meta_path = meta_by_id.get(place_id)
+        if meta_path is None:
+            missing.append(place_id)
+            continue
         if not meta_path.exists():
             missing.append(place_id)
             continue

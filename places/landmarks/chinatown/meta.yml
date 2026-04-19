@@ -1,0 +1,32 @@
+id: chinatown
+title:
+  en: Chinatown
+  ru: Чайнатаун
+coords:
+  lat: 40.7158
+  lng: -73.997
+category:
+- landmarks
+time: medium
+cost: free
+transit:
+  en: Canal St
+  ru: Canal St
+address: Canal St & Mott St, New York, NY 10013
+borough: Manhattan
+neighborhood: Chinatown / Little Italy
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget
+external_link: ''
+personal: want-to-go
