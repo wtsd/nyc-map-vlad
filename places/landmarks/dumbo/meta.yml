@@ -1,0 +1,38 @@
+id: dumbo
+title:
+  en: DUMBO Waterfront
+  ru: DUMBO набережная
+coords:
+  lat: 40.7033
+  lng: -73.9881
+category:
+- landmarks
+time: medium
+cost: free
+transit:
+  en: York St (F)
+  ru: York St (F)
+address: Washington St & Water St, Brooklyn, NY 11201
+borough: Brooklyn
+neighborhood: DUMBO
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- photography
+- scenic
+- touristy
+best_time:
+- afternoon
+- golden-hour
+- midday
+- morning
+vibes:
+- curious
+- photogenic
+best_for:
+- budget
+- photos
+external_link: ''
+personal: want-to-go

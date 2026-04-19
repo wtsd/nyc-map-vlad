@@ -16,7 +16,7 @@ A personal interactive map and checklist of NYC places for friends and family.
 
 Add a new place:
 
-1. Create folder in `places/your-place-id/`
+1. Create folder in `places/<category>/your-place-id/`
 2. Add:
    - `meta.yml`
    - `en.md`
@@ -33,7 +33,7 @@ https://wtsd.github.io/nyc-map-vlad/
 
 ## Structure
 
-- `places/` → source content
+- `places/<category>/<place-id>/` → source content
 - `scripts/build.py` → build script
 - `build/places.json` → generated data
 - `assets/` → frontend

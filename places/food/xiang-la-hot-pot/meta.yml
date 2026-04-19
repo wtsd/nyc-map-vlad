@@ -1,0 +1,20 @@
+id: xiang-la-hot-pot
+title:
+  en: Xiang La Hot Pot
+  ru: Xiang La Hot Pot
+coords:
+  lat: 0.0
+  lng: 0.0
+category:
+- food
+tags: []
+time: medium
+cost: paid
+price: $19 lunch
+transit:
+  en: 34 St-Herald Sq
+  ru: 34 St-Herald Sq
+address: '34 W 32nd St #2F, New York, NY 10001'
+external_link: https://www.tiktok.com/t/ZP8gHYhuh
+featured: false
+personal: want-to-go

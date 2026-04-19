@@ -1,6 +1,7 @@
 import os
 import yaml
 import json
+from pathlib import Path
 
 PLACES_DIR = "places"
 OUTPUT_FILE = "build/places.json"
@@ -16,23 +17,19 @@ def load_yaml(path):
         return yaml.safe_load(f)
 
 places = []
+places_root = Path(PLACES_DIR)
 
-for place_id in os.listdir(PLACES_DIR):
-    place_path = os.path.join(PLACES_DIR, place_id)
-    if not os.path.isdir(place_path):
-        continue
+for meta_path in sorted(places_root.rglob("meta.yml")):
+    place_path = meta_path.parent
+    place_id = place_path.name
 
-    meta_path = os.path.join(place_path, "meta.yml")
-    if not os.path.exists(meta_path):
-        continue
+    meta = load_yaml(str(meta_path))
 
-    meta = load_yaml(meta_path)
+    en_text = read_file(str(place_path / "en.md"))
+    ru_text = read_file(str(place_path / "ru.md"))
 
-    en_text = read_file(os.path.join(place_path, "en.md"))
-    ru_text = read_file(os.path.join(place_path, "ru.md"))
-
-    image_path = f"places/{place_id}/cover.jpg"
-    if not os.path.exists(os.path.join(place_path, "cover.jpg")):
+    image_path = str(place_path / "cover.jpg").replace("\\", "/")
+    if not (place_path / "cover.jpg").exists():
         image_path = "assets/images/placeholders/cover.jpg"
 
     place = {
@@ -40,6 +37,7 @@ for place_id in os.listdir(PLACES_DIR):
         "title": meta["title"],
         "coords": [meta["coords"]["lat"], meta["coords"]["lng"]],
         "category": meta.get("category", []),
+        "personal": meta.get("personal", ""),
         "tags": meta.get("tags", []),
         "time": meta.get("time"),
         "cost": meta.get("cost"),

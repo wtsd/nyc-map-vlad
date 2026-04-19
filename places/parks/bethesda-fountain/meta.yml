@@ -1,0 +1,34 @@
+id: bethesda-fountain
+title:
+  en: Bethesda Fountain
+  ru: Фонтан Bethesda
+coords:
+  lat: 40.774
+  lng: -73.97
+category:
+- parks
+time: short
+cost: free
+transit:
+  en: 72 St
+  ru: 72 St
+address: Central Park, Terrace Dr, New York, NY 10021
+borough: Manhattan
+neighborhood: Upper East Side
+route_types:
+- budget-friendly
+- easy-stop
+- outdoors
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

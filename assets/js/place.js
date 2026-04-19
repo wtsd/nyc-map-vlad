@@ -65,6 +65,10 @@ function getCategoryLabel(category) {
   return NYCMapCommon.getCategoryLabel(lang, category);
 }
 
+function getPersonalEmoji(personal) {
+  return NYCMapCommon.getPersonalEmoji(personal);
+}
+
 function toggleLang() {
   lang = lang === "en" ? "ru" : "en";
   localStorage.setItem("lang", lang);
@@ -139,6 +143,8 @@ function render() {
   }
 
   const title = NYCMapCommon.getLocalizedText(lang, currentPlace.title, "");
+  const personalEmoji = getPersonalEmoji(currentPlace.personal);
+  const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
   const summary = NYCMapCommon.getLocalizedText(lang, currentPlace.summary, "");
   const address = NYCMapCommon.getPlaceAddress(currentPlace, lang);
   const mapsUrl = NYCMapCommon.getMapsUrl(currentPlace, lang);
@@ -147,10 +153,10 @@ function render() {
     ? getCategoryLabel(currentPlace.category[0])
     : "";
 
-  document.title = `${title} | NYC Map by Vlad and Katya`;
-  document.getElementById("pageTitle").textContent = title;
+  document.title = `${fullTitle} | NYC Map by Vlad and Katya`;
+  document.getElementById("pageTitle").textContent = fullTitle;
   document.getElementById("pageSubtitle").textContent = t.subtitle;
-  document.getElementById("placeName").textContent = title;
+  document.getElementById("placeName").textContent = fullTitle;
   document.getElementById("placeCategory").textContent = category;
   document.getElementById("placeTime").textContent = getTimeLabel(currentPlace.time);
   document.getElementById("placeCost").textContent = getCostLabel(currentPlace.cost, currentPlace.price);

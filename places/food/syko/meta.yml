@@ -1,0 +1,20 @@
+id: syko
+title:
+  en: Syko
+  ru: Syko
+coords:
+  lat: 0.0
+  lng: 0.0
+category:
+- food
+tags: []
+time: medium
+cost: paid
+price: ''
+transit:
+  en: 15 St-Prospect Park / Prospect Park West
+  ru: 15 St-Prospect Park / Prospect Park West
+address: 214A Prospect Park W, Brooklyn, NY 11215
+external_link: https://www.tiktok.com/t/ZP8gHaxeR
+featured: false
+personal: want-to-go

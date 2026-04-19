@@ -1,0 +1,35 @@
+id: socrates-sculpture-park
+title:
+  en: Socrates Sculpture Park
+  ru: Парк скульптур Сократа
+coords:
+  lat: 40.7678
+  lng: -73.9368
+category:
+- hidden-gems
+time: medium
+cost: free
+transit:
+  en: Broadway / 31 St + bus or ferry nearby
+  ru: Broadway / 31 St + bus or ferry nearby
+address: 32-01 Vernon Blvd, Queens, NY 11106
+route_types:
+- budget-friendly
+- easy-stop
+- hidden-gem
+- outdoors
+- photography
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for:
+- budget
+- photos
+external_link: ''
+personal: want-to-go

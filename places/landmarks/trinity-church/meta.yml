@@ -1,0 +1,33 @@
+id: trinity-church
+title:
+  en: Trinity Church
+  ru: Церковь Тринити
+coords:
+  lat: 40.7081
+  lng: -74.012
+category:
+- landmarks
+time: short
+cost: free
+transit:
+  en: Wall St
+  ru: Wall St
+address: 89 Broadway, New York, NY 10006
+borough: Manhattan
+neighborhood: Financial District
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- history
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

@@ -1,0 +1,32 @@
+id: joes-home-of-soup-dumplings
+title:
+  en: Joe's Home of Soup Dumplings
+  ru: Joe's Home of Soup Dumplings
+coords:
+  lat: 40.7153
+  lng: -73.9975
+category:
+- food
+time: medium
+cost: paid
+transit:
+  en: Canal St
+  ru: Canal St
+address: 24 W 56th St, New York, NY 10019
+borough: Manhattan
+neighborhood: Chinatown / Little Italy
+route_types:
+- date-night
+- easy-stop
+- foodie
+best_time:
+- dinner
+- evening
+- late-afternoon
+- lunch
+vibes:
+- tasty
+best_for:
+- couples
+external_link: ''
+personal: want-to-go

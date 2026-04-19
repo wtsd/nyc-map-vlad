@@ -1,0 +1,34 @@
+id: washington-square-park
+title:
+  en: Washington Square Park
+  ru: Вашингтон-сквер-парк
+coords:
+  lat: 40.7308
+  lng: -73.9973
+category:
+- parks
+time: medium
+cost: free
+transit:
+  en: W 4 St
+  ru: W 4 St
+address: Washington Square, New York, NY 10012
+borough: Manhattan
+neighborhood: Greenwich Village
+route_types:
+- budget-friendly
+- easy-stop
+- outdoors
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

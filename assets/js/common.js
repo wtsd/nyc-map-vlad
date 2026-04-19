@@ -18,6 +18,18 @@
     other: { en: "Other", ru: "Другое" }
   };
 
+  const PERSONAL_LABELS = {
+    "want-to-go": { en: "Want to go", ru: "Хочу сходить" },
+    "been-not-impressed": { en: "Not impressed", ru: "Не впечатлило" },
+    "highly-recommend": { en: "Highly recommend", ru: "Советую" }
+  };
+
+  const PERSONAL_EMOJIS = {
+    "want-to-go": "🟦",
+    "been-not-impressed": "⬜",
+    "highly-recommend": "🟩"
+  };
+
   const TIME_LABELS = {
     short: { en: "Under 30 min", ru: "До 30 минут" },
     medium: { en: "Couple of hours", ru: "Пара часов" },
@@ -44,6 +56,14 @@
 
   function getTimeLabel(lang, time) {
     return TIME_LABELS[time]?.[normalizeLang(lang)] || time || "";
+  }
+
+  function getPersonalLabel(lang, personal) {
+    return PERSONAL_LABELS[personal]?.[normalizeLang(lang)] || personal || "";
+  }
+
+  function getPersonalEmoji(personal) {
+    return PERSONAL_EMOJIS[personal] || "";
   }
 
   function getCostLabel(lang, cost, price) {
@@ -87,6 +107,8 @@
     normalizeLang,
     getStatusLabel,
     getCategoryLabel,
+    getPersonalLabel,
+    getPersonalEmoji,
     getTimeLabel,
     getCostLabel,
     getLocalizedText,

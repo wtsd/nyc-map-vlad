@@ -1,0 +1,3449 @@
+[
+  {
+    "id": "alimama-tea",
+    "title": {
+      "en": "Alimama Tea",
+      "ru": "Alimama Tea"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "89A Bayard St, New York, NY 10013",
+    "external_link": "https://www.tiktok.com/t/ZP8gHFrEV",
+    "image": "places/food/alimama-tea/cover.jpg",
+    "summary": {
+      "en": "Known for donuts and bubble tea in Chinatown. Easy sweet stop while walking Lower Manhattan.",
+      "ru": "Место с пончиками и bubble tea в Чайнатауне. Удобная сладкая остановка во время прогулки по Нижнему Манхэттену."
+    }
+  },
+  {
+    "id": "annapurna-thakali-kitchen",
+    "title": {
+      "en": "Annapurna Thakali Kitchen",
+      "ru": "Annapurna Thakali Kitchen"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "74 St-Broadway / Jackson Heights-Roosevelt Ave",
+      "ru": "74 St-Broadway / Jackson Heights-Roosevelt Ave"
+    },
+    "address": "72-24 Roosevelt Ave, Jackson Heights, NY 11372",
+    "external_link": "https://www.tiktok.com/t/ZP8gHmvYG",
+    "image": "places/food/annapurna-thakali-kitchen/cover.jpg",
+    "summary": {
+      "en": "Nepalese food stop in Jackson Heights.",
+      "ru": "Точка с непальской кухней в Jackson Heights."
+    }
+  },
+  {
+    "id": "aragvi",
+    "title": {
+      "en": "Aragvi",
+      "ru": "Арагви"
+    },
+    "coords": [
+      40.7435,
+      -73.9848
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "28 St / 33 St",
+      "ru": "28 St / 33 St"
+    },
+    "address": "230 Park Ave South, New York, NY 10003",
+    "external_link": "",
+    "image": "places/food/aragvi/cover.jpg",
+    "summary": {
+      "en": "Solid Georgian restaurant option if you want to show friends and family something different from the standard NYC tourist food list.",
+      "ru": "Хороший грузинский ресторан, если хочется показать друзьям и семье что-то менее банальное, чем стандартный туристический набор."
+    }
+  },
+  {
+    "id": "bakery-je-taime",
+    "title": {
+      "en": "Bakery Je T’Aime",
+      "ru": "Bakery Je T’Aime"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Bedford-Nostrand Avs / Marcus Garvey Blvd area",
+      "ru": "район Bedford-Nostrand Avs / Marcus Garvey Blvd"
+    },
+    "address": "471 Marcus Garvey Blvd, Brooklyn, NY 11216",
+    "external_link": "https://www.tiktok.com/t/ZP8gHaMvJ",
+    "image": "places/food/bakery-je-taime/cover.jpg",
+    "summary": {
+      "en": "Bakery stop in Brooklyn from Katya’s list. Good candidate for pastries, coffee, and a neighborhood walk.",
+      "ru": "Пекарня в Бруклине из списка Кати. Подходит для выпечки, кофе и короткой прогулки по району."
+    }
+  },
+  {
+    "id": "cafe-2by2",
+    "title": {
+      "en": "Cafe 2by2",
+      "ru": "Cafe 2by2"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Astor Pl / 8 St-NYU",
+      "ru": "Astor Pl / 8 St-NYU"
+    },
+    "address": "84 E 10th St 2nd FL, New York, NY 10003",
+    "external_link": "https://www.tiktok.com/t/ZP8gHRw9k",
+    "image": "places/food/cafe-2by2/cover.jpg",
+    "summary": {
+      "en": "Tiramisu café stop in the East Village area.",
+      "ru": "Тирамису-кафе в районе East Village."
+    }
+  },
+  {
+    "id": "casa-adela",
+    "title": {
+      "en": "Casa Adela",
+      "ru": "Casa Adela"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "1 Av / Delancey-Essex area",
+      "ru": "1 Av / район Delancey-Essex"
+    },
+    "address": "66 Loisaida Ave, New York, NY 10009",
+    "external_link": "https://www.tiktok.com/t/ZP8gHyVRN",
+    "image": "places/food/casa-adela/cover.jpg",
+    "summary": {
+      "en": "Puerto Rican food stop in the East Village / Loisaida area.",
+      "ru": "Место с пуэрториканской кухней в районе East Village / Loisaida."
+    }
+  },
+  {
+    "id": "chelsea-market",
+    "title": {
+      "en": "Chelsea Market",
+      "ru": "Челси Маркет"
+    },
+    "coords": [
+      40.7423,
+      -74.006
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "14 St",
+      "ru": "14 St"
+    },
+    "address": "75 9th Ave, New York, NY 10011",
+    "external_link": "",
+    "image": "places/food/chelsea-market/cover.jpg",
+    "summary": {
+      "en": "Food hall with lots of options. Great stop while walking the High Line.",
+      "ru": "Фуд-холл с большим выбором еды."
+    }
+  },
+  {
+    "id": "conwell-coffee-hall",
+    "title": {
+      "en": "Conwell Coffee Hall",
+      "ru": "Conwell Coffee Hall"
+    },
+    "coords": [
+      40.7075,
+      -74.0109
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Wall St",
+      "ru": "Wall St"
+    },
+    "address": "6 Hanover St, New York, NY 10005",
+    "external_link": "",
+    "image": "places/food/conwell-coffee-hall/cover.jpg",
+    "summary": {
+      "en": "Hidden coffee spot inside a historic building.",
+      "ru": "Скрытая кофейня в историческом здании."
+    }
+  },
+  {
+    "id": "din-soup-dumplings",
+    "title": {
+      "en": "Din Soup Dumplings",
+      "ru": "Din Soup Dumplings"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Court St / Borough Hall",
+      "ru": "Court St / Borough Hall"
+    },
+    "address": "162 Montague St Fl 2, Brooklyn, NY 11201",
+    "external_link": "https://www.tiktok.com/t/ZP8gHNPXb",
+    "image": "places/food/din-soup-dumplings/cover.jpg",
+    "summary": {
+      "en": "Brooklyn Heights dumpling stop, noted for the fun mini-dumpling format.",
+      "ru": "Место в Brooklyn Heights, отмечено за интересный формат мини-димсамов и soup dumplings."
+    }
+  },
+  {
+    "id": "ferrane",
+    "title": {
+      "en": "Ferrane",
+      "ru": "Ferrane"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Clark St",
+      "ru": "Clark St"
+    },
+    "address": "57 Clark St, Brooklyn, NY 11201",
+    "external_link": "https://www.tiktok.com/t/ZP8gHk4uy",
+    "image": "places/food/ferrane/cover.jpg",
+    "summary": {
+      "en": "Swedish bakery in Brooklyn Heights, noted for princess cake.",
+      "ru": "Шведская пекарня в Brooklyn Heights, здесь отмечена ради princess cake."
+    }
+  },
+  {
+    "id": "fu-zhou-wei-zhong-wei-jia-xiang-feng-wei",
+    "title": {
+      "en": "Fu Zhou Wei Zhong Wei Jia Xiang Feng Wei",
+      "ru": "Fu Zhou Wei Zhong Wei Jia Xiang Feng Wei"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "East Broadway",
+      "ru": "East Broadway"
+    },
+    "address": "88 E Broadway, New York, NY 10002",
+    "external_link": "https://www.tiktok.com/t/ZP8gHmxPC",
+    "image": "places/food/fu-zhou-wei-zhong-wei-jia-xiang-feng-wei/cover.jpg",
+    "summary": {
+      "en": "Lower East Side / Chinatown food stop from Katya’s list.",
+      "ru": "Точка на границе LES и Чайнатауна из Катиного списка."
+    }
+  },
+  {
+    "id": "gan-hoo-bbq",
+    "title": {
+      "en": "Gan Hoo BBQ",
+      "ru": "Gan Hoo BBQ"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "28 St / 33 St",
+      "ru": "28 St / 33 St"
+    },
+    "address": "29 E 30th St, New York, NY 10016",
+    "external_link": "https://www.tiktok.com/t/ZP8gHkcvp",
+    "image": "places/food/gan-hoo-bbq/cover.jpg",
+    "summary": {
+      "en": "Korean BBQ option from Katya’s list.",
+      "ru": "Вариант Korean BBQ из Катиного списка."
+    }
+  },
+  {
+    "id": "giant-scallion-pancakes-flushing",
+    "title": {
+      "en": "Giant Scallion Pancakes",
+      "ru": "Giant Scallion Pancakes"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "$6",
+    "transit": {
+      "en": "Flushing-Main St",
+      "ru": "Flushing-Main St"
+    },
+    "address": "135-45 Roosevelt Ave, Flushing, NY 11354",
+    "external_link": "https://www.tiktok.com/t/ZP8gHPEb7",
+    "image": "places/food/giant-scallion-pancakes-flushing/cover.jpg",
+    "summary": {
+      "en": "Flushing snack stop for giant scallion pancakes.",
+      "ru": "Точка во Flushing ради giant scallion pancakes."
+    }
+  },
+  {
+    "id": "golden-manna-bakery",
+    "title": {
+      "en": "Golden Manna Bakery",
+      "ru": "Golden Manna Bakery"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "16 Bowery, New York, NY 10013",
+    "external_link": "https://www.tiktok.com/t/ZP8gHNCvS",
+    "image": "places/food/golden-manna-bakery/cover.jpg",
+    "summary": {
+      "en": "Bakery stop on Bowery, noted here for mango mochi.",
+      "ru": "Пекарня на Bowery, отмечена здесь ради mango mochi."
+    }
+  },
+  {
+    "id": "hanamizuki-cafe",
+    "title": {
+      "en": "Hanamizuki Cafe",
+      "ru": "Hanamizuki Cafe"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "28 St / Penn Station area",
+      "ru": "28 St / район Penn Station"
+    },
+    "address": "143 W 29th St, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gH6P7f",
+    "image": "places/food/hanamizuki-cafe/cover.jpg",
+    "summary": {
+      "en": "Japanese café stop known here for onigiri. Marked as tried.",
+      "ru": "Японское кафе, здесь отмечено ради onigiri. Уже пробовали."
+    }
+  },
+  {
+    "id": "hay-hay-roasted",
+    "title": {
+      "en": "Hay Hay Roasted",
+      "ru": "Hay Hay Roasted"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "81 Mott St, New York, NY 10013",
+    "external_link": "https://www.tiktok.com/t/ZP8gHy6dX",
+    "image": "places/food/hay-hay-roasted/cover.jpg",
+    "summary": {
+      "en": "Chinatown food stop for roasted honey pork over rice.",
+      "ru": "Точка в Чайнатауне ради roasted honey pork over rice."
+    }
+  },
+  {
+    "id": "ichiran-ramen-midtown",
+    "title": {
+      "en": "Ichiran Ramen",
+      "ru": "Ichiran Ramen"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "50 St / Times Sq-42 St",
+      "ru": "50 St / Times Sq-42 St"
+    },
+    "address": "152 W 49th St, New York, NY 10020",
+    "external_link": "https://www.tiktok.com/t/ZP8gHfRJU",
+    "image": "places/food/ichiran-ramen-midtown/cover.jpg",
+    "summary": {
+      "en": "Midtown ramen stop from Katya’s list.",
+      "ru": "Рамен-точка в Мидтауне из Катиного списка."
+    }
+  },
+  {
+    "id": "joes-home-of-soup-dumplings",
+    "title": {
+      "en": "Joe's Home of Soup Dumplings",
+      "ru": "Joe's Home of Soup Dumplings"
+    },
+    "coords": [
+      40.7153,
+      -73.9975
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "24 W 56th St, New York, NY 10019",
+    "external_link": "",
+    "image": "places/food/joes-home-of-soup-dumplings/cover.jpg",
+    "summary": {
+      "en": "Very solid soup dumpling stop and easy to combine with Chinatown.",
+      "ru": "Очень достойное место за soup dumplings, которое удобно совместить с прогулкой по Чайнатауну."
+    }
+  },
+  {
+    "id": "jongro-bbq-market",
+    "title": {
+      "en": "Jongro BBQ Market",
+      "ru": "Jongro BBQ Market"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "$10 special",
+    "transit": {
+      "en": "34 St-Herald Sq",
+      "ru": "34 St-Herald Sq"
+    },
+    "address": "39 W 32nd St 1st Fl, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gHRqMM",
+    "image": "places/food/jongro-bbq-market/cover.jpg",
+    "summary": {
+      "en": "Korean spot in Koreatown, noted here for the special deal.",
+      "ru": "Корейское место в Koreatown, отмечено здесь из-за выгодного special."
+    }
+  },
+  {
+    "id": "krispy-kreme-times-square",
+    "title": {
+      "en": "Krispy Kreme (Times Square)",
+      "ru": "Krispy Kreme на Таймс-сквер"
+    },
+    "coords": [
+      40.7569,
+      -73.9863
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Times Sq - 42 St",
+      "ru": "Times Sq - 42 St"
+    },
+    "address": "1601 Broadway, New York, NY 10019",
+    "external_link": "",
+    "image": "places/food/krispy-kreme-times-square/cover.jpg",
+    "summary": {
+      "en": "Not essential New York, but fun if you want a bright Times Square sugar stop.",
+      "ru": "Не главная нью-йоркская must-see точка, но как сладкая остановка на Таймс-сквер вполне работает."
+    }
+  },
+  {
+    "id": "laduree-soho",
+    "title": {
+      "en": "Ladurée SoHo",
+      "ru": "Ladurée SoHo"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Prince St / Spring St",
+      "ru": "Prince St / Spring St"
+    },
+    "address": "398 W Broadway, New York, NY 10012",
+    "external_link": "https://www.tiktok.com/t/ZP8gHdHAu",
+    "image": "places/food/laduree-soho/cover.jpg",
+    "summary": {
+      "en": "SoHo brunch and pastry stop, noted here for the cherry blossom vibe.",
+      "ru": "Место в SoHo для brunch и десертов, здесь отмечено ради красивой cherry blossom атмосферы."
+    }
+  },
+  {
+    "id": "lafayette-grand-cafe-bakery",
+    "title": {
+      "en": "Lafayette Grand Café & Bakery",
+      "ru": "Lafayette Grand Café & Bakery"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Bleecker St / Broadway-Lafayette",
+      "ru": "Bleecker St / Broadway-Lafayette"
+    },
+    "address": "380 Lafayette St, New York, NY 10003",
+    "external_link": "https://www.tiktok.com/t/ZP8gHmSRS",
+    "image": "places/food/lafayette-grand-cafe-bakery/cover.jpg",
+    "summary": {
+      "en": "Popular bakery and café known for viral croissants.",
+      "ru": "Популярная пекарня и кафе, известные своими viral croissants."
+    }
+  },
+  {
+    "id": "liberty-bagels-midtown",
+    "title": {
+      "en": "Liberty Bagels",
+      "ru": "Liberty Bagels"
+    },
+    "coords": [
+      40.764,
+      -73.9778
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "5 Av/53 St / 57 St",
+      "ru": "5 Av/53 St / 57 St"
+    },
+    "address": "260 W 35th St, New York, NY 10001",
+    "external_link": "",
+    "image": "places/food/liberty-bagels-midtown/cover.jpg",
+    "summary": {
+      "en": "Good bagel stop for visitors if you want something fast, classic, and easy to understand.",
+      "ru": "Хорошая точка за бейглом для гостей, если хочется чего-то быстрого, понятного и по-нью-йоркски классического."
+    }
+  },
+  {
+    "id": "luckin-coffee-6th-ave",
+    "title": {
+      "en": "Luckin Coffee",
+      "ru": "Luckin Coffee"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "28 St / 34 St",
+      "ru": "28 St / 34 St"
+    },
+    "address": "800 6th Ave, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gHNV8U",
+    "image": "places/food/luckin-coffee-6th-ave/cover.jpg",
+    "summary": {
+      "en": "Chinese coffee chain stop in Midtown.",
+      "ru": "Точка китайской кофейной сети в Мидтауне."
+    }
+  },
+  {
+    "id": "meat-me-bbq",
+    "title": {
+      "en": "MEAT ME BBQ",
+      "ru": "MEAT ME BBQ"
+    },
+    "coords": [
+      40.7588,
+      -73.8297
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Flushing-Main St",
+      "ru": "Flushing-Main St"
+    },
+    "address": "136-20 Roosevelt Ave, Flushing, NY 11354",
+    "external_link": "",
+    "image": "places/food/meat-me-bbq/cover.jpg",
+    "summary": {
+      "en": "Korean BBQ option if you want a more food-focused outing rather than a quick snack stop.",
+      "ru": "Хороший вариант корейского BBQ, если хочется полноценного гастрономического выхода, а не просто перекуса."
+    }
+  },
+  {
+    "id": "mei-lai-wah",
+    "title": {
+      "en": "Mei Lai Wah",
+      "ru": "Mei Lai Wah"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "41 Mott St, New York, NY 10013",
+    "external_link": "https://www.tiktok.com/t/ZP8gHmWwe",
+    "image": "places/food/mei-lai-wah/cover.jpg",
+    "summary": {
+      "en": "Famous Chinatown stop for pork bun with pineapple top.",
+      "ru": "Известная точка в Чайнатауне ради pork bun с pineapple top."
+    }
+  },
+  {
+    "id": "mixue",
+    "title": {
+      "en": "MIXUE",
+      "ru": "MIXUE"
+    },
+    "coords": [
+      40.715,
+      -73.9987
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "54 Bayard St, New York, NY 10013",
+    "external_link": "",
+    "image": "places/food/mixue/cover.jpg",
+    "summary": {
+      "en": "Cheap and cheerful dessert stop. More of a fun quick treat than a destination by itself.",
+      "ru": "Недорогая и веселая сладкая остановка. Скорее быстрый десерт по пути, чем отдельная цель."
+    }
+  },
+  {
+    "id": "mojo-east",
+    "title": {
+      "en": "Mojo East",
+      "ru": "Mojo East"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Delancey St-Essex St",
+      "ru": "Delancey St-Essex St"
+    },
+    "address": "85 Stanton St, New York, NY 10002",
+    "external_link": "https://www.tiktok.com/t/ZP8gHM7S7",
+    "image": "places/food/mojo-east/cover.jpg",
+    "summary": {
+      "en": "Omakase option on the Lower East Side.",
+      "ru": "Вариант omakase на Lower East Side."
+    }
+  },
+  {
+    "id": "nathans-famous",
+    "title": {
+      "en": "Nathan's Famous",
+      "ru": "Nathan's Famous"
+    },
+    "coords": [
+      40.5755,
+      -73.9819
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Coney Island",
+      "ru": "Coney Island"
+    },
+    "address": "1310 Surf Ave, Brooklyn, NY 11224",
+    "external_link": "",
+    "image": "places/food/nathans-famous/cover.jpg",
+    "summary": {
+      "en": "Famous hot dogs spot.",
+      "ru": "Легендарные хот-доги."
+    }
+  },
+  {
+    "id": "new-kim-tuong",
+    "title": {
+      "en": "New Kim Tuong",
+      "ru": "New Kim Tuong"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Grand St",
+      "ru": "Grand St"
+    },
+    "address": "83 Chrystie St, New York, NY 10002",
+    "external_link": "https://www.tiktok.com/t/ZP8gHjkrX",
+    "image": "places/food/new-kim-tuong/cover.jpg",
+    "summary": {
+      "en": "Chinatown / LES food stop from Katya’s list.",
+      "ru": "Точка на границе Чайнатауна и LES из Катиного списка."
+    }
+  },
+  {
+    "id": "nom-wah-tea-parlor",
+    "title": {
+      "en": "Nom Wah Tea Parlor",
+      "ru": "Nom Wah Tea Parlor"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "13 Doyers St, New York, NY 10013",
+    "external_link": "https://www.tiktok.com/t/ZP8gHrW8A",
+    "image": "places/food/nom-wah-tea-parlor/cover.jpg",
+    "summary": {
+      "en": "Historic Chinatown dim sum spot, known as one of the oldest in the area.",
+      "ru": "Историческое место в Чайнатауне для dim sum, одно из самых старых в этом районе."
+    }
+  },
+  {
+    "id": "nonnas-of-the-world",
+    "title": {
+      "en": "Nonna's of the World",
+      "ru": "Nonna's of the World"
+    },
+    "coords": [
+      40.7198,
+      -73.9906
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Delancey St / Essex St",
+      "ru": "Delancey St / Essex St"
+    },
+    "address": "75 Kenmare St, New York, NY 10012",
+    "external_link": "",
+    "image": "places/food/nonnas-of-the-world/cover.jpg",
+    "summary": {
+      "en": "Comfort-food kind of place with personality. Good for a more casual sit-down stop.",
+      "ru": "Место в духе комфортной домашней еды, но с характером. Хорошо подходит для более спокойной посадки."
+    }
+  },
+  {
+    "id": "ole-and-steen",
+    "title": {
+      "en": "Ole & Steen",
+      "ru": "Ole & Steen"
+    },
+    "coords": [
+      40.7417,
+      -73.9894
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "23 St",
+      "ru": "23 St"
+    },
+    "address": "80 W 40th St, New York, NY 10018",
+    "external_link": "",
+    "image": "places/food/ole-and-steen/cover.jpg",
+    "summary": {
+      "en": "Easy coffee and pastry stop when you want something calm and predictable.",
+      "ru": "Удобная кофейно-выпечная остановка, когда хочется чего-то спокойного и понятного."
+    }
+  },
+  {
+    "id": "rooftop-230-fifth",
+    "title": {
+      "en": "230 Fifth Rooftop Bar",
+      "ru": "Рooftop-бар 230 Fifth"
+    },
+    "coords": [
+      40.7442,
+      -73.9889
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "23 St / 28 St",
+      "ru": "23 St / 28 St"
+    },
+    "address": "230 5th Ave, New York, NY 10001",
+    "external_link": "",
+    "image": "places/food/rooftop-230-fifth/cover.jpg",
+    "summary": {
+      "en": "Touristy, yes, but the rooftop view makes it a very easy place to bring visitors.",
+      "ru": "Да, место туристическое, но вид с крыши делает его очень удобным вариантом для гостей города."
+    }
+  },
+  {
+    "id": "skirt-steak",
+    "title": {
+      "en": "Skirt Steak",
+      "ru": "Skirt Steak"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "highly-recommend",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "28 St / 34 St-Herald Sq",
+      "ru": "28 St / 34 St-Herald Sq"
+    },
+    "address": "835 6th Ave, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gHkxCm",
+    "image": "places/food/skirt-steak/cover.jpg",
+    "summary": {
+      "en": "Steak-and-fries stop in Midtown South.",
+      "ru": "Место со steak and fries в Midtown South."
+    }
+  },
+  {
+    "id": "steves-authentic-key-lime-pie",
+    "title": {
+      "en": "Steve’s Authentic Key Lime Pie",
+      "ru": "Steve’s Authentic Key Lime Pie"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Red Hook area",
+      "ru": "район Red Hook"
+    },
+    "address": "185 Van Dyke St, Brooklyn, NY 11231",
+    "external_link": "https://www.tiktok.com/t/ZP8gH6ydb",
+    "image": "places/food/steves-authentic-key-lime-pie/cover.jpg",
+    "summary": {
+      "en": "Red Hook dessert stop if key lime pie is the mission.",
+      "ru": "Место в Red Hook, если цель прогулки - key lime pie."
+    }
+  },
+  {
+    "id": "sushi-counter",
+    "title": {
+      "en": "Sushi Counter",
+      "ru": "Sushi Counter"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "$12 / 3 hand rolls",
+    "transit": {
+      "en": "Christopher St-Sheridan Sq",
+      "ru": "Christopher St-Sheridan Sq"
+    },
+    "address": "119 Christopher St, New York, NY 10014",
+    "external_link": "https://www.tiktok.com/t/ZP8gHUcGF",
+    "image": "places/food/sushi-counter/cover.jpg",
+    "summary": {
+      "en": "West Village sushi stop known here for hand roll pricing.",
+      "ru": "Суши-точка в West Village, отмечена здесь из-за hand rolls по хорошей цене."
+    }
+  },
+  {
+    "id": "syko",
+    "title": {
+      "en": "Syko",
+      "ru": "Syko"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "15 St-Prospect Park / Prospect Park West",
+      "ru": "15 St-Prospect Park / Prospect Park West"
+    },
+    "address": "214A Prospect Park W, Brooklyn, NY 11215",
+    "external_link": "https://www.tiktok.com/t/ZP8gHaxeR",
+    "image": "places/food/syko/cover.jpg",
+    "summary": {
+      "en": "Fusion spot combining Syrian and Korean ideas.",
+      "ru": "Фьюжн-место с сирийскими и корейскими идеями."
+    }
+  },
+  {
+    "id": "tashkent-supermarket",
+    "title": {
+      "en": "Tashkent Supermarket",
+      "ru": "Супермаркет Ташкент"
+    },
+    "coords": [
+      40.7312,
+      -73.9952
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "W 4 St",
+      "ru": "W 4 St"
+    },
+    "address": "378 6th Ave, New York, NY 10011",
+    "external_link": "",
+    "image": "places/food/tashkent-supermarket/cover.jpg",
+    "summary": {
+      "en": "Unexpectedly useful stop if you want familiar Central Asian groceries in Manhattan.",
+      "ru": "Неожиданно полезная точка, если хочется знакомых центральноазиатских продуктов на Манхэттене."
+    }
+  },
+  {
+    "id": "this-bowl",
+    "title": {
+      "en": "This Bowl",
+      "ru": "This Bowl"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "23 St / 28 St",
+      "ru": "23 St / 28 St"
+    },
+    "address": "230 5th Ave, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gHPF2g",
+    "image": "places/food/this-bowl/cover.jpg",
+    "summary": {
+      "en": "Bowl-focused stop for poke and similar quick meals.",
+      "ru": "Точка с bowl-форматом, включая poke и другие быстрые блюда."
+    }
+  },
+  {
+    "id": "xiang-la-hot-pot",
+    "title": {
+      "en": "Xiang La Hot Pot",
+      "ru": "Xiang La Hot Pot"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "$19 lunch",
+    "transit": {
+      "en": "34 St-Herald Sq",
+      "ru": "34 St-Herald Sq"
+    },
+    "address": "34 W 32nd St #2F, New York, NY 10001",
+    "external_link": "https://www.tiktok.com/t/ZP8gHYhuh",
+    "image": "places/food/xiang-la-hot-pot/cover.jpg",
+    "summary": {
+      "en": "Koreatown hot pot stop, noted here for the lunch special.",
+      "ru": "Точка с hot pot в Koreatown, отмечена здесь из-за ланч-спешла."
+    }
+  },
+  {
+    "id": "yubu",
+    "title": {
+      "en": "Yubu",
+      "ru": "Yubu"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "46 Grand St, New York, NY 10013",
+    "external_link": "https://www.tiktok.com/t/ZP8gHMkFT",
+    "image": "places/food/yubu/cover.jpg",
+    "summary": {
+      "en": "Known for tofu pockets with toppings.",
+      "ru": "Место, известное tofu pockets с разными topping-ами."
+    }
+  },
+  {
+    "id": "alwyn-court",
+    "title": {
+      "en": "Alwyn Court",
+      "ru": "Alwyn Court"
+    },
+    "coords": [
+      40.7656,
+      -73.9804
+    ],
+    "category": [
+      "hidden-gems"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "57 St / 7 Av",
+      "ru": "57 St / 7 Av"
+    },
+    "address": "180 W 58th St, New York, NY 10019",
+    "external_link": "",
+    "image": "places/hidden-gems/alwyn-court/cover.jpg",
+    "summary": {
+      "en": "One of those Manhattan buildings that rewards looking up. Easy to miss if you do not know what you are looking for.",
+      "ru": "Одно из тех манхэттенских зданий, ради которых стоит поднять голову вверх. Легко пройти мимо, если не знаешь, что искать."
+    }
+  },
+  {
+    "id": "elevated-acre",
+    "title": {
+      "en": "Elevated Acre",
+      "ru": "Elevated Acre"
+    },
+    "coords": [
+      40.704,
+      -74.007
+    ],
+    "category": [
+      "hidden-gems"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Wall St",
+      "ru": "Wall St"
+    },
+    "address": "55 Water St, New York, NY 10041",
+    "external_link": "",
+    "image": "places/hidden-gems/elevated-acre/cover.jpg",
+    "summary": {
+      "en": "Hidden elevated park in FiDi.",
+      "ru": "Скрытый парк на крыше."
+    }
+  },
+  {
+    "id": "ghostbusters-firehouse",
+    "title": {
+      "en": "Ghostbusters Firehouse",
+      "ru": "Пожарная станция Ghostbusters"
+    },
+    "coords": [
+      40.7195,
+      -74.0065
+    ],
+    "category": [
+      "hidden-gems"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "14 N Moore St, New York, NY 10013",
+    "external_link": "",
+    "image": "places/hidden-gems/ghostbusters-firehouse/cover.jpg",
+    "summary": {
+      "en": "Real firehouse used in Ghostbusters movie.",
+      "ru": "Настоящая пожарная часть из фильма Ghostbusters."
+    }
+  },
+  {
+    "id": "socrates-sculpture-park",
+    "title": {
+      "en": "Socrates Sculpture Park",
+      "ru": "Парк скульптур Сократа"
+    },
+    "coords": [
+      40.7678,
+      -73.9368
+    ],
+    "category": [
+      "hidden-gems"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Broadway / 31 St + bus or ferry nearby",
+      "ru": "Broadway / 31 St + bus or ferry nearby"
+    },
+    "address": "32-01 Vernon Blvd, Queens, NY 11106",
+    "external_link": "",
+    "image": "places/hidden-gems/socrates-sculpture-park/cover.jpg",
+    "summary": {
+      "en": "Outdoor art park with a local feel and nice East River views.",
+      "ru": "Открытый парк современного искусства с локальной атмосферой и хорошими видами на Ист-Ривер."
+    }
+  },
+  {
+    "id": "brooklyn-bridge",
+    "title": {
+      "en": "Brooklyn Bridge",
+      "ru": "Бруклинский мост"
+    },
+    "coords": [
+      40.7061,
+      -73.9969
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Brooklyn Bridge–City Hall",
+      "ru": "Brooklyn Bridge–City Hall"
+    },
+    "address": "Brooklyn Bridge Pedestrian Entrance, New York, NY 10038",
+    "external_link": "",
+    "image": "places/landmarks/brooklyn-bridge/cover.jpg",
+    "summary": {
+      "en": "Classic NYC walk. Best from Brooklyn to Manhattan.",
+      "ru": "Классическая прогулка по Нью-Йорку. Лучше идти из Бруклина."
+    }
+  },
+  {
+    "id": "cathedral-of-st-john-the-divine",
+    "title": {
+      "en": "Cathedral of St. John the Divine",
+      "ru": "Собор Святого Иоанна Богослова"
+    },
+    "coords": [
+      40.8038,
+      -73.9619
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "110 St Cathedral Pkwy",
+      "ru": "110 St Cathedral Pkwy"
+    },
+    "address": "1047 Amsterdam Ave, New York, NY 10025",
+    "external_link": "",
+    "image": "places/landmarks/cathedral-of-st-john-the-divine/cover.jpg",
+    "summary": {
+      "en": "Huge and impressive cathedral that feels a little hidden compared with Midtown icons.",
+      "ru": "Огромный и впечатляющий собор, который будто немного скрыт в тени мидтаунских достопримечательностей."
+    }
+  },
+  {
+    "id": "chinatown",
+    "title": {
+      "en": "Chinatown",
+      "ru": "Чайнатаун"
+    },
+    "coords": [
+      40.7158,
+      -73.997
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "Canal St & Mott St, New York, NY 10013",
+    "external_link": "",
+    "image": "places/landmarks/chinatown/cover.jpg",
+    "summary": {
+      "en": "Busy, layered, and full of energy. Best if you walk without rushing and let the neighborhood reveal itself.",
+      "ru": "Шумный, многослойный и очень живой район. Лучше всего идти без спешки и просто дать ему раскрыться."
+    }
+  },
+  {
+    "id": "chrysler-building",
+    "title": {
+      "en": "Chrysler Building",
+      "ru": "Крайслер-билдинг"
+    },
+    "coords": [
+      40.7516,
+      -73.9755
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Grand Central",
+      "ru": "Grand Central"
+    },
+    "address": "405 Lexington Ave, New York, NY 10174",
+    "external_link": "",
+    "image": "places/landmarks/chrysler-building/cover.jpg",
+    "summary": {
+      "en": "One of the most beautiful skyscrapers in NYC.",
+      "ru": "Один из самых красивых небоскребов."
+    }
+  },
+  {
+    "id": "coney-island",
+    "title": {
+      "en": "Coney Island",
+      "ru": "Кони-Айленд"
+    },
+    "coords": [
+      40.5749,
+      -73.985
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Coney Island–Stillwell Ave",
+      "ru": "Coney Island–Stillwell Ave"
+    },
+    "address": "Surf Ave & Stillwell Ave, Brooklyn, NY 11224",
+    "external_link": "",
+    "image": "places/landmarks/coney-island/cover.jpg",
+    "summary": {
+      "en": "Beach, boardwalk, and old-school NYC vibes.",
+      "ru": "Пляж, набережная и старый Нью-Йорк."
+    }
+  },
+  {
+    "id": "dumbo",
+    "title": {
+      "en": "DUMBO Waterfront",
+      "ru": "DUMBO набережная"
+    },
+    "coords": [
+      40.7033,
+      -73.9881
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "York St (F)",
+      "ru": "York St (F)"
+    },
+    "address": "Washington St & Water St, Brooklyn, NY 11201",
+    "external_link": "",
+    "image": "places/landmarks/dumbo/cover.jpg",
+    "summary": {
+      "en": "One of the best skyline views in NYC. Walk along the waterfront and enjoy the vibe.",
+      "ru": "Одно из лучших мест с видом на Манхэттен. Отлично для прогулки."
+    }
+  },
+  {
+    "id": "empire-state-building",
+    "title": {
+      "en": "Empire State Building",
+      "ru": "Эмпайр-стейт-билдинг"
+    },
+    "coords": [
+      40.7484,
+      -73.9857
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~5",
+    "transit": {
+      "en": "34 St Herald Sq",
+      "ru": "34 St Herald Sq"
+    },
+    "address": "20 W 34th St, New York, NY 10001",
+    "external_link": "",
+    "image": "places/landmarks/empire-state-building/cover.jpg",
+    "summary": {
+      "en": "Classic skyline building. More about the history than the view nowadays.",
+      "ru": "Классический небоскрёб. Больше про историю, чем про лучший вид."
+    }
+  },
+  {
+    "id": "federal-reserve",
+    "title": {
+      "en": "Federal Reserve Bank",
+      "ru": "Федеральный резерв"
+    },
+    "coords": [
+      40.7074,
+      -74.0103
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Wall St",
+      "ru": "Wall St"
+    },
+    "address": "33 Liberty St, New York, NY 10045",
+    "external_link": "",
+    "image": "places/landmarks/federal-reserve/cover.jpg",
+    "summary": {
+      "en": "Historic building tied to US financial system.",
+      "ru": "Историческое здание финансовой системы США."
+    }
+  },
+  {
+    "id": "flatiron-building",
+    "title": {
+      "en": "Flatiron Building",
+      "ru": "Флэтайрон"
+    },
+    "coords": [
+      40.7411,
+      -73.9897
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "23 St",
+      "ru": "23 St"
+    },
+    "address": "175 5th Ave, New York, NY 10010",
+    "external_link": "",
+    "image": "places/landmarks/flatiron-building/cover.jpg",
+    "summary": {
+      "en": "Unique triangular building.",
+      "ru": "Необычное треугольное здание."
+    }
+  },
+  {
+    "id": "grand-central-terminal",
+    "title": {
+      "en": "Grand Central Terminal",
+      "ru": "Гранд Сентрал"
+    },
+    "coords": [
+      40.7527,
+      -73.9772
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Grand Central",
+      "ru": "Grand Central"
+    },
+    "address": "89 E 42nd St, New York, NY 10017",
+    "external_link": "",
+    "image": "places/landmarks/grand-central-terminal/cover.jpg",
+    "summary": {
+      "en": "Historic train station with iconic main hall.",
+      "ru": "Исторический вокзал с красивым залом."
+    }
+  },
+  {
+    "id": "hudson-yards",
+    "title": {
+      "en": "Hudson Yards",
+      "ru": "Хадсон Ярдс"
+    },
+    "coords": [
+      40.754,
+      -74.0027
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "34 St Hudson Yards",
+      "ru": "34 St Hudson Yards"
+    },
+    "address": "20 Hudson Yards, New York, NY 10001",
+    "external_link": "",
+    "image": "places/landmarks/hudson-yards/cover.jpg",
+    "summary": {
+      "en": "Modern development with shops and views.",
+      "ru": "Современный район с магазинами."
+    }
+  },
+  {
+    "id": "lincoln-center",
+    "title": {
+      "en": "Lincoln Center",
+      "ru": "Линкольн-центр"
+    },
+    "coords": [
+      40.7725,
+      -73.9835
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "66 St - Lincoln Center",
+      "ru": "66 St - Lincoln Center"
+    },
+    "address": "Lincoln Center Plaza, New York, NY 10023",
+    "external_link": "",
+    "image": "places/landmarks/lincoln-center/cover.jpg",
+    "summary": {
+      "en": "Elegant cultural complex. Good in the evening when the plaza lights and fountain make everything feel more cinematic.",
+      "ru": "Красивый культурный комплекс. Особенно хорош вечером, когда площадь и фонтан выглядят почти кинематографично."
+    }
+  },
+  {
+    "id": "little-italy",
+    "title": {
+      "en": "Little Italy",
+      "ru": "Литл-Итали"
+    },
+    "coords": [
+      40.7191,
+      -73.9973
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Canal St / Spring St",
+      "ru": "Canal St / Spring St"
+    },
+    "address": "Mulberry St & Grand St, New York, NY 10013",
+    "external_link": "",
+    "image": "places/landmarks/little-italy/cover.jpg",
+    "summary": {
+      "en": "Small but still worth a pass if you are already walking between SoHo and Chinatown.",
+      "ru": "Небольшой, но все равно заслуживает короткой прогулки, если ты уже идешь между Сохо и Чайнатауном."
+    }
+  },
+  {
+    "id": "madison-square-garden",
+    "title": {
+      "en": "Madison Square Garden",
+      "ru": "Мэдисон-сквер-гарден"
+    },
+    "coords": [
+      40.7505,
+      -73.9934
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Penn Station",
+      "ru": "Penn Station"
+    },
+    "address": "4 Pennsylvania Plaza, New York, NY 10001",
+    "external_link": "",
+    "image": "places/landmarks/madison-square-garden/cover.jpg",
+    "summary": {
+      "en": "Legendary arena. Best experienced during an event.",
+      "ru": "Легендарная арена. Лучше всего — во время события."
+    }
+  },
+  {
+    "id": "memorial-911",
+    "title": {
+      "en": "9/11 Memorial",
+      "ru": "Мемориал 11 сентября"
+    },
+    "coords": [
+      40.7115,
+      -74.0134
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "World Trade Center",
+      "ru": "World Trade Center"
+    },
+    "address": "180 Greenwich St, New York, NY 10007",
+    "external_link": "",
+    "image": "places/landmarks/memorial-911/cover.jpg",
+    "summary": {
+      "en": "Powerful memorial with reflecting pools.",
+      "ru": "Трогательный мемориал с бассейнами."
+    }
+  },
+  {
+    "id": "new-yorker-hotel",
+    "title": {
+      "en": "The New Yorker Hotel",
+      "ru": "Отель The New Yorker"
+    },
+    "coords": [
+      40.7528,
+      -73.9935
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Penn Station",
+      "ru": "Penn Station"
+    },
+    "address": "481 8th Ave, New York, NY 10001",
+    "external_link": "",
+    "image": "places/landmarks/new-yorker-hotel/cover.jpg",
+    "summary": {
+      "en": "Classic New York hotel building with strong old-school city energy.",
+      "ru": "Классическое нью-йоркское здание отеля с очень старошкольной городской энергетикой."
+    }
+  },
+  {
+    "id": "ny-public-library",
+    "title": {
+      "en": "NY Public Library",
+      "ru": "Публичная библиотека Нью-Йорка"
+    },
+    "coords": [
+      40.7532,
+      -73.9822
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "42 St",
+      "ru": "42 St"
+    },
+    "address": "476 5th Ave, New York, NY 10018",
+    "external_link": "",
+    "image": "places/landmarks/ny-public-library/cover.jpg",
+    "summary": {
+      "en": "Famous reading room and classic architecture.",
+      "ru": "Знаменитый читальный зал."
+    }
+  },
+  {
+    "id": "nyse",
+    "title": {
+      "en": "New York Stock Exchange",
+      "ru": "Нью-Йоркская фондовая биржа"
+    },
+    "coords": [
+      40.7069,
+      -74.0113
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Wall St",
+      "ru": "Wall St"
+    },
+    "address": "11 Wall St, New York, NY 10005",
+    "external_link": "",
+    "image": "places/landmarks/nyse/cover.jpg",
+    "summary": {
+      "en": "Symbol of global finance. You’ll mostly see it from outside.",
+      "ru": "Символ мировой финансовой системы."
+    }
+  },
+  {
+    "id": "oculus",
+    "title": {
+      "en": "Oculus",
+      "ru": "Окулус"
+    },
+    "coords": [
+      40.7115,
+      -74.0113
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "been-not-impressed",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "World Trade Center",
+      "ru": "World Trade Center"
+    },
+    "address": "185 Greenwich St, New York, NY 10007",
+    "external_link": "",
+    "image": "places/landmarks/oculus/cover.jpg",
+    "summary": {
+      "en": "Futuristic transit hub and shopping center.",
+      "ru": "Футуристический транспортный узел."
+    }
+  },
+  {
+    "id": "one-world-trade-center",
+    "title": {
+      "en": "One World Trade Center",
+      "ru": "One World Trade Center"
+    },
+    "coords": [
+      40.7127,
+      -74.0134
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~45",
+    "transit": {
+      "en": "World Trade Center",
+      "ru": "World Trade Center"
+    },
+    "address": "285 Fulton St, New York, NY 10007",
+    "external_link": "",
+    "image": "places/landmarks/one-world-trade-center/cover.jpg",
+    "summary": {
+      "en": "Tallest building in NYC with observation deck.",
+      "ru": "Самое высокое здание в Нью-Йорке."
+    }
+  },
+  {
+    "id": "rockefeller-center",
+    "title": {
+      "en": "Rockefeller Center",
+      "ru": "Рокфеллер-центр"
+    },
+    "coords": [
+      40.7587,
+      -73.9787
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "47-50 St",
+      "ru": "47-50 St"
+    },
+    "address": "45 Rockefeller Plaza, New York, NY 10111",
+    "external_link": "",
+    "image": "places/landmarks/rockefeller-center/cover.jpg",
+    "summary": {
+      "en": "Famous complex with ice rink (winter) and Top of the Rock.",
+      "ru": "Известный комплекс с катком зимой."
+    }
+  },
+  {
+    "id": "roosevelt-island-tram",
+    "title": {
+      "en": "Roosevelt Island Tram",
+      "ru": "Канатка на Рузвельт-Айленд"
+    },
+    "coords": [
+      40.7619,
+      -73.964
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "MetroCard / OMNY fare",
+    "transit": {
+      "en": "Lexington Av/59 St",
+      "ru": "Lexington Av/59 St"
+    },
+    "address": "254 E 60th St, New York, NY 10022",
+    "external_link": "",
+    "image": "places/landmarks/roosevelt-island-tram/cover.jpg",
+    "summary": {
+      "en": "Fun and very NYC way to get to Roosevelt Island. The ride itself is half the attraction.",
+      "ru": "Очень нью-йоркский способ попасть на Рузвельт-Айленд. Сама поездка уже отдельное впечатление."
+    }
+  },
+  {
+    "id": "soho",
+    "title": {
+      "en": "SoHo",
+      "ru": "Сохо"
+    },
+    "coords": [
+      40.7233,
+      -74.003
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Prince St / Spring St",
+      "ru": "Prince St / Spring St"
+    },
+    "address": "Broadway & Prince St, New York, NY 10012",
+    "external_link": "",
+    "image": "places/landmarks/soho/cover.jpg",
+    "summary": {
+      "en": "Cast-iron buildings, shopping, side streets, and that specific downtown Manhattan mood.",
+      "ru": "Чугунные фасады, магазины, боковые улицы и тот самый даунтаунский вайб Манхэттена."
+    }
+  },
+  {
+    "id": "st-patricks-cathedral",
+    "title": {
+      "en": "St. Patrick's Cathedral",
+      "ru": "Собор Святого Патрика"
+    },
+    "coords": [
+      40.7585,
+      -73.976
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "5 Av/53 St",
+      "ru": "5 Av/53 St"
+    },
+    "address": "5th Ave & E 51st St, New York, NY 10022",
+    "external_link": "",
+    "image": "places/landmarks/st-patricks-cathedral/cover.jpg",
+    "summary": {
+      "en": "Beautiful cathedral right on busy 5th Avenue.",
+      "ru": "Красивый собор прямо на 5-й авеню."
+    }
+  },
+  {
+    "id": "statue-of-liberty",
+    "title": {
+      "en": "Statue of Liberty",
+      "ru": "Статуя Свободы"
+    },
+    "coords": [
+      40.6892,
+      -74.0445
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~5",
+    "transit": null,
+    "address": "Liberty Island, New York, NY 10004",
+    "external_link": "",
+    "image": "places/landmarks/statue-of-liberty/cover.jpg",
+    "summary": {
+      "en": "ferry\ntransit:\n  en: Battery Park ferry\n  ru: Паром из Battery Park",
+      "ru": "NYC icon. Tourist-heavy but still worth it if you’ve never been."
+    }
+  },
+  {
+    "id": "the-vessel",
+    "title": {
+      "en": "The Vessel",
+      "ru": "Вессел"
+    },
+    "coords": [
+      40.7538,
+      -74.0021
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "34 St Hudson Yards",
+      "ru": "34 St Hudson Yards"
+    },
+    "address": "20 Hudson Yards, New York, NY 10001",
+    "external_link": "",
+    "image": "places/landmarks/the-vessel/cover.jpg",
+    "summary": {
+      "en": "Futuristic structure. Mostly for photos now.",
+      "ru": "Футуристическая конструкция. В основном для фото."
+    }
+  },
+  {
+    "id": "times-square",
+    "title": {
+      "en": "Times Square",
+      "ru": "Таймс-сквер"
+    },
+    "coords": [
+      40.758,
+      -73.9855
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Times Sq–42 St",
+      "ru": "Times Sq–42 St"
+    },
+    "address": "Times Square, New York, NY 10036",
+    "external_link": "",
+    "image": "places/landmarks/times-square/cover.jpg",
+    "summary": {
+      "en": "Pure chaos, lights, and tourists. Worth seeing once, especially at night.",
+      "ru": "Шум, свет и туристы. Стоит увидеть хотя бы раз, особенно ночью."
+    }
+  },
+  {
+    "id": "trinity-church",
+    "title": {
+      "en": "Trinity Church",
+      "ru": "Церковь Тринити"
+    },
+    "coords": [
+      40.7081,
+      -74.012
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Wall St",
+      "ru": "Wall St"
+    },
+    "address": "89 Broadway, New York, NY 10006",
+    "external_link": "",
+    "image": "places/landmarks/trinity-church/cover.jpg",
+    "summary": {
+      "en": "Historic church with cemetery.",
+      "ru": "Историческая церковь с кладбищем."
+    }
+  },
+  {
+    "id": "unisphere",
+    "title": {
+      "en": "Unisphere",
+      "ru": "Unisphere"
+    },
+    "coords": [
+      40.7464,
+      -73.8458
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Mets-Willets Point",
+      "ru": "Mets-Willets Point"
+    },
+    "address": "Flushing Meadows Corona Park, Queens, NY 11368",
+    "external_link": "",
+    "image": "places/landmarks/unisphere/cover.jpg",
+    "summary": {
+      "en": "Massive globe sculpture and one of the coolest Queens landmarks.",
+      "ru": "Огромная скульптура-глобус и одна из самых классных достопримечательностей Куинса."
+    }
+  },
+  {
+    "id": "united-nations",
+    "title": {
+      "en": "United Nations Headquarters",
+      "ru": "Штаб-квартира ООН"
+    },
+    "coords": [
+      40.7498,
+      -73.968
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Grand Central",
+      "ru": "Grand Central"
+    },
+    "address": "405 E 42nd St, New York, NY 10017",
+    "external_link": "",
+    "image": "places/landmarks/united-nations/cover.jpg",
+    "summary": {
+      "en": "One of those places that feels globally important even from the outside.",
+      "ru": "Одно из тех мест, которое даже снаружи ощущается важным для всего мира."
+    }
+  },
+  {
+    "id": "wall-street-bull",
+    "title": {
+      "en": "Wall Street Bull",
+      "ru": "Бык на Уолл-стрит"
+    },
+    "coords": [
+      40.7055,
+      -74.0134
+    ],
+    "category": [
+      "landmarks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Bowling Green",
+      "ru": "Bowling Green"
+    },
+    "address": "Bowling Green, New York, NY 10004",
+    "external_link": "",
+    "image": "places/landmarks/wall-street-bull/cover.jpg",
+    "summary": {
+      "en": "Famous charging bull statue.",
+      "ru": "Знаменитая статуя быка."
+    }
+  },
+  {
+    "id": "american-museum-of-natural-history",
+    "title": {
+      "en": "American Museum of Natural History",
+      "ru": "Американский музей естественной истории"
+    },
+    "coords": [
+      40.7813,
+      -73.9735
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~0",
+    "transit": {
+      "en": "81 St - Museum of Natural History",
+      "ru": "81 St - Museum of Natural History"
+    },
+    "address": "200 Central Park W, New York, NY 10024",
+    "external_link": "",
+    "image": "places/museums/american-museum-of-natural-history/cover.jpg",
+    "summary": {
+      "en": "Classic major museum. Great if you want dinosaurs, space, nature, and one of the most recognizable museum interiors in the city.",
+      "ru": "Классический большой музей. Отлично подойдет, если хочется динозавров, космоса, природы и одного из самых узнаваемых музейных интерьеров города."
+    }
+  },
+  {
+    "id": "bronx-museum-of-the-arts",
+    "title": {
+      "en": "The Bronx Museum of the Arts",
+      "ru": "Музей искусств Бронкса"
+    },
+    "coords": [
+      40.831,
+      -73.9197
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "167 St",
+      "ru": "167 St"
+    },
+    "address": "1040 Grand Concourse, Bronx, NY 10456",
+    "external_link": "",
+    "image": "places/museums/bronx-museum-of-the-arts/cover.jpg",
+    "summary": {
+      "en": "Solid museum stop if you want to go beyond the usual Manhattan-heavy art circuit.",
+      "ru": "Хороший музейный вариант, если хочется выйти за пределы привычного манхэттенского арт-маршрута."
+    }
+  },
+  {
+    "id": "brooklyn-museum",
+    "title": {
+      "en": "Brooklyn Museum",
+      "ru": "Бруклинский музей"
+    },
+    "coords": [
+      40.6712,
+      -73.9636
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~0",
+    "transit": {
+      "en": "Eastern Pkwy-Brooklyn Museum",
+      "ru": "Eastern Pkwy-Brooklyn Museum"
+    },
+    "address": "200 Eastern Pkwy, Brooklyn, NY 11238",
+    "external_link": "",
+    "image": "places/museums/brooklyn-museum/cover.jpg",
+    "summary": {
+      "en": "Big museum with enough range to justify a proper visit, not just a quick stop.",
+      "ru": "Большой музей, который вполне заслуживает полноценного визита, а не просто быстрого захода."
+    }
+  },
+  {
+    "id": "ellis-island",
+    "title": {
+      "en": "Ellis Island",
+      "ru": "Эллис-Айленд"
+    },
+    "coords": [
+      40.6995,
+      -74.0396
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Same ferry as Statue of Liberty",
+      "ru": "Тот же паром"
+    },
+    "address": "Ellis Island, New York, NY 10004",
+    "external_link": "",
+    "image": "places/museums/ellis-island/cover.jpg",
+    "summary": {
+      "en": "Immigration museum with real history behind NYC.",
+      "ru": "Музей иммиграции с настоящей историей города."
+    }
+  },
+  {
+    "id": "guggenheim-museum",
+    "title": {
+      "en": "Guggenheim Museum",
+      "ru": "Музей Гуггенхайма"
+    },
+    "coords": [
+      40.783,
+      -73.959
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~0",
+    "transit": {
+      "en": "86 St",
+      "ru": "86 St"
+    },
+    "address": "1071 5th Ave, New York, NY 10128",
+    "external_link": "",
+    "image": "places/museums/guggenheim-museum/cover.jpg",
+    "summary": {
+      "en": "Worth it even for the building alone. The spiral interior is the main event.",
+      "ru": "Сюда стоит идти даже ради самого здания. Спиральный интерьер уже сам по себе событие."
+    }
+  },
+  {
+    "id": "intrepid-museum",
+    "title": {
+      "en": "Intrepid Museum",
+      "ru": "Музей Intrepid"
+    },
+    "coords": [
+      40.7645,
+      -73.9996
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~6",
+    "transit": {
+      "en": "50 St / 42 St + walk",
+      "ru": "50 St / 42 St + walk"
+    },
+    "address": "Pier 86, W 46th St, New York, NY 10036",
+    "external_link": "",
+    "image": "places/museums/intrepid-museum/cover.jpg",
+    "summary": {
+      "en": "Aircraft carrier turned museum. Great if you like aviation, ships, or space-related exhibits.",
+      "ru": "Авианосец, превращенный в музей. Отличное место, если нравятся авиация, корабли или космические экспонаты."
+    }
+  },
+  {
+    "id": "mercer-labs",
+    "title": {
+      "en": "Mercer Labs",
+      "ru": "Mercer Labs"
+    },
+    "coords": [
+      40.7103,
+      -74.0087
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~0+",
+    "transit": {
+      "en": "Fulton St / World Trade Center",
+      "ru": "Fulton St / World Trade Center"
+    },
+    "address": "21 Dey St, New York, NY 10007",
+    "external_link": "",
+    "image": "places/museums/mercer-labs/cover.jpg",
+    "summary": {
+      "en": "Immersive museum-style experience. More about spectacle and atmosphere than a traditional museum visit.",
+      "ru": "Иммерсивное пространство, где ставка скорее на впечатление и атмосферу, чем на формат классического музея."
+    }
+  },
+  {
+    "id": "met-museum",
+    "title": {
+      "en": "MET Museum",
+      "ru": "Метрополитен музей"
+    },
+    "coords": [
+      40.7794,
+      -73.9632
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~30",
+    "transit": {
+      "en": "86 St",
+      "ru": "86 St"
+    },
+    "address": "1000 5th Ave, New York, NY 10028",
+    "external_link": "",
+    "image": "places/museums/met-museum/cover.jpg",
+    "summary": {
+      "en": "Massive museum with world-class collection.",
+      "ru": "Огромный музей с мировой коллекцией."
+    }
+  },
+  {
+    "id": "moma",
+    "title": {
+      "en": "MoMA",
+      "ru": "Музей современного искусства MoMA"
+    },
+    "coords": [
+      40.7614,
+      -73.9776
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "highly-recommend",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~0",
+    "transit": {
+      "en": "5 Av/53 St",
+      "ru": "5 Av/53 St"
+    },
+    "address": "11 W 53rd St, New York, NY 10019",
+    "external_link": "",
+    "image": "places/museums/moma/cover.jpg",
+    "summary": {
+      "en": "One of the essential museums if modern art sounds even remotely interesting to you.",
+      "ru": "Один из главных музеев, если современное искусство хотя бы немного интересно."
+    }
+  },
+  {
+    "id": "museum-of-the-city-of-new-york",
+    "title": {
+      "en": "Museum of the City of New York",
+      "ru": "Музей города Нью-Йорка"
+    },
+    "coords": [
+      40.7925,
+      -73.9519
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~3",
+    "transit": {
+      "en": "103 St / 6 train",
+      "ru": "103 St / 6 train"
+    },
+    "address": "1220 5th Ave, New York, NY 10029",
+    "external_link": "",
+    "image": "places/museums/museum-of-the-city-of-new-york/cover.jpg",
+    "summary": {
+      "en": "Good pick if you want context and history behind the city instead of just another photo stop.",
+      "ru": "Хороший выбор, если хочется понять контекст и историю города, а не просто поставить еще одну точку на карте."
+    }
+  },
+  {
+    "id": "whitney-museum",
+    "title": {
+      "en": "Whitney Museum",
+      "ru": "Музей Whitney"
+    },
+    "coords": [
+      40.7396,
+      -74.0089
+    ],
+    "category": [
+      "museums"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~0",
+    "transit": {
+      "en": "14 St / 8 Av",
+      "ru": "14 St / 8 Av"
+    },
+    "address": "99 Gansevoort St, New York, NY 10014",
+    "external_link": "",
+    "image": "places/museums/whitney-museum/cover.jpg",
+    "summary": {
+      "en": "Good museum stop near the High Line with strong American art focus.",
+      "ru": "Хороший музей рядом с High Line, с сильным акцентом на американское искусство."
+    }
+  },
+  {
+    "id": "birds-jazz",
+    "title": {
+      "en": "Birds",
+      "ru": "Birds"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Houston St / Christopher St",
+      "ru": "Houston St / Christopher St"
+    },
+    "address": "64 Downing St, New York, NY 10014",
+    "external_link": "https://www.tiktok.com/t/ZP8gHr1Wn",
+    "image": "places/other/birds-jazz/cover.jpg",
+    "summary": {
+      "en": "Jazz / live music stop in the West Village area.",
+      "ru": "Точка с jazz / live music в районе West Village."
+    }
+  },
+  {
+    "id": "brighton-beach",
+    "title": {
+      "en": "Brighton Beach",
+      "ru": "Брайтон-Бич"
+    },
+    "coords": [
+      40.5763,
+      -73.9615
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Brighton Beach",
+      "ru": "Brighton Beach"
+    },
+    "address": "Brighton Beach Ave & Boardwalk, Brooklyn, NY 11235",
+    "external_link": "",
+    "image": "places/other/brighton-beach/cover.jpg",
+    "summary": {
+      "en": "Russian-speaking neighborhood with a unique vibe.",
+      "ru": "Русскоязычный район с особой атмосферой."
+    }
+  },
+  {
+    "id": "harry-potter-store",
+    "title": {
+      "en": "Harry Potter Store",
+      "ru": "Магазин Гарри Поттера"
+    },
+    "coords": [
+      40.742,
+      -73.989
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "23 St",
+      "ru": "23 St"
+    },
+    "address": "935 Broadway, New York, NY 10010",
+    "external_link": "",
+    "image": "places/other/harry-potter-store/cover.jpg",
+    "summary": {
+      "en": "Immersive store for Harry Potter fans.",
+      "ru": "Интерактивный магазин для фанатов Гарри Поттера."
+    }
+  },
+  {
+    "id": "janes-carousel",
+    "title": {
+      "en": "Jane's Carousel",
+      "ru": "Карусель Jane’s"
+    },
+    "coords": [
+      40.7034,
+      -73.995
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "DUMBO",
+      "ru": "DUMBO"
+    },
+    "address": "1 Old Dock St, Brooklyn, NY 11201",
+    "external_link": "",
+    "image": "places/other/janes-carousel/cover.jpg",
+    "summary": {
+      "en": "Vintage carousel with a perfect Brooklyn skyline view.",
+      "ru": "Красивая винтажная карусель с видом на Манхэттен."
+    }
+  },
+  {
+    "id": "lego-store-5th-ave",
+    "title": {
+      "en": "LEGO Store (5th Ave)",
+      "ru": "LEGO Store"
+    },
+    "coords": [
+      40.7605,
+      -73.975
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "5 Av/53 St",
+      "ru": "5 Av/53 St"
+    },
+    "address": "636 5th Ave, New York, NY 10020",
+    "external_link": "",
+    "image": "places/other/lego-store-5th-ave/cover.jpg",
+    "summary": {
+      "en": "Creative LEGO displays and NYC-themed builds.",
+      "ru": "Интересные LEGO-инсталляции и модели."
+    }
+  },
+  {
+    "id": "louis-vuitton-5th-ave",
+    "title": {
+      "en": "Louis Vuitton (5th Ave)",
+      "ru": "Louis Vuitton на 5-й авеню"
+    },
+    "coords": [
+      40.7607,
+      -73.975
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "5 Av/53 St",
+      "ru": "5 Av/53 St"
+    },
+    "address": "1 E 57th St, New York, NY 10022",
+    "external_link": "",
+    "image": "places/other/louis-vuitton-5th-ave/cover.jpg",
+    "summary": {
+      "en": "More of a luxury Fifth Avenue stop than a landmark, but it fits the classic Midtown shopping walk.",
+      "ru": "Скорее точка на маршруте по люксовой 5-й авеню, чем отдельная достопримечательность, но в классическую прогулку по Мидтауну вписывается хорошо."
+    }
+  },
+  {
+    "id": "luna-park",
+    "title": {
+      "en": "Luna Park",
+      "ru": "Луна-парк"
+    },
+    "coords": [
+      40.5755,
+      -73.978
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Coney Island",
+      "ru": "Coney Island"
+    },
+    "address": "1000 Surf Ave, Brooklyn, NY 11224",
+    "external_link": "",
+    "image": "places/other/luna-park/cover.jpg",
+    "summary": {
+      "en": "Classic amusement park.",
+      "ru": "Классический парк аттракционов."
+    }
+  },
+  {
+    "id": "mms-store",
+    "title": {
+      "en": "M&M's Store",
+      "ru": "Магазин M&M's"
+    },
+    "coords": [
+      40.7587,
+      -73.9851
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Times Sq–42 St",
+      "ru": "Times Sq–42 St"
+    },
+    "address": "1600 Broadway, New York, NY 10019",
+    "external_link": "",
+    "image": "places/other/mms-store/cover.jpg",
+    "summary": {
+      "en": "Big colorful candy store. Fun stop if you’re already in Times Square.",
+      "ru": "Яркий магазин конфет. Можно зайти, если рядом."
+    }
+  },
+  {
+    "id": "nyu",
+    "title": {
+      "en": "NYU Area",
+      "ru": "Район NYU"
+    },
+    "coords": [
+      40.7295,
+      -73.9965
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "W 4 St / Astor Pl",
+      "ru": "W 4 St / Astor Pl"
+    },
+    "address": "Washington Square Park area, New York, NY 10012",
+    "external_link": "",
+    "image": "places/other/nyu/cover.jpg",
+    "summary": {
+      "en": "More of a vibe stop than a landmark. Good if you want to feel student New York around the Village.",
+      "ru": "Скорее место ради атмосферы, чем отдельная достопримечательность. Хорошо, если хочется почувствовать студенческий Нью-Йорк."
+    }
+  },
+  {
+    "id": "penn-station",
+    "title": {
+      "en": "Penn Station",
+      "ru": "Пенн-стейшн"
+    },
+    "coords": [
+      40.7506,
+      -73.9935
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Penn Station",
+      "ru": "Penn Station"
+    },
+    "address": "8th Ave & W 31st St, New York, NY 10001",
+    "external_link": "",
+    "image": "places/other/penn-station/cover.jpg",
+    "summary": {
+      "en": "Major transit hub. Not pretty, but useful to know.",
+      "ru": "Главный транспортный узел. Не самый красивый, но важный."
+    }
+  },
+  {
+    "id": "saint-tuesday",
+    "title": {
+      "en": "Saint Tuesday",
+      "ru": "Saint Tuesday"
+    },
+    "coords": [
+      0.0,
+      0.0
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "",
+    "transit": {
+      "en": "Canal St",
+      "ru": "Canal St"
+    },
+    "address": "77 Walker St, New York, NY 10013",
+    "external_link": "https://www.tiktok.com/t/ZP8gHPCFp",
+    "image": "places/other/saint-tuesday/cover.jpg",
+    "summary": {
+      "en": "Jazz / live music stop in Lower Manhattan.",
+      "ru": "Точка с jazz / live music в Нижнем Манхэттене."
+    }
+  },
+  {
+    "id": "seaglass-carousel",
+    "title": {
+      "en": "SeaGlass Carousel",
+      "ru": "SeaGlass Carousel"
+    },
+    "coords": [
+      40.7033,
+      -74.017
+    ],
+    "category": [
+      "other"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Bowling Green",
+      "ru": "Bowling Green"
+    },
+    "address": "State St & Battery Pl, New York, NY 10004",
+    "external_link": "",
+    "image": "places/other/seaglass-carousel/cover.jpg",
+    "summary": {
+      "en": "Unique glowing carousel, fun and a bit surreal.",
+      "ru": "Необычная светящаяся карусель."
+    }
+  },
+  {
+    "id": "bethesda-fountain",
+    "title": {
+      "en": "Bethesda Fountain",
+      "ru": "Фонтан Bethesda"
+    },
+    "coords": [
+      40.774,
+      -73.97
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "72 St",
+      "ru": "72 St"
+    },
+    "address": "Central Park, Terrace Dr, New York, NY 10021",
+    "external_link": "",
+    "image": "places/parks/bethesda-fountain/cover.jpg",
+    "summary": {
+      "en": "Iconic fountain in Central Park.",
+      "ru": "Знаменитый фонтан в Центральном парке."
+    }
+  },
+  {
+    "id": "bronx-zoo",
+    "title": {
+      "en": "Bronx Zoo",
+      "ru": "Бронксский зоопарк"
+    },
+    "coords": [
+      40.8506,
+      -73.8769
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~0+",
+    "transit": {
+      "en": "West Farms Sq / E Tremont Av",
+      "ru": "West Farms Sq / E Tremont Av"
+    },
+    "address": "2300 Southern Blvd, Bronx, NY 10460",
+    "external_link": "",
+    "image": "places/parks/bronx-zoo/cover.jpg",
+    "summary": {
+      "en": "Major zoo and definitely not a quick stop. Best if you want to dedicate real time to it.",
+      "ru": "Крупный зоопарк и точно не место на пять минут. Лучше идти, если готов выделить на него полноценное время."
+    }
+  },
+  {
+    "id": "brooklyn-botanic-garden",
+    "title": {
+      "en": "Brooklyn Botanic Garden",
+      "ru": "Бруклинский ботанический сад"
+    },
+    "coords": [
+      40.6694,
+      -73.9624
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "paid",
+    "price": "~2",
+    "transit": {
+      "en": "Eastern Pkwy-Brooklyn Museum",
+      "ru": "Eastern Pkwy-Brooklyn Museum"
+    },
+    "address": "990 Washington Ave, Brooklyn, NY 11225",
+    "external_link": "",
+    "image": "places/parks/brooklyn-botanic-garden/cover.jpg",
+    "summary": {
+      "en": "Beautiful and calm, especially in spring. Easy to combine with Brooklyn Museum.",
+      "ru": "Очень красивое и спокойное место, особенно весной. Удобно совместить с Бруклинским музеем."
+    }
+  },
+  {
+    "id": "bryant-park",
+    "title": {
+      "en": "Bryant Park",
+      "ru": "Брайант-парк"
+    },
+    "coords": [
+      40.7536,
+      -73.9832
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "42 St",
+      "ru": "42 St"
+    },
+    "address": "Bryant Park, New York, NY 10018",
+    "external_link": "",
+    "image": "places/parks/bryant-park/cover.jpg",
+    "summary": {
+      "en": "Small but lively park behind NY Public Library.",
+      "ru": "Небольшой, но уютный парк."
+    }
+  },
+  {
+    "id": "central-park-mall",
+    "title": {
+      "en": "The Mall",
+      "ru": "Аллея The Mall"
+    },
+    "coords": [
+      40.7745,
+      -73.971
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "72 St",
+      "ru": "72 St"
+    },
+    "address": "The Mall, Central Park, New York, NY 10022",
+    "external_link": "",
+    "image": "places/parks/central-park-mall/cover.jpg",
+    "summary": {
+      "en": "Beautiful tree-lined walkway.",
+      "ru": "Красивая аллея с деревьями."
+    }
+  },
+  {
+    "id": "central-park-zoo",
+    "title": {
+      "en": "Central Park Zoo",
+      "ru": "Зоопарк Центрального парка"
+    },
+    "coords": [
+      40.7678,
+      -73.9718
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "59 St",
+      "ru": "59 St"
+    },
+    "address": "East 64th St, New York, NY 10021",
+    "external_link": "",
+    "image": "places/parks/central-park-zoo/cover.jpg",
+    "summary": {
+      "en": "Small zoo right inside Central Park.",
+      "ru": "Небольшой зоопарк прямо в парке."
+    }
+  },
+  {
+    "id": "governors-island",
+    "title": {
+      "en": "Governors Island",
+      "ru": "Говернорс-Айленд"
+    },
+    "coords": [
+      40.6895,
+      -74.0168
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "full",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Ferry from Manhattan/Brooklyn",
+      "ru": "Паром"
+    },
+    "address": "Governors Island Ferry Terminal, New York, NY 10004",
+    "external_link": "",
+    "image": "places/parks/governors-island/cover.jpg",
+    "summary": {
+      "en": "Great escape from the city with views, bikes, and open space.",
+      "ru": "Отличное место, чтобы отдохнуть от города."
+    }
+  },
+  {
+    "id": "high-line",
+    "title": {
+      "en": "High Line",
+      "ru": "Хай Лайн"
+    },
+    "coords": [
+      40.7479,
+      -74.0049
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "14 St / 23 St",
+      "ru": "14 St / 23 St"
+    },
+    "address": "Gansevoort St Entrance, New York, NY 10014",
+    "external_link": "",
+    "image": "places/parks/high-line/cover.jpg",
+    "summary": {
+      "en": "Elevated park built on old railway.",
+      "ru": "Парк на бывшей железной дороге."
+    }
+  },
+  {
+    "id": "little-island",
+    "title": {
+      "en": "Little Island",
+      "ru": "Little Island"
+    },
+    "coords": [
+      40.742,
+      -74.016
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "14 St",
+      "ru": "14 St"
+    },
+    "address": "Pier 55, Hudson River Greenway, New York, NY 10014",
+    "external_link": "",
+    "image": "places/parks/little-island/cover.jpg",
+    "summary": {
+      "en": "Floating park with great views.",
+      "ru": "Парк на воде с отличными видами."
+    }
+  },
+  {
+    "id": "morningside-park",
+    "title": {
+      "en": "Morningside Park",
+      "ru": "Морнингсайд-парк"
+    },
+    "coords": [
+      40.8018,
+      -73.9595
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "110 St",
+      "ru": "110 St"
+    },
+    "address": "Morningside Ave & W 114th St, New York, NY 10027",
+    "external_link": "",
+    "image": "places/parks/morningside-park/cover.jpg",
+    "summary": {
+      "en": "Nice uptown park to pair with the cathedral or Columbia area.",
+      "ru": "Приятный парк в верхнем Манхэттене, который удобно совместить с собором или районом Колумбийского университета."
+    }
+  },
+  {
+    "id": "ny-aquarium",
+    "title": {
+      "en": "New York Aquarium",
+      "ru": "Нью-Йоркский аквариум"
+    },
+    "coords": [
+      40.5755,
+      -73.975
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": null,
+    "transit": {
+      "en": "Coney Island",
+      "ru": "Coney Island"
+    },
+    "address": "602 Surf Ave, Brooklyn, NY 11224",
+    "external_link": "",
+    "image": "places/parks/ny-aquarium/cover.jpg",
+    "summary": {
+      "en": "Ocean-themed exhibits right by the beach.",
+      "ru": "Аквариум у океана."
+    }
+  },
+  {
+    "id": "roosevelt-island",
+    "title": {
+      "en": "Roosevelt Island",
+      "ru": "Рузвельт-Айленд"
+    },
+    "coords": [
+      40.7612,
+      -73.9496
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "Roosevelt Island Tram / F train",
+      "ru": "Roosevelt Island Tram / F train"
+    },
+    "address": "Roosevelt Island, New York, NY 10044",
+    "external_link": "",
+    "image": "places/parks/roosevelt-island/cover.jpg",
+    "summary": {
+      "en": "Quiet island with nice river views and a very different pace from Manhattan.",
+      "ru": "Спокойный остров с хорошими видами на реку и совсем другим ритмом по сравнению с Манхэттеном."
+    }
+  },
+  {
+    "id": "washington-square-park",
+    "title": {
+      "en": "Washington Square Park",
+      "ru": "Вашингтон-сквер-парк"
+    },
+    "coords": [
+      40.7308,
+      -73.9973
+    ],
+    "category": [
+      "parks"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "W 4 St",
+      "ru": "W 4 St"
+    },
+    "address": "Washington Square, New York, NY 10012",
+    "external_link": "",
+    "image": "places/parks/washington-square-park/cover.jpg",
+    "summary": {
+      "en": "Classic downtown park with arch, musicians, students, and a lot of NYC character.",
+      "ru": "Классический даунтаун-парк с аркой, музыкантами, студентами и очень нью-йоркской атмосферой."
+    }
+  },
+  {
+    "id": "manhattan-bridge-view",
+    "title": {
+      "en": "Manhattan Bridge View",
+      "ru": "Вид на Манхэттенский мост"
+    },
+    "coords": [
+      40.7033,
+      -73.9887
+    ],
+    "category": [
+      "viewpoints"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "short",
+    "cost": "free",
+    "price": null,
+    "transit": {
+      "en": "York St",
+      "ru": "York St"
+    },
+    "address": "Washington St & Front St, Brooklyn, NY 11201",
+    "external_link": "",
+    "image": "places/viewpoints/manhattan-bridge-view/cover.jpg",
+    "summary": {
+      "en": "Famous photo spot with bridge framing.",
+      "ru": "Популярное место для фото с мостом."
+    }
+  },
+  {
+    "id": "the-edge",
+    "title": {
+      "en": "The Edge",
+      "ru": "Edge смотровая"
+    },
+    "coords": [
+      40.7539,
+      -74.0027
+    ],
+    "category": [
+      "viewpoints"
+    ],
+    "personal": "want-to-go",
+    "tags": [],
+    "time": "medium",
+    "cost": "paid",
+    "price": "~0",
+    "transit": {
+      "en": "34 St Hudson Yards",
+      "ru": "34 St Hudson Yards"
+    },
+    "address": "30 Hudson Yards, New York, NY 10001",
+    "external_link": "",
+    "image": "places/viewpoints/the-edge/cover.jpg",
+    "summary": {
+      "en": "Observation deck with glass floor.",
+      "ru": "Смотровая площадка со стеклянным полом."
+    }
+  }
+]

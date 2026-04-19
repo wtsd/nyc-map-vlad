@@ -1,0 +1,32 @@
+id: united-nations
+title:
+  en: United Nations Headquarters
+  ru: Штаб-квартира ООН
+coords:
+  lat: 40.7498
+  lng: -73.968
+category:
+- landmarks
+time: short
+cost: free
+transit:
+  en: Grand Central
+  ru: Grand Central
+address: 405 E 42nd St, New York, NY 10017
+borough: Manhattan
+neighborhood: Midtown East
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

@@ -1,0 +1,33 @@
+id: ellis-island
+title:
+  en: Ellis Island
+  ru: Эллис-Айленд
+coords:
+  lat: 40.6995
+  lng: -74.0396
+category:
+- museums
+time: medium
+cost: paid
+transit:
+  en: Same ferry as Statue of Liberty
+  ru: Тот же паром
+address: Ellis Island, New York, NY 10004
+route_types:
+- culture
+- day-trip
+- easy-stop
+- outdoors
+- rainy-day
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- midday
+- morning
+vibes:
+- curious
+- photogenic
+best_for: []
+external_link: ''
+personal: want-to-go

@@ -1,0 +1,32 @@
+id: nonnas-of-the-world
+title:
+  en: Nonna's of the World
+  ru: Nonna's of the World
+coords:
+  lat: 40.7198
+  lng: -73.9906
+category:
+- food
+time: medium
+cost: paid
+transit:
+  en: Delancey St / Essex St
+  ru: Delancey St / Essex St
+address: 75 Kenmare St, New York, NY 10012
+borough: Manhattan
+neighborhood: Chinatown / Little Italy
+route_types:
+- date-night
+- easy-stop
+- foodie
+best_time:
+- dinner
+- evening
+- late-afternoon
+- lunch
+vibes:
+- tasty
+best_for:
+- couples
+external_link: ''
+personal: want-to-go

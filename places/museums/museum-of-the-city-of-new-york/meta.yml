@@ -1,0 +1,28 @@
+id: museum-of-the-city-of-new-york
+title:
+  en: Museum of the City of New York
+  ru: Музей города Нью-Йорка
+coords:
+  lat: 40.7925
+  lng: -73.9519
+category:
+- museums
+time: medium
+cost: paid
+price: ~3
+transit:
+  en: 103 St / 6 train
+  ru: 103 St / 6 train
+address: 1220 5th Ave, New York, NY 10029
+route_types:
+- culture
+- easy-stop
+- rainy-day
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for: []
+external_link: ''
+personal: want-to-go

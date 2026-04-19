@@ -1,0 +1,32 @@
+id: the-vessel
+title:
+  en: The Vessel
+  ru: Вессел
+coords:
+  lat: 40.7538
+  lng: -74.0021
+category:
+- landmarks
+time: short
+cost: free
+transit:
+  en: 34 St Hudson Yards
+  ru: 34 St Hudson Yards
+address: 20 Hudson Yards, New York, NY 10001
+borough: Manhattan
+neighborhood: Chelsea
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

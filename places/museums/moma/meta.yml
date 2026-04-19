@@ -1,0 +1,30 @@
+id: moma
+title:
+  en: MoMA
+  ru: Музей современного искусства MoMA
+coords:
+  lat: 40.7614
+  lng: -73.9776
+category:
+- museums
+personal: highly-recommend
+time: full
+cost: paid
+price: ~0
+transit:
+  en: 5 Av/53 St
+  ru: 5 Av/53 St
+address: 11 W 53rd St, New York, NY 10019
+borough: Manhattan
+neighborhood: Midtown West
+route_types:
+- anchor-stop
+- culture
+- rainy-day
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for: []
+external_link: ""

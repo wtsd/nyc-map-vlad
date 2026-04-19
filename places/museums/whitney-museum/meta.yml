@@ -1,0 +1,30 @@
+id: whitney-museum
+title:
+  en: Whitney Museum
+  ru: Музей Whitney
+coords:
+  lat: 40.7396
+  lng: -74.0089
+category:
+- museums
+time: medium
+cost: paid
+price: ~0
+transit:
+  en: 14 St / 8 Av
+  ru: 14 St / 8 Av
+address: 99 Gansevoort St, New York, NY 10014
+borough: Manhattan
+neighborhood: Greenwich Village
+route_types:
+- culture
+- easy-stop
+- rainy-day
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for: []
+external_link: ''
+personal: want-to-go

@@ -1,0 +1,32 @@
+id: new-yorker-hotel
+title:
+  en: The New Yorker Hotel
+  ru: Отель The New Yorker
+coords:
+  lat: 40.7528
+  lng: -73.9935
+category:
+- landmarks
+time: short
+cost: free
+transit:
+  en: Penn Station
+  ru: Penn Station
+address: 481 8th Ave, New York, NY 10001
+borough: Manhattan
+neighborhood: Chelsea
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget
+external_link: ''
+personal: want-to-go

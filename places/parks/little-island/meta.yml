@@ -1,0 +1,35 @@
+id: little-island
+title:
+  en: Little Island
+  ru: Little Island
+coords:
+  lat: 40.742
+  lng: -74.016
+category:
+- parks
+personal: want-to-go
+time: short
+cost: free
+transit:
+  en: 14 St
+  ru: 14 St
+address: Pier 55, Hudson River Greenway, New York, NY 10014
+route_types:
+- budget-friendly
+- day-trip
+- easy-stop
+- outdoors
+- photography
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for:
+- budget
+- photos
+external_link: ""

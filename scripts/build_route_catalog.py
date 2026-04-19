@@ -24,6 +24,10 @@ def load_yaml(path: Path) -> dict[str, Any]:
     return data
 
 
+def iter_place_dirs(places_dir: Path) -> list[Path]:
+    return sorted(meta_path.parent for meta_path in places_dir.rglob("meta.yml"))
+
+
 def title_en(meta: dict[str, Any]) -> str:
     title = meta.get("title", "")
     if isinstance(title, dict):
@@ -57,10 +61,8 @@ def main() -> int:
     by_neighborhood: dict[str, list[str]] = {}
     by_route_type: dict[str, list[str]] = {}
 
-    for place_dir in sorted(path for path in places_dir.iterdir() if path.is_dir()):
+    for place_dir in iter_place_dirs(places_dir):
         meta_path = place_dir / "meta.yml"
-        if not meta_path.exists():
-            continue
         meta = load_yaml(meta_path)
         record = route_record(place_dir.name, meta)
         records.append(record)
