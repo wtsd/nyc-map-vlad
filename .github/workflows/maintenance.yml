@@ -1,0 +1,54 @@
+name: Maintenance
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Fill missing coordinates/addresses (dry-run)
+        run: python scripts/update_missing_location_data.py .
+
+      - name: Detect out-of-business places (dry-run)
+        run: python scripts/archive_closed_places.py .
+
+      - name: Generate statistics
+        run: python scripts/generate_statistics.py .
+
+      - name: Publish statistics to job summary
+        run: |
+          {
+            echo "## Generated statistics"
+            echo
+            cat build/statistics.md
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload maintenance artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: maintenance-statistics
+          path: |
+            build/statistics.json
+            build/statistics.md
