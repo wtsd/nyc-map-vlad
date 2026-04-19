@@ -1,27 +1,19 @@
 id: gan-hoo-bbq
-
 title:
   en: Gan Hoo BBQ
   ru: Gan Hoo BBQ
-
 coords:
-  lat: 0.0
-  lng: 0.0
-
+  lat: 40.7451081
+  lng: -73.9842044
 category:
-  - food
-
+- food
 tags: []
-
 time: medium
 cost: paid
-price: ""
-
+price: ''
 transit:
   en: 28 St / 33 St
   ru: 28 St / 33 St
-
-address: "29 E 30th St, New York, NY 10016"
-external_link: "https://www.tiktok.com/t/ZP8gHkcvp"
-
+address: 29 E 30th St, New York, NY 10016
+external_link: https://www.tiktok.com/t/ZP8gHkcvp
 featured: false

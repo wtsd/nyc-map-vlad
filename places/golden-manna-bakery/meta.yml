@@ -1,27 +1,19 @@
 id: golden-manna-bakery
-
 title:
   en: Golden Manna Bakery
   ru: Golden Manna Bakery
-
 coords:
-  lat: 0.0
-  lng: 0.0
-
+  lat: 40.7145755
+  lng: -73.9975494
 category:
-  - food
-
+- food
 tags: []
-
 time: short
 cost: paid
-price: ""
-
+price: ''
 transit:
   en: Canal St
   ru: Canal St
-
-address: "16 Bowery, New York, NY 10013"
-external_link: "https://www.tiktok.com/t/ZP8gHNCvS"
-
+address: 16 Bowery, New York, NY 10013
+external_link: https://www.tiktok.com/t/ZP8gHNCvS
 featured: false
