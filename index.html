@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NYC Map by Vlad and Katya</title>
-  <link rel="stylesheet" href="assets/css/styles.css?v=9be4180e59" />
+  <title>NYC Map</title>
+  <link rel="stylesheet" href="assets/css/styles.css?v=ae16a1828f" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
@@ -13,8 +13,8 @@
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <h1>NYC Map by Vlad and Katya</h1>
-        <p>Personal NYC spots for friends and family</p>
+        <h1>NYC Map</h1>
+        <p>by Katya and Vlad</p>
       </div>
 
       <div class="topbar-actions">
@@ -24,8 +24,8 @@
 
         <div class="header-buttons">
           <button id="filtersToggle" class="secondary-btn icon-btn filters-toggle" onclick="toggleFiltersPanel()" aria-expanded="false" aria-controls="secondaryControls">
-            <span class="btn-icon" aria-hidden="true">⚙️</span>
-            <span class="btn-label">Filters</span>
+            <span class="btn-icon" aria-hidden="true">🧰</span>
+            <span class="btn-label sr-only">Filters</span>
           </button>
           <button class="secondary-btn icon-btn" onclick="copySummary()" aria-label="Copy summary">
             <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -77,15 +77,15 @@
         </button>
         <button class="personal-filter-tab" type="button" data-personal="want-to-go" onclick="setPersonalFilter('want-to-go')">
           <span aria-hidden="true">🟦</span>
-          <span id="personalWantLabel">Want to go</span>
+          <span id="personalWantLabel">Want</span>
         </button>
         <button class="personal-filter-tab" type="button" data-personal="been-not-impressed" onclick="setPersonalFilter('been-not-impressed')">
           <span aria-hidden="true">⬜</span>
-          <span id="personalNotImpressedLabel">Not impressed</span>
+          <span id="personalNotImpressedLabel">Meh</span>
         </button>
         <button class="personal-filter-tab" type="button" data-personal="highly-recommend" onclick="setPersonalFilter('highly-recommend')">
           <span aria-hidden="true">🟩</span>
-          <span id="personalRecommendLabel">Highly recommend</span>
+          <span id="personalRecommendLabel">Top</span>
         </button>
       </div>
     </div>
@@ -132,14 +132,14 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-  <script src="assets/js/common.js?v=9be4180e59"></script>
-  <script src="assets/js/state.js?v=9be4180e59"></script>
-  <script src="assets/js/ui-text.js?v=9be4180e59"></script>
-  <script src="assets/js/filters.js?v=9be4180e59"></script>
-  <script src="assets/js/url-state.js?v=9be4180e59"></script>
-  <script src="assets/js/data-loader.js?v=9be4180e59"></script>
-  <script src="assets/js/list-view.js?v=9be4180e59"></script>
-  <script src="assets/js/app.js?v=9be4180e59"></script>
-  <script src="assets/js/map.js?v=9be4180e59"></script>
+  <script src="assets/js/common.js?v=ae16a1828f"></script>
+  <script src="assets/js/state.js?v=ae16a1828f"></script>
+  <script src="assets/js/ui-text.js?v=ae16a1828f"></script>
+  <script src="assets/js/filters.js?v=ae16a1828f"></script>
+  <script src="assets/js/url-state.js?v=ae16a1828f"></script>
+  <script src="assets/js/data-loader.js?v=ae16a1828f"></script>
+  <script src="assets/js/list-view.js?v=ae16a1828f"></script>
+  <script src="assets/js/app.js?v=ae16a1828f"></script>
+  <script src="assets/js/map.js?v=ae16a1828f"></script>
 </body>
 </html>

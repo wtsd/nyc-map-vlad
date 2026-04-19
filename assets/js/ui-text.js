@@ -13,9 +13,9 @@
       statLabels: { want: "Want", skip: "Skip", visited: "Visited" },
       personalTabs: {
         all: "Personal: all",
-        wantToGo: "Want to go",
-        notImpressed: "Not impressed",
-        recommend: "Highly recommend"
+        wantToGo: "Want",
+        notImpressed: "Meh",
+        recommend: "Top"
       },
       card: {
         openDetails: "Open place details",
