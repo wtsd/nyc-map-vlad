@@ -23,7 +23,7 @@
         statusWant: "Want",
         statusVisited: "Visited",
         statusSkip: "Skip",
-        statusHint: "Choose one status",
+        statusHint: "Your label",
         emptyTitle: "No places found",
         emptyBody: "Try clearing filters or changing search keywords."
       },
@@ -69,7 +69,7 @@
         statusWant: "Хочу",
         statusVisited: "Был",
         statusSkip: "Пропустить",
-        statusHint: "Выберите один статус",
+        statusHint: "Ваша пометка",
         emptyTitle: "Ничего не найдено",
         emptyBody: "Попробуйте сбросить фильтры или изменить запрос."
       },

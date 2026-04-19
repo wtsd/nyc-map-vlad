@@ -20,8 +20,8 @@ const PERSONAL_COLORS = {
 };
 
 function getMarkerMode() {
-  const selectedCategory = document.getElementById("categoryFilter")?.value || "";
-  return selectedCategory ? "personal" : "category";
+  const selectedCategoryCount = document.querySelectorAll("#categoryFilterGroup input:checked").length;
+  return selectedCategoryCount > 0 ? "personal" : "category";
 }
 
 function getColorByMode(place, mode) {
@@ -37,11 +37,19 @@ function renderLegend(mode) {
   if (!legendEl) return;
 
   const source = mode === "personal" ? PERSONAL_COLORS : CATEGORY_COLORS;
+  const selectedCategories = new Set(
+    Array.from(document.querySelectorAll("#categoryFilterGroup input:checked")).map((input) => input.value)
+  );
   const items = Object.entries(source).map(([key, color]) => {
     const label = mode === "personal"
       ? NYCMapCommon.getPersonalLabel(NYCMapState.getLang(), key)
       : NYCMapCommon.getCategoryLabel(NYCMapState.getLang(), key);
-    return `<li class="map-legend-item"><span class="map-legend-dot" style="--legend-color: ${color};"></span><span>${label}</span></li>`;
+    const activeClass = selectedCategories.has(key) ? "active" : "";
+    return `<li class="map-legend-item ${activeClass}">
+      <button type="button" class="map-legend-btn" onclick="toggleLegendCategoryFilter('${key}')">
+        <span class="map-legend-dot" style="--legend-color: ${color};"></span><span>${label}</span>
+      </button>
+    </li>`;
   }).join("");
 
   const title = mode === "personal"
@@ -52,6 +60,13 @@ function renderLegend(mode) {
     <div class="map-legend-title">${title}</div>
     <ul class="map-legend-list">${items}</ul>
   `;
+}
+
+function toggleLegendCategoryFilter(category) {
+  const input = document.querySelector(`#categoryFilterGroup input[value='${category}']`);
+  if (!input) return;
+  input.checked = !input.checked;
+  if (typeof onFiltersChanged === "function") onFiltersChanged();
 }
 
 function initMap(allPlaces) {
@@ -257,3 +272,4 @@ function locateUser() {
 }
 
 window.focusMarkerFromCard = focusMarkerFromCard;
+window.toggleLegendCategoryFilter = toggleLegendCategoryFilter;

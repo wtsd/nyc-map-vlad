@@ -1,13 +1,13 @@
 (() => {
   function syncFiltersToUrl(state, filters) {
     const url = new URL(window.location.href);
-    const { category } = filters.readFilterInputs();
+    const { categories } = filters.readFilterInputs();
     const search = (document.getElementById("searchFilter")?.value || "").trim();
 
-    if (category) url.searchParams.set("category", category);
-    else url.searchParams.delete("category");
+    if (categories.length) url.searchParams.set("categories", categories.join(","));
+    else url.searchParams.delete("categories");
 
-    if (state.getCurrentPersonalFilter()) url.searchParams.set("personal", state.getCurrentPersonalFilter());
+    if (state.getCurrentPersonalFilter().length) url.searchParams.set("personal", state.getCurrentPersonalFilter().join(","));
     else url.searchParams.delete("personal");
 
     if (state.getCurrentStatusFilter()) url.searchParams.set("status", state.getCurrentStatusFilter());

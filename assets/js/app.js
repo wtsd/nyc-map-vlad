@@ -25,7 +25,13 @@
   }
 
   function setPersonalFilter(personal) {
-    state.setCurrentPersonalFilter(personal);
+    state.setCurrentPersonalFilter(Array.isArray(personal) ? personal : []);
+    onFiltersChanged();
+  }
+
+  function onPersonalToggleChanged() {
+    const selected = Array.from(document.querySelectorAll(".personal-toggle-chip input:checked")).map((input) => input.value);
+    state.setCurrentPersonalFilter(selected);
     onFiltersChanged();
   }
 
@@ -139,6 +145,7 @@
   window.onFiltersChanged = onFiltersChanged;
   window.setStatusFilter = setStatusFilter;
   window.setPersonalFilter = setPersonalFilter;
+  window.onPersonalToggleChanged = onPersonalToggleChanged;
   window.goToPage = goToPage;
   window.switchMobileView = switchMobileView;
   window.toggleMap = toggleMap;

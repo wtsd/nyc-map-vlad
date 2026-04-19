@@ -1,18 +1,18 @@
 (() => {
-  const VALID_PERSONAL = ["", "want-to-go", "highly-recommend"];
+  const VALID_PERSONAL = ["want-to-go", "highly-recommend"];
   const VALID_STATUS = ["", "want", "skip", "visited"];
 
   function readFilterInputs() {
-    const category = document.getElementById("categoryFilter")?.value || "";
+    const categories = Array.from(document.querySelectorAll("#categoryFilterGroup input:checked")).map((input) => input.value);
     const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
-    return { category, search };
+    return { categories, search };
   }
 
-  function filterPlaces(places, checklist, getSearchText, { category, search, status, personal }) {
+  function filterPlaces(places, checklist, getSearchText, { categories, search, status, personal }) {
     return places.filter((p) => {
-      const categoryOk = !category || (Array.isArray(p.category) && p.category.includes(category));
+      const categoryOk = !categories.length || (Array.isArray(p.category) && categories.some((category) => p.category.includes(category)));
       const statusOk = !status || checklist[p.id] === status;
-      const personalOk = !personal || p.personal === personal;
+      const personalOk = !personal.length || personal.includes(p.personal);
       if (!categoryOk || !statusOk || !personalOk) return false;
       if (!search) return true;
       return String(getSearchText(p.id)).includes(search);
@@ -20,9 +20,9 @@
   }
 
   function getFilteredPlaces(state) {
-    const { category, search } = readFilterInputs();
+    const { categories, search } = readFilterInputs();
     return filterPlaces(state.getPlaces(), state.getChecklist(), state.getSearchText, {
-      category,
+      categories,
       search,
       status: state.getCurrentStatusFilter(),
       personal: state.getCurrentPersonalFilter()
@@ -30,28 +30,38 @@
   }
 
   function getPlacesForStats(state) {
-    const { category, search } = readFilterInputs();
+    const { categories, search } = readFilterInputs();
     return filterPlaces(state.getPlaces(), state.getChecklist(), state.getSearchText, {
-      category,
+      categories,
       search,
       status: "",
-      personal: ""
+      personal: []
     });
   }
 
   function applyFiltersFromParams(state, params) {
-    const category = params.get("category") || "";
-    const personal = params.get("personal") || "";
+    const categories = (params.get("categories") || "")
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
+    const personal = (params.get("personal") || "")
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
     const status = params.get("status") || "";
     const search = params.get("search") || "";
 
-    const categoryFilter = document.getElementById("categoryFilter");
-    if (categoryFilter) {
-      const validCategory = Array.from(categoryFilter.options).some((option) => option.value === category);
-      categoryFilter.value = validCategory ? category : "";
-    }
+    const categoryInputs = Array.from(document.querySelectorAll("#categoryFilterGroup input"));
+    categoryInputs.forEach((input) => {
+      input.checked = categories.includes(input.value);
+    });
 
-    state.setCurrentPersonalFilter(VALID_PERSONAL.includes(personal) ? personal : "");
+    const validPersonal = personal.filter((value) => VALID_PERSONAL.includes(value));
+    state.setCurrentPersonalFilter(validPersonal);
+    const personalInputs = Array.from(document.querySelectorAll(".personal-toggle-chip input"));
+    personalInputs.forEach((input) => {
+      input.checked = validPersonal.includes(input.value);
+    });
     state.setCurrentStatusFilter(VALID_STATUS.includes(status) ? status : "");
 
     const searchFilter = document.getElementById("searchFilter");
