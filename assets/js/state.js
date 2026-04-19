@@ -37,7 +37,25 @@
   }
 
   function setPlaces(places) {
-    state.places = Array.isArray(places) ? places : [];
+    if (!Array.isArray(places)) {
+      state.places = [];
+      return;
+    }
+    state.places = places.map((place) => {
+      const title = [place?.title?.en, place?.title?.ru].filter(Boolean).join(" ").toLowerCase();
+      const summary = [place?.summary?.en, place?.summary?.ru].filter(Boolean).join(" ").toLowerCase();
+      const categories = (place?.category || []).join(" ").toLowerCase();
+      const address = typeof place?.address === "string"
+        ? place.address.toLowerCase()
+        : Object.values(place?.address || {})
+          .filter((v) => typeof v === "string" && v)
+          .join(" ")
+          .toLowerCase();
+      return {
+        ...place,
+        _searchText: `${title}\n${summary}\n${categories}\n${address}`
+      };
+    });
   }
 
   function getChecklist() {

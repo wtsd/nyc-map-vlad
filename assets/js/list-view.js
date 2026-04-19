@@ -150,6 +150,7 @@
     if (!container) return;
 
     container.innerHTML = "";
+    const fragment = document.createDocumentFragment();
     places.forEach((p) => {
       const status = checklist[p.id] || "none";
       const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
@@ -158,7 +159,7 @@
       const summary = truncate(NYCMapCommon.getLocalizedText(lang, p.summary, ""), 180);
       const address = NYCMapCommon.getPlaceAddress(p, lang);
       const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(lang, p.category[0]) : "";
-      const detailsUrl = `place.html?id=${encodeURIComponent(p.id)}`;
+      const detailsUrl = NYCMapCommon.getPlaceDetailsUrl(p);
       const imageBlock = p.image
         ? `
         <a class="card-image-wrap card-image-link" href="${detailsUrl}" aria-label="${text.card.openDetails}">
@@ -207,8 +208,9 @@
         if (event.target.closest("button, a, input, select, textarea")) return;
         if (typeof focusMarkerFromCard === "function") focusMarkerFromCard(p.id, false);
       });
-      container.appendChild(el);
+      fragment.appendChild(el);
     });
+    container.appendChild(fragment);
   }
 
   async function copyPlace(state, id) {

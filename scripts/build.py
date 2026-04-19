@@ -86,11 +86,18 @@ def build_place(meta, place_path):
     image_file = place_path / "cover.jpg"
     image_path = str(image_file).replace("\\", "/") if image_file.exists() else "assets/images/placeholders/cover.jpg"
 
+    categories = meta.get("category", [])
+    if isinstance(categories, str):
+        categories = [categories]
+    primary_category = categories[0] if categories else ""
+    route = f"{primary_category}/{meta['id']}" if primary_category else meta["id"]
+
     return {
         "id": meta["id"],
+        "route": route,
         "title": meta["title"],
         "coords": [meta["coords"]["lat"], meta["coords"]["lng"]],
-        "category": meta.get("category", []),
+        "category": categories,
         "personal": meta.get("personal", ""),
         "tags": meta.get("tags", []),
         "time": meta.get("time"),

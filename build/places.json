@@ -1,6 +1,7 @@
 [
   {
     "id": "alimama-tea",
+    "route": "food/alimama-tea",
     "title": {
       "en": "Alimama Tea",
       "ru": "Alimama Tea"
@@ -31,6 +32,7 @@
   },
   {
     "id": "annapurna-thakali-kitchen",
+    "route": "food/annapurna-thakali-kitchen",
     "title": {
       "en": "Annapurna Thakali Kitchen",
       "ru": "Annapurna Thakali Kitchen"
@@ -61,6 +63,7 @@
   },
   {
     "id": "aragvi",
+    "route": "food/aragvi",
     "title": {
       "en": "Aragvi",
       "ru": "Арагви"
@@ -91,6 +94,7 @@
   },
   {
     "id": "baires-grill",
+    "route": "food/baires-grill",
     "title": {
       "en": "Baires Grill",
       "ru": "Baires Grill"
@@ -121,6 +125,7 @@
   },
   {
     "id": "bakery-je-taime",
+    "route": "food/bakery-je-taime",
     "title": {
       "en": "Bakery Je T’Aime",
       "ru": "Bakery Je T’Aime"
@@ -151,6 +156,7 @@
   },
   {
     "id": "cafe-2by2",
+    "route": "food/cafe-2by2",
     "title": {
       "en": "Cafe 2by2",
       "ru": "Cafe 2by2"
@@ -181,6 +187,7 @@
   },
   {
     "id": "casa-adela",
+    "route": "food/casa-adela",
     "title": {
       "en": "Casa Adela",
       "ru": "Casa Adela"
@@ -211,6 +218,7 @@
   },
   {
     "id": "chelsea-market",
+    "route": "food/chelsea-market",
     "title": {
       "en": "Chelsea Market",
       "ru": "Челси Маркет"
@@ -241,6 +249,7 @@
   },
   {
     "id": "chirokuro",
+    "route": "food/chirokuro",
     "title": {
       "en": "Chirokuro",
       "ru": "Chirokuro"
@@ -271,6 +280,7 @@
   },
   {
     "id": "conwell-coffee-hall",
+    "route": "food/conwell-coffee-hall",
     "title": {
       "en": "Conwell Coffee Hall",
       "ru": "Conwell Coffee Hall"
@@ -301,6 +311,7 @@
   },
   {
     "id": "davelle",
+    "route": "food/davelle",
     "title": {
       "en": "Davelle",
       "ru": "Davelle"
@@ -331,6 +342,7 @@
   },
   {
     "id": "din-soup-dumplings",
+    "route": "food/din-soup-dumplings",
     "title": {
       "en": "Din Soup Dumplings",
       "ru": "Din Soup Dumplings"
@@ -361,6 +373,7 @@
   },
   {
     "id": "don-udon",
+    "route": "food/don-udon",
     "title": {
       "en": "Don Udon",
       "ru": "Don Udon"
@@ -391,6 +404,7 @@
   },
   {
     "id": "ferrane",
+    "route": "food/ferrane",
     "title": {
       "en": "Ferrane",
       "ru": "Ferrane"
@@ -421,6 +435,7 @@
   },
   {
     "id": "fu-zhou-wei-zhong-wei-jia-xiang-feng-wei",
+    "route": "food/fu-zhou-wei-zhong-wei-jia-xiang-feng-wei",
     "title": {
       "en": "Fu Zhou Wei Zhong Wei Jia Xiang Feng Wei",
       "ru": "Fu Zhou Wei Zhong Wei Jia Xiang Feng Wei"
@@ -451,6 +466,7 @@
   },
   {
     "id": "gan-hoo-bbq",
+    "route": "food/gan-hoo-bbq",
     "title": {
       "en": "Gan Hoo BBQ",
       "ru": "Gan Hoo BBQ"
@@ -481,6 +497,7 @@
   },
   {
     "id": "giant-scallion-pancakes-flushing",
+    "route": "food/giant-scallion-pancakes-flushing",
     "title": {
       "en": "Giant Scallion Pancakes",
       "ru": "Giant Scallion Pancakes"
@@ -511,6 +528,7 @@
   },
   {
     "id": "golden-manna-bakery",
+    "route": "food/golden-manna-bakery",
     "title": {
       "en": "Golden Manna Bakery",
       "ru": "Golden Manna Bakery"
@@ -541,6 +559,7 @@
   },
   {
     "id": "gyu-ichiro",
+    "route": "food/gyu-ichiro",
     "title": {
       "en": "GYU Ichiro",
       "ru": "GYU Ichiro"
@@ -571,6 +590,7 @@
   },
   {
     "id": "hamido-seafood",
+    "route": "food/hamido-seafood",
     "title": {
       "en": "Hamido Seafood",
       "ru": "Hamido Seafood"
@@ -601,6 +621,7 @@
   },
   {
     "id": "hanamizuki-cafe",
+    "route": "food/hanamizuki-cafe",
     "title": {
       "en": "Hanamizuki Cafe",
       "ru": "Hanamizuki Cafe"
@@ -631,6 +652,7 @@
   },
   {
     "id": "hay-hay-roasted",
+    "route": "food/hay-hay-roasted",
     "title": {
       "en": "Hay Hay Roasted",
       "ru": "Hay Hay Roasted"
@@ -661,6 +683,7 @@
   },
   {
     "id": "ichiran-ramen-midtown",
+    "route": "food/ichiran-ramen-midtown",
     "title": {
       "en": "Ichiran Ramen",
       "ru": "Ichiran Ramen"
@@ -691,6 +714,7 @@
   },
   {
     "id": "jiang-nan-flushing",
+    "route": "food/jiang-nan-flushing",
     "title": {
       "en": "Jiang Nan",
       "ru": "Jiang Nan"
@@ -721,6 +745,7 @@
   },
   {
     "id": "joes-home-of-soup-dumplings",
+    "route": "food/joes-home-of-soup-dumplings",
     "title": {
       "en": "Joe's Home of Soup Dumplings",
       "ru": "Joe's Home of Soup Dumplings"
@@ -751,6 +776,7 @@
   },
   {
     "id": "jongro-bbq-market",
+    "route": "food/jongro-bbq-market",
     "title": {
       "en": "Jongro BBQ Market",
       "ru": "Jongro BBQ Market"
@@ -781,6 +807,7 @@
   },
   {
     "id": "krispy-kreme-times-square",
+    "route": "food/krispy-kreme-times-square",
     "title": {
       "en": "Krispy Kreme (Times Square)",
       "ru": "Krispy Kreme на Таймс-сквер"
@@ -811,6 +838,7 @@
   },
   {
     "id": "laduree-soho",
+    "route": "food/laduree-soho",
     "title": {
       "en": "Ladurée SoHo",
       "ru": "Ladurée SoHo"
@@ -841,6 +869,7 @@
   },
   {
     "id": "lafayette-grand-cafe-bakery",
+    "route": "food/lafayette-grand-cafe-bakery",
     "title": {
       "en": "Lafayette Grand Café & Bakery",
       "ru": "Lafayette Grand Café & Bakery"
@@ -871,6 +900,7 @@
   },
   {
     "id": "larina",
+    "route": "food/larina",
     "title": {
       "en": "Larina",
       "ru": "Larina"
@@ -901,6 +931,7 @@
   },
   {
     "id": "liberty-bagels-midtown",
+    "route": "food/liberty-bagels-midtown",
     "title": {
       "en": "Liberty Bagels",
       "ru": "Liberty Bagels"
@@ -931,6 +962,7 @@
   },
   {
     "id": "luckin-coffee-6th-ave",
+    "route": "food/luckin-coffee-6th-ave",
     "title": {
       "en": "Luckin Coffee",
       "ru": "Luckin Coffee"
@@ -961,6 +993,7 @@
   },
   {
     "id": "lucky-rabbit-noodles",
+    "route": "food/lucky-rabbit-noodles",
     "title": {
       "en": "Lucky Rabbit Noodles",
       "ru": "Lucky Rabbit Noodles"
@@ -991,6 +1024,7 @@
   },
   {
     "id": "mala-panda",
+    "route": "food/mala-panda",
     "title": {
       "en": "Mala Panda",
       "ru": "Mala Panda"
@@ -1021,6 +1055,7 @@
   },
   {
     "id": "meat-me-bbq",
+    "route": "food/meat-me-bbq",
     "title": {
       "en": "MEAT ME BBQ",
       "ru": "MEAT ME BBQ"
@@ -1051,6 +1086,7 @@
   },
   {
     "id": "mei-lai-wah",
+    "route": "food/mei-lai-wah",
     "title": {
       "en": "Mei Lai Wah",
       "ru": "Mei Lai Wah"
@@ -1081,6 +1117,7 @@
   },
   {
     "id": "mixue",
+    "route": "food/mixue",
     "title": {
       "en": "MIXUE",
       "ru": "MIXUE"
@@ -1111,6 +1148,7 @@
   },
   {
     "id": "mojo-east",
+    "route": "food/mojo-east",
     "title": {
       "en": "Mojo East",
       "ru": "Mojo East"
@@ -1141,6 +1179,7 @@
   },
   {
     "id": "nathans-famous",
+    "route": "food/nathans-famous",
     "title": {
       "en": "Nathan's Famous",
       "ru": "Nathan's Famous"
@@ -1171,6 +1210,7 @@
   },
   {
     "id": "new-kim-tuong",
+    "route": "food/new-kim-tuong",
     "title": {
       "en": "New Kim Tuong",
       "ru": "New Kim Tuong"
@@ -1201,6 +1241,7 @@
   },
   {
     "id": "nom-wah-tea-parlor",
+    "route": "food/nom-wah-tea-parlor",
     "title": {
       "en": "Nom Wah Tea Parlor",
       "ru": "Nom Wah Tea Parlor"
@@ -1231,13 +1272,14 @@
   },
   {
     "id": "nonnas-of-the-world",
+    "route": "food/nonnas-of-the-world",
     "title": {
       "en": "Nonna's of the World",
       "ru": "Nonna's of the World"
     },
     "coords": [
-      40.7198,
-      -73.9906
+      40.72023,
+      -73.99536
     ],
     "category": [
       "food"
@@ -1261,6 +1303,7 @@
   },
   {
     "id": "ole-and-steen",
+    "route": "food/ole-and-steen",
     "title": {
       "en": "Ole & Steen",
       "ru": "Ole & Steen"
@@ -1291,6 +1334,7 @@
   },
   {
     "id": "ozakaya",
+    "route": "food/ozakaya",
     "title": {
       "en": "Ozakaya",
       "ru": "Ozakaya"
@@ -1321,6 +1365,7 @@
   },
   {
     "id": "pavlo-mochi",
+    "route": "food/pavlo-mochi",
     "title": {
       "en": "Pavlo Mochi",
       "ru": "Pavlo Mochi"
@@ -1351,6 +1396,7 @@
   },
   {
     "id": "piscator",
+    "route": "food/piscator",
     "title": {
       "en": "Piscator",
       "ru": "Piscator"
@@ -1381,6 +1427,7 @@
   },
   {
     "id": "rooftop-230-fifth",
+    "route": "food/rooftop-230-fifth",
     "title": {
       "en": "230 Fifth Rooftop Bar",
       "ru": "Рooftop-бар 230 Fifth"
@@ -1411,6 +1458,7 @@
   },
   {
     "id": "roy-fish-market",
+    "route": "food/roy-fish-market",
     "title": {
       "en": "Roy Fish Market",
       "ru": "Roy Fish Market"
@@ -1441,6 +1489,7 @@
   },
   {
     "id": "san-matteo-upper-east-side",
+    "route": "food/san-matteo-upper-east-side",
     "title": {
       "en": "San Matteo",
       "ru": "San Matteo"
@@ -1471,6 +1520,7 @@
   },
   {
     "id": "sendo",
+    "route": "food/sendo",
     "title": {
       "en": "Sendo",
       "ru": "Sendo"
@@ -1501,6 +1551,7 @@
   },
   {
     "id": "skirt-steak",
+    "route": "food/skirt-steak",
     "title": {
       "en": "Skirt Steak",
       "ru": "Skirt Steak"
@@ -1531,6 +1582,7 @@
   },
   {
     "id": "smashy-burger-union-square",
+    "route": "food/smashy-burger-union-square",
     "title": {
       "en": "Smashy Burger",
       "ru": "Smashy Burger"
@@ -1561,6 +1613,7 @@
   },
   {
     "id": "steves-authentic-key-lime-pie",
+    "route": "food/steves-authentic-key-lime-pie",
     "title": {
       "en": "Steve’s Authentic Key Lime Pie",
       "ru": "Steve’s Authentic Key Lime Pie"
@@ -1591,6 +1644,7 @@
   },
   {
     "id": "sushi-counter",
+    "route": "food/sushi-counter",
     "title": {
       "en": "Sushi Counter",
       "ru": "Sushi Counter"
@@ -1621,6 +1675,7 @@
   },
   {
     "id": "syko",
+    "route": "food/syko",
     "title": {
       "en": "Syko",
       "ru": "Syko"
@@ -1651,6 +1706,7 @@
   },
   {
     "id": "tashkent-supermarket",
+    "route": "food/tashkent-supermarket",
     "title": {
       "en": "Tashkent Supermarket",
       "ru": "Супермаркет Ташкент"
@@ -1681,6 +1737,7 @@
   },
   {
     "id": "the-office-of-mr-motto",
+    "route": "food/the-office-of-mr-motto",
     "title": {
       "en": "The Office of Mr. Motto",
       "ru": "The Office of Mr. Motto"
@@ -1711,6 +1768,7 @@
   },
   {
     "id": "this-bowl",
+    "route": "food/this-bowl",
     "title": {
       "en": "This Bowl",
       "ru": "This Bowl"
@@ -1741,6 +1799,7 @@
   },
   {
     "id": "tortelli",
+    "route": "food/tortelli",
     "title": {
       "en": "Tortelli",
       "ru": "Tortelli"
@@ -1771,6 +1830,7 @@
   },
   {
     "id": "ume",
+    "route": "food/ume",
     "title": {
       "en": "Ume",
       "ru": "Ume"
@@ -1801,6 +1861,7 @@
   },
   {
     "id": "xiang-la-hot-pot",
+    "route": "food/xiang-la-hot-pot",
     "title": {
       "en": "Xiang La Hot Pot",
       "ru": "Xiang La Hot Pot"
@@ -1831,6 +1892,7 @@
   },
   {
     "id": "yubu",
+    "route": "food/yubu",
     "title": {
       "en": "Yubu",
       "ru": "Yubu"
@@ -1861,6 +1923,7 @@
   },
   {
     "id": "alwyn-court",
+    "route": "hidden-gems/alwyn-court",
     "title": {
       "en": "Alwyn Court",
       "ru": "Alwyn Court"
@@ -1891,6 +1954,7 @@
   },
   {
     "id": "elevated-acre",
+    "route": "hidden-gems/elevated-acre",
     "title": {
       "en": "Elevated Acre",
       "ru": "Elevated Acre"
@@ -1921,6 +1985,7 @@
   },
   {
     "id": "ghostbusters-firehouse",
+    "route": "hidden-gems/ghostbusters-firehouse",
     "title": {
       "en": "Ghostbusters Firehouse",
       "ru": "Пожарная станция Ghostbusters"
@@ -1951,6 +2016,7 @@
   },
   {
     "id": "socrates-sculpture-park",
+    "route": "hidden-gems/socrates-sculpture-park",
     "title": {
       "en": "Socrates Sculpture Park",
       "ru": "Парк скульптур Сократа"
@@ -1981,6 +2047,7 @@
   },
   {
     "id": "brooklyn-bridge",
+    "route": "landmarks/brooklyn-bridge",
     "title": {
       "en": "Brooklyn Bridge",
       "ru": "Бруклинский мост"
@@ -2011,6 +2078,7 @@
   },
   {
     "id": "cathedral-of-st-john-the-divine",
+    "route": "landmarks/cathedral-of-st-john-the-divine",
     "title": {
       "en": "Cathedral of St. John the Divine",
       "ru": "Собор Святого Иоанна Богослова"
@@ -2041,6 +2109,7 @@
   },
   {
     "id": "chinatown",
+    "route": "landmarks/chinatown",
     "title": {
       "en": "Chinatown",
       "ru": "Чайнатаун"
@@ -2071,6 +2140,7 @@
   },
   {
     "id": "chrysler-building",
+    "route": "landmarks/chrysler-building",
     "title": {
       "en": "Chrysler Building",
       "ru": "Крайслер-билдинг"
@@ -2101,6 +2171,7 @@
   },
   {
     "id": "coney-island",
+    "route": "landmarks/coney-island",
     "title": {
       "en": "Coney Island",
       "ru": "Кони-Айленд"
@@ -2131,6 +2202,7 @@
   },
   {
     "id": "dumbo",
+    "route": "landmarks/dumbo",
     "title": {
       "en": "DUMBO Waterfront",
       "ru": "DUMBO набережная"
@@ -2161,6 +2233,7 @@
   },
   {
     "id": "empire-state-building",
+    "route": "landmarks/empire-state-building",
     "title": {
       "en": "Empire State Building",
       "ru": "Эмпайр-стейт-билдинг"
@@ -2191,6 +2264,7 @@
   },
   {
     "id": "federal-reserve",
+    "route": "landmarks/federal-reserve",
     "title": {
       "en": "Federal Reserve Bank",
       "ru": "Федеральный резерв"
@@ -2221,6 +2295,7 @@
   },
   {
     "id": "flatiron-building",
+    "route": "landmarks/flatiron-building",
     "title": {
       "en": "Flatiron Building",
       "ru": "Флэтайрон"
@@ -2251,6 +2326,7 @@
   },
   {
     "id": "grand-central-terminal",
+    "route": "landmarks/grand-central-terminal",
     "title": {
       "en": "Grand Central Terminal",
       "ru": "Гранд Сентрал"
@@ -2281,6 +2357,7 @@
   },
   {
     "id": "hudson-yards",
+    "route": "landmarks/hudson-yards",
     "title": {
       "en": "Hudson Yards",
       "ru": "Хадсон Ярдс"
@@ -2311,6 +2388,7 @@
   },
   {
     "id": "lincoln-center",
+    "route": "landmarks/lincoln-center",
     "title": {
       "en": "Lincoln Center",
       "ru": "Линкольн-центр"
@@ -2341,6 +2419,7 @@
   },
   {
     "id": "little-italy",
+    "route": "landmarks/little-italy",
     "title": {
       "en": "Little Italy",
       "ru": "Литл-Итали"
@@ -2371,6 +2450,7 @@
   },
   {
     "id": "madison-square-garden",
+    "route": "landmarks/madison-square-garden",
     "title": {
       "en": "Madison Square Garden",
       "ru": "Мэдисон-сквер-гарден"
@@ -2401,6 +2481,7 @@
   },
   {
     "id": "memorial-911",
+    "route": "landmarks/memorial-911",
     "title": {
       "en": "9/11 Memorial",
       "ru": "Мемориал 11 сентября"
@@ -2431,6 +2512,7 @@
   },
   {
     "id": "new-yorker-hotel",
+    "route": "landmarks/new-yorker-hotel",
     "title": {
       "en": "The New Yorker Hotel",
       "ru": "Отель The New Yorker"
@@ -2461,6 +2543,7 @@
   },
   {
     "id": "ny-public-library",
+    "route": "landmarks/ny-public-library",
     "title": {
       "en": "NY Public Library",
       "ru": "Публичная библиотека Нью-Йорка"
@@ -2491,6 +2574,7 @@
   },
   {
     "id": "nyse",
+    "route": "landmarks/nyse",
     "title": {
       "en": "New York Stock Exchange",
       "ru": "Нью-Йоркская фондовая биржа"
@@ -2521,6 +2605,7 @@
   },
   {
     "id": "oculus",
+    "route": "landmarks/oculus",
     "title": {
       "en": "Oculus",
       "ru": "Окулус"
@@ -2551,6 +2636,7 @@
   },
   {
     "id": "one-world-trade-center",
+    "route": "landmarks/one-world-trade-center",
     "title": {
       "en": "One World Trade Center",
       "ru": "One World Trade Center"
@@ -2581,6 +2667,7 @@
   },
   {
     "id": "rockefeller-center",
+    "route": "landmarks/rockefeller-center",
     "title": {
       "en": "Rockefeller Center",
       "ru": "Рокфеллер-центр"
@@ -2611,6 +2698,7 @@
   },
   {
     "id": "roosevelt-island-tram",
+    "route": "landmarks/roosevelt-island-tram",
     "title": {
       "en": "Roosevelt Island Tram",
       "ru": "Канатка на Рузвельт-Айленд"
@@ -2641,6 +2729,7 @@
   },
   {
     "id": "soho",
+    "route": "landmarks/soho",
     "title": {
       "en": "SoHo",
       "ru": "Сохо"
@@ -2671,6 +2760,7 @@
   },
   {
     "id": "st-patricks-cathedral",
+    "route": "landmarks/st-patricks-cathedral",
     "title": {
       "en": "St. Patrick's Cathedral",
       "ru": "Собор Святого Патрика"
@@ -2701,6 +2791,7 @@
   },
   {
     "id": "statue-of-liberty",
+    "route": "landmarks/statue-of-liberty",
     "title": {
       "en": "Statue of Liberty",
       "ru": "Статуя Свободы"
@@ -2728,6 +2819,7 @@
   },
   {
     "id": "the-vessel",
+    "route": "landmarks/the-vessel",
     "title": {
       "en": "The Vessel",
       "ru": "Вессел"
@@ -2758,6 +2850,7 @@
   },
   {
     "id": "times-square",
+    "route": "landmarks/times-square",
     "title": {
       "en": "Times Square",
       "ru": "Таймс-сквер"
@@ -2788,6 +2881,7 @@
   },
   {
     "id": "trinity-church",
+    "route": "landmarks/trinity-church",
     "title": {
       "en": "Trinity Church",
       "ru": "Церковь Тринити"
@@ -2818,6 +2912,7 @@
   },
   {
     "id": "unisphere",
+    "route": "landmarks/unisphere",
     "title": {
       "en": "Unisphere",
       "ru": "Unisphere"
@@ -2848,6 +2943,7 @@
   },
   {
     "id": "united-nations",
+    "route": "landmarks/united-nations",
     "title": {
       "en": "United Nations Headquarters",
       "ru": "Штаб-квартира ООН"
@@ -2878,6 +2974,7 @@
   },
   {
     "id": "wall-street-bull",
+    "route": "landmarks/wall-street-bull",
     "title": {
       "en": "Wall Street Bull",
       "ru": "Бык на Уолл-стрит"
@@ -2908,6 +3005,7 @@
   },
   {
     "id": "american-museum-of-natural-history",
+    "route": "museums/american-museum-of-natural-history",
     "title": {
       "en": "American Museum of Natural History",
       "ru": "Американский музей естественной истории"
@@ -2938,6 +3036,7 @@
   },
   {
     "id": "bronx-museum-of-the-arts",
+    "route": "museums/bronx-museum-of-the-arts",
     "title": {
       "en": "The Bronx Museum of the Arts",
       "ru": "Музей искусств Бронкса"
@@ -2968,6 +3067,7 @@
   },
   {
     "id": "brooklyn-museum",
+    "route": "museums/brooklyn-museum",
     "title": {
       "en": "Brooklyn Museum",
       "ru": "Бруклинский музей"
@@ -2998,6 +3098,7 @@
   },
   {
     "id": "ellis-island",
+    "route": "museums/ellis-island",
     "title": {
       "en": "Ellis Island",
       "ru": "Эллис-Айленд"
@@ -3028,6 +3129,7 @@
   },
   {
     "id": "guggenheim-museum",
+    "route": "museums/guggenheim-museum",
     "title": {
       "en": "Guggenheim Museum",
       "ru": "Музей Гуггенхайма"
@@ -3058,6 +3160,7 @@
   },
   {
     "id": "intrepid-museum",
+    "route": "museums/intrepid-museum",
     "title": {
       "en": "Intrepid Museum",
       "ru": "Музей Intrepid"
@@ -3088,6 +3191,7 @@
   },
   {
     "id": "mercer-labs",
+    "route": "museums/mercer-labs",
     "title": {
       "en": "Mercer Labs",
       "ru": "Mercer Labs"
@@ -3118,6 +3222,7 @@
   },
   {
     "id": "met-museum",
+    "route": "museums/met-museum",
     "title": {
       "en": "MET Museum",
       "ru": "Метрополитен музей"
@@ -3148,6 +3253,7 @@
   },
   {
     "id": "moma",
+    "route": "museums/moma",
     "title": {
       "en": "MoMA",
       "ru": "Музей современного искусства MoMA"
@@ -3178,6 +3284,7 @@
   },
   {
     "id": "museum-of-the-city-of-new-york",
+    "route": "museums/museum-of-the-city-of-new-york",
     "title": {
       "en": "Museum of the City of New York",
       "ru": "Музей города Нью-Йорка"
@@ -3208,6 +3315,7 @@
   },
   {
     "id": "whitney-museum",
+    "route": "museums/whitney-museum",
     "title": {
       "en": "Whitney Museum",
       "ru": "Музей Whitney"
@@ -3238,6 +3346,7 @@
   },
   {
     "id": "birds-jazz",
+    "route": "other/birds-jazz",
     "title": {
       "en": "Birds",
       "ru": "Birds"
@@ -3268,6 +3377,7 @@
   },
   {
     "id": "brighton-beach",
+    "route": "other/brighton-beach",
     "title": {
       "en": "Brighton Beach",
       "ru": "Брайтон-Бич"
@@ -3298,6 +3408,7 @@
   },
   {
     "id": "champagne-problems",
+    "route": "other/champagne-problems",
     "title": {
       "en": "Champagne Problems",
       "ru": "Champagne Problems"
@@ -3328,6 +3439,7 @@
   },
   {
     "id": "harry-potter-store",
+    "route": "other/harry-potter-store",
     "title": {
       "en": "Harry Potter Store",
       "ru": "Магазин Гарри Поттера"
@@ -3358,6 +3470,7 @@
   },
   {
     "id": "janes-carousel",
+    "route": "other/janes-carousel",
     "title": {
       "en": "Jane's Carousel",
       "ru": "Карусель Jane’s"
@@ -3388,6 +3501,7 @@
   },
   {
     "id": "lego-store-5th-ave",
+    "route": "other/lego-store-5th-ave",
     "title": {
       "en": "LEGO Store (5th Ave)",
       "ru": "LEGO Store"
@@ -3418,6 +3532,7 @@
   },
   {
     "id": "louis-vuitton-5th-ave",
+    "route": "other/louis-vuitton-5th-ave",
     "title": {
       "en": "Louis Vuitton (5th Ave)",
       "ru": "Louis Vuitton на 5-й авеню"
@@ -3448,6 +3563,7 @@
   },
   {
     "id": "luna-park",
+    "route": "other/luna-park",
     "title": {
       "en": "Luna Park",
       "ru": "Луна-парк"
@@ -3478,6 +3594,7 @@
   },
   {
     "id": "mms-store",
+    "route": "other/mms-store",
     "title": {
       "en": "M&M's Store",
       "ru": "Магазин M&M's"
@@ -3508,6 +3625,7 @@
   },
   {
     "id": "nyu",
+    "route": "other/nyu",
     "title": {
       "en": "NYU Area",
       "ru": "Район NYU"
@@ -3538,6 +3656,7 @@
   },
   {
     "id": "penn-station",
+    "route": "other/penn-station",
     "title": {
       "en": "Penn Station",
       "ru": "Пенн-стейшн"
@@ -3568,6 +3687,7 @@
   },
   {
     "id": "saint-tuesday",
+    "route": "other/saint-tuesday",
     "title": {
       "en": "Saint Tuesday",
       "ru": "Saint Tuesday"
@@ -3598,6 +3718,7 @@
   },
   {
     "id": "seaglass-carousel",
+    "route": "other/seaglass-carousel",
     "title": {
       "en": "SeaGlass Carousel",
       "ru": "SeaGlass Carousel"
@@ -3628,6 +3749,7 @@
   },
   {
     "id": "bethesda-fountain",
+    "route": "parks/bethesda-fountain",
     "title": {
       "en": "Bethesda Fountain",
       "ru": "Фонтан Bethesda"
@@ -3658,6 +3780,7 @@
   },
   {
     "id": "bronx-zoo",
+    "route": "parks/bronx-zoo",
     "title": {
       "en": "Bronx Zoo",
       "ru": "Бронксский зоопарк"
@@ -3688,6 +3811,7 @@
   },
   {
     "id": "brooklyn-botanic-garden",
+    "route": "parks/brooklyn-botanic-garden",
     "title": {
       "en": "Brooklyn Botanic Garden",
       "ru": "Бруклинский ботанический сад"
@@ -3718,6 +3842,7 @@
   },
   {
     "id": "bryant-park",
+    "route": "parks/bryant-park",
     "title": {
       "en": "Bryant Park",
       "ru": "Брайант-парк"
@@ -3748,6 +3873,7 @@
   },
   {
     "id": "central-park-mall",
+    "route": "parks/central-park-mall",
     "title": {
       "en": "The Mall",
       "ru": "Аллея The Mall"
@@ -3778,6 +3904,7 @@
   },
   {
     "id": "central-park-zoo",
+    "route": "parks/central-park-zoo",
     "title": {
       "en": "Central Park Zoo",
       "ru": "Зоопарк Центрального парка"
@@ -3808,6 +3935,7 @@
   },
   {
     "id": "governors-island",
+    "route": "parks/governors-island",
     "title": {
       "en": "Governors Island",
       "ru": "Говернорс-Айленд"
@@ -3838,6 +3966,7 @@
   },
   {
     "id": "high-line",
+    "route": "parks/high-line",
     "title": {
       "en": "High Line",
       "ru": "Хай Лайн"
@@ -3868,6 +3997,7 @@
   },
   {
     "id": "little-island",
+    "route": "parks/little-island",
     "title": {
       "en": "Little Island",
       "ru": "Little Island"
@@ -3898,6 +4028,7 @@
   },
   {
     "id": "morningside-park",
+    "route": "parks/morningside-park",
     "title": {
       "en": "Morningside Park",
       "ru": "Морнингсайд-парк"
@@ -3928,6 +4059,7 @@
   },
   {
     "id": "ny-aquarium",
+    "route": "parks/ny-aquarium",
     "title": {
       "en": "New York Aquarium",
       "ru": "Нью-Йоркский аквариум"
@@ -3958,6 +4090,7 @@
   },
   {
     "id": "roosevelt-island",
+    "route": "parks/roosevelt-island",
     "title": {
       "en": "Roosevelt Island",
       "ru": "Рузвельт-Айленд"
@@ -3988,6 +4121,7 @@
   },
   {
     "id": "washington-square-park",
+    "route": "parks/washington-square-park",
     "title": {
       "en": "Washington Square Park",
       "ru": "Вашингтон-сквер-парк"
@@ -4018,6 +4152,7 @@
   },
   {
     "id": "manhattan-bridge-view",
+    "route": "viewpoints/manhattan-bridge-view",
     "title": {
       "en": "Manhattan Bridge View",
       "ru": "Вид на Манхэттенский мост"
@@ -4048,6 +4183,7 @@
   },
   {
     "id": "the-edge",
+    "route": "viewpoints/the-edge",
     "title": {
       "en": "The Edge",
       "ru": "Edge смотровая"

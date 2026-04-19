@@ -93,6 +93,32 @@
     return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
   }
 
+  function getPrimaryCategory(place) {
+    if (!place || !Array.isArray(place.category) || !place.category.length) return "";
+    return String(place.category[0] || "").trim();
+  }
+
+  function getPlaceRoute(place) {
+    if (!place) return "";
+    if (place.route) return String(place.route);
+    const category = getPrimaryCategory(place);
+    const id = place.id ? String(place.id) : "";
+    return category && id ? `${category}/${id}` : id;
+  }
+
+  function getPlaceDetailsUrl(place) {
+    const route = getPlaceRoute(place);
+    if (!route) return "place.html";
+    return `place.html?place=${encodeURIComponent(route)}`;
+  }
+
+  function getPlaceQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    const route = params.get("place") || "";
+    const id = params.get("id") || "";
+    return { route, id };
+  }
+
   async function copyText(text) {
     if (!navigator.clipboard?.writeText) return false;
     try {
@@ -114,6 +140,9 @@
     getLocalizedText,
     getPlaceAddress,
     getMapsUrl,
+    getPlaceRoute,
+    getPlaceDetailsUrl,
+    getPlaceQueryParams,
     copyText
   };
 })();

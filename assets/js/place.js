@@ -41,10 +41,6 @@ function getText() {
   };
 }
 
-function q(name) {
-  return new URLSearchParams(window.location.search).get(name);
-}
-
 function saveChecklist() {
   localStorage.setItem("checklist", JSON.stringify(checklist));
 }
@@ -134,8 +130,16 @@ function renderNotFound() {
 
 function render() {
   const t = getText()[lang];
-  const id = q("id");
-  currentPlace = places.find(p => p.id === id);
+  const { route, id } = NYCMapCommon.getPlaceQueryParams();
+  const normalizedRoute = (route || "").replace(/^\/+|\/+$/g, "").toLowerCase();
+  const normalizedId = (id || "").trim().toLowerCase();
+  currentPlace = places.find((p) => {
+    const placeRoute = NYCMapCommon.getPlaceRoute(p).toLowerCase();
+    const placeId = String(p.id || "").toLowerCase();
+    if (normalizedRoute && placeRoute === normalizedRoute) return true;
+    if (normalizedId && placeId === normalizedId) return true;
+    return false;
+  });
 
   if (!currentPlace) {
     renderNotFound();
