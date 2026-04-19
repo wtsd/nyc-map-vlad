@@ -32,6 +32,13 @@
 
   <main class="layout place-layout">
     <section class="place-main">
+      <div class="place-nav-row">
+        <a class="secondary-btn icon-btn" id="backToListTopLink" href="index.html" aria-label="Back to list">
+          <span class="btn-icon" aria-hidden="true">←</span>
+          <span class="btn-label">Back to list</span>
+        </a>
+      </div>
+      <nav id="placeBreadcrumbs" class="place-breadcrumbs" aria-label="Breadcrumb"></nav>
       <article class="place-card card">
         <div class="place-image-wrap">
           <img id="placeImage" src="" alt="" loading="lazy"
@@ -42,34 +49,19 @@
         <div class="place-body card-body">
           <div class="card-topline">
             <h2 id="placeName" class="card-title">Loading...</h2>
-            <div id="placeCategory" class="card-category"></div>
+            <div class="card-topline-meta">
+              <span id="placePersonal" class="chip personal-rating-chip hidden"></span>
+              <div id="placeCategory" class="card-category"></div>
+            </div>
           </div>
 
-          <div class="meta-details" aria-label="Place metadata">
-            <div class="meta-item">
-              <span class="meta-item-label" id="metaAddressLabel">Address</span>
-              <a id="placeAddressLink" class="meta-item-value address-btn" href="#" target="_blank" rel="noopener noreferrer">
-                <span aria-hidden="true">📍</span>
-                <span id="placeAddress"></span>
-              </a>
-            </div>
-            <div id="placeTransitRow" class="meta-item">
-              <span class="meta-item-label" id="metaTransitLabel">Transit</span>
-              <span id="placeTransit" class="meta-item-value meta-text"></span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-item-label" id="metaCostLabel">Cost</span>
-              <span id="placeCost" class="chip"></span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-item-label" id="metaTimeLabel">Time</span>
-              <span id="placeTime" class="chip"></span>
-            </div>
-            <div id="placePersonalRow" class="meta-item hidden">
-              <span class="meta-item-label" id="metaPersonalLabel">Personal rating</span>
-              <span id="placePersonal" class="chip personal-rating-chip"></span>
-            </div>
+          <div class="transit-row">
+            <a id="placeAddressLink" class="address-btn" href="#" target="_blank" rel="noopener noreferrer">
+              <span aria-hidden="true">📍</span>
+              <span id="placeAddress"></span>
+            </a>
           </div>
+          <p id="placeTransitRow" class="meta-text"><span id="metaTransitLabel">Transit</span>: <span id="placeTransit"></span></p>
 
           <p id="placeSummary" class="summary"></p>
           <div id="placeExternalRow" class="external-row hidden">
@@ -104,10 +96,6 @@
                   <path d="M4 7.5v11.75l6-2.25 8 2.25 2-11.75-8-2.25z"></path>
                 </svg>
                 <span class="btn-label">Open in Maps</span>
-              </a>
-              <a class="secondary-btn icon-btn" id="backToListLink" href="index.html" aria-label="Back to list">
-                <span class="btn-icon" aria-hidden="true">←</span>
-                <span class="btn-label">Back to list</span>
               </a>
             </div>
           </div>
