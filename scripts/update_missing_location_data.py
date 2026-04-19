@@ -18,7 +18,7 @@ USER_AGENT = "nyc-map-vlad-maintenance/1.0"
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Fill missing address and coords in places/*/meta.yml using Nominatim."
+        description="Fill missing address and coords in places/<category>/<place-id>/meta.yml using Nominatim."
     )
     parser.add_argument("repo_root", type=Path, help="Path to repository root")
     parser.add_argument("--write", action="store_true", help="Persist changes")

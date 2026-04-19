@@ -59,12 +59,23 @@
     if (!controls || !toggle) return;
     controls.classList.toggle("is-collapsed", !expanded);
     toggle.setAttribute("aria-expanded", String(expanded));
+    const isMobile = window.matchMedia("(max-width: 760px)").matches;
+    document.body.classList.toggle("mobile-search-open", isMobile && expanded);
   }
 
   function toggleFiltersPanel() {
     const controls = document.getElementById("secondaryControls");
     if (!controls) return;
     setSecondaryControlsExpanded(controls.classList.contains("is-collapsed"));
+  }
+
+  function syncViewportOffsets() {
+    const topbar = document.querySelector(".topbar");
+    const footer = document.querySelector(".site-footer");
+    const topbarHeight = topbar ? Math.ceil(topbar.getBoundingClientRect().height) : 0;
+    const footerHeight = footer ? Math.ceil(footer.getBoundingClientRect().height) : 0;
+    document.documentElement.style.setProperty("--topbar-height", `${topbarHeight}px`);
+    document.documentElement.style.setProperty("--footer-height", `${footerHeight}px`);
   }
 
   async function loadData() {
@@ -138,6 +149,7 @@
   urlState.applyFiltersFromUrl(state, filters);
   listView.applyMobileTabState(state);
   setSecondaryControlsExpanded(!window.matchMedia("(max-width: 760px)").matches);
+  syncViewportOffsets();
 
   window.addEventListener("popstate", () => {
     urlState.applyFiltersFromUrl(state, filters);
@@ -148,7 +160,16 @@
   window.addEventListener("resize", () => {
     listView.applyMobileTabState(state);
     setSecondaryControlsExpanded(!window.matchMedia("(max-width: 760px)").matches);
+    syncViewportOffsets();
   });
+
+  const topbar = document.querySelector(".topbar");
+  const footer = document.querySelector(".site-footer");
+  if (typeof ResizeObserver !== "undefined") {
+    const resizeObserver = new ResizeObserver(() => syncViewportOffsets());
+    if (topbar) resizeObserver.observe(topbar);
+    if (footer) resizeObserver.observe(footer);
+  }
 
   const yearEl = document.getElementById("footerYear");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

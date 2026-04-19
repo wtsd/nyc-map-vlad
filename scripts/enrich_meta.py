@@ -196,6 +196,9 @@ def load_yaml(path: Path) -> dict[str, Any]:
 def iter_place_dirs(places_dir: Path) -> list[Path]:
     return sorted(meta_path.parent for meta_path in places_dir.rglob("meta.yml"))
 
+def place_key(places_dir: Path, place_dir: Path) -> str:
+    return place_dir.relative_to(places_dir).as_posix()
+
 
 def dump_yaml(data: dict[str, Any]) -> str:
     return yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=100)
@@ -349,19 +352,20 @@ def process_repo(repo_root: Path, write: bool, backup: bool) -> dict[str, Any]:
     report: dict[str, Any] = {"changed": [], "unchanged": [], "errors": []}
     for place_dir in iter_place_dirs(places_dir):
         meta_path = place_dir / "meta.yml"
+        place_id = place_key(places_dir, place_dir)
         try:
             original = load_yaml(meta_path)
             enriched = enrich_meta(original, place_dir)
             if enriched != original:
-                report["changed"].append(place_dir.name)
+                report["changed"].append(place_id)
                 if write:
                     if backup:
                         meta_path.with_suffix(".yml.bak").write_text(meta_path.read_text(encoding="utf-8"), encoding="utf-8")
                     meta_path.write_text(dump_yaml(enriched), encoding="utf-8")
             else:
-                report["unchanged"].append(place_dir.name)
+                report["unchanged"].append(place_id)
         except Exception as exc:
-            report["errors"].append({"place": place_dir.name, "error": str(exc)})
+            report["errors"].append({"place": place_id, "error": str(exc)})
     return report
 
 

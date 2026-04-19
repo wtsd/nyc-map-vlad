@@ -28,6 +28,10 @@ def iter_place_dirs(places_dir: Path) -> list[Path]:
     return sorted(meta_path.parent for meta_path in places_dir.rglob("meta.yml"))
 
 
+def place_key(places_dir: Path, place_dir: Path) -> str:
+    return place_dir.relative_to(places_dir).as_posix()
+
+
 def title_en(meta: dict[str, Any]) -> str:
     title = meta.get("title", "")
     if isinstance(title, dict):
@@ -64,7 +68,7 @@ def main() -> int:
     for place_dir in iter_place_dirs(places_dir):
         meta_path = place_dir / "meta.yml"
         meta = load_yaml(meta_path)
-        record = route_record(place_dir.name, meta)
+        record = route_record(place_key(places_dir, place_dir), meta)
         records.append(record)
 
         neighborhood = record.get("neighborhood")
