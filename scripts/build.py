@@ -9,9 +9,10 @@ from pathlib import Path
 import yaml
 
 try:
-    from PIL import Image
+    from PIL import Image, UnidentifiedImageError
 except Exception:
     Image = None
+    UnidentifiedImageError = OSError
 
 PLACES_DIR = "places"
 BUILD_DIR = Path("build")
@@ -130,12 +131,44 @@ def generate_thumbnail(image_file: Path, place_id: str):
     output_rel = f"build/thumbs/{place_id}.webp"
     output_path = Path(output_rel)
 
-    with Image.open(image_file) as im:
-        rgb = im.convert("RGB")
-        rgb.thumbnail((640, 360))
-        rgb.save(output_path, format="WEBP", quality=72, method=6)
+    try:
+        with Image.open(image_file) as im:
+            rgb = im.convert("RGB")
+            rgb.thumbnail((640, 360))
+            rgb.save(output_path, format="WEBP", quality=72, method=6)
+    except (UnidentifiedImageError, OSError) as exc:
+        print(
+            f"Warning: failed to generate thumbnail for {image_file} ({exc}); skipping.",
+            file=sys.stderr,
+        )
+        return None
 
     return output_rel.replace("\\", "/")
+
+
+def resolve_image_path(image_file: Path):
+    if not image_file.exists():
+        return ""
+
+    if image_file.stat().st_size == 0:
+        print(
+            f"Warning: {image_file} is empty; omitting image.",
+            file=sys.stderr,
+        )
+        return ""
+
+    if Image is not None:
+        try:
+            with Image.open(image_file) as im:
+                im.verify()
+        except (UnidentifiedImageError, OSError) as exc:
+            print(
+                f"Warning: {image_file} is not a valid image ({exc}); omitting image.",
+                file=sys.stderr,
+            )
+            return ""
+
+    return str(image_file).replace("\\", "/")
 
 
 def build_place(meta, place_path):
@@ -143,8 +176,8 @@ def build_place(meta, place_path):
     ru_text = read_file(str(place_path / "ru.md"))
 
     image_file = place_path / "cover.jpg"
-    image_path = str(image_file).replace("\\", "/") if image_file.exists() else "assets/images/placeholders/cover.jpg"
-    thumb_path = generate_thumbnail(image_file, meta["id"])
+    image_path = resolve_image_path(image_file)
+    thumb_path = generate_thumbnail(image_file, meta["id"]) if image_path else None
 
     categories = meta.get("category", [])
     if isinstance(categories, str):

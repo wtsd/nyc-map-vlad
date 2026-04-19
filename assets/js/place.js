@@ -206,9 +206,15 @@ function render() {
   document.getElementById("placeTransit").textContent = transit;
   const placeImage = document.getElementById("placeImage");
   const placeImageFallback = document.getElementById("placeImageFallback");
-  placeImage.style.display = "block";
-  placeImageFallback.classList.add("hidden");
-  placeImage.src = currentPlace.image || "assets/images/placeholders/cover.jpg";
+  if (currentPlace.image) {
+    placeImage.style.display = "block";
+    placeImageFallback.classList.add("hidden");
+    placeImage.src = currentPlace.image;
+  } else {
+    placeImage.removeAttribute("src");
+    placeImage.style.display = "none";
+    placeImageFallback.classList.remove("hidden");
+  }
   placeImage.alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
   document.getElementById("placeAddressLink").href = mapsUrl;
