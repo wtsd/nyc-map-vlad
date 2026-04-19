@@ -8,7 +8,8 @@
     mobileView: "list",
     currentPage: 1,
     currentStatusFilter: "",
-    currentPersonalFilter: ""
+    currentPersonalFilter: "",
+    searchIndexById: {}
   };
 
   Object.keys(state.checklist).forEach((id) => {
@@ -37,25 +38,24 @@
   }
 
   function setPlaces(places) {
-    if (!Array.isArray(places)) {
-      state.places = [];
+    state.places = Array.isArray(places) ? places : [];
+  }
+
+  function setSearchIndex(indexRows) {
+    if (!Array.isArray(indexRows)) {
+      state.searchIndexById = {};
       return;
     }
-    state.places = places.map((place) => {
-      const title = [place?.title?.en, place?.title?.ru].filter(Boolean).join(" ").toLowerCase();
-      const summary = [place?.summary?.en, place?.summary?.ru].filter(Boolean).join(" ").toLowerCase();
-      const categories = (place?.category || []).join(" ").toLowerCase();
-      const address = typeof place?.address === "string"
-        ? place.address.toLowerCase()
-        : Object.values(place?.address || {})
-          .filter((v) => typeof v === "string" && v)
-          .join(" ")
-          .toLowerCase();
-      return {
-        ...place,
-        _searchText: `${title}\n${summary}\n${categories}\n${address}`
-      };
-    });
+
+    state.searchIndexById = indexRows.reduce((acc, row) => {
+      if (!row || typeof row.id !== "string") return acc;
+      acc[row.id] = typeof row.text === "string" ? row.text : "";
+      return acc;
+    }, {});
+  }
+
+  function getSearchText(placeId) {
+    return state.searchIndexById[placeId] || "";
   }
 
   function getChecklist() {
@@ -106,6 +106,8 @@
     toggleLang,
     getPlaces,
     setPlaces,
+    setSearchIndex,
+    getSearchText,
     getChecklist,
     setChecklistStatus,
     setCurrentPage,

@@ -283,7 +283,9 @@ function render() {
 
 async function loadData() {
   try {
-    const res = await fetch("build/places.json");
+    const manifest = await NYCMapDataLoader.loadManifest();
+    const placesPath = NYCMapDataLoader.resolveAssetPath(manifest, "places", "build/places.json");
+    const res = await fetch(placesPath);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
     places = await res.json();
@@ -294,4 +296,14 @@ async function loadData() {
   }
 }
 
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) return;
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch((error) => {
+      console.warn("Service worker registration failed", error);
+    });
+  });
+}
+
+registerServiceWorker();
 loadData();

@@ -8,20 +8,20 @@
     return { category, search };
   }
 
-  function filterPlaces(places, checklist, { category, search, status, personal }) {
+  function filterPlaces(places, checklist, getSearchText, { category, search, status, personal }) {
     return places.filter((p) => {
       const categoryOk = !category || (Array.isArray(p.category) && p.category.includes(category));
       const statusOk = !status || checklist[p.id] === status;
       const personalOk = !personal || p.personal === personal;
       if (!categoryOk || !statusOk || !personalOk) return false;
       if (!search) return true;
-      return String(p._searchText || "").includes(search);
+      return String(getSearchText(p.id)).includes(search);
     });
   }
 
   function getFilteredPlaces(state) {
     const { category, search } = readFilterInputs();
-    return filterPlaces(state.getPlaces(), state.getChecklist(), {
+    return filterPlaces(state.getPlaces(), state.getChecklist(), state.getSearchText, {
       category,
       search,
       status: state.getCurrentStatusFilter(),
@@ -31,7 +31,7 @@
 
   function getPlacesForStats(state) {
     const { category, search } = readFilterInputs();
-    return filterPlaces(state.getPlaces(), state.getChecklist(), {
+    return filterPlaces(state.getPlaces(), state.getChecklist(), state.getSearchText, {
       category,
       search,
       status: "",

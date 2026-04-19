@@ -1,0 +1,52 @@
+{
+  "version": "9be4180e59",
+  "places": "build/places.fa151a33fa.json",
+  "searchIndex": "build/search-index.e514db7ca8.json",
+  "offline": {
+    "core": [
+      "index.html",
+      "place.html",
+      "assets/css/styles.css",
+      "assets/js/common.js",
+      "assets/js/state.js",
+      "assets/js/ui-text.js",
+      "assets/js/filters.js",
+      "assets/js/url-state.js",
+      "assets/js/list-view.js",
+      "assets/js/data-loader.js",
+      "assets/js/app.js",
+      "assets/js/map.js",
+      "assets/js/place.js",
+      "build/places.json",
+      "build/search-index.json",
+      "build/places.fa151a33fa.json",
+      "build/search-index.e514db7ca8.json"
+    ],
+    "images": [
+      "places/food/alimama-tea/cover.jpg",
+      "places/food/annapurna-thakali-kitchen/cover.jpg",
+      "places/food/aragvi/cover.jpg",
+      "places/food/baires-grill/cover.jpg",
+      "places/food/bakery-je-taime/cover.jpg",
+      "places/food/cafe-2by2/cover.jpg",
+      "places/food/casa-adela/cover.jpg",
+      "places/food/chelsea-market/cover.jpg",
+      "places/food/chirokuro/cover.jpg",
+      "places/food/conwell-coffee-hall/cover.jpg",
+      "places/food/davelle/cover.jpg",
+      "places/food/din-soup-dumplings/cover.jpg",
+      "places/food/don-udon/cover.jpg",
+      "places/food/ferrane/cover.jpg",
+      "places/food/fu-zhou-wei-zhong-wei-jia-xiang-feng-wei/cover.jpg",
+      "places/food/gan-hoo-bbq/cover.jpg",
+      "places/food/giant-scallion-pancakes-flushing/cover.jpg",
+      "places/food/golden-manna-bakery/cover.jpg",
+      "places/food/gyu-ichiro/cover.jpg",
+      "places/food/hamido-seafood/cover.jpg",
+      "places/food/hanamizuki-cafe/cover.jpg",
+      "places/food/hay-hay-roasted/cover.jpg",
+      "places/food/ichiran-ramen-midtown/cover.jpg",
+      "places/food/jiang-nan-flushing/cover.jpg"
+    ]
+  }
+}

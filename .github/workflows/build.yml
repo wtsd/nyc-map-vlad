@@ -28,7 +28,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install pyyaml
+        run: pip install pyyaml pillow
 
       - name: Build
         run: python scripts/build.py
