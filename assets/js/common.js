@@ -18,26 +18,8 @@
     other: { en: "Other", ru: "Другое" }
   };
 
-  const PERSONAL_LABELS = {
-    "want-to-go": { en: "Want to go", ru: "Хочу сходить" },
-    "highly-recommend": { en: "Highly recommend", ru: "Советую" }
-  };
-
-  const PERSONAL_EMOJIS = {
-    "want-to-go": "🟦",
-    "highly-recommend": "🟩"
-  };
-
-  const TIME_LABELS = {
-    short: { en: "Under 30 min", ru: "До 30 минут" },
-    medium: { en: "Couple of hours", ru: "Пара часов" },
-    full: { en: "Whole day", ru: "Весь день" }
-  };
-
-  const COST_LABELS = {
-    free: { en: "Free", ru: "Бесплатно" },
-    paid: { en: "Paid", ru: "Платно" }
-  };
+  const PERSONAL_LABELS = {};
+  const PERSONAL_EMOJIS = {};
 
   function normalizeLang(lang) {
     return lang === "ru" ? "ru" : DEFAULT_LANG;
@@ -52,9 +34,7 @@
     return CATEGORY_LABELS[category]?.[normalizeLang(lang)] || category || "";
   }
 
-  function getTimeLabel(lang, time) {
-    return TIME_LABELS[time]?.[normalizeLang(lang)] || time || "";
-  }
+  function getTimeLabel(_lang, _time) { return ""; }
 
   function getPersonalLabel(lang, personal) {
     return PERSONAL_LABELS[personal]?.[normalizeLang(lang)] || personal || "";
@@ -64,13 +44,22 @@
     return PERSONAL_EMOJIS[personal] || "";
   }
 
-  function getCostLabel(lang, cost, price) {
-    if (cost === "free") return COST_LABELS.free[normalizeLang(lang)];
-    if (cost === "paid") {
-      const base = COST_LABELS.paid[normalizeLang(lang)];
-      return price ? `${base} ${price}` : base;
+  function getPriceTier(place) {
+    if (!place) return "";
+    if (place.cost === "free") return "$";
+    const raw = String(place.price || "").toLowerCase().trim();
+    if (!raw) return place.cost === "paid" ? "$$" : "";
+    if (raw.includes("pricey") || raw.includes("expensive") || raw.includes("100")) return "$$$";
+    const match = raw.match(/\d+/);
+    if (match) {
+      const value = Number(match[0]);
+      if (value <= 15) return "$";
+      if (value <= 45) return "$$";
+      return "$$$";
     }
-    return cost || "";
+    if ((raw.match(/\$/g) || []).length >= 3) return "$$$";
+    if ((raw.match(/\$/g) || []).length === 2) return "$$";
+    return "$";
   }
 
   function getLocalizedText(lang, value, fallback = "") {
@@ -134,7 +123,7 @@
     getPersonalLabel,
     getPersonalEmoji,
     getTimeLabel,
-    getCostLabel,
+    getPriceTier,
     getLocalizedText,
     getPlaceAddress,
     getMapsUrl,
