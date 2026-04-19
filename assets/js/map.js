@@ -16,7 +16,6 @@ const CATEGORY_COLORS = {
 };
 const PERSONAL_COLORS = {
   "want-to-go": "#3b82f6",
-  "been-not-impressed": "#94a3b8",
   "highly-recommend": "#22c55e"
 };
 
@@ -46,7 +45,7 @@ function renderLegend(mode) {
   }).join("");
 
   const title = mode === "personal"
-    ? (NYCMapState.getLang() === "ru" ? "Легенда: личная оценка" : "Legend: personal")
+    ? (NYCMapState.getLang() === "ru" ? "Легенда: оценка" : "Legend: ratings")
     : (NYCMapState.getLang() === "ru" ? "Легенда: категории" : "Legend: categories");
 
   legendEl.innerHTML = `

@@ -1,5 +1,5 @@
 (() => {
-  const VALID_PERSONAL = ["", "want-to-go", "been-not-impressed", "highly-recommend"];
+  const VALID_PERSONAL = ["", "want-to-go", "highly-recommend"];
   const VALID_STATUS = ["", "want", "skip", "visited"];
 
   function readFilterInputs() {

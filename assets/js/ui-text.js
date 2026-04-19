@@ -12,9 +12,8 @@
       statusTabs: { "": "All", want: "Want", skip: "Skip", visited: "Visited" },
       statLabels: { want: "Want", skip: "Skip", visited: "Visited" },
       personalTabs: {
-        all: "Personal: all",
+        all: "All",
         wantToGo: "Want",
-        notImpressed: "Meh",
         recommend: "Top"
       },
       card: {
@@ -59,9 +58,8 @@
       statusTabs: { "": "Все", want: "Хочу", skip: "Пропустить", visited: "Был" },
       statLabels: { want: "Хочу", skip: "Пропустить", visited: "Был" },
       personalTabs: {
-        all: "Личное: все",
+        all: "Все",
         wantToGo: "Хочу сходить",
-        notImpressed: "Не впечатлило",
         recommend: "Советую"
       },
       card: {

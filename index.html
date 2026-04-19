@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NYC Map</title>
-  <link rel="stylesheet" href="assets/css/styles.css?v=8371e97ec3" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=2cc8da0282" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
@@ -71,17 +71,13 @@
           <span class="stat-filter-label" id="statVisitedLabel">Visited</span>
         </button>
       </div>
-      <div class="personal-filter-tabs" role="tablist" aria-label="Personal filters">
+      <div class="personal-filter-tabs" role="tablist" aria-label="Rating filters">
         <button class="personal-filter-tab active" type="button" data-personal="" onclick="setPersonalFilter('')">
-          <span id="personalAllLabel">Personal: all</span>
+          <span id="personalAllLabel">All</span>
         </button>
         <button class="personal-filter-tab" type="button" data-personal="want-to-go" onclick="setPersonalFilter('want-to-go')">
           <span aria-hidden="true">🟦</span>
           <span id="personalWantLabel">Want</span>
-        </button>
-        <button class="personal-filter-tab" type="button" data-personal="been-not-impressed" onclick="setPersonalFilter('been-not-impressed')">
-          <span aria-hidden="true">⬜</span>
-          <span id="personalNotImpressedLabel">Meh</span>
         </button>
         <button class="personal-filter-tab" type="button" data-personal="highly-recommend" onclick="setPersonalFilter('highly-recommend')">
           <span aria-hidden="true">🟩</span>
@@ -132,14 +128,14 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-  <script src="assets/js/common.js?v=8371e97ec3"></script>
-  <script src="assets/js/state.js?v=8371e97ec3"></script>
-  <script src="assets/js/ui-text.js?v=8371e97ec3"></script>
-  <script src="assets/js/filters.js?v=8371e97ec3"></script>
-  <script src="assets/js/url-state.js?v=8371e97ec3"></script>
-  <script src="assets/js/data-loader.js?v=8371e97ec3"></script>
-  <script src="assets/js/list-view.js?v=8371e97ec3"></script>
-  <script src="assets/js/app.js?v=8371e97ec3"></script>
-  <script src="assets/js/map.js?v=8371e97ec3"></script>
+  <script src="assets/js/common.js?v=2cc8da0282"></script>
+  <script src="assets/js/state.js?v=2cc8da0282"></script>
+  <script src="assets/js/ui-text.js?v=2cc8da0282"></script>
+  <script src="assets/js/filters.js?v=2cc8da0282"></script>
+  <script src="assets/js/url-state.js?v=2cc8da0282"></script>
+  <script src="assets/js/data-loader.js?v=2cc8da0282"></script>
+  <script src="assets/js/list-view.js?v=2cc8da0282"></script>
+  <script src="assets/js/app.js?v=2cc8da0282"></script>
+  <script src="assets/js/map.js?v=2cc8da0282"></script>
 </body>
 </html>
