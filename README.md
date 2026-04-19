@@ -37,3 +37,19 @@ https://wtsd.github.io/nyc-map-vlad/
 - `scripts/build.py` → build script
 - `build/places.json` → generated data
 - `assets/` → frontend
+
+
+## Maintenance scripts
+
+Run from repository root.
+
+- Fill missing `coords` and `address` (Nominatim, dry-run by default):
+  - `python scripts/update_missing_location_data.py .`
+  - `python scripts/update_missing_location_data.py . --write`
+- Detect potentially closed places and move them to `archive` category (OpenStreetMap tags, dry-run by default):
+  - `python scripts/archive_closed_places.py .`
+  - `python scripts/archive_closed_places.py . --write`
+- Generate category + personal statistics:
+  - `python scripts/generate_statistics.py .`
+
+A scheduled GitHub Actions workflow is available at `.github/workflows/maintenance.yml`.
