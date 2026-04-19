@@ -15,14 +15,21 @@ function getText() {
       copy: "Copy summary",
       copied: "Summary copied",
       address: "Address:",
-      price: "Price:",
+      transit: "Transit:",
+      cost: "Cost:",
+      time: "Time:",
+      personal: "Personal rating:",
       external: "Open source link",
       openInMaps: "Open in maps",
       backToList: "Back to list",
+      noTransit: "Not specified",
       notFound: "Place not found",
       notFoundText: "The requested place does not exist.",
       photoFallback: "Photo coming later",
+      wantBtn: "Want",
       visitedBtn: "Visited",
+      skipBtn: "Skip",
+      statusHint: "Choose one status",
       copyError: "Could not copy to clipboard"
     },
     ru: {
@@ -32,14 +39,21 @@ function getText() {
       copy: "Копировать описание",
       copied: "Описание скопировано",
       address: "Адрес:",
-      price: "Цена:",
+      transit: "Транспорт:",
+      cost: "Цена:",
+      time: "Время:",
+      personal: "Личная оценка:",
       external: "Открыть источник",
       openInMaps: "Открыть в картах",
       backToList: "Назад к списку",
+      noTransit: "Не указано",
       notFound: "Место не найдено",
       notFoundText: "Запрошенное место не существует.",
       photoFallback: "Фото будет позже",
+      wantBtn: "Хочу",
       visitedBtn: "Был",
+      skipBtn: "Пропустить",
+      statusHint: "Выберите один статус",
       copyError: "Не удалось скопировать"
     }
   };
@@ -53,8 +67,20 @@ function getStatusLabel(status) {
   return NYCMapCommon.getStatusLabel(lang, status);
 }
 
+function getTimeLabel(time) {
+  return NYCMapCommon.getTimeLabel(lang, time);
+}
+
+function getCostLabel(cost, price) {
+  return NYCMapCommon.getCostLabel(lang, cost, price);
+}
+
 function getCategoryLabel(category) {
   return NYCMapCommon.getCategoryLabel(lang, category);
+}
+
+function getPersonalEmoji(personal) {
+  return NYCMapCommon.getPersonalEmoji(personal);
 }
 
 function toggleLang() {
@@ -68,13 +94,6 @@ function setStatus(id, status) {
   saveChecklist();
   renderStatus();
 }
-function setVisited(id, checked) {
-  const current = checklist[id] || null;
-  if (checked && current !== "visited") checklist[id] = "visited";
-  if (!checked && current === "visited") checklist[id] = null;
-  saveChecklist();
-  renderStatus();
-}
 
 function renderStatus() {
   if (!currentPlace) return;
@@ -82,8 +101,12 @@ function renderStatus() {
   const t = getText()[lang];
   const status = checklist[currentPlace.id] || "none";
 
-  const visited = document.getElementById("btnVisited");
-  if (visited) visited.checked = status === "visited";
+  document.getElementById("btnWant").classList.toggle("active", status === "want");
+  document.getElementById("btnVisited").classList.toggle("active", status === "visited");
+  document.getElementById("btnSkip").classList.toggle("active", status === "skip");
+  document.getElementById("btnWant").setAttribute("aria-checked", String(status === "want"));
+  document.getElementById("btnVisited").setAttribute("aria-checked", String(status === "visited"));
+  document.getElementById("btnSkip").setAttribute("aria-checked", String(status === "skip"));
 }
 
 async function copyCurrentPlace() {
@@ -98,7 +121,9 @@ async function copyCurrentPlace() {
     `${lang === "ru" ? "Статус" : "Status"}: ${getStatusLabel(status)}`,
     "",
     `${t.address} ${NYCMapCommon.getPlaceAddress(currentPlace, lang)}`,
-    `${t.price} ${NYCMapCommon.getPriceTier(currentPlace) || "-"}`,
+    `${t.transit} ${NYCMapCommon.getLocalizedText(lang, currentPlace.transit, t.noTransit)}`,
+    `${lang === "ru" ? "Время" : "Time"}: ${getTimeLabel(currentPlace.time)}`,
+    `${lang === "ru" ? "Цена" : "Cost"}: ${getCostLabel(currentPlace.cost, currentPlace.price)}`,
     "",
     currentPlace.summary[lang] || currentPlace.summary.en || ""
   ];
@@ -157,9 +182,12 @@ function render() {
   }
 
   const title = NYCMapCommon.getLocalizedText(lang, currentPlace.title, "");
-  const fullTitle = title;
+  const personalEmoji = getPersonalEmoji(currentPlace.personal);
+  const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
   const summary = NYCMapCommon.getLocalizedText(lang, currentPlace.summary, "");
   const address = NYCMapCommon.getPlaceAddress(currentPlace, lang);
+  const transit = NYCMapCommon.getLocalizedText(lang, currentPlace.transit, t.noTransit);
+  const personal = NYCMapCommon.getPersonalLabel(lang, currentPlace.personal);
   const mapsUrl = NYCMapCommon.getMapsUrl(currentPlace, lang);
   const externalUrl = currentPlace.external_link || currentPlace.external_url || "";
   const category = Array.isArray(currentPlace.category) && currentPlace.category.length
@@ -171,9 +199,11 @@ function render() {
   document.getElementById("pageSubtitle").textContent = t.subtitle;
   document.getElementById("placeName").textContent = fullTitle;
   document.getElementById("placeCategory").textContent = category;
-  document.getElementById("placePrice").textContent = NYCMapCommon.getPriceTier(currentPlace) || "-";
+  document.getElementById("placeTime").textContent = getTimeLabel(currentPlace.time);
+  document.getElementById("placeCost").textContent = getCostLabel(currentPlace.cost, currentPlace.price);
   document.getElementById("placeSummary").textContent = summary;
   document.getElementById("placeAddress").textContent = address;
+  document.getElementById("placeTransit").textContent = transit;
   const placeImage = document.getElementById("placeImage");
   const placeImageFallback = document.getElementById("placeImageFallback");
   if (currentPlace.image) {
@@ -188,6 +218,15 @@ function render() {
   placeImage.alt = title;
   document.getElementById("placeImageFallback").textContent = t.photoFallback;
   document.getElementById("placeAddressLink").href = mapsUrl;
+  const personalRow = document.getElementById("placePersonalRow");
+  const personalEl = document.getElementById("placePersonal");
+  if (personal) {
+    personalRow.classList.remove("hidden");
+    personalEl.textContent = personal;
+  } else {
+    personalRow.classList.add("hidden");
+    personalEl.textContent = "";
+  }
   const externalRow = document.getElementById("placeExternalRow");
   const externalLink = document.getElementById("placeExternalLink");
   const externalLabel = document.getElementById("placeExternalLabel");
@@ -206,8 +245,21 @@ function render() {
     metaDescription.setAttribute("content", summary || title);
   }
 
-  const visitedToggle = document.getElementById("btnVisited");
-  if (visitedToggle) visitedToggle.setAttribute("aria-label", t.visitedBtn);
+  const statusButtons = [
+    { id: "btnWant", label: t.wantBtn },
+    { id: "btnVisited", label: t.visitedBtn },
+    { id: "btnSkip", label: t.skipBtn }
+  ];
+  statusButtons.forEach(({ id, label }) => {
+    const btn = document.getElementById(id);
+    if (!btn) return;
+    btn.setAttribute("aria-label", label);
+    btn.textContent = label;
+  });
+  const statusHint = document.querySelector(".status-row-title");
+  if (statusHint) statusHint.textContent = t.statusHint;
+  const statusGroup = document.querySelector(".status-toggle-wrap");
+  if (statusGroup) statusGroup.setAttribute("aria-label", t.statusHint);
 
   const backBtn = document.querySelector(".header-buttons a");
   const backBtnLabel = backBtn?.querySelector(".btn-label");
@@ -223,8 +275,14 @@ function render() {
   if (backToListLabel) backToListLabel.textContent = t.backToList;
   const metaAddressLabel = document.getElementById("metaAddressLabel");
   if (metaAddressLabel) metaAddressLabel.textContent = t.address;
-  const metaPriceLabel = document.getElementById("metaPriceLabel");
-  if (metaPriceLabel) metaPriceLabel.textContent = t.price;
+  const metaTransitLabel = document.getElementById("metaTransitLabel");
+  if (metaTransitLabel) metaTransitLabel.textContent = t.transit;
+  const metaCostLabel = document.getElementById("metaCostLabel");
+  if (metaCostLabel) metaCostLabel.textContent = t.cost;
+  const metaTimeLabel = document.getElementById("metaTimeLabel");
+  if (metaTimeLabel) metaTimeLabel.textContent = t.time;
+  const metaPersonalLabel = document.getElementById("metaPersonalLabel");
+  if (metaPersonalLabel) metaPersonalLabel.textContent = t.personal;
 
   renderStatus();
 }
@@ -255,4 +313,3 @@ function registerServiceWorker() {
 
 registerServiceWorker();
 loadData();
-window.setVisited = setVisited;

@@ -14,21 +14,39 @@ const CATEGORY_COLORS = {
   "hidden-gems": "#14b8a6",
   other: "#64748b"
 };
-function getColorByMode(place) {
+const PERSONAL_COLORS = {
+  "want-to-go": "#3b82f6",
+  "highly-recommend": "#22c55e"
+};
+
+function getMarkerMode() {
+  const selectedCategory = document.getElementById("categoryFilter")?.value || "";
+  return selectedCategory ? "personal" : "category";
+}
+
+function getColorByMode(place, mode) {
+  if (mode === "personal") {
+    return PERSONAL_COLORS[place.personal] || "#64748b";
+  }
   const primaryCategory = Array.isArray(place.category) ? place.category[0] : "";
   return CATEGORY_COLORS[primaryCategory] || "#64748b";
 }
 
-function renderLegend() {
+function renderLegend(mode) {
   const legendEl = document.getElementById("mapLegend");
   if (!legendEl) return;
 
-  const items = Object.entries(CATEGORY_COLORS).map(([key, color]) => {
-    const label = NYCMapCommon.getCategoryLabel(NYCMapState.getLang(), key);
+  const source = mode === "personal" ? PERSONAL_COLORS : CATEGORY_COLORS;
+  const items = Object.entries(source).map(([key, color]) => {
+    const label = mode === "personal"
+      ? NYCMapCommon.getPersonalLabel(NYCMapState.getLang(), key)
+      : NYCMapCommon.getCategoryLabel(NYCMapState.getLang(), key);
     return `<li class="map-legend-item"><span class="map-legend-dot" style="--legend-color: ${color};"></span><span>${label}</span></li>`;
   }).join("");
 
-  const title = NYCMapState.getLang() === "ru" ? "Категории" : "Categories";
+  const title = mode === "personal"
+    ? (NYCMapState.getLang() === "ru" ? "Легенда: оценка" : "Legend: ratings")
+    : (NYCMapState.getLang() === "ru" ? "Легенда: категории" : "Legend: categories");
 
   legendEl.innerHTML = `
     <div class="map-legend-title">${title}</div>
@@ -79,8 +97,9 @@ function setMarkerActiveState(id, isActive) {
   const marker = markersById[id];
   if (!marker) return;
 
+  const markerMode = getMarkerMode();
   const place = marker.__placeData;
-  const markerColor = getColorByMode(place);
+  const markerColor = getColorByMode(place, markerMode);
   marker.setStyle({
     radius: isActive ? 10 : 8,
     weight: isActive ? 3 : 2,
@@ -122,7 +141,8 @@ function refreshMap(currentPlaces) {
   if (!map || !markersLayer) return;
 
   markersLayer.clearLayers();
-  renderLegend();
+  const markerMode = getMarkerMode();
+  renderLegend(markerMode);
   const bounds = [];
 
   currentPlaces.forEach(p => {
