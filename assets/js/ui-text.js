@@ -8,6 +8,7 @@
       searchPlaceholder: "Search",
       share: "Share",
       language: "Language",
+      filters: "Filters",
       statusTabs: { "": "All", want: "Want", skip: "Skip", visited: "Visited" },
       statLabels: { want: "Want", skip: "Skip", visited: "Visited" },
       personalTabs: {
@@ -22,7 +23,10 @@
         copy: "Copy",
         statusWant: "Want",
         statusVisited: "Visited",
-        statusSkip: "Skip"
+        statusSkip: "Skip",
+        statusHint: "Choose one status",
+        emptyTitle: "No places found",
+        emptyBody: "Try clearing filters or changing search keywords."
       },
       copy: {
         status: "Status",
@@ -31,6 +35,10 @@
         cost: "Cost",
         failed: "Could not copy to clipboard",
         loadFailed: "Failed to load data"
+      },
+      loading: {
+        title: "Loading places...",
+        body: "Preparing the list and map."
       },
       summary: {
         title: "NYC Map by Vlad and Katya",
@@ -47,6 +55,7 @@
       searchPlaceholder: "Поиск",
       share: "Поделиться",
       language: "Язык",
+      filters: "Фильтры",
       statusTabs: { "": "Все", want: "Хочу", skip: "Пропустить", visited: "Был" },
       statLabels: { want: "Хочу", skip: "Пропустить", visited: "Был" },
       personalTabs: {
@@ -61,7 +70,10 @@
         copy: "Копировать",
         statusWant: "Хочу",
         statusVisited: "Был",
-        statusSkip: "Пропустить"
+        statusSkip: "Пропустить",
+        statusHint: "Выберите один статус",
+        emptyTitle: "Ничего не найдено",
+        emptyBody: "Попробуйте сбросить фильтры или изменить запрос."
       },
       copy: {
         status: "Статус",
@@ -70,6 +82,10 @@
         cost: "Цена",
         failed: "Не удалось скопировать",
         loadFailed: "Ошибка загрузки"
+      },
+      loading: {
+        title: "Загружаем места...",
+        body: "Готовим список и карту."
       },
       summary: {
         title: "Карта Нью-Йорка от Влада и Кати",

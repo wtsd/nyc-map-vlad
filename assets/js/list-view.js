@@ -8,6 +8,7 @@
   function getCategoryLabel(lang, category) { return NYCMapCommon.getCategoryLabel(lang, category); }
   function getTimeLabel(lang, time) { return NYCMapCommon.getTimeLabel(lang, time); }
   function getPersonalEmoji(personal) { return NYCMapCommon.getPersonalEmoji(personal); }
+  function getPersonalLabel(lang, personal) { return NYCMapCommon.getPersonalLabel(lang, personal); }
   function getCostLabel(lang, cost, price) { return NYCMapCommon.getCostLabel(lang, cost, price); }
 
   function updateStats(state, filtered) {
@@ -93,6 +94,7 @@
     const searchFilter = document.getElementById("searchFilter");
     const shareLabel = document.querySelector(".header-buttons button[onclick='copySummary()'] .btn-label");
     const langLabel = document.querySelector(".header-buttons button[onclick='toggleLang()'] .btn-label");
+    const filtersLabel = document.querySelector("#filtersToggle .btn-label");
 
     if (tabList) tabList.textContent = text.listTab;
     if (tabMap) tabMap.textContent = text.mapTab;
@@ -104,6 +106,7 @@
     if (searchFilter) searchFilter.placeholder = text.searchPlaceholder;
     if (shareLabel) shareLabel.textContent = text.share;
     if (langLabel) langLabel.textContent = text.language;
+    if (filtersLabel) filtersLabel.textContent = text.filters;
 
     const statusFilterTabs = document.querySelectorAll(".status-filter-tab");
     statusFilterTabs.forEach((tab) => {
@@ -150,12 +153,22 @@
     if (!container) return;
 
     container.innerHTML = "";
+    if (!places.length) {
+      container.innerHTML = `
+        <article class="empty-state-card">
+          <h3>${text.card.emptyTitle}</h3>
+          <p>${text.card.emptyBody}</p>
+        </article>
+      `;
+      return;
+    }
+
     const fragment = document.createDocumentFragment();
     places.forEach((p) => {
       const status = checklist[p.id] || "none";
       const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
       const personalEmoji = getPersonalEmoji(p.personal);
-      const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
+      const personalLabel = getPersonalLabel(lang, p.personal);
       const summary = truncate(NYCMapCommon.getLocalizedText(lang, p.summary, ""), 180);
       const address = NYCMapCommon.getPlaceAddress(p, lang);
       const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(lang, p.category[0]) : "";
@@ -177,7 +190,7 @@
         <div class="card-body">
           <div class="card-topline">
             <div class="card-title-wrap">
-              <h3 class="card-title"><a class="card-title-link" href="${detailsUrl}">${fullTitle}</a></h3>
+              <h3 class="card-title"><a class="card-title-link" href="${detailsUrl}">${title}</a></h3>
               <button class="copy-btn card-copy-btn" onclick="copyPlace('${p.id}')" aria-label="${text.card.copyDetails}" title="${text.card.copy}">
                 <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <rect x="9" y="9" width="11" height="11" rx="2"></rect>
@@ -187,6 +200,12 @@
               </button>
             </div>
             <div class="card-category">${category}</div>
+          </div>
+          <div class="personal-rating">
+            <span class="chip personal-rating-chip">
+              <span aria-hidden="true">${personalEmoji || "•"}</span>
+              <span>${personalLabel || category}</span>
+            </span>
           </div>
           <div class="transit-row">
             <a class="address-btn" href="${NYCMapCommon.getMapsUrl(p, lang)}" target="_blank" rel="noopener noreferrer">
@@ -198,11 +217,14 @@
             <span class="chip ${p.time === "short" ? "is-muted" : ""}">${getTimeLabel(lang, p.time)}</span>
             <span class="chip ${p.cost === "free" ? "is-muted" : ""}">${getCostLabel(lang, p.cost, p.price)}</span>
           </div>
-          <div class="status-row"><div class="status-toggle-wrap">
-            <button class="status-btn ${status === "want" ? "active" : ""} ${status !== "none" && status !== "want" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'want')">${text.card.statusWant}</button>
-            <button class="status-btn ${status === "visited" ? "active" : ""} ${status !== "none" && status !== "visited" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'visited')">${text.card.statusVisited}</button>
-            <button class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">${text.card.statusSkip}</button>
-          </div></div>
+          <div class="status-row">
+            <span class="status-row-title">${text.card.statusHint}</span>
+            <div class="status-toggle-wrap" role="radiogroup" aria-label="${text.card.statusHint}">
+            <button role="radio" aria-checked="${status === "want"}" class="status-btn ${status === "want" ? "active" : ""} ${status !== "none" && status !== "want" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'want')">${text.card.statusWant}</button>
+            <button role="radio" aria-checked="${status === "visited"}" class="status-btn ${status === "visited" ? "active" : ""} ${status !== "none" && status !== "visited" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'visited')">${text.card.statusVisited}</button>
+            <button role="radio" aria-checked="${status === "skip"}" class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">${text.card.statusSkip}</button>
+            </div>
+          </div>
         </div>`;
       el.addEventListener("click", (event) => {
         if (event.target.closest("button, a, input, select, textarea")) return;
