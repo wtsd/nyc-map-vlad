@@ -173,10 +173,14 @@
       const address = NYCMapCommon.getPlaceAddress(p, lang);
       const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(lang, p.category[0]) : "";
       const detailsUrl = NYCMapCommon.getPlaceDetailsUrl(p);
-      const imageBlock = p.image
+      const imageUrl = p.thumbnail || p.image;
+      const imageBlock = imageUrl
         ? `
         <a class="card-image-wrap card-image-link" href="${detailsUrl}" aria-label="${text.card.openDetails}">
-          <img src="${p.image}" alt="${title}" loading="lazy" onerror="this.closest('.card-image-wrap')?.remove();">
+          <picture>
+            ${p.thumbnail ? `<source srcset="${p.thumbnail}" type="image/webp">` : ""}
+            <img src="${p.image || imageUrl}" alt="${title}" loading="lazy" width="640" height="360" decoding="async" onerror="this.closest('.card-image-wrap')?.remove();">
+          </picture>
         </a>
         `
         : "";
@@ -280,6 +284,17 @@
     if (!copied) alert(NYCMapUIText.getUIText(lang).copy.failed);
   }
 
+
+
+  let lastMapRenderKey = "";
+
+  function getMapRenderKey(state, filteredPlaces) {
+    const lang = state.getLang();
+    const category = document.getElementById("categoryFilter")?.value || "";
+    const ids = filteredPlaces.map((place) => place.id).join("|");
+    return `${lang}::${category}::${ids}`;
+  }
+
   function render(state, filters) {
     const container = document.getElementById("list");
     if (!container) return;
@@ -296,7 +311,13 @@
     renderUIChrome(state);
     renderCards(state, paginatedPlaces);
 
-    if (typeof refreshMap === "function") refreshMap(filtered);
+    if (typeof refreshMap === "function") {
+      const mapRenderKey = getMapRenderKey(state, filtered);
+      if (mapRenderKey !== lastMapRenderKey) {
+        refreshMap(filtered);
+        lastMapRenderKey = mapRenderKey;
+      }
+    }
     renderPagination(state, filtered.length, totalPages);
     applyMobileTabState(state);
   }

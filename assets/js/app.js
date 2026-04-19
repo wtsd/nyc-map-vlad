@@ -70,17 +70,41 @@
   async function loadData() {
     renderListState("loading");
     try {
-      const res = await fetch("build/places.json");
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const manifest = await NYCMapDataLoader.loadManifest();
+      const placesPath = NYCMapDataLoader.resolveAssetPath(manifest, "places", "build/places.json");
+      const searchPath = NYCMapDataLoader.resolveAssetPath(manifest, "searchIndex", "build/search-index.json");
 
-      const places = await res.json();
+      const [placesRes, searchRes] = await Promise.all([
+        fetch(placesPath),
+        fetch(searchPath).catch(() => null)
+      ]);
+      if (!placesRes.ok) throw new Error(`HTTP ${placesRes.status}`);
+
+      const places = await placesRes.json();
       state.setPlaces(places);
+
+      if (searchRes && searchRes.ok) {
+        const searchIndex = await searchRes.json();
+        state.setSearchIndex(searchIndex);
+      } else {
+        state.setSearchIndex([]);
+      }
+
       render();
       if (typeof initMap === "function") initMap(places);
     } catch (error) {
-      console.error("Failed to load places.json", error);
+      console.error("Failed to load places data", error);
       renderListState("error");
     }
+  }
+
+  function registerServiceWorker() {
+    if (!("serviceWorker" in navigator)) return;
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("sw.js").catch((error) => {
+        console.warn("Service worker registration failed", error);
+      });
+    });
   }
 
   function switchMobileView(view) {
@@ -109,6 +133,7 @@
   window.toggleMap = toggleMap;
   window.toggleFiltersPanel = toggleFiltersPanel;
 
+  registerServiceWorker();
   loadData();
   urlState.applyFiltersFromUrl(state, filters);
   listView.applyMobileTabState(state);

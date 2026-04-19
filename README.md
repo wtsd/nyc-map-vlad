@@ -39,6 +39,16 @@ https://wtsd.github.io/nyc-map-vlad/
 - `assets/` → frontend
 
 
+
+## Performance build outputs
+
+The build now also prepares performance-oriented static artifacts:
+
+- `build/search-index.json` (+ hashed copy) for lightweight client search
+- `build/thumbs/*.webp` card thumbnails (when Pillow is available)
+- `build/manifest.json` for cache-friendly hashed data URLs and offline pre-cache lists
+- `sw.js` service worker for repeat-load/offline support on static hosting
+
 ## Maintenance scripts
 
 Run from repository root.

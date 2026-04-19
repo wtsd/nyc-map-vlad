@@ -1,0 +1,546 @@
+[
+  {
+    "id": "alimama-tea",
+    "text": "alimama tea alimama tea\nknown for donuts and bubble tea in chinatown. easy sweet stop while walking lower manhattan.\nместо с пончиками и bubble tea в чайнатауне. удобная сладкая остановка во время прогулки по нижнему манхэттену.\nfood\n89a bayard st, new york, ny 10013"
+  },
+  {
+    "id": "annapurna-thakali-kitchen",
+    "text": "annapurna thakali kitchen annapurna thakali kitchen\nnepalese food stop in jackson heights.\nточка с непальской кухней в jackson heights.\nfood\n72-24 roosevelt ave, jackson heights, ny 11372"
+  },
+  {
+    "id": "aragvi",
+    "text": "aragvi арагви\nsolid georgian restaurant option if you want to show friends and family something different from the standard nyc tourist food list.\nхороший грузинский ресторан, если хочется показать друзьям и семье что-то менее банальное, чем стандартный туристический набор.\nfood\n230 park ave south, new york, ny 10003"
+  },
+  {
+    "id": "baires-grill",
+    "text": "baires grill baires grill\nsteak option in hell’s kitchen / midtown west.\nвариант со steak в районе hell’s kitchen / midtown west.\nfood\n350 w 50th st, new york, ny 10019"
+  },
+  {
+    "id": "bakery-je-taime",
+    "text": "bakery je t’aime bakery je t’aime\nbakery stop in brooklyn from katya’s list. good candidate for pastries, coffee, and a neighborhood walk.\nпекарня в бруклине из списка кати. подходит для выпечки, кофе и короткой прогулки по району.\nfood\n471 marcus garvey blvd, brooklyn, ny 11216"
+  },
+  {
+    "id": "cafe-2by2",
+    "text": "cafe 2by2 cafe 2by2\ntiramisu café stop in the east village area.\nтирамису-кафе в районе east village.\nfood\n84 e 10th st 2nd fl, new york, ny 10003"
+  },
+  {
+    "id": "casa-adela",
+    "text": "casa adela casa adela\npuerto rican food stop in the east village / loisaida area.\nместо с пуэрториканской кухней в районе east village / loisaida.\nfood\n66 loisaida ave, new york, ny 10009"
+  },
+  {
+    "id": "chelsea-market",
+    "text": "chelsea market челси маркет\nfood hall with lots of options. great stop while walking the high line.\nфуд-холл с большим выбором еды.\nfood\n75 9th ave, new york, ny 10011"
+  },
+  {
+    "id": "chirokuro",
+    "text": "chirokuro chirokuro\nsushi spot with a stylized 2d restaurant concept.\nсуши-место с 2d-концепцией интерьера.\nfood\n103 2nd ave, new york, ny 10003"
+  },
+  {
+    "id": "conwell-coffee-hall",
+    "text": "conwell coffee hall conwell coffee hall\nhidden coffee spot inside a historic building.\nскрытая кофейня в историческом здании.\nfood\n6 hanover st, new york, ny 10005"
+  },
+  {
+    "id": "davelle",
+    "text": "davelle davelle\njapanese café / small bites place on the lower east side.\nяпонское кафе с small bites на lower east side.\nfood\n102 suffolk st, new york, ny 10002"
+  },
+  {
+    "id": "din-soup-dumplings",
+    "text": "din soup dumplings din soup dumplings\nbrooklyn heights dumpling stop, noted for the fun mini-dumpling format.\nместо в brooklyn heights, отмечено за интересный формат мини-димсамов и soup dumplings.\nfood\n162 montague st fl 2, brooklyn, ny 11201"
+  },
+  {
+    "id": "don-udon",
+    "text": "don udon don udon\nbrooklyn japanese spot for udon and fish.\nяпонское место в бруклине ради udon и рыбы.\nfood\n634 park pl, brooklyn, ny 11238"
+  },
+  {
+    "id": "ferrane",
+    "text": "ferrane ferrane\nswedish bakery in brooklyn heights, noted for princess cake.\nшведская пекарня в brooklyn heights, здесь отмечена ради princess cake.\nfood\n57 clark st, brooklyn, ny 11201"
+  },
+  {
+    "id": "fu-zhou-wei-zhong-wei-jia-xiang-feng-wei",
+    "text": "fu zhou wei zhong wei jia xiang feng wei fu zhou wei zhong wei jia xiang feng wei\nlower east side / chinatown food stop from katya’s list.\nточка на границе les и чайнатауна из катиного списка.\nfood\n88 e broadway, new york, ny 10002"
+  },
+  {
+    "id": "gan-hoo-bbq",
+    "text": "gan hoo bbq gan hoo bbq\nkorean bbq option from katya’s list.\nвариант korean bbq из катиного списка.\nfood\n29 e 30th st, new york, ny 10016"
+  },
+  {
+    "id": "giant-scallion-pancakes-flushing",
+    "text": "giant scallion pancakes giant scallion pancakes\nflushing snack stop for giant scallion pancakes.\nточка во flushing ради giant scallion pancakes.\nfood\n135-45 roosevelt ave, flushing, ny 11354"
+  },
+  {
+    "id": "golden-manna-bakery",
+    "text": "golden manna bakery golden manna bakery\nbakery stop on bowery, noted here for mango mochi.\nпекарня на bowery, отмечена здесь ради mango mochi.\nfood\n16 bowery, new york, ny 10013"
+  },
+  {
+    "id": "gyu-ichiro",
+    "text": "gyu ichiro gyu ichiro\nall-you-can-eat bbq and sushi option.\nвариант all-you-can-eat bbq и sushi.\nfood\n135 bowery, new york, ny 10002"
+  },
+  {
+    "id": "hamido-seafood",
+    "text": "hamido seafood hamido seafood\negyptian seafood stop in astoria.\nместо с египетской seafood-кухней в astoria.\nfood\n31-29 ditmars blvd, astoria, ny 11105"
+  },
+  {
+    "id": "hanamizuki-cafe",
+    "text": "hanamizuki cafe hanamizuki cafe\njapanese café stop known here for onigiri. marked as tried.\nяпонское кафе, здесь отмечено ради onigiri. уже пробовали.\nfood\n143 w 29th st, new york, ny 10001"
+  },
+  {
+    "id": "hay-hay-roasted",
+    "text": "hay hay roasted hay hay roasted\nchinatown food stop for roasted honey pork over rice.\nточка в чайнатауне ради roasted honey pork over rice.\nfood\n81 mott st, new york, ny 10013"
+  },
+  {
+    "id": "ichiran-ramen-midtown",
+    "text": "ichiran ramen ichiran ramen\nmidtown ramen stop from katya’s list.\nрамен-точка в мидтауне из катиного списка.\nfood\n152 w 49th st, new york, ny 10020"
+  },
+  {
+    "id": "jiang-nan-flushing",
+    "text": "jiang nan jiang nan\nflushing option known here for peking duck.\nместо во flushing, отмеченное здесь ради peking duck.\nfood\n133-42 39th ave ste 101, flushing, ny 11354"
+  },
+  {
+    "id": "joes-home-of-soup-dumplings",
+    "text": "joe's home of soup dumplings joe's home of soup dumplings\nvery solid soup dumpling stop and easy to combine with chinatown.\nочень достойное место за soup dumplings, которое удобно совместить с прогулкой по чайнатауну.\nfood\n24 w 56th st, new york, ny 10019"
+  },
+  {
+    "id": "jongro-bbq-market",
+    "text": "jongro bbq market jongro bbq market\nkorean spot in koreatown, noted here for the special deal.\nкорейское место в koreatown, отмечено здесь из-за выгодного special.\nfood\n39 w 32nd st 1st fl, new york, ny 10001"
+  },
+  {
+    "id": "krispy-kreme-times-square",
+    "text": "krispy kreme (times square) krispy kreme на таймс-сквер\nnot essential new york, but fun if you want a bright times square sugar stop.\nне главная нью-йоркская must-see точка, но как сладкая остановка на таймс-сквер вполне работает.\nfood\n1601 broadway, new york, ny 10019"
+  },
+  {
+    "id": "laduree-soho",
+    "text": "ladurée soho ladurée soho\nsoho brunch and pastry stop, noted here for the cherry blossom vibe.\nместо в soho для brunch и десертов, здесь отмечено ради красивой cherry blossom атмосферы.\nfood\n398 w broadway, new york, ny 10012"
+  },
+  {
+    "id": "lafayette-grand-cafe-bakery",
+    "text": "lafayette grand café & bakery lafayette grand café & bakery\npopular bakery and café known for viral croissants.\nпопулярная пекарня и кафе, известные своими viral croissants.\nfood\n380 lafayette st, new york, ny 10003"
+  },
+  {
+    "id": "larina",
+    "text": "larina larina\nbrooklyn pasta spot from katya’s list.\nпаста-место в бруклине из катиного списка.\nfood\n387 myrtle ave, brooklyn, ny 11205"
+  },
+  {
+    "id": "liberty-bagels-midtown",
+    "text": "liberty bagels liberty bagels\ngood bagel stop for visitors if you want something fast, classic, and easy to understand.\nхорошая точка за бейглом для гостей, если хочется чего-то быстрого, понятного и по-нью-йоркски классического.\nfood\n260 w 35th st, new york, ny 10001"
+  },
+  {
+    "id": "luckin-coffee-6th-ave",
+    "text": "luckin coffee luckin coffee\nchinese coffee chain stop in midtown.\nточка китайской кофейной сети в мидтауне.\nfood\n800 6th ave, new york, ny 10001"
+  },
+  {
+    "id": "lucky-rabbit-noodles",
+    "text": "lucky rabbit noodles lucky rabbit noodles\nfusion noodle stop in dumbo.\nfusion noodle-место в dumbo.\nfood\n151 front st, brooklyn, ny 11201"
+  },
+  {
+    "id": "mala-panda",
+    "text": "mala panda mala panda\nchinese option in midtown south, noted here around the $20 mark.\nкитайское место в midtown south, здесь отмечено как вариант примерно за $20.\nfood\n105 w 27th st, new york, ny 10001"
+  },
+  {
+    "id": "meat-me-bbq",
+    "text": "meat me bbq meat me bbq\nkorean bbq option if you want a more food-focused outing rather than a quick snack stop.\nхороший вариант корейского bbq, если хочется полноценного гастрономического выхода, а не просто перекуса.\nfood\n136-20 roosevelt ave, flushing, ny 11354"
+  },
+  {
+    "id": "mei-lai-wah",
+    "text": "mei lai wah mei lai wah\nfamous chinatown stop for pork bun with pineapple top.\nизвестная точка в чайнатауне ради pork bun с pineapple top.\nfood\n41 mott st, new york, ny 10013"
+  },
+  {
+    "id": "mixue",
+    "text": "mixue mixue\ncheap and cheerful dessert stop. more of a fun quick treat than a destination by itself.\nнедорогая и веселая сладкая остановка. скорее быстрый десерт по пути, чем отдельная цель.\nfood\n54 bayard st, new york, ny 10013"
+  },
+  {
+    "id": "mojo-east",
+    "text": "mojo east mojo east\nomakase option on the lower east side.\nвариант omakase на lower east side.\nfood\n85 stanton st, new york, ny 10002"
+  },
+  {
+    "id": "nathans-famous",
+    "text": "nathan's famous nathan's famous\nfamous hot dogs spot.\nлегендарные хот-доги.\nfood\n1310 surf ave, brooklyn, ny 11224"
+  },
+  {
+    "id": "new-kim-tuong",
+    "text": "new kim tuong new kim tuong\nchinatown / les food stop from katya’s list.\nточка на границе чайнатауна и les из катиного списка.\nfood\n83 chrystie st, new york, ny 10002"
+  },
+  {
+    "id": "nom-wah-tea-parlor",
+    "text": "nom wah tea parlor nom wah tea parlor\nhistoric chinatown dim sum spot, known as one of the oldest in the area.\nисторическое место в чайнатауне для dim sum, одно из самых старых в этом районе.\nfood\n13 doyers st, new york, ny 10013"
+  },
+  {
+    "id": "nonnas-of-the-world",
+    "text": "nonna's of the world nonna's of the world\ncomfort-food kind of place with personality. good for a more casual sit-down stop.\nместо в духе комфортной домашней еды, но с характером. хорошо подходит для более спокойной посадки.\nfood\n75 kenmare st, new york, ny 10012"
+  },
+  {
+    "id": "ole-and-steen",
+    "text": "ole & steen ole & steen\neasy coffee and pastry stop when you want something calm and predictable.\nудобная кофейно-выпечная остановка, когда хочется чего-то спокойного и понятного.\nfood\n80 w 40th st, new york, ny 10018"
+  },
+  {
+    "id": "ozakaya",
+    "text": "ozakaya ozakaya\njapanese restaurant in brooklyn, marked here as a pricier option.\nяпонский ресторан в бруклине, отмечен здесь как более дорогой вариант.\nfood\n635 vanderbilt ave, brooklyn, ny 11238"
+  },
+  {
+    "id": "pavlo-mochi",
+    "text": "pavlo mochi pavlo mochi\ndessert stop from katya’s list, centered around mochi.\nдесертная точка из катиного списка, отмечена ради mochi.\nfood\n199 avenue b, new york, ny 10009"
+  },
+  {
+    "id": "piscator",
+    "text": "piscator piscator\nfish-focused pop-up style stop in greenpoint.\nместо с акцентом на рыбу в стиле pop-up в greenpoint.\nfood\n1011 manhattan ave, brooklyn, ny 11222"
+  },
+  {
+    "id": "rooftop-230-fifth",
+    "text": "230 fifth rooftop bar рooftop-бар 230 fifth\ntouristy, yes, but the rooftop view makes it a very easy place to bring visitors.\nда, место туристическое, но вид с крыши делает его очень удобным вариантом для гостей города.\nfood\n230 5th ave, new york, ny 10001"
+  },
+  {
+    "id": "roy-fish-market",
+    "text": "roy fish market roy fish market\nupper east side sushi stop from katya’s list.\nсуши-точка на upper east side из катиного списка.\nfood\n1138 1st ave, new york, ny 10065"
+  },
+  {
+    "id": "san-matteo-upper-east-side",
+    "text": "san matteo san matteo\nupper east side pizza stop from katya’s list.\nпицца-место на upper east side из катиного списка.\nfood\n1559 2nd ave, new york, ny 10028"
+  },
+  {
+    "id": "sendo",
+    "text": "sendo sendo\nsushi spot in midtown south.\nсуши-место в midtown south.\nfood\n876 6th ave 2nd floor, new york, ny 10001"
+  },
+  {
+    "id": "skirt-steak",
+    "text": "skirt steak skirt steak\nsteak-and-fries stop in midtown south.\nместо со steak and fries в midtown south.\nfood\n835 6th ave, new york, ny 10001"
+  },
+  {
+    "id": "smashy-burger-union-square",
+    "text": "smashy burger smashy burger\nburger stop by union square, noted here for low-price smash burgers.\nбургерная у union square, отмечена здесь из-за недорогих smash burgers.\nfood\n42 union sq e, new york, ny 10003"
+  },
+  {
+    "id": "steves-authentic-key-lime-pie",
+    "text": "steve’s authentic key lime pie steve’s authentic key lime pie\nred hook dessert stop if key lime pie is the mission.\nместо в red hook, если цель прогулки - key lime pie.\nfood\n185 van dyke st, brooklyn, ny 11231"
+  },
+  {
+    "id": "sushi-counter",
+    "text": "sushi counter sushi counter\nwest village sushi stop known here for hand roll pricing.\nсуши-точка в west village, отмечена здесь из-за hand rolls по хорошей цене.\nfood\n119 christopher st, new york, ny 10014"
+  },
+  {
+    "id": "syko",
+    "text": "syko syko\nfusion spot combining syrian and korean ideas.\nфьюжн-место с сирийскими и корейскими идеями.\nfood\n214a prospect park w, brooklyn, ny 11215"
+  },
+  {
+    "id": "tashkent-supermarket",
+    "text": "tashkent supermarket супермаркет ташкент\nunexpectedly useful stop if you want familiar central asian groceries in manhattan.\nнеожиданно полезная точка, если хочется знакомых центральноазиатских продуктов на манхэттене.\nfood\n378 6th ave, new york, ny 10011"
+  },
+  {
+    "id": "the-office-of-mr-motto",
+    "text": "the office of mr. motto the office of mr. motto\nhigher-end japanese option in the east village area.\nболее дорогой японский вариант в районе east village.\nfood\n120a st marks pl, new york, ny 10009"
+  },
+  {
+    "id": "this-bowl",
+    "text": "this bowl this bowl\nbowl-focused stop for poke and similar quick meals.\nточка с bowl-форматом, включая poke и другие быстрые блюда.\nfood\n230 5th ave, new york, ny 10001"
+  },
+  {
+    "id": "tortelli",
+    "text": "tortelli tortelli\npasta spot in brooklyn from katya’s list.\nпаста-место в бруклине из катиного списка.\nfood\n359 sackett st, brooklyn, ny 11231"
+  },
+  {
+    "id": "ume",
+    "text": "ume ume\nmore upscale japanese option in williamsburg.\nболее нарядный японский ресторан в williamsburg.\nfood\n237 kent ave, brooklyn, ny 11249"
+  },
+  {
+    "id": "xiang-la-hot-pot",
+    "text": "xiang la hot pot xiang la hot pot\nkoreatown hot pot stop, noted here for the lunch special.\nточка с hot pot в koreatown, отмечена здесь из-за ланч-спешла.\nfood\n34 w 32nd st #2f, new york, ny 10001"
+  },
+  {
+    "id": "yubu",
+    "text": "yubu yubu\nknown for tofu pockets with toppings.\nместо, известное tofu pockets с разными topping-ами.\nfood\n46 grand st, new york, ny 10013"
+  },
+  {
+    "id": "alwyn-court",
+    "text": "alwyn court alwyn court\none of those manhattan buildings that rewards looking up. easy to miss if you do not know what you are looking for.\nодно из тех манхэттенских зданий, ради которых стоит поднять голову вверх. легко пройти мимо, если не знаешь, что искать.\nhidden-gems\n180 w 58th st, new york, ny 10019"
+  },
+  {
+    "id": "elevated-acre",
+    "text": "elevated acre elevated acre\nhidden elevated park in fidi.\nскрытый парк на крыше.\nhidden-gems\n55 water st, new york, ny 10041"
+  },
+  {
+    "id": "ghostbusters-firehouse",
+    "text": "ghostbusters firehouse пожарная станция ghostbusters\nreal firehouse used in ghostbusters movie.\nнастоящая пожарная часть из фильма ghostbusters.\nhidden-gems\n14 n moore st, new york, ny 10013"
+  },
+  {
+    "id": "socrates-sculpture-park",
+    "text": "socrates sculpture park парк скульптур сократа\noutdoor art park with a local feel and nice east river views.\nоткрытый парк современного искусства с локальной атмосферой и хорошими видами на ист-ривер.\nhidden-gems\n32-01 vernon blvd, queens, ny 11106"
+  },
+  {
+    "id": "brooklyn-bridge",
+    "text": "brooklyn bridge бруклинский мост\nclassic nyc walk. best from brooklyn to manhattan.\nклассическая прогулка по нью-йорку. лучше идти из бруклина.\nlandmarks\nbrooklyn bridge pedestrian entrance, new york, ny 10038"
+  },
+  {
+    "id": "cathedral-of-st-john-the-divine",
+    "text": "cathedral of st. john the divine собор святого иоанна богослова\nhuge and impressive cathedral that feels a little hidden compared with midtown icons.\nогромный и впечатляющий собор, который будто немного скрыт в тени мидтаунских достопримечательностей.\nlandmarks\n1047 amsterdam ave, new york, ny 10025"
+  },
+  {
+    "id": "chinatown",
+    "text": "chinatown чайнатаун\nbusy, layered, and full of energy. best if you walk without rushing and let the neighborhood reveal itself.\nшумный, многослойный и очень живой район. лучше всего идти без спешки и просто дать ему раскрыться.\nlandmarks\ncanal st & mott st, new york, ny 10013"
+  },
+  {
+    "id": "chrysler-building",
+    "text": "chrysler building крайслер-билдинг\none of the most beautiful skyscrapers in nyc.\nодин из самых красивых небоскребов.\nlandmarks\n405 lexington ave, new york, ny 10174"
+  },
+  {
+    "id": "coney-island",
+    "text": "coney island кони-айленд\nbeach, boardwalk, and old-school nyc vibes.\nпляж, набережная и старый нью-йорк.\nlandmarks\nsurf ave & stillwell ave, brooklyn, ny 11224"
+  },
+  {
+    "id": "dumbo",
+    "text": "dumbo waterfront dumbo набережная\none of the best skyline views in nyc. walk along the waterfront and enjoy the vibe.\nодно из лучших мест с видом на манхэттен. отлично для прогулки.\nlandmarks\nwashington st & water st, brooklyn, ny 11201"
+  },
+  {
+    "id": "empire-state-building",
+    "text": "empire state building эмпайр-стейт-билдинг\nclassic skyline building. more about the history than the view nowadays.\nклассический небоскрёб. больше про историю, чем про лучший вид.\nlandmarks\n20 w 34th st, new york, ny 10001"
+  },
+  {
+    "id": "federal-reserve",
+    "text": "federal reserve bank федеральный резерв\nhistoric building tied to us financial system.\nисторическое здание финансовой системы сша.\nlandmarks\n33 liberty st, new york, ny 10045"
+  },
+  {
+    "id": "flatiron-building",
+    "text": "flatiron building флэтайрон\nunique triangular building.\nнеобычное треугольное здание.\nlandmarks\n175 5th ave, new york, ny 10010"
+  },
+  {
+    "id": "grand-central-terminal",
+    "text": "grand central terminal гранд сентрал\nhistoric train station with iconic main hall.\nисторический вокзал с красивым залом.\nlandmarks\n89 e 42nd st, new york, ny 10017"
+  },
+  {
+    "id": "hudson-yards",
+    "text": "hudson yards хадсон ярдс\nmodern development with shops and views.\nсовременный район с магазинами.\nlandmarks\n20 hudson yards, new york, ny 10001"
+  },
+  {
+    "id": "lincoln-center",
+    "text": "lincoln center линкольн-центр\nelegant cultural complex. good in the evening when the plaza lights and fountain make everything feel more cinematic.\nкрасивый культурный комплекс. особенно хорош вечером, когда площадь и фонтан выглядят почти кинематографично.\nlandmarks\nlincoln center plaza, new york, ny 10023"
+  },
+  {
+    "id": "little-italy",
+    "text": "little italy литл-итали\nsmall but still worth a pass if you are already walking between soho and chinatown.\nнебольшой, но все равно заслуживает короткой прогулки, если ты уже идешь между сохо и чайнатауном.\nlandmarks\nmulberry st & grand st, new york, ny 10013"
+  },
+  {
+    "id": "madison-square-garden",
+    "text": "madison square garden мэдисон-сквер-гарден\nlegendary arena. best experienced during an event.\nлегендарная арена. лучше всего — во время события.\nlandmarks\n4 pennsylvania plaza, new york, ny 10001"
+  },
+  {
+    "id": "memorial-911",
+    "text": "9/11 memorial мемориал 11 сентября\npowerful memorial with reflecting pools.\nтрогательный мемориал с бассейнами.\nlandmarks\n180 greenwich st, new york, ny 10007"
+  },
+  {
+    "id": "new-yorker-hotel",
+    "text": "the new yorker hotel отель the new yorker\nclassic new york hotel building with strong old-school city energy.\nклассическое нью-йоркское здание отеля с очень старошкольной городской энергетикой.\nlandmarks\n481 8th ave, new york, ny 10001"
+  },
+  {
+    "id": "ny-public-library",
+    "text": "ny public library публичная библиотека нью-йорка\nfamous reading room and classic architecture.\nзнаменитый читальный зал.\nlandmarks\n476 5th ave, new york, ny 10018"
+  },
+  {
+    "id": "nyse",
+    "text": "new york stock exchange нью-йоркская фондовая биржа\nsymbol of global finance. you’ll mostly see it from outside.\nсимвол мировой финансовой системы.\nlandmarks\n11 wall st, new york, ny 10005"
+  },
+  {
+    "id": "oculus",
+    "text": "oculus окулус\nfuturistic transit hub and shopping center.\nфутуристический транспортный узел.\nlandmarks\n185 greenwich st, new york, ny 10007"
+  },
+  {
+    "id": "one-world-trade-center",
+    "text": "one world trade center one world trade center\ntallest building in nyc with observation deck.\nсамое высокое здание в нью-йорке.\nlandmarks\n285 fulton st, new york, ny 10007"
+  },
+  {
+    "id": "rockefeller-center",
+    "text": "rockefeller center рокфеллер-центр\nfamous complex with ice rink (winter) and top of the rock.\nизвестный комплекс с катком зимой.\nlandmarks\n45 rockefeller plaza, new york, ny 10111"
+  },
+  {
+    "id": "roosevelt-island-tram",
+    "text": "roosevelt island tram канатка на рузвельт-айленд\nfun and very nyc way to get to roosevelt island. the ride itself is half the attraction.\nочень нью-йоркский способ попасть на рузвельт-айленд. сама поездка уже отдельное впечатление.\nlandmarks\n254 e 60th st, new york, ny 10022"
+  },
+  {
+    "id": "soho",
+    "text": "soho сохо\ncast-iron buildings, shopping, side streets, and that specific downtown manhattan mood.\nчугунные фасады, магазины, боковые улицы и тот самый даунтаунский вайб манхэттена.\nlandmarks\nbroadway & prince st, new york, ny 10012"
+  },
+  {
+    "id": "st-patricks-cathedral",
+    "text": "st. patrick's cathedral собор святого патрика\nbeautiful cathedral right on busy 5th avenue.\nкрасивый собор прямо на 5-й авеню.\nlandmarks\n5th ave & e 51st st, new york, ny 10022"
+  },
+  {
+    "id": "statue-of-liberty",
+    "text": "statue of liberty статуя свободы\nferry\ntransit:\n  en: battery park ferry\n  ru: паром из battery park\nnyc icon. tourist-heavy but still worth it if you’ve never been.\nlandmarks\nliberty island, new york, ny 10004"
+  },
+  {
+    "id": "the-vessel",
+    "text": "the vessel вессел\nfuturistic structure. mostly for photos now.\nфутуристическая конструкция. в основном для фото.\nlandmarks\n20 hudson yards, new york, ny 10001"
+  },
+  {
+    "id": "times-square",
+    "text": "times square таймс-сквер\npure chaos, lights, and tourists. worth seeing once, especially at night.\nшум, свет и туристы. стоит увидеть хотя бы раз, особенно ночью.\nlandmarks\ntimes square, new york, ny 10036"
+  },
+  {
+    "id": "trinity-church",
+    "text": "trinity church церковь тринити\nhistoric church with cemetery.\nисторическая церковь с кладбищем.\nlandmarks\n89 broadway, new york, ny 10006"
+  },
+  {
+    "id": "unisphere",
+    "text": "unisphere unisphere\nmassive globe sculpture and one of the coolest queens landmarks.\nогромная скульптура-глобус и одна из самых классных достопримечательностей куинса.\nlandmarks\nflushing meadows corona park, queens, ny 11368"
+  },
+  {
+    "id": "united-nations",
+    "text": "united nations headquarters штаб-квартира оон\none of those places that feels globally important even from the outside.\nодно из тех мест, которое даже снаружи ощущается важным для всего мира.\nlandmarks\n405 e 42nd st, new york, ny 10017"
+  },
+  {
+    "id": "wall-street-bull",
+    "text": "wall street bull бык на уолл-стрит\nfamous charging bull statue.\nзнаменитая статуя быка.\nlandmarks\nbowling green, new york, ny 10004"
+  },
+  {
+    "id": "american-museum-of-natural-history",
+    "text": "american museum of natural history американский музей естественной истории\nclassic major museum. great if you want dinosaurs, space, nature, and one of the most recognizable museum interiors in the city.\nклассический большой музей. отлично подойдет, если хочется динозавров, космоса, природы и одного из самых узнаваемых музейных интерьеров города.\nmuseums\n200 central park w, new york, ny 10024"
+  },
+  {
+    "id": "bronx-museum-of-the-arts",
+    "text": "the bronx museum of the arts музей искусств бронкса\nsolid museum stop if you want to go beyond the usual manhattan-heavy art circuit.\nхороший музейный вариант, если хочется выйти за пределы привычного манхэттенского арт-маршрута.\nmuseums\n1040 grand concourse, bronx, ny 10456"
+  },
+  {
+    "id": "brooklyn-museum",
+    "text": "brooklyn museum бруклинский музей\nbig museum with enough range to justify a proper visit, not just a quick stop.\nбольшой музей, который вполне заслуживает полноценного визита, а не просто быстрого захода.\nmuseums\n200 eastern pkwy, brooklyn, ny 11238"
+  },
+  {
+    "id": "ellis-island",
+    "text": "ellis island эллис-айленд\nimmigration museum with real history behind nyc.\nмузей иммиграции с настоящей историей города.\nmuseums\nellis island, new york, ny 10004"
+  },
+  {
+    "id": "guggenheim-museum",
+    "text": "guggenheim museum музей гуггенхайма\nworth it even for the building alone. the spiral interior is the main event.\nсюда стоит идти даже ради самого здания. спиральный интерьер уже сам по себе событие.\nmuseums\n1071 5th ave, new york, ny 10128"
+  },
+  {
+    "id": "intrepid-museum",
+    "text": "intrepid museum музей intrepid\naircraft carrier turned museum. great if you like aviation, ships, or space-related exhibits.\nавианосец, превращенный в музей. отличное место, если нравятся авиация, корабли или космические экспонаты.\nmuseums\npier 86, w 46th st, new york, ny 10036"
+  },
+  {
+    "id": "mercer-labs",
+    "text": "mercer labs mercer labs\nimmersive museum-style experience. more about spectacle and atmosphere than a traditional museum visit.\nиммерсивное пространство, где ставка скорее на впечатление и атмосферу, чем на формат классического музея.\nmuseums\n21 dey st, new york, ny 10007"
+  },
+  {
+    "id": "met-museum",
+    "text": "met museum метрополитен музей\nmassive museum with world-class collection.\nогромный музей с мировой коллекцией.\nmuseums\n1000 5th ave, new york, ny 10028"
+  },
+  {
+    "id": "moma",
+    "text": "moma музей современного искусства moma\none of the essential museums if modern art sounds even remotely interesting to you.\nодин из главных музеев, если современное искусство хотя бы немного интересно.\nmuseums\n11 w 53rd st, new york, ny 10019"
+  },
+  {
+    "id": "museum-of-the-city-of-new-york",
+    "text": "museum of the city of new york музей города нью-йорка\ngood pick if you want context and history behind the city instead of just another photo stop.\nхороший выбор, если хочется понять контекст и историю города, а не просто поставить еще одну точку на карте.\nmuseums\n1220 5th ave, new york, ny 10029"
+  },
+  {
+    "id": "whitney-museum",
+    "text": "whitney museum музей whitney\ngood museum stop near the high line with strong american art focus.\nхороший музей рядом с high line, с сильным акцентом на американское искусство.\nmuseums\n99 gansevoort st, new york, ny 10014"
+  },
+  {
+    "id": "birds-jazz",
+    "text": "birds birds\njazz / live music stop in the west village area.\nточка с jazz / live music в районе west village.\nother\n64 downing st, new york, ny 10014"
+  },
+  {
+    "id": "brighton-beach",
+    "text": "brighton beach брайтон-бич\nrussian-speaking neighborhood with a unique vibe.\nрусскоязычный район с особой атмосферой.\nother\nbrighton beach ave & boardwalk, brooklyn, ny 11235"
+  },
+  {
+    "id": "champagne-problems",
+    "text": "champagne problems champagne problems\nspeakeasy-style stop from katya’s list.\nspeakeasy-точка из катиного списка.\nother\n207 bowery, new york, ny 10002"
+  },
+  {
+    "id": "harry-potter-store",
+    "text": "harry potter store магазин гарри поттера\nimmersive store for harry potter fans.\nинтерактивный магазин для фанатов гарри поттера.\nother\n935 broadway, new york, ny 10010"
+  },
+  {
+    "id": "janes-carousel",
+    "text": "jane's carousel карусель jane’s\nvintage carousel with a perfect brooklyn skyline view.\nкрасивая винтажная карусель с видом на манхэттен.\nother\n1 old dock st, brooklyn, ny 11201"
+  },
+  {
+    "id": "lego-store-5th-ave",
+    "text": "lego store (5th ave) lego store\ncreative lego displays and nyc-themed builds.\nинтересные lego-инсталляции и модели.\nother\n636 5th ave, new york, ny 10020"
+  },
+  {
+    "id": "louis-vuitton-5th-ave",
+    "text": "louis vuitton (5th ave) louis vuitton на 5-й авеню\nmore of a luxury fifth avenue stop than a landmark, but it fits the classic midtown shopping walk.\nскорее точка на маршруте по люксовой 5-й авеню, чем отдельная достопримечательность, но в классическую прогулку по мидтауну вписывается хорошо.\nother\n1 e 57th st, new york, ny 10022"
+  },
+  {
+    "id": "luna-park",
+    "text": "luna park луна-парк\nclassic amusement park.\nклассический парк аттракционов.\nother\n1000 surf ave, brooklyn, ny 11224"
+  },
+  {
+    "id": "mms-store",
+    "text": "m&m's store магазин m&m's\nbig colorful candy store. fun stop if you’re already in times square.\nяркий магазин конфет. можно зайти, если рядом.\nother\n1600 broadway, new york, ny 10019"
+  },
+  {
+    "id": "nyu",
+    "text": "nyu area район nyu\nmore of a vibe stop than a landmark. good if you want to feel student new york around the village.\nскорее место ради атмосферы, чем отдельная достопримечательность. хорошо, если хочется почувствовать студенческий нью-йорк.\nother\nwashington square park area, new york, ny 10012"
+  },
+  {
+    "id": "penn-station",
+    "text": "penn station пенн-стейшн\nmajor transit hub. not pretty, but useful to know.\nглавный транспортный узел. не самый красивый, но важный.\nother\n8th ave & w 31st st, new york, ny 10001"
+  },
+  {
+    "id": "saint-tuesday",
+    "text": "saint tuesday saint tuesday\njazz / live music stop in lower manhattan.\nточка с jazz / live music в нижнем манхэттене.\nother\n77 walker st, new york, ny 10013"
+  },
+  {
+    "id": "seaglass-carousel",
+    "text": "seaglass carousel seaglass carousel\nunique glowing carousel, fun and a bit surreal.\nнеобычная светящаяся карусель.\nother\nstate st & battery pl, new york, ny 10004"
+  },
+  {
+    "id": "bethesda-fountain",
+    "text": "bethesda fountain фонтан bethesda\niconic fountain in central park.\nзнаменитый фонтан в центральном парке.\nparks\ncentral park, terrace dr, new york, ny 10021"
+  },
+  {
+    "id": "bronx-zoo",
+    "text": "bronx zoo бронксский зоопарк\nmajor zoo and definitely not a quick stop. best if you want to dedicate real time to it.\nкрупный зоопарк и точно не место на пять минут. лучше идти, если готов выделить на него полноценное время.\nparks\n2300 southern blvd, bronx, ny 10460"
+  },
+  {
+    "id": "brooklyn-botanic-garden",
+    "text": "brooklyn botanic garden бруклинский ботанический сад\nbeautiful and calm, especially in spring. easy to combine with brooklyn museum.\nочень красивое и спокойное место, особенно весной. удобно совместить с бруклинским музеем.\nparks\n990 washington ave, brooklyn, ny 11225"
+  },
+  {
+    "id": "bryant-park",
+    "text": "bryant park брайант-парк\nsmall but lively park behind ny public library.\nнебольшой, но уютный парк.\nparks\nbryant park, new york, ny 10018"
+  },
+  {
+    "id": "central-park-mall",
+    "text": "the mall аллея the mall\nbeautiful tree-lined walkway.\nкрасивая аллея с деревьями.\nparks\nthe mall, central park, new york, ny 10022"
+  },
+  {
+    "id": "central-park-zoo",
+    "text": "central park zoo зоопарк центрального парка\nsmall zoo right inside central park.\nнебольшой зоопарк прямо в парке.\nparks\neast 64th st, new york, ny 10021"
+  },
+  {
+    "id": "governors-island",
+    "text": "governors island говернорс-айленд\ngreat escape from the city with views, bikes, and open space.\nотличное место, чтобы отдохнуть от города.\nparks\ngovernors island ferry terminal, new york, ny 10004"
+  },
+  {
+    "id": "high-line",
+    "text": "high line хай лайн\nelevated park built on old railway.\nпарк на бывшей железной дороге.\nparks\ngansevoort st entrance, new york, ny 10014"
+  },
+  {
+    "id": "little-island",
+    "text": "little island little island\nfloating park with great views.\nпарк на воде с отличными видами.\nparks\npier 55, hudson river greenway, new york, ny 10014"
+  },
+  {
+    "id": "morningside-park",
+    "text": "morningside park морнингсайд-парк\nnice uptown park to pair with the cathedral or columbia area.\nприятный парк в верхнем манхэттене, который удобно совместить с собором или районом колумбийского университета.\nparks\nmorningside ave & w 114th st, new york, ny 10027"
+  },
+  {
+    "id": "ny-aquarium",
+    "text": "new york aquarium нью-йоркский аквариум\nocean-themed exhibits right by the beach.\nаквариум у океана.\nparks\n602 surf ave, brooklyn, ny 11224"
+  },
+  {
+    "id": "roosevelt-island",
+    "text": "roosevelt island рузвельт-айленд\nquiet island with nice river views and a very different pace from manhattan.\nспокойный остров с хорошими видами на реку и совсем другим ритмом по сравнению с манхэттеном.\nparks\nroosevelt island, new york, ny 10044"
+  },
+  {
+    "id": "washington-square-park",
+    "text": "washington square park вашингтон-сквер-парк\nclassic downtown park with arch, musicians, students, and a lot of nyc character.\nклассический даунтаун-парк с аркой, музыкантами, студентами и очень нью-йоркской атмосферой.\nparks\nwashington square, new york, ny 10012"
+  },
+  {
+    "id": "manhattan-bridge-view",
+    "text": "manhattan bridge view вид на манхэттенский мост\nfamous photo spot with bridge framing.\nпопулярное место для фото с мостом.\nviewpoints\nwashington st & front st, brooklyn, ny 11201"
+  },
+  {
+    "id": "the-edge",
+    "text": "the edge edge смотровая\nobservation deck with glass floor.\nсмотровая площадка со стеклянным полом.\nviewpoints\n30 hudson yards, new york, ny 10001"
+  }
+]
