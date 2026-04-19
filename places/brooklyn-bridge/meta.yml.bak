@@ -1,0 +1,12 @@
+id: brooklyn-bridge
+title:
+  en: Brooklyn Bridge
+  ru: Бруклинский мост
+coords: {lat: 40.7061, lng: -73.9969}
+category: [landmarks]
+time: medium
+cost: free
+transit:
+  en: Brooklyn Bridge–City Hall
+  ru: Brooklyn Bridge–City Hall
+address: "Brooklyn Bridge Pedestrian Entrance, New York, NY 10038"

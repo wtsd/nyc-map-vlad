@@ -2,11 +2,35 @@ id: brooklyn-bridge
 title:
   en: Brooklyn Bridge
   ru: Бруклинский мост
-coords: {lat: 40.7061, lng: -73.9969}
-category: [landmarks]
+coords:
+  lat: 40.7061
+  lng: -73.9969
+category:
+- landmarks
 time: medium
 cost: free
 transit:
   en: Brooklyn Bridge–City Hall
   ru: Brooklyn Bridge–City Hall
-address: "Brooklyn Bridge Pedestrian Entrance, New York, NY 10038"
+address: Brooklyn Bridge Pedestrian Entrance, New York, NY 10038
+borough: Brooklyn
+neighborhood: DUMBO
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- photography
+- scenic
+- touristy
+best_time:
+- afternoon
+- golden-hour
+- midday
+- morning
+vibes:
+- curious
+- photogenic
+best_for:
+- budget
+- photos

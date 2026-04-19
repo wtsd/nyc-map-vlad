@@ -1,0 +1,12 @@
+id: rooftop-230-fifth
+title:
+  en: 230 Fifth Rooftop Bar
+  ru: Рooftop-бар 230 Fifth
+coords: {lat: 40.7442, lng: -73.9889}
+category: [food]
+time: medium
+cost: paid
+transit:
+  en: 23 St / 28 St
+  ru: 23 St / 28 St
+address: "230 5th Ave, New York, NY 10001"

@@ -2,11 +2,29 @@ id: lincoln-center
 title:
   en: Lincoln Center
   ru: Линкольн-центр
-coords: {lat: 40.7725, lng: -73.9835}
-category: [landmarks]
+coords:
+  lat: 40.7725
+  lng: -73.9835
+category:
+- landmarks
 time: medium
 cost: free
 transit:
   en: 66 St - Lincoln Center
   ru: 66 St - Lincoln Center
-address: "Lincoln Center Plaza, New York, NY 10023"
+address: Lincoln Center Plaza, New York, NY 10023
+borough: Manhattan
+neighborhood: Upper West Side
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget

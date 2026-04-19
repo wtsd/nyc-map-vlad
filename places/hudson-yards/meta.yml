@@ -2,11 +2,35 @@ id: hudson-yards
 title:
   en: Hudson Yards
   ru: Хадсон Ярдс
-coords: {lat: 40.7540, lng: -74.0027}
-category: [landmarks]
+coords:
+  lat: 40.754
+  lng: -74.0027
+category:
+- landmarks
 time: medium
 cost: free
 transit:
   en: 34 St Hudson Yards
   ru: 34 St Hudson Yards
-address: "20 Hudson Yards, New York, NY 10001"
+address: 20 Hudson Yards, New York, NY 10001
+borough: Manhattan
+neighborhood: Chelsea
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- photography
+- scenic
+- touristy
+best_time:
+- afternoon
+- golden-hour
+- midday
+- morning
+vibes:
+- curious
+- photogenic
+best_for:
+- budget
+- photos

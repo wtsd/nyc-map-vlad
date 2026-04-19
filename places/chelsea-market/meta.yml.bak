@@ -1,0 +1,12 @@
+id: chelsea-market
+title:
+  en: Chelsea Market
+  ru: Челси Маркет
+coords: {lat: 40.7423, lng: -74.0060}
+category: [food]
+time: medium
+cost: paid
+transit:
+  en: 14 St
+  ru: 14 St
+address: "75 9th Ave, New York, NY 10011"

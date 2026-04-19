@@ -2,11 +2,24 @@ id: harry-potter-store
 title:
   en: Harry Potter Store
   ru: Магазин Гарри Поттера
-coords: {lat: 40.7420, lng: -73.9890}
-category: [other]
+coords:
+  lat: 40.742
+  lng: -73.989
+category:
+- other
 time: short
 cost: free
 transit:
   en: 23 St
   ru: 23 St
-address: "935 Broadway, New York, NY 10010"
+address: 935 Broadway, New York, NY 10010
+borough: Manhattan
+neighborhood: Flatiron / NoMad
+route_types:
+- budget-friendly
+- easy-stop
+- shopping
+best_time: []
+vibes: []
+best_for:
+- budget

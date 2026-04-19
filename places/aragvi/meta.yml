@@ -2,11 +2,32 @@ id: aragvi
 title:
   en: Aragvi
   ru: Арагви
-coords: {lat: 40.7435, lng: -73.9848}
-category: [food]
+coords:
+  lat: 40.7435
+  lng: -73.9848
+category:
+- food
 time: medium
 cost: paid
 transit:
   en: 28 St / 33 St
   ru: 28 St / 33 St
-address: "230 Park Ave South, New York, NY 10003"
+address: 230 Park Ave South, New York, NY 10003
+borough: Manhattan
+neighborhood: Flatiron / NoMad
+route_types:
+- date-night
+- easy-stop
+- family
+- foodie
+- kids
+best_time:
+- dinner
+- evening
+- late-afternoon
+- lunch
+vibes:
+- tasty
+best_for:
+- couples
+- families

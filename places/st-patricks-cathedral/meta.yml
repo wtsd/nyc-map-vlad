@@ -2,11 +2,30 @@ id: st-patricks-cathedral
 title:
   en: St. Patrick's Cathedral
   ru: Собор Святого Патрика
-coords: {lat: 40.7585, lng: -73.9760}
-category: [landmarks]
+coords:
+  lat: 40.7585
+  lng: -73.976
+category:
+- landmarks
 time: short
 cost: free
 transit:
   en: 5 Av/53 St
   ru: 5 Av/53 St
-address: "5th Ave & E 51st St, New York, NY 10022"
+address: 5th Ave & E 51st St, New York, NY 10022
+borough: Manhattan
+neighborhood: Midtown East
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- quiet
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget

@@ -1,0 +1,12 @@
+id: manhattan-bridge-view
+title:
+  en: Manhattan Bridge View
+  ru: Вид на Манхэттенский мост
+coords: {lat: 40.7033, lng: -73.9887}
+category: [viewpoints]
+time: short
+cost: free
+transit:
+  en: York St
+  ru: York St
+address: "Washington St & Front St, Brooklyn, NY 11201"

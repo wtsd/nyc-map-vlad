@@ -1,0 +1,14 @@
+id: aragvi
+title:
+  en: Aragvi
+  ru: Арагви
+coords:
+  lat: 40.7435
+  lng: -73.9848
+category: [food]
+time: medium
+cost: paid
+transit:
+  en: 28 St / 33 St
+  ru: 28 St / 33 St
+address: "230 Park Ave South, New York, NY 10003"

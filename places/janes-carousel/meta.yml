@@ -2,11 +2,27 @@ id: janes-carousel
 title:
   en: Jane's Carousel
   ru: Карусель Jane’s
-coords: {lat: 40.7034, lng: -73.9950}
-category: [other]
+coords:
+  lat: 40.7034
+  lng: -73.995
+category:
+- other
 time: short
 cost: paid
 transit:
   en: DUMBO
   ru: DUMBO
-address: "1 Old Dock St, Brooklyn, NY 11201"
+address: 1 Old Dock St, Brooklyn, NY 11201
+borough: Brooklyn
+neighborhood: DUMBO
+route_types:
+- easy-stop
+- photography
+- scenic
+best_time:
+- golden-hour
+- morning
+vibes:
+- photogenic
+best_for:
+- photos

@@ -1,0 +1,12 @@
+id: krispy-kreme-times-square
+title:
+  en: Krispy Kreme (Times Square)
+  ru: Krispy Kreme на Таймс-сквер
+coords: {lat: 40.7569, lng: -73.9863}
+category: [food]
+time: short
+cost: paid
+transit:
+  en: Times Sq - 42 St
+  ru: Times Sq - 42 St
+address: "1601 Broadway, New York, NY 10019"

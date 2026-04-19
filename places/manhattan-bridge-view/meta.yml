@@ -2,11 +2,34 @@ id: manhattan-bridge-view
 title:
   en: Manhattan Bridge View
   ru: Вид на Манхэттенский мост
-coords: {lat: 40.7033, lng: -73.9887}
-category: [viewpoints]
+coords:
+  lat: 40.7033
+  lng: -73.9887
+category:
+- viewpoints
 time: short
 cost: free
 transit:
   en: York St
   ru: York St
-address: "Washington St & Front St, Brooklyn, NY 11201"
+address: Washington St & Front St, Brooklyn, NY 11201
+borough: Brooklyn
+neighborhood: DUMBO
+route_types:
+- architecture
+- budget-friendly
+- date-night
+- easy-stop
+- photography
+- scenic
+best_time:
+- evening
+- golden-hour
+- late-afternoon
+- morning
+vibes:
+- photogenic
+best_for:
+- budget
+- couples
+- photos

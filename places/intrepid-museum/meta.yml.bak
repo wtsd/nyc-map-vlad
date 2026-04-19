@@ -1,0 +1,13 @@
+id: intrepid-museum
+title:
+  en: Intrepid Museum
+  ru: Музей Intrepid
+coords: {lat: 40.7645, lng: -73.9996}
+category: [museums]
+time: full
+cost: paid
+price: ~6
+transit:
+  en: 50 St / 42 St + walk
+  ru: 50 St / 42 St + walk
+address: "Pier 86, W 46th St, New York, NY 10036"

@@ -2,11 +2,23 @@ id: louis-vuitton-5th-ave
 title:
   en: Louis Vuitton (5th Ave)
   ru: Louis Vuitton на 5-й авеню
-coords: {lat: 40.7607, lng: -73.9750}
-category: [other]
+coords:
+  lat: 40.7607
+  lng: -73.975
+category:
+- other
 time: short
 cost: free
 transit:
   en: 5 Av/53 St
   ru: 5 Av/53 St
-address: "1 E 57th St, New York, NY 10022"
+address: 1 E 57th St, New York, NY 10022
+borough: Manhattan
+neighborhood: Midtown East
+route_types:
+- budget-friendly
+- easy-stop
+best_time: []
+vibes: []
+best_for:
+- budget

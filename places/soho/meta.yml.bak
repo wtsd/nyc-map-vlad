@@ -1,0 +1,12 @@
+id: soho
+title:
+  en: SoHo
+  ru: Сохо
+coords: {lat: 40.7233, lng: -74.0030}
+category: [landmarks]
+time: medium
+cost: free
+transit:
+  en: Prince St / Spring St
+  ru: Prince St / Spring St
+address: "Broadway & Prince St, New York, NY 10012"

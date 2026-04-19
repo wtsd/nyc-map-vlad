@@ -1,0 +1,13 @@
+id: guggenheim-museum
+title:
+  en: Guggenheim Museum
+  ru: Музей Гуггенхайма
+coords: {lat: 40.7830, lng: -73.9590}
+category: [museums]
+time: medium
+cost: paid
+price: ~0
+transit:
+  en: 86 St
+  ru: 86 St
+address: "1071 5th Ave, New York, NY 10128"

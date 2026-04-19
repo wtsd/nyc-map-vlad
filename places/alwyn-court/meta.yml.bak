@@ -1,0 +1,12 @@
+id: alwyn-court
+title:
+  en: Alwyn Court
+  ru: Alwyn Court
+coords: {lat: 40.7656, lng: -73.9804}
+category: [hidden-gems]
+time: short
+cost: free
+transit:
+  en: 57 St / 7 Av
+  ru: 57 St / 7 Av
+address: "180 W 58th St, New York, NY 10019"

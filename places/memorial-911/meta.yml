@@ -2,11 +2,29 @@ id: memorial-911
 title:
   en: 9/11 Memorial
   ru: Мемориал 11 сентября
-coords: {lat: 40.7115, lng: -74.0134}
-category: [landmarks]
+coords:
+  lat: 40.7115
+  lng: -74.0134
+category:
+- landmarks
 time: medium
 cost: free
 transit:
   en: World Trade Center
   ru: World Trade Center
-address: "180 Greenwich St, New York, NY 10007"
+address: 180 Greenwich St, New York, NY 10007
+borough: Manhattan
+neighborhood: Financial District
+route_types:
+- architecture
+- budget-friendly
+- culture
+- easy-stop
+- touristy
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget

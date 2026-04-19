@@ -1,0 +1,12 @@
+id: ny-aquarium
+title:
+  en: New York Aquarium
+  ru: Нью-Йоркский аквариум
+coords: {lat: 40.5755, lng: -73.9750}
+category: [parks]
+time: medium
+cost: paid
+transit:
+  en: Coney Island
+  ru: Coney Island
+address: "602 Surf Ave, Brooklyn, NY 11224"

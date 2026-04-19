@@ -2,11 +2,21 @@ id: seaglass-carousel
 title:
   en: SeaGlass Carousel
   ru: SeaGlass Carousel
-coords: {lat: 40.7033, lng: -74.0170}
-category: [other]
+coords:
+  lat: 40.7033
+  lng: -74.017
+category:
+- other
 time: short
 cost: paid
 transit:
   en: Bowling Green
   ru: Bowling Green
-address: "State St & Battery Pl, New York, NY 10004"
+address: State St & Battery Pl, New York, NY 10004
+borough: Manhattan
+neighborhood: Financial District
+route_types:
+- easy-stop
+best_time: []
+vibes: []
+best_for: []

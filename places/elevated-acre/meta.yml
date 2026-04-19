@@ -2,11 +2,28 @@ id: elevated-acre
 title:
   en: Elevated Acre
   ru: Elevated Acre
-coords: {lat: 40.7040, lng: -74.0070}
-category: [hidden-gems]
+coords:
+  lat: 40.704
+  lng: -74.007
+category:
+- hidden-gems
 time: short
 cost: free
 transit:
   en: Wall St
   ru: Wall St
-address: "55 Water St, New York, NY 10041"
+address: 55 Water St, New York, NY 10041
+borough: Manhattan
+neighborhood: Financial District
+route_types:
+- budget-friendly
+- easy-stop
+- hidden-gem
+- photography
+best_time:
+- golden-hour
+- morning
+vibes: []
+best_for:
+- budget
+- photos

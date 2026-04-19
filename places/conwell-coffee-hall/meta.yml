@@ -2,11 +2,37 @@ id: conwell-coffee-hall
 title:
   en: Conwell Coffee Hall
   ru: Conwell Coffee Hall
-coords: {lat: 40.7075, lng: -74.0109}
-category: [food]
+coords:
+  lat: 40.7075
+  lng: -74.0109
+category:
+- food
 time: short
 cost: paid
 transit:
   en: Wall St
   ru: Wall St
-address: "6 Hanover St, New York, NY 10005"
+address: 6 Hanover St, New York, NY 10005
+borough: Manhattan
+neighborhood: Financial District
+route_types:
+- coffee
+- culture
+- date-night
+- easy-stop
+- foodie
+- history
+- quick-bite
+best_time:
+- afternoon
+- dinner
+- evening
+- late-afternoon
+- lunch
+- midday
+- morning
+vibes:
+- curious
+- tasty
+best_for:
+- couples

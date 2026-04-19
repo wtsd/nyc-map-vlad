@@ -1,0 +1,12 @@
+id: oculus
+title:
+  en: Oculus
+  ru: Окулус
+coords: {lat: 40.7115, lng: -74.0113}
+category: [landmarks]
+time: short
+cost: free
+transit:
+  en: World Trade Center
+  ru: World Trade Center
+address: "185 Greenwich St, New York, NY 10007"

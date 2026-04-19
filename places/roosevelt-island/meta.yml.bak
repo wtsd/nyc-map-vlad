@@ -1,0 +1,12 @@
+id: roosevelt-island
+title:
+  en: Roosevelt Island
+  ru: Рузвельт-Айленд
+coords: {lat: 40.7612, lng: -73.9496}
+category: [parks]
+time: medium
+cost: free
+transit:
+  en: Roosevelt Island Tram / F train
+  ru: Roosevelt Island Tram / F train
+address: "Roosevelt Island, New York, NY 10044"

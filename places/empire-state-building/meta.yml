@@ -2,12 +2,34 @@ id: empire-state-building
 title:
   en: Empire State Building
   ru: Эмпайр-стейт-билдинг
-coords: {lat: 40.7484, lng: -73.9857}
-category: [landmarks]
+coords:
+  lat: 40.7484
+  lng: -73.9857
+category:
+- landmarks
 time: medium
 cost: paid
 price: ~5
 transit:
   en: 34 St Herald Sq
   ru: 34 St Herald Sq
-address: "20 W 34th St, New York, NY 10001"
+address: 20 W 34th St, New York, NY 10001
+borough: Manhattan
+neighborhood: Flatiron / NoMad
+route_types:
+- architecture
+- culture
+- easy-stop
+- photography
+- scenic
+- touristy
+best_time:
+- afternoon
+- golden-hour
+- midday
+- morning
+vibes:
+- curious
+- photogenic
+best_for:
+- photos

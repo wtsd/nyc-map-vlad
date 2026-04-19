@@ -2,12 +2,27 @@ id: mercer-labs
 title:
   en: Mercer Labs
   ru: Mercer Labs
-coords: {lat: 40.7103, lng: -74.0087}
-category: [museums]
+coords:
+  lat: 40.7103
+  lng: -74.0087
+category:
+- museums
 time: medium
 cost: paid
 price: ~0+
 transit:
   en: Fulton St / World Trade Center
   ru: Fulton St / World Trade Center
-address: "21 Dey St, New York, NY 10007"
+address: 21 Dey St, New York, NY 10007
+borough: Manhattan
+neighborhood: Financial District
+route_types:
+- culture
+- easy-stop
+- rainy-day
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for: []

@@ -1,0 +1,12 @@
+id: madison-square-garden
+title:
+  en: Madison Square Garden
+  ru: Мэдисон-сквер-гарден
+coords: {lat: 40.7505, lng: -73.9934}
+category: [landmarks]
+time: short
+cost: paid
+transit:
+  en: Penn Station
+  ru: Penn Station
+address: "4 Pennsylvania Plaza, New York, NY 10001"

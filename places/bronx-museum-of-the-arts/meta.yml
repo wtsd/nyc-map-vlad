@@ -2,11 +2,28 @@ id: bronx-museum-of-the-arts
 title:
   en: The Bronx Museum of the Arts
   ru: Музей искусств Бронкса
-coords: {lat: 40.8310, lng: -73.9197}
-category: [museums]
+coords:
+  lat: 40.831
+  lng: -73.9197
+category:
+- museums
 time: medium
 cost: free
 transit:
   en: 167 St
   ru: 167 St
-address: "1040 Grand Concourse, Bronx, NY 10456"
+address: 1040 Grand Concourse, Bronx, NY 10456
+borough: Bronx
+neighborhood: South Bronx
+route_types:
+- budget-friendly
+- culture
+- easy-stop
+- rainy-day
+best_time:
+- afternoon
+- midday
+vibes:
+- curious
+best_for:
+- budget

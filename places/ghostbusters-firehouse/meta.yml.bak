@@ -1,0 +1,12 @@
+id: ghostbusters-firehouse
+title:
+  en: Ghostbusters Firehouse
+  ru: Пожарная станция Ghostbusters
+coords: {lat: 40.7195, lng: -74.0065}
+category: [hidden-gems]
+time: short
+cost: free
+transit:
+  en: Canal St
+  ru: Canal St
+address: "14 N Moore St, New York, NY 10013"

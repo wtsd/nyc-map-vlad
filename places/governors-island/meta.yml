@@ -2,11 +2,32 @@ id: governors-island
 title:
   en: Governors Island
   ru: Говернорс-Айленд
-coords: {lat: 40.6895, lng: -74.0168}
-category: [parks]
+coords:
+  lat: 40.6895
+  lng: -74.0168
+category:
+- parks
 time: full
 cost: free
 transit:
   en: Ferry from Manhattan/Brooklyn
   ru: Паром
-address: "Governors Island Ferry Terminal, New York, NY 10004"
+address: Governors Island Ferry Terminal, New York, NY 10004
+route_types:
+- anchor-stop
+- budget-friendly
+- day-trip
+- outdoors
+- photography
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for:
+- budget
+- photos

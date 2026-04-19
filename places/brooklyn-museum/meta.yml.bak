@@ -1,0 +1,13 @@
+id: brooklyn-museum
+title:
+  en: Brooklyn Museum
+  ru: Бруклинский музей
+coords: {lat: 40.6712, lng: -73.9636}
+category: [museums]
+time: full
+cost: paid
+price: ~0
+transit:
+  en: Eastern Pkwy-Brooklyn Museum
+  ru: Eastern Pkwy-Brooklyn Museum
+address: "200 Eastern Pkwy, Brooklyn, NY 11238"

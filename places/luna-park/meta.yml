@@ -2,11 +2,29 @@ id: luna-park
 title:
   en: Luna Park
   ru: Луна-парк
-coords: {lat: 40.5755, lng: -73.9780}
-category: [other]
+coords:
+  lat: 40.5755
+  lng: -73.978
+category:
+- other
 time: medium
 cost: paid
 transit:
   en: Coney Island
   ru: Coney Island
-address: "1000 Surf Ave, Brooklyn, NY 11224"
+address: 1000 Surf Ave, Brooklyn, NY 11224
+borough: Brooklyn
+neighborhood: Coney Island
+route_types:
+- easy-stop
+- outdoors
+- relaxing
+- scenic
+best_time:
+- afternoon
+- golden-hour
+- morning
+vibes:
+- photogenic
+- slow
+best_for: []
