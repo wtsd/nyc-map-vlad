@@ -340,7 +340,6 @@ function render() {
 
   paginatedPlaces.forEach(p => {
     const status = checklist[p.id] || "none";
-    const imageSrc = p.image || "assets/images/placeholders/cover.jpg";
     const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
     const personalEmoji = getPersonalEmoji(p.personal);
     const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
@@ -348,17 +347,20 @@ function render() {
     const address = NYCMapCommon.getPlaceAddress(p, lang);
     const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(p.category[0]) : "";
     const detailsUrl = `place.html?id=${encodeURIComponent(p.id)}`;
+    const imageBlock = p.image
+      ? `
+      <a class="card-image-wrap card-image-link" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}">
+        <img src="${p.image}" alt="${title}" loading="lazy" onerror="this.closest('.card-image-wrap')?.remove();">
+      </a>
+      `
+      : "";
 
     const el = document.createElement("article");
     el.className = "card";
     el.id = `card-${p.id}`;
 
     el.innerHTML = `
-      <a class="card-image-wrap card-image-link" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}">
-        <img src="${imageSrc}" alt="${title}" loading="lazy"
-             onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');">
-        <div class="card-image-fallback hidden">${lang === "ru" ? "Фото будет позже" : "Photo coming later"}</div>
-      </a>
+      ${imageBlock}
 
       <div class="card-body">
         <div class="card-topline">

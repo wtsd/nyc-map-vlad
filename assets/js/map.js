@@ -3,6 +3,55 @@ let markersLayer;
 let markersById = {};
 let userLocationMarker;
 let userLocationAccuracyCircle;
+const CATEGORY_COLORS = {
+  landmarks: "#3b82f6",
+  parks: "#22c55e",
+  museums: "#a855f7",
+  food: "#f97316",
+  viewpoints: "#0ea5e9",
+  "hidden-gems": "#14b8a6",
+  other: "#64748b"
+};
+const PERSONAL_COLORS = {
+  "want-to-go": "#3b82f6",
+  "been-not-impressed": "#94a3b8",
+  "highly-recommend": "#22c55e"
+};
+
+function getMarkerMode() {
+  const selectedCategory = document.getElementById("categoryFilter")?.value || "";
+  return selectedCategory ? "personal" : "category";
+}
+
+function getColorByMode(place, mode) {
+  if (mode === "personal") {
+    return PERSONAL_COLORS[place.personal] || "#64748b";
+  }
+  const primaryCategory = Array.isArray(place.category) ? place.category[0] : "";
+  return CATEGORY_COLORS[primaryCategory] || "#64748b";
+}
+
+function renderLegend(mode) {
+  const legendEl = document.getElementById("mapLegend");
+  if (!legendEl) return;
+
+  const source = mode === "personal" ? PERSONAL_COLORS : CATEGORY_COLORS;
+  const items = Object.entries(source).map(([key, color]) => {
+    const label = mode === "personal"
+      ? NYCMapCommon.getPersonalLabel(lang, key)
+      : NYCMapCommon.getCategoryLabel(lang, key);
+    return `<li class="map-legend-item"><span class="map-legend-dot" style="--legend-color: ${color};"></span><span>${label}</span></li>`;
+  }).join("");
+
+  const title = mode === "personal"
+    ? (lang === "ru" ? "Легенда: личная оценка" : "Legend: personal")
+    : (lang === "ru" ? "Легенда: категории" : "Legend: categories");
+
+  legendEl.innerHTML = `
+    <div class="map-legend-title">${title}</div>
+    <ul class="map-legend-list">${items}</ul>
+  `;
+}
 
 function initMap(allPlaces) {
   map = L.map("map", {
@@ -27,14 +76,17 @@ function refreshMap(currentPlaces) {
 
   markersLayer.clearLayers();
   markersById = {};
+  const markerMode = getMarkerMode();
+  renderLegend(markerMode);
 
   currentPlaces.forEach(p => {
     const title = p.title?.[lang] || p.title?.en || p.id;
+    const markerColor = getColorByMode(p, markerMode);
     const marker = L.circleMarker(p.coords, {
       radius: 8,
       color: "#0f172a",
       weight: 2,
-      fillColor: "#3b82f6",
+      fillColor: markerColor,
       fillOpacity: 0.92
     });
 
