@@ -52,4 +52,9 @@ Run from repository root.
 - Generate category + personal statistics:
   - `python scripts/generate_statistics.py .`
 
+- Ingest recurring manual batches safely (dry-run by default, duplicate detection by id/address/title):
+  - `python scripts/ingest_places_batch.py . --batch-file scripts/katya_batch_template.py`
+  - `python scripts/ingest_places_batch.py . --batch-file scripts/katya_batch_template.py --write`
+  - Add `--overwrite-descriptions` only when you intentionally want to replace `en.md` / `ru.md`
+
 A scheduled GitHub Actions workflow is available at `.github/workflows/maintenance.yml`.
