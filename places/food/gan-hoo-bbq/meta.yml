@@ -7,14 +7,7 @@ coords:
   lng: -73.9842044
 category:
 - food
-tags: []
-time: medium
-cost: paid
-price: ''
-transit:
-  en: 28 St / 33 St
-  ru: 28 St / 33 St
+price: $$
 address: 29 E 30th St, New York, NY 10016
 external_link: https://www.tiktok.com/t/ZP8gHkcvp
-featured: false
 personal: want-to-go

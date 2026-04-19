@@ -7,11 +7,6 @@ coords:
   lng: -73.971
 category:
 - parks
-time: short
-cost: free
-transit:
-  en: 72 St
-  ru: 72 St
 address: The Mall, Central Park, New York, NY 10022
 borough: Manhattan
 neighborhood: Upper West Side
@@ -32,3 +27,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

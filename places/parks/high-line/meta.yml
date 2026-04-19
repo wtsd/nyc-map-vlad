@@ -7,11 +7,6 @@ coords:
   lng: -74.0049
 category:
 - parks
-time: medium
-cost: free
-transit:
-  en: 14 St / 23 St
-  ru: 14 St / 23 St
 address: Gansevoort St Entrance, New York, NY 10014
 borough: Manhattan
 neighborhood: Chelsea
@@ -32,3 +27,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

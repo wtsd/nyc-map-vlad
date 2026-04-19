@@ -7,11 +7,6 @@ coords:
   lng: -73.9778
 category:
 - food
-time: short
-cost: paid
-transit:
-  en: 5 Av/53 St / 57 St
-  ru: 5 Av/53 St / 57 St
 address: 260 W 35th St, New York, NY 10001
 borough: Manhattan
 neighborhood: Midtown West
@@ -31,3 +26,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

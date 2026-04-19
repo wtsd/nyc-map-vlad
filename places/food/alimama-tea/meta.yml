@@ -7,14 +7,7 @@ coords:
   lng: -73.9991388
 category:
 - food
-tags: []
-time: short
-cost: paid
-price: ''
-transit:
-  en: Canal St
-  ru: Canal St
+price: $$
 address: 89A Bayard St, New York, NY 10013
 external_link: https://www.tiktok.com/t/ZP8gHFrEV
-featured: false
 personal: want-to-go

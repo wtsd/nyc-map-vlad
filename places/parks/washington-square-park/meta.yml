@@ -7,11 +7,6 @@ coords:
   lng: -73.9973
 category:
 - parks
-time: medium
-cost: free
-transit:
-  en: W 4 St
-  ru: W 4 St
 address: Washington Square, New York, NY 10012
 borough: Manhattan
 neighborhood: Greenwich Village
@@ -32,3 +27,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

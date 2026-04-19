@@ -7,11 +7,6 @@ coords:
   lng: -73.9934
 category:
 - landmarks
-time: short
-cost: paid
-transit:
-  en: Penn Station
-  ru: Penn Station
 address: 4 Pennsylvania Plaza, New York, NY 10001
 borough: Manhattan
 neighborhood: Chelsea
@@ -28,3 +23,4 @@ vibes:
 best_for: []
 external_link: ''
 personal: want-to-go
+price: $$

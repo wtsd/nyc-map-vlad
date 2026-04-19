@@ -7,11 +7,6 @@ coords:
   lng: -74.0134
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: Bowling Green
-  ru: Bowling Green
 address: Bowling Green, New York, NY 10004
 borough: Manhattan
 neighborhood: Financial District
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

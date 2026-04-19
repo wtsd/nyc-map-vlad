@@ -7,12 +7,7 @@ coords:
   lng: -73.9996
 category:
 - museums
-time: full
-cost: paid
-price: ~6
-transit:
-  en: 50 St / 42 St + walk
-  ru: 50 St / 42 St + walk
+price: $$
 address: Pier 86, W 46th St, New York, NY 10036
 borough: Manhattan
 neighborhood: Midtown West

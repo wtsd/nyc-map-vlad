@@ -7,12 +7,7 @@ coords:
   lng: -74.0089
 category:
 - museums
-time: medium
-cost: paid
-price: ~0
-transit:
-  en: 14 St / 8 Av
-  ru: 14 St / 8 Av
+price: $$
 address: 99 Gansevoort St, New York, NY 10014
 borough: Manhattan
 neighborhood: Greenwich Village

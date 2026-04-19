@@ -7,11 +7,6 @@ coords:
   lng: -73.9822
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: 42 St
-  ru: 42 St
 address: 476 5th Ave, New York, NY 10018
 borough: Manhattan
 neighborhood: Midtown East
@@ -32,3 +27,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

@@ -7,11 +7,6 @@ coords:
   lng: -73.9755
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: Grand Central
-  ru: Grand Central
 address: 405 Lexington Ave, New York, NY 10174
 borough: Manhattan
 neighborhood: Midtown East
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

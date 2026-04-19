@@ -7,12 +7,7 @@ coords:
   lng: -73.964
 category:
 - landmarks
-time: medium
-cost: paid
-price: MetroCard / OMNY fare
-transit:
-  en: Lexington Av/59 St
-  ru: Lexington Av/59 St
+price: $$
 address: 254 E 60th St, New York, NY 10022
 route_types:
 - architecture

@@ -7,11 +7,6 @@ coords:
   lng: -74.0113
 category:
 - landmarks
-time: short
-cost: free
-transit:
-  en: Wall St
-  ru: Wall St
 address: 11 Wall St, New York, NY 10005
 borough: Manhattan
 neighborhood: Financial District
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

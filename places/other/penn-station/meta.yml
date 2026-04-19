@@ -7,11 +7,6 @@ coords:
   lng: -73.9935
 category:
 - other
-time: short
-cost: free
-transit:
-  en: Penn Station
-  ru: Penn Station
 address: 8th Ave & W 31st St, New York, NY 10001
 borough: Manhattan
 neighborhood: Chelsea
@@ -24,3 +19,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

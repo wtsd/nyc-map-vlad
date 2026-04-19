@@ -8,11 +8,7 @@ coords:
 category:
 - landmarks
 personal: want-to-go
-time: short
-cost: free
-transit:
-  en: World Trade Center
-  ru: World Trade Center
+price: $$
 address: 185 Greenwich St, New York, NY 10007
 borough: Manhattan
 neighborhood: Financial District

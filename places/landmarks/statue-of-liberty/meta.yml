@@ -7,9 +7,7 @@ coords:
   lng: -74.0445
 category:
 - landmarks
-time: full
-cost: paid
-price: ~5
+price: $$
 address: Liberty Island, New York, NY 10004
 route_types:
 - anchor-stop

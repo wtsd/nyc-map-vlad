@@ -7,12 +7,7 @@ coords:
   lng: -73.8769
 category:
 - parks
-time: full
-cost: paid
-price: ~0+
-transit:
-  en: West Farms Sq / E Tremont Av
-  ru: West Farms Sq / E Tremont Av
+price: $$
 address: 2300 Southern Blvd, Bronx, NY 10460
 route_types:
 - anchor-stop

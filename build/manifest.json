@@ -1,6 +1,6 @@
 {
-  "version": "2cc8da0282",
-  "places": "build/places.eda761b88c.json",
+  "version": "0dc59578ca",
+  "places": "build/places.aace27dee3.json",
   "searchIndex": "build/search-index.efb4ce33ec.json",
   "offline": {
     "core": [
@@ -19,7 +19,7 @@
       "assets/js/place.js",
       "build/places.json",
       "build/search-index.json",
-      "build/places.eda761b88c.json",
+      "build/places.aace27dee3.json",
       "build/search-index.efb4ce33ec.json"
     ],
     "images": []

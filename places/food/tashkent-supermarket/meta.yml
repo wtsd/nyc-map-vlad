@@ -7,11 +7,6 @@ coords:
   lng: -73.9952
 category:
 - food
-time: short
-cost: paid
-transit:
-  en: W 4 St
-  ru: W 4 St
 address: 378 6th Ave, New York, NY 10011
 borough: Manhattan
 neighborhood: Greenwich Village
@@ -31,3 +26,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

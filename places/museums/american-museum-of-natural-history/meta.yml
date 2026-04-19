@@ -7,12 +7,7 @@ coords:
   lng: -73.9735
 category:
 - museums
-time: full
-cost: paid
-price: ~0
-transit:
-  en: 81 St - Museum of Natural History
-  ru: 81 St - Museum of Natural History
+price: $$
 address: 200 Central Park W, New York, NY 10024
 borough: Manhattan
 neighborhood: Upper West Side

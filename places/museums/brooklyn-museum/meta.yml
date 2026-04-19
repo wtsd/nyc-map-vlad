@@ -7,12 +7,7 @@ coords:
   lng: -73.9636
 category:
 - museums
-time: full
-cost: paid
-price: ~0
-transit:
-  en: Eastern Pkwy-Brooklyn Museum
-  ru: Eastern Pkwy-Brooklyn Museum
+price: $$
 address: 200 Eastern Pkwy, Brooklyn, NY 11238
 borough: Brooklyn
 neighborhood: Prospect Heights

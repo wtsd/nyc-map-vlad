@@ -21,8 +21,6 @@ SEARCH_INDEX_FILE = BUILD_DIR / "search-index.json"
 MANIFEST_FILE = BUILD_DIR / "manifest.json"
 THUMBS_DIR = BUILD_DIR / "thumbs"
 
-VALID_TIME = {"short", "medium", "full"}
-VALID_COST = {"free", "paid"}
 VALID_PERSONAL = {"", "want-to-go", "been-not-impressed", "highly-recommend"}
 
 REQUIRED_META_FIELDS = [
@@ -31,8 +29,6 @@ REQUIRED_META_FIELDS = [
     "coords",
     "category",
     "personal",
-    "time",
-    "cost",
     "address",
 ]
 
@@ -192,11 +188,7 @@ def build_place(meta, place_path):
         "coords": [meta["coords"]["lat"], meta["coords"]["lng"]],
         "category": categories,
         "personal": meta.get("personal", ""),
-        "tags": meta.get("tags", []),
-        "time": meta.get("time"),
-        "cost": meta.get("cost"),
         "price": meta.get("price"),
-        "transit": meta.get("transit"),
         "address": meta.get("address", ""),
         "external_link": meta.get("external_link", ""),
         "image": image_path,
@@ -314,14 +306,6 @@ def main():
         coords_error = validate_coords(meta.get("coords"))
         if coords_error:
             errors.append(f"{meta_path}: coords {coords_error}")
-
-        enum_error = validate_enum("time", meta.get("time"), VALID_TIME)
-        if enum_error:
-            errors.append(f"{meta_path}: {enum_error}")
-
-        enum_error = validate_enum("cost", meta.get("cost"), VALID_COST)
-        if enum_error:
-            errors.append(f"{meta_path}: {enum_error}")
 
         enum_error = validate_enum("personal", meta.get("personal"), VALID_PERSONAL)
         if enum_error:

@@ -7,11 +7,6 @@ coords:
   lng: -74.07729
 category:
 - food
-time: medium
-cost: paid
-transit:
-  en: St George Ferry Terminal
-  ru: St George Ferry Terminal
 address: 27 Hyatt St, Staten Island, NY 10301
 borough: Staten Island
 neighborhood: Staten Island
@@ -30,3 +25,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

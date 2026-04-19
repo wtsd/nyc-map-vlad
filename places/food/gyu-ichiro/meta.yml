@@ -7,14 +7,7 @@ coords:
   lng: -73.9943363
 category:
 - food
-tags: []
-time: medium
-cost: paid
-price: ''
-transit:
-  en: Grand St / Bowery
-  ru: Grand St / Bowery
+price: $$
 address: 135 Bowery, New York, NY 10002
 external_link: https://www.tiktok.com/t/ZP8gHcgxC
-featured: false
 personal: want-to-go

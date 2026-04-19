@@ -7,11 +7,6 @@ coords:
   lng: -73.9819
 category:
 - food
-time: short
-cost: paid
-transit:
-  en: Coney Island
-  ru: Coney Island
 address: 1310 Surf Ave, Brooklyn, NY 11224
 borough: Brooklyn
 neighborhood: Coney Island
@@ -30,3 +25,4 @@ best_for:
 - couples
 external_link: ''
 personal: want-to-go
+price: $$

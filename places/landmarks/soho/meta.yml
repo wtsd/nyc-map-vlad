@@ -7,11 +7,6 @@ coords:
   lng: -74.003
 category:
 - landmarks
-time: medium
-cost: free
-transit:
-  en: Prince St / Spring St
-  ru: Prince St / Spring St
 address: Broadway & Prince St, New York, NY 10012
 borough: Manhattan
 neighborhood: SoHo / Nolita
@@ -30,3 +25,4 @@ best_for:
 - budget
 external_link: ''
 personal: want-to-go
+price: $$

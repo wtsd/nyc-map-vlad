@@ -7,11 +7,6 @@ coords:
   lng: -73.978
 category:
 - other
-time: medium
-cost: paid
-transit:
-  en: Coney Island
-  ru: Coney Island
 address: 1000 Surf Ave, Brooklyn, NY 11224
 borough: Brooklyn
 neighborhood: Coney Island
@@ -30,3 +25,4 @@ vibes:
 best_for: []
 external_link: ''
 personal: want-to-go
+price: $$

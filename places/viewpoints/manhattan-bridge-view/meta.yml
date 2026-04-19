@@ -7,11 +7,6 @@ coords:
   lng: -73.9887
 category:
 - viewpoints
-time: short
-cost: free
-transit:
-  en: York St
-  ru: York St
 address: Washington St & Front St, Brooklyn, NY 11201
 borough: Brooklyn
 neighborhood: DUMBO
@@ -35,3 +30,4 @@ best_for:
 - photos
 external_link: ''
 personal: want-to-go
+price: $$

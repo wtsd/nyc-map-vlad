@@ -7,11 +7,6 @@ coords:
   lng: -73.9718
 category:
 - parks
-time: medium
-cost: paid
-transit:
-  en: 59 St
-  ru: 59 St
 address: East 64th St, New York, NY 10021
 borough: Manhattan
 neighborhood: Midtown West
@@ -33,3 +28,4 @@ best_for:
 - families
 external_link: ''
 personal: want-to-go
+price: $$

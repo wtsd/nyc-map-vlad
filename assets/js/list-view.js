@@ -206,6 +206,7 @@
               <span aria-hidden="true">📍</span><span>${address}</span>
             </a>
           </div>
+          <p class="summary">${summary}</p>
           <div class="status-row">
             <span class="status-row-title">${text.card.personalLabel}: ${getPersonalLabel(lang, p.personal) || "—"}</span>
             <select id="status-select-${p.id}" class="card-status-select" onchange="setStatus('${p.id}', this.value)">
@@ -215,7 +216,6 @@
               <option value="visited" ${status === "visited" ? "selected" : ""}>${text.card.statusVisited}</option>
             </select>
           </div>
-          <p class="summary">${summary}</p>
         </div>`;
       el.addEventListener("click", (event) => {
         if (event.target.closest("button, a, input, select, textarea")) return;
