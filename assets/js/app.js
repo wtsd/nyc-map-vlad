@@ -7,6 +7,7 @@ Object.keys(checklist).forEach(id => {
 let mobileView = "list";
 let currentPage = 1;
 let currentStatusFilter = "";
+let currentPersonalFilter = "";
 const pageSize = 25;
 
 function toggleLang() {
@@ -35,6 +36,14 @@ function getCategoryLabel(category) {
 
 function getTimeLabel(time) {
   return NYCMapCommon.getTimeLabel(lang, time);
+}
+
+function getPersonalLabel(personal) {
+  return NYCMapCommon.getPersonalLabel(lang, personal);
+}
+
+function getPersonalEmoji(personal) {
+  return NYCMapCommon.getPersonalEmoji(personal);
 }
 
 function getCostLabel(cost, price) {
@@ -120,22 +129,24 @@ function getFilteredPlaces() {
   const category = document.getElementById("categoryFilter")?.value || "";
   const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
   const status = currentStatusFilter;
+  const personal = currentPersonalFilter;
 
-  return filterPlaces(category, search, status);
+  return filterPlaces(category, search, status, personal);
 }
 
 function getPlacesForStats() {
   const category = document.getElementById("categoryFilter")?.value || "";
   const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
 
-  return filterPlaces(category, search, "");
+  return filterPlaces(category, search, "", "");
 }
 
-function filterPlaces(category, search, status) {
+function filterPlaces(category, search, status, personal) {
   return places.filter(p => {
     const categoryOk = !category || (Array.isArray(p.category) && p.category.includes(category));
     const statusOk = !status || checklist[p.id] === status;
-    if (!categoryOk || !statusOk) return false;
+    const personalOk = !personal || p.personal === personal;
+    if (!categoryOk || !statusOk || !personalOk) return false;
     if (!search) return true;
 
     const title = `${p.title?.en || ""} ${p.title?.ru || ""}`.toLowerCase();
@@ -148,6 +159,7 @@ function filterPlaces(category, search, status) {
 
 function onFiltersChanged() {
   currentPage = 1;
+  syncFiltersToUrl();
   render();
 }
 
@@ -162,6 +174,61 @@ function setStatusFilter(status) {
   });
 
   onFiltersChanged();
+}
+
+function setPersonalFilter(personal) {
+  currentPersonalFilter = personal;
+
+  const tabs = document.querySelectorAll(".personal-filter-tab");
+  tabs.forEach(tab => {
+    const isActive = tab.dataset.personal === personal;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
+
+  onFiltersChanged();
+}
+
+function syncFiltersToUrl() {
+  const url = new URL(window.location.href);
+  const category = document.getElementById("categoryFilter")?.value || "";
+
+  if (category) url.searchParams.set("category", category);
+  else url.searchParams.delete("category");
+
+  if (currentPersonalFilter) url.searchParams.set("personal", currentPersonalFilter);
+  else url.searchParams.delete("personal");
+
+  if (currentStatusFilter) url.searchParams.set("status", currentStatusFilter);
+  else url.searchParams.delete("status");
+
+  const search = (document.getElementById("searchFilter")?.value || "").trim();
+  if (search) url.searchParams.set("search", search);
+  else url.searchParams.delete("search");
+
+  window.history.pushState({}, "", url);
+}
+
+function applyFiltersFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category") || "";
+  const personal = params.get("personal") || "";
+  const status = params.get("status") || "";
+  const search = params.get("search") || "";
+
+  const categoryFilter = document.getElementById("categoryFilter");
+  if (categoryFilter) {
+    const validCategory = Array.from(categoryFilter.options).some(option => option.value === category);
+    categoryFilter.value = validCategory ? category : "";
+  }
+
+  currentPersonalFilter = ["", "want-to-go", "been-not-impressed", "highly-recommend"].includes(personal)
+    ? personal
+    : "";
+  currentStatusFilter = ["", "want", "skip", "visited"].includes(status) ? status : "";
+
+  const searchFilter = document.getElementById("searchFilter");
+  if (searchFilter) searchFilter.value = search;
 }
 
 function goToPage(page) {
@@ -211,6 +278,10 @@ function render() {
   const statWantLabel = document.getElementById("statWantLabel");
   const statSkipLabel = document.getElementById("statSkipLabel");
   const statVisitedLabel = document.getElementById("statVisitedLabel");
+  const personalAllLabel = document.getElementById("personalAllLabel");
+  const personalWantLabel = document.getElementById("personalWantLabel");
+  const personalNotImpressedLabel = document.getElementById("personalNotImpressedLabel");
+  const personalRecommendLabel = document.getElementById("personalRecommendLabel");
   const filtered = getFilteredPlaces();
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
 
@@ -253,6 +324,17 @@ function render() {
   if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "Хочу" : "Want";
   if (statSkipLabel) statSkipLabel.textContent = lang === "ru" ? "Пропустить" : "Skip";
   if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "Был" : "Visited";
+  if (personalAllLabel) personalAllLabel.textContent = lang === "ru" ? "Личное: все" : "Personal: all";
+  if (personalWantLabel) personalWantLabel.textContent = lang === "ru" ? "Хочу сходить" : "Want to go";
+  if (personalNotImpressedLabel) personalNotImpressedLabel.textContent = lang === "ru" ? "Не впечатлило" : "Not impressed";
+  if (personalRecommendLabel) personalRecommendLabel.textContent = lang === "ru" ? "Советую" : "Highly recommend";
+  const personalTabs = document.querySelectorAll(".personal-filter-tab");
+  personalTabs.forEach(tab => {
+    const personalKey = tab.dataset.personal || "";
+    const isActive = personalKey === currentPersonalFilter;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
 
   container.innerHTML = "";
 
@@ -260,6 +342,8 @@ function render() {
     const status = checklist[p.id] || "none";
     const imageSrc = p.image || "assets/images/placeholders/cover.jpg";
     const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
+    const personalEmoji = getPersonalEmoji(p.personal);
+    const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
     const summary = truncate(NYCMapCommon.getLocalizedText(lang, p.summary, ""), 180);
     const address = NYCMapCommon.getPlaceAddress(p, lang);
     const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(p.category[0]) : "";
@@ -280,7 +364,7 @@ function render() {
         <div class="card-topline">
           <div class="card-title-wrap">
             <h3 class="card-title">
-              <a class="card-title-link" href="${detailsUrl}">${title}</a>
+              <a class="card-title-link" href="${detailsUrl}">${fullTitle}</a>
             </h3>
             <button class="copy-btn card-copy-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
               <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -413,7 +497,13 @@ function updateStats(filtered) {
   if (visited) visited.textContent = counts.visited;
 }
 loadData();
+applyFiltersFromUrl();
 applyMobileTabState();
+window.addEventListener("popstate", () => {
+  applyFiltersFromUrl();
+  currentPage = 1;
+  render();
+});
 window.addEventListener("resize", applyMobileTabState);
 const yearEl = document.getElementById("footerYear");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());

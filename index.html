@@ -62,6 +62,23 @@
           <span class="stat-filter-label" id="statVisitedLabel">Visited</span>
         </button>
       </div>
+      <div class="personal-filter-tabs" role="tablist" aria-label="Personal filters">
+        <button class="personal-filter-tab active" type="button" data-personal="" onclick="setPersonalFilter('')">
+          <span id="personalAllLabel">Personal: all</span>
+        </button>
+        <button class="personal-filter-tab" type="button" data-personal="want-to-go" onclick="setPersonalFilter('want-to-go')">
+          <span aria-hidden="true">🟦</span>
+          <span id="personalWantLabel">Want to go</span>
+        </button>
+        <button class="personal-filter-tab" type="button" data-personal="been-not-impressed" onclick="setPersonalFilter('been-not-impressed')">
+          <span aria-hidden="true">⬜</span>
+          <span id="personalNotImpressedLabel">Not impressed</span>
+        </button>
+        <button class="personal-filter-tab" type="button" data-personal="highly-recommend" onclick="setPersonalFilter('highly-recommend')">
+          <span aria-hidden="true">🟩</span>
+          <span id="personalRecommendLabel">Highly recommend</span>
+        </button>
+      </div>
     </div>
     <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
       <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>

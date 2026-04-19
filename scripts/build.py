@@ -40,6 +40,7 @@ for place_id in os.listdir(PLACES_DIR):
         "title": meta["title"],
         "coords": [meta["coords"]["lat"], meta["coords"]["lng"]],
         "category": meta.get("category", []),
+        "personal": meta.get("personal", ""),
         "tags": meta.get("tags", []),
         "time": meta.get("time"),
         "cost": meta.get("cost"),

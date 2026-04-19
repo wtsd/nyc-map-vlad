@@ -6,7 +6,9 @@ coords:
   lat: 40.746807
   lng: -73.990083
 category:
-- food
+  - food
+personal: highly-recommend
+
 tags: []
 time: medium
 cost: paid

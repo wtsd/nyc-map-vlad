@@ -140,6 +140,13 @@ input[type="search"] {
   flex-wrap: wrap;
 }
 
+.personal-filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
 .status-filter-tab {
   height: 38px;
   border: 1px solid var(--border);
@@ -150,7 +157,26 @@ input[type="search"] {
   cursor: pointer;
 }
 
+.personal-filter-tab {
+  height: 38px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .status-filter-tab.active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+.personal-filter-tab.active {
   background: #111827;
   color: #fff;
   border-color: #111827;
