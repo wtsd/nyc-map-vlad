@@ -17,8 +17,9 @@
 
       <div class="topbar-actions">
         <div class="filters">
-          <select id="categoryFilter" onchange="render()">
-            <option value="">All categories</option>
+          <input id="searchFilter" type="search" placeholder="Search" oninput="onFiltersChanged()" aria-label="Search" />
+          <select id="categoryFilter" onchange="onFiltersChanged()">
+            <option value="">All</option>
             <option value="landmarks">Landmarks</option>
             <option value="parks">Parks</option>
             <option value="museums">Museums</option>
@@ -27,65 +28,61 @@
             <option value="hidden-gems">Hidden gems</option>
             <option value="other">Other</option>
           </select>
-
-          <select id="statusFilter" onchange="render()">
-            <option value="">All statuses</option>
-            <option value="want">Want</option>
-            <option value="visited">Visited</option>
-            <option value="favorite">Favorite</option>
-            <option value="skip">Skip</option>
-          </select>
         </div>
 
         <div class="header-buttons">
           <button class="secondary-btn icon-btn" onclick="copySummary()" aria-label="Copy summary">
-            <span class="btn-icon" aria-hidden="true">📋</span>
-            <span class="btn-label">Copy summary</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M16 8a3 3 0 1 0-2.83-4H13a3 3 0 0 0 .17 1l-6.2 3.1a3 3 0 1 0 0 7.8l6.2 3.1A3 3 0 1 0 14 17a2.9 2.9 0 0 0-.83.12l-6.2-3.1a3.08 3.08 0 0 0 0-4.04l6.2-3.1A2.9 2.9 0 0 0 14 7a3 3 0 0 0 2-.77z"></path>
+            </svg>
           </button>
           <button class="secondary-btn icon-btn" onclick="toggleLang()" aria-label="Switch language">
-            <span class="btn-icon" aria-hidden="true">🌐</span>
-            <span class="btn-label">EN / RU</span>
+            <span class="btn-icon" aria-hidden="true">🌎</span>
           </button>
         </div>
       </div>
     </div>
 
     <div class="stats-strip">
-      <div class="stat-box">
-        <div class="stat-number" id="statTotal">0</div>
-        <div class="stat-label">All places</div>
+      <div class="status-filter-tabs" role="tablist" aria-label="Status filters">
+        <button class="status-filter-tab stat-filter-btn active" type="button" data-status="" onclick="setStatusFilter('')">
+          <span class="stat-number" id="statTotal">0</span>
+          <span class="stat-filter-label">All</span>
+        </button>
+        <button class="status-filter-tab stat-filter-btn" type="button" data-status="want" onclick="setStatusFilter('want')">
+          <span class="stat-number" id="statWant">0</span>
+          <span class="stat-filter-label" id="statWantLabel">Want</span>
+        </button>
+        <button class="status-filter-tab stat-filter-btn" type="button" data-status="skip" onclick="setStatusFilter('skip')">
+          <span class="stat-number" id="statSkip">0</span>
+          <span class="stat-filter-label" id="statSkipLabel">Skip</span>
+        </button>
+        <button class="status-filter-tab stat-filter-btn" type="button" data-status="visited" onclick="setStatusFilter('visited')">
+          <span class="stat-number" id="statVisited">0</span>
+          <span class="stat-filter-label" id="statVisitedLabel">Visited</span>
+        </button>
       </div>
-      <div class="stat-box">
-        <div class="stat-number" id="statWant">0</div>
-        <div class="stat-label">Want</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number" id="statVisited">0</div>
-        <div class="stat-label">Visited</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-number" id="statFavorite">0</div>
-        <div class="stat-label">Favorite</div>
-      </div>
+    </div>
+    <div class="mobile-tabs" role="tablist" aria-label="List and map tabs">
+      <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>
+      <button id="tabMap" class="mobile-tab" onclick="switchMobileView('map')" role="tab" aria-selected="false">Map</button>
     </div>
   </header>
 
   <main class="layout">
-    <section class="sidebar-section">
-      <div class="sidebar-header">
-        <div>
-          <h2>Places</h2>
-          <p id="resultsCount">Loading...</p>
-        </div>
-      </div>
-
+    <section id="listSection" class="sidebar-section">
+      <div id="paginationTop" class="pagination"></div>
       <div id="list" class="card-list"></div>
+      <div id="pagination" class="pagination"></div>
     </section>
 
-    <aside class="map-section">
+    <aside id="mapSection" class="map-section">
       <div class="map-card">
         <div class="map-card-header">
-          <h2>Map View</h2>
+          <button id="locateBtn" class="secondary-btn icon-btn" onclick="locateUser()" aria-label="Show my location">
+            <span class="btn-icon" aria-hidden="true">📍</span>
+            <span class="btn-label">Locate me</span>
+          </button>
           <button class="secondary-btn mobile-map-toggle icon-btn" onclick="toggleMap()" aria-label="Toggle map">
             <span class="btn-icon" aria-hidden="true">🗺️</span>
             <span class="btn-label">Show / hide</span>
@@ -97,6 +94,13 @@
       </div>
     </aside>
   </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <a href="https://github.com/wtsd/nyc-map-vlad" target="_blank" rel="noopener noreferrer">Repository</a>
+      <span>© <span id="footerYear"></span> Vlad & Katya</span>
+    </div>
+  </footer>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="assets/js/common.js"></script>

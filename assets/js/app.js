@@ -1,6 +1,13 @@
 let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
 let places = [];
 let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
+Object.keys(checklist).forEach(id => {
+  if (checklist[id] === "favorite") checklist[id] = null;
+});
+let mobileView = "list";
+let currentPage = 1;
+let currentStatusFilter = "";
+const pageSize = 25;
 
 function toggleLang() {
   lang = lang === "en" ? "ru" : "en";
@@ -45,10 +52,10 @@ async function copyPlace(id) {
 
   const status = checklist[id] || "none";
   const text = [
-    p.title[lang] || p.title.en,
+    NYCMapCommon.getLocalizedText(lang, p.title, ""),
     `${lang === "ru" ? "Статус" : "Status"}: ${getStatusLabel(status)}`,
     "",
-    `${lang === "ru" ? "Транспорт" : "Transit"}: ${p.transit?.[lang] || p.transit?.en || ""}`,
+    `${lang === "ru" ? "Адрес" : "Address"}: ${NYCMapCommon.getPlaceAddress(p, lang)}`,
     `${lang === "ru" ? "Время" : "Time"}: ${getTimeLabel(p.time)}`,
     `${lang === "ru" ? "Цена" : "Cost"}: ${getCostLabel(p.cost, p.price)}`,
     "",
@@ -65,7 +72,6 @@ async function copySummary() {
   const grouped = {
     want: [],
     visited: [],
-    favorite: [],
     skip: []
   };
 
@@ -81,14 +87,12 @@ async function copySummary() {
       title: "NYC Map by Vlad and Katya",
       want: "Want to visit",
       visited: "Visited",
-      favorite: "Favorite",
       skip: "Skip"
     },
     ru: {
       title: "Карта Нью-Йорка от Влада и Кати",
       want: "Хочу посетить",
       visited: "Посетил",
-      favorite: "Любимое",
       skip: "Пропустить"
     }
   };
@@ -96,7 +100,7 @@ async function copySummary() {
   const t = labels[lang];
   let out = `${t.title}\n\n`;
 
-  ["want", "visited", "favorite", "skip"].forEach(key => {
+  ["want", "visited", "skip"].forEach(key => {
     if (!grouped[key].length) return;
 
     out += `${t[key]}:\n`;
@@ -114,36 +118,150 @@ async function copySummary() {
 
 function getFilteredPlaces() {
   const category = document.getElementById("categoryFilter")?.value || "";
-  const status = document.getElementById("statusFilter")?.value || "";
+  const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
+  const status = currentStatusFilter;
 
+  return filterPlaces(category, search, status);
+}
+
+function getPlacesForStats() {
+  const category = document.getElementById("categoryFilter")?.value || "";
+  const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
+
+  return filterPlaces(category, search, "");
+}
+
+function filterPlaces(category, search, status) {
   return places.filter(p => {
     const categoryOk = !category || (Array.isArray(p.category) && p.category.includes(category));
     const statusOk = !status || checklist[p.id] === status;
-    return categoryOk && statusOk;
+    if (!categoryOk || !statusOk) return false;
+    if (!search) return true;
+
+    const title = `${p.title?.en || ""} ${p.title?.ru || ""}`.toLowerCase();
+    const summary = `${p.summary?.en || ""} ${p.summary?.ru || ""}`.toLowerCase();
+    const address = `${p.address?.en || ""} ${p.address?.ru || ""}`.toLowerCase();
+    const categories = (p.category || []).join(" ").toLowerCase();
+    return title.includes(search) || summary.includes(search) || address.includes(search) || categories.includes(search);
+  });
+}
+
+function onFiltersChanged() {
+  currentPage = 1;
+  render();
+}
+
+function setStatusFilter(status) {
+  currentStatusFilter = status;
+
+  const tabs = document.querySelectorAll(".status-filter-tab");
+  tabs.forEach(tab => {
+    const isActive = tab.dataset.status === status;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
+
+  onFiltersChanged();
+}
+
+function goToPage(page) {
+  const totalPages = Math.max(1, Math.ceil(getFilteredPlaces().length / pageSize));
+  currentPage = Math.min(Math.max(page, 1), totalPages);
+  render();
+}
+
+function renderPagination(totalItems, totalPages) {
+  const paginations = [
+    document.getElementById("paginationTop"),
+    document.getElementById("pagination")
+  ].filter(Boolean);
+
+  if (!paginations.length) return;
+
+  if (totalItems <= pageSize) {
+    paginations.forEach(pagination => {
+      pagination.innerHTML = "";
+      pagination.classList.add("hidden");
+    });
+    return;
+  }
+
+  const prevDisabled = currentPage === 1 ? "disabled" : "";
+  const nextDisabled = currentPage === totalPages ? "disabled" : "";
+  const html = `
+    <button class="page-btn" onclick="goToPage(${currentPage - 1})" ${prevDisabled} aria-label="Previous page">${lang === "ru" ? "←" : "←"}</button>
+    <span class="page-info">${currentPage} / ${totalPages}</span>
+    <button class="page-btn" onclick="goToPage(${currentPage + 1})" ${nextDisabled} aria-label="Next page">${lang === "ru" ? "→" : "→"}</button>
+  `;
+
+  paginations.forEach(pagination => {
+    pagination.classList.remove("hidden");
+    pagination.innerHTML = html;
   });
 }
 
 function render() {
   const container = document.getElementById("list");
-  const resultsCount = document.getElementById("resultsCount");
+  const tabList = document.getElementById("tabList");
+  const tabMap = document.getElementById("tabMap");
+  const locateBtn = document.getElementById("locateBtn");
+  const searchFilter = document.getElementById("searchFilter");
+  const shareLabel = document.querySelector(".header-buttons button[onclick='copySummary()'] .btn-label");
+  const langLabel = document.querySelector(".header-buttons button[onclick='toggleLang()'] .btn-label");
+  const statWantLabel = document.getElementById("statWantLabel");
+  const statSkipLabel = document.getElementById("statSkipLabel");
+  const statVisitedLabel = document.getElementById("statVisitedLabel");
   const filtered = getFilteredPlaces();
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
+
+  if (currentPage > totalPages) currentPage = totalPages;
+  const pageStart = (currentPage - 1) * pageSize;
+  const paginatedPlaces = filtered.slice(pageStart, pageStart + pageSize);
 
   if (!container) return;
 
-  updateStats(filtered);
+  updateStats(getPlacesForStats());
 
-  if (resultsCount) {
-    resultsCount.textContent = lang === "ru" ? `${filtered.length} мест` : `${filtered.length} places`;
+  if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
+  if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
+  if (locateBtn) {
+    locateBtn.setAttribute("aria-label", lang === "ru" ? "Показать мое местоположение" : "Show my location");
+    const locateLabel = locateBtn.querySelector(".btn-label");
+    if (locateLabel) locateLabel.textContent = lang === "ru" ? "Где я" : "Locate me";
   }
+  if (searchFilter) {
+    searchFilter.placeholder = lang === "ru" ? "Поиск" : "Search";
+  }
+  if (shareLabel) shareLabel.textContent = lang === "ru" ? "Поделиться" : "Share";
+  if (langLabel) langLabel.textContent = lang === "ru" ? "Язык" : "Language";
+  const statusFilterTabs = document.querySelectorAll(".status-filter-tab");
+  const statusTabLabels = lang === "ru"
+    ? { "": "Все", want: "Хочу", skip: "Пропустить", visited: "Был" }
+    : { "": "All", want: "Want", skip: "Skip", visited: "Visited" };
+  statusFilterTabs.forEach(tab => {
+    const statusKey = tab.dataset.status || "";
+    const label = tab.querySelector(".stat-filter-label");
+    if (label) {
+      label.textContent = statusTabLabels[statusKey] || "";
+    } else {
+      tab.textContent = statusTabLabels[statusKey] || tab.textContent;
+    }
+    const isActive = statusKey === currentStatusFilter;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", String(isActive));
+  });
+  if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "Хочу" : "Want";
+  if (statSkipLabel) statSkipLabel.textContent = lang === "ru" ? "Пропустить" : "Skip";
+  if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "Был" : "Visited";
 
   container.innerHTML = "";
 
-  filtered.forEach(p => {
+  paginatedPlaces.forEach(p => {
     const status = checklist[p.id] || "none";
     const imageSrc = p.image || "assets/images/placeholders/cover.jpg";
-    const title = p.title[lang] || p.title.en;
-    const summary = truncate(p.summary[lang] || p.summary.en || "", 180);
-    const transit = p.transit?.[lang] || p.transit?.en || "";
+    const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
+    const summary = truncate(NYCMapCommon.getLocalizedText(lang, p.summary, ""), 180);
+    const address = NYCMapCommon.getPlaceAddress(p, lang);
     const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(p.category[0]) : "";
     const detailsUrl = `place.html?id=${encodeURIComponent(p.id)}`;
 
@@ -160,48 +278,43 @@ function render() {
 
       <div class="card-body">
         <div class="card-topline">
-          <h3 class="card-title">${title}</h3>
-          <div class="card-category">${category}</div>
-        </div>
-
-        <div class="meta-row">
-          <span class="chip">${getTimeLabel(p.time)}</span>
-          <span class="chip">${getCostLabel(p.cost, p.price)}</span>
-        </div>
-
-        <p class="summary">${summary}</p>
-
-        <div class="transit-row">
-          <span>${lang === "ru" ? "Транспорт:" : "Transit:"}</span>
-          <strong>${transit}</strong>
-        </div>
-
-        <div class="status-row">
-          <button class="status-btn ${status === "want" ? "active" : ""}" onclick="setStatus('${p.id}', 'want')">${lang === "ru" ? "Хочу" : "Want"}</button>
-          <button class="status-btn ${status === "visited" ? "active" : ""}" onclick="setStatus('${p.id}', 'visited')">${lang === "ru" ? "Был" : "Visited"}</button>
-          <button class="status-btn ${status === "favorite" ? "active" : ""}" onclick="setStatus('${p.id}', 'favorite')">${lang === "ru" ? "Любимое" : "Favorite"}</button>
-          <button class="status-btn ${status === "skip" ? "active" : ""}" onclick="setStatus('${p.id}', 'skip')">${lang === "ru" ? "Пропустить" : "Skip"}</button>
-        </div>
-
-        <div class="card-footer">
-          <div class="card-footer-actions">
-            <button class="copy-btn icon-btn icon-only-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
+          <div class="card-title-wrap">
+            <h3 class="card-title">
+              <a class="card-title-link" href="${detailsUrl}">${title}</a>
+            </h3>
+            <button class="copy-btn card-copy-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
               <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <rect x="9" y="9" width="11" height="11" rx="2"></rect>
                 <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
               </svg>
-              <span class="sr-only btn-label">${lang === "ru" ? "Копировать" : "Copy"}</span>
+              <span class="sr-only">${lang === "ru" ? "Копировать" : "Copy"}</span>
             </button>
-        <a class="copy-btn" href="${getMapsUrl(p)}" target="_blank" rel="noopener noreferrer">${lang === "ru" ? "Карта" : "Maps"}</a>
-            <a class="primary-link-btn icon-btn icon-only-btn" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}" title="${lang === "ru" ? "Открыть" : "Open"}">
-              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path d="M7 17 17 7"></path>
-                <path d="M7 7h10v10"></path>
-              </svg>
-              <span class="sr-only btn-label">${lang === "ru" ? "Открыть" : "Open"}</span>
-            </a>
+          </div>
+          <div class="card-category">${category}</div>
+        </div>
+
+        <div class="transit-row">
+          <a class="address-btn" href="${NYCMapCommon.getMapsUrl(p, lang)}" target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">📍</span>
+            <span>${address}</span>
+          </a>
+        </div>
+
+        <p class="summary">${summary}</p>
+
+        <div class="meta-row">
+          <span class="chip ${p.time === "short" ? "is-muted" : ""}">${getTimeLabel(p.time)}</span>
+          <span class="chip ${p.cost === "free" ? "is-muted" : ""}">${getCostLabel(p.cost, p.price)}</span>
+        </div>
+
+        <div class="status-row">
+          <div class="status-toggle-wrap">
+            <button class="status-btn ${status === "want" ? "active" : ""} ${status !== "none" && status !== "want" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'want')">${lang === "ru" ? "Хочу" : "Want"}</button>
+            <button class="status-btn ${status === "visited" ? "active" : ""} ${status !== "none" && status !== "visited" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'visited')">${lang === "ru" ? "Был" : "Visited"}</button>
+            <button class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">${lang === "ru" ? "Пропустить" : "Skip"}</button>
           </div>
         </div>
+
       </div>
     `;
 
@@ -211,6 +324,10 @@ function render() {
   if (typeof refreshMap === "function") {
     refreshMap(filtered);
   }
+
+  renderPagination(filtered.length, totalPages);
+
+  applyMobileTabState();
 }
 
 async function loadData() {
@@ -223,9 +340,9 @@ async function loadData() {
     initMap(places);
   } catch (error) {
     console.error("Failed to load places.json", error);
-    const resultsCount = document.getElementById("resultsCount");
-    if (resultsCount) {
-      resultsCount.textContent = lang === "ru" ? "Ошибка загрузки" : "Failed to load data";
+    const list = document.getElementById("list");
+    if (list) {
+      list.innerHTML = `<p>${lang === "ru" ? "Ошибка загрузки" : "Failed to load data"}</p>`;
     }
   }
 }
@@ -242,36 +359,61 @@ function toggleMap() {
   }, 50);
 }
 
+function switchMobileView(view) {
+  mobileView = view === "map" ? "map" : "list";
+  applyMobileTabState();
+}
+
+function applyMobileTabState() {
+  const listSection = document.getElementById("listSection");
+  const mapSection = document.getElementById("mapSection");
+  const tabList = document.getElementById("tabList");
+  const tabMap = document.getElementById("tabMap");
+  const mobile = window.matchMedia("(max-width: 760px)").matches;
+
+  if (!listSection || !mapSection || !tabList || !tabMap) return;
+
+  if (!mobile) {
+    listSection.classList.remove("mobile-hidden");
+    mapSection.classList.remove("mobile-hidden");
+  } else {
+    listSection.classList.toggle("mobile-hidden", mobileView === "map");
+    mapSection.classList.toggle("mobile-hidden", mobileView !== "map");
+  }
+
+  tabList.classList.toggle("active", mobileView === "list");
+  tabMap.classList.toggle("active", mobileView === "map");
+  tabList.setAttribute("aria-selected", String(mobileView === "list"));
+  tabMap.setAttribute("aria-selected", String(mobileView === "map"));
+}
+
 function updateStats(filtered) {
   const counts = {
     total: filtered.length,
     want: 0,
-    visited: 0,
-    favorite: 0
+    skip: 0,
+    visited: 0
   };
 
   filtered.forEach(p => {
     const status = checklist[p.id];
     if (status === "want") counts.want += 1;
+    if (status === "skip") counts.skip += 1;
     if (status === "visited") counts.visited += 1;
-    if (status === "favorite") counts.favorite += 1;
   });
 
   const total = document.getElementById("statTotal");
   const want = document.getElementById("statWant");
+  const skip = document.getElementById("statSkip");
   const visited = document.getElementById("statVisited");
-  const favorite = document.getElementById("statFavorite");
 
   if (total) total.textContent = counts.total;
   if (want) want.textContent = counts.want;
+  if (skip) skip.textContent = counts.skip;
   if (visited) visited.textContent = counts.visited;
-  if (favorite) favorite.textContent = counts.favorite;
 }
-
-
-function getMapsUrl(place) {
-  const query = place.address || place.title?.[lang] || place.title?.en || place.id;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-}
-
 loadData();
+applyMobileTabState();
+window.addEventListener("resize", applyMobileTabState);
+const yearEl = document.getElementById("footerYear");
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());

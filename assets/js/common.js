@@ -5,7 +5,6 @@
     none: { en: "Not set", ru: "Не выбрано" },
     want: { en: "Want to visit", ru: "Хочу посетить" },
     visited: { en: "Visited", ru: "Посетил" },
-    favorite: { en: "Favorite", ru: "Любимое" },
     skip: { en: "Skip", ru: "Пропустить" }
   };
 
@@ -56,6 +55,24 @@
     return cost || "";
   }
 
+  function getLocalizedText(lang, value, fallback = "") {
+    if (!value) return fallback;
+    if (typeof value === "string") return value;
+    if (typeof value !== "object") return fallback;
+
+    return value[normalizeLang(lang)] || value.en || fallback;
+  }
+
+  function getPlaceAddress(place, lang) {
+    if (!place) return "";
+    return getLocalizedText(lang, place.address, getLocalizedText(lang, place.title, place.id || ""));
+  }
+
+  function getMapsUrl(place, lang) {
+    const query = getPlaceAddress(place, lang);
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+  }
+
   async function copyText(text) {
     if (!navigator.clipboard?.writeText) return false;
     try {
@@ -72,6 +89,9 @@
     getCategoryLabel,
     getTimeLabel,
     getCostLabel,
+    getLocalizedText,
+    getPlaceAddress,
+    getMapsUrl,
     copyText
   };
 })();
