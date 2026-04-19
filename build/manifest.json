@@ -1,7 +1,7 @@
 {
-  "version": "8371e97ec3",
-  "places": "build/places.c1ecf5ceae.json",
-  "searchIndex": "build/search-index.59608c9b00.json",
+  "version": "2cc8da0282",
+  "places": "build/places.eda761b88c.json",
+  "searchIndex": "build/search-index.efb4ce33ec.json",
   "offline": {
     "core": [
       "index.html",
@@ -19,8 +19,8 @@
       "assets/js/place.js",
       "build/places.json",
       "build/search-index.json",
-      "build/places.c1ecf5ceae.json",
-      "build/search-index.59608c9b00.json"
+      "build/places.eda761b88c.json",
+      "build/search-index.efb4ce33ec.json"
     ],
     "images": []
   }

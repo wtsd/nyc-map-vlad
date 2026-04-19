@@ -20,13 +20,11 @@
 
   const PERSONAL_LABELS = {
     "want-to-go": { en: "Want to go", ru: "Хочу сходить" },
-    "been-not-impressed": { en: "Not impressed", ru: "Не впечатлило" },
     "highly-recommend": { en: "Highly recommend", ru: "Советую" }
   };
 
   const PERSONAL_EMOJIS = {
     "want-to-go": "🟦",
-    "been-not-impressed": "⬜",
     "highly-recommend": "🟩"
   };
 
