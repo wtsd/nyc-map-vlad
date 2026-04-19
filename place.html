@@ -53,21 +53,9 @@
                 <span id="placeAddress"></span>
               </a>
             </div>
-            <div id="placeTransitRow" class="meta-item">
-              <span class="meta-item-label" id="metaTransitLabel">Transit</span>
-              <span id="placeTransit" class="meta-item-value meta-text"></span>
-            </div>
             <div class="meta-item">
-              <span class="meta-item-label" id="metaCostLabel">Cost</span>
-              <span id="placeCost" class="chip"></span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-item-label" id="metaTimeLabel">Time</span>
-              <span id="placeTime" class="chip"></span>
-            </div>
-            <div id="placePersonalRow" class="meta-item hidden">
-              <span class="meta-item-label" id="metaPersonalLabel">Personal rating</span>
-              <span id="placePersonal" class="chip personal-rating-chip"></span>
+              <span class="meta-item-label" id="metaPriceLabel">Price</span>
+              <span id="placePrice" class="chip price-chip"></span>
             </div>
           </div>
 
@@ -80,12 +68,10 @@
           </div>
 
           <div class="status-row">
-            <span class="status-row-title">Choose one status</span>
-            <div class="status-toggle-wrap" role="radiogroup" aria-label="Choose one status">
-              <button id="btnWant" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'want')" aria-label="Want to visit">Want</button>
-              <button id="btnVisited" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'visited')" aria-label="Visited">Visited</button>
-              <button id="btnSkip" role="radio" aria-checked="false" class="status-btn" onclick="setStatus(currentPlace.id, 'skip')" aria-label="Skip">Skip</button>
-            </div>
+            <label class="compact-check" title="Visited">
+              <input id="btnVisited" type="checkbox" onchange="setVisited(currentPlace.id, this.checked)" aria-label="Visited">
+              <span aria-hidden="true">✅</span>
+            </label>
           </div>
 
           <div class="card-footer">

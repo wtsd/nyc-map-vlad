@@ -18,14 +18,15 @@
     state.setChecklistStatus(id, status);
     render();
   }
+  function setVisited(id, checked) {
+    const current = state.getChecklist()[id] || null;
+    if (checked && current !== "visited") state.setChecklistStatus(id, "visited");
+    if (!checked && current === "visited") state.setChecklistStatus(id, "visited");
+    render();
+  }
 
   function setStatusFilter(status) {
     state.setCurrentStatusFilter(status);
-    onFiltersChanged();
-  }
-
-  function setPersonalFilter(personal) {
-    state.setCurrentPersonalFilter(personal);
     onFiltersChanged();
   }
 
@@ -136,9 +137,9 @@
   window.copySummary = () => listView.copySummary(state);
   window.copyPlace = (id) => listView.copyPlace(state, id);
   window.setStatus = setStatus;
+  window.setVisited = setVisited;
   window.onFiltersChanged = onFiltersChanged;
   window.setStatusFilter = setStatusFilter;
-  window.setPersonalFilter = setPersonalFilter;
   window.goToPage = goToPage;
   window.switchMobileView = switchMobileView;
   window.toggleMap = toggleMap;

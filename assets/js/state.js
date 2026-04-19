@@ -8,7 +8,6 @@
     mobileView: "list",
     currentPage: 1,
     currentStatusFilter: "",
-    currentPersonalFilter: "",
     searchIndexById: {}
   };
 
@@ -83,14 +82,6 @@
     return state.currentStatusFilter;
   }
 
-  function setCurrentPersonalFilter(personal) {
-    state.currentPersonalFilter = personal || "";
-  }
-
-  function getCurrentPersonalFilter() {
-    return state.currentPersonalFilter;
-  }
-
   function setMobileView(view) {
     state.mobileView = view === "map" ? "map" : "list";
   }
@@ -114,8 +105,6 @@
     getCurrentPage,
     setCurrentStatusFilter,
     getCurrentStatusFilter,
-    setCurrentPersonalFilter,
-    getCurrentPersonalFilter,
     setMobileView,
     getMobileView,
     pageSize
