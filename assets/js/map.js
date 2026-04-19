@@ -38,14 +38,14 @@ function renderLegend(mode) {
   const source = mode === "personal" ? PERSONAL_COLORS : CATEGORY_COLORS;
   const items = Object.entries(source).map(([key, color]) => {
     const label = mode === "personal"
-      ? NYCMapCommon.getPersonalLabel(lang, key)
-      : NYCMapCommon.getCategoryLabel(lang, key);
+      ? NYCMapCommon.getPersonalLabel(NYCMapState.getLang(), key)
+      : NYCMapCommon.getCategoryLabel(NYCMapState.getLang(), key);
     return `<li class="map-legend-item"><span class="map-legend-dot" style="--legend-color: ${color};"></span><span>${label}</span></li>`;
   }).join("");
 
   const title = mode === "personal"
-    ? (lang === "ru" ? "Легенда: личная оценка" : "Legend: personal")
-    : (lang === "ru" ? "Легенда: категории" : "Legend: categories");
+    ? (NYCMapState.getLang() === "ru" ? "Легенда: личная оценка" : "Legend: personal")
+    : (NYCMapState.getLang() === "ru" ? "Легенда: категории" : "Legend: categories");
 
   legendEl.innerHTML = `
     <div class="map-legend-title">${title}</div>
@@ -80,6 +80,7 @@ function refreshMap(currentPlaces) {
   renderLegend(markerMode);
 
   currentPlaces.forEach(p => {
+    const lang = NYCMapState.getLang();
     const title = p.title?.[lang] || p.title?.en || p.id;
     const markerColor = getColorByMode(p, markerMode);
     const marker = L.circleMarker(p.coords, {
@@ -92,7 +93,7 @@ function refreshMap(currentPlaces) {
 
     marker.bindPopup(`
       <strong>${title}</strong><br>
-      <button onclick="scrollToCard('${p.id}')" style="margin-top:8px; cursor:pointer;">${lang === "ru" ? "К карточке" : "Show card"}</button>
+      <button onclick="scrollToCard('${p.id}')" style="margin-top:8px; cursor:pointer;">${NYCMapState.getLang() === "ru" ? "К карточке" : "Show card"}</button>
     `);
 
     marker.on("click", () => {
@@ -122,7 +123,7 @@ function locateUser() {
   if (!map) return;
 
   if (!navigator.geolocation) {
-    alert(lang === "ru" ? "Геолокация не поддерживается браузером" : "Geolocation is not supported by your browser");
+    alert(NYCMapState.getLang() === "ru" ? "Геолокация не поддерживается браузером" : "Geolocation is not supported by your browser");
     return;
   }
 
@@ -157,18 +158,18 @@ function locateUser() {
       }
 
       userLocationMarker.bindPopup(
-        `${lang === "ru" ? "Вы здесь" : "You are here"}<br>${lang === "ru" ? "Точность" : "Accuracy"}: ±${Math.round(accuracy)}m`
+        `${NYCMapState.getLang() === "ru" ? "Вы здесь" : "You are here"}<br>${NYCMapState.getLang() === "ru" ? "Точность" : "Accuracy"}: ±${Math.round(accuracy)}m`
       );
       userLocationMarker.openPopup();
       map.setView(userLatLng, Math.max(map.getZoom(), 14));
     },
     (error) => {
       const messages = {
-        1: lang === "ru" ? "Доступ к геолокации запрещен" : "Location access was denied",
-        2: lang === "ru" ? "Не удалось определить местоположение" : "Could not determine location",
-        3: lang === "ru" ? "Время ожидания геолокации истекло" : "Location request timed out"
+        1: NYCMapState.getLang() === "ru" ? "Доступ к геолокации запрещен" : "Location access was denied",
+        2: NYCMapState.getLang() === "ru" ? "Не удалось определить местоположение" : "Could not determine location",
+        3: NYCMapState.getLang() === "ru" ? "Время ожидания геолокации истекло" : "Location request timed out"
       };
-      alert(messages[error.code] || (lang === "ru" ? "Ошибка геолокации" : "Geolocation error"));
+      alert(messages[error.code] || (NYCMapState.getLang() === "ru" ? "Ошибка геолокации" : "Geolocation error"));
     },
     {
       enableHighAccuracy: true,
