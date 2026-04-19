@@ -168,7 +168,6 @@
         ? Math.max(1, Math.min(3, numericPrice))
         : 0;
       const priceLabel = priceTier ? "$".repeat(priceTier) : "";
-      const visitedIcon = status === "visited" ? "✅" : "";
       const imageUrl = p.thumbnail || p.image;
       const normalizedPersonal = p.personal === "visited" ? "visited" : "to-do";
       const personalIcon = normalizedPersonal === "visited" ? "✅" : "❔";
@@ -193,7 +192,6 @@
           <div class="card-topline">
             <h3 class="card-title"><a class="card-title-link" href="${detailsUrl}">${title}</a></h3>
             <div class="card-topline-meta">
-              ${visitedIcon ? `<span class="chip card-visited-chip" aria-label="${text.card.statusVisited}">${visitedIcon}</span>` : ""}
               ${priceLabel ? `<span class="chip">${priceLabel}</span>` : ""}
               <button class="copy-btn card-copy-btn" onclick="copyPlace('${p.id}')" aria-label="${text.card.copyDetails}" title="${text.card.copy}">
                 <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
