@@ -1,511 +1,100 @@
-let lang = NYCMapCommon.normalizeLang(localStorage.getItem("lang"));
-let places = [];
-let checklist = JSON.parse(localStorage.getItem("checklist") || "{}");
-Object.keys(checklist).forEach(id => {
-  if (checklist[id] === "favorite") checklist[id] = null;
-});
-let mobileView = "list";
-let currentPage = 1;
-let currentStatusFilter = "";
-let currentPersonalFilter = "";
-const pageSize = 25;
+(() => {
+  const state = window.NYCMapState;
+  const filters = window.NYCMapFilters;
+  const listView = window.NYCMapListView;
+  const urlState = window.NYCMapUrlState;
 
-function toggleLang() {
-  lang = lang === "en" ? "ru" : "en";
-  localStorage.setItem("lang", lang);
-  render();
-}
-
-function saveChecklist() {
-  localStorage.setItem("checklist", JSON.stringify(checklist));
-}
-
-function setStatus(id, status) {
-  checklist[id] = checklist[id] === status ? null : status;
-  saveChecklist();
-  render();
-}
-
-function getStatusLabel(status) {
-  return NYCMapCommon.getStatusLabel(lang, status);
-}
-
-function getCategoryLabel(category) {
-  return NYCMapCommon.getCategoryLabel(lang, category);
-}
-
-function getTimeLabel(time) {
-  return NYCMapCommon.getTimeLabel(lang, time);
-}
-
-function getPersonalLabel(personal) {
-  return NYCMapCommon.getPersonalLabel(lang, personal);
-}
-
-function getPersonalEmoji(personal) {
-  return NYCMapCommon.getPersonalEmoji(personal);
-}
-
-function getCostLabel(cost, price) {
-  return NYCMapCommon.getCostLabel(lang, cost, price);
-}
-
-function truncate(text, max) {
-  if (!text) return "";
-  return text.length > max ? `${text.slice(0, max).trim()}...` : text;
-}
-
-async function copyPlace(id) {
-  const p = places.find(x => x.id === id);
-  if (!p) return;
-
-  const status = checklist[id] || "none";
-  const text = [
-    NYCMapCommon.getLocalizedText(lang, p.title, ""),
-    `${lang === "ru" ? "Статус" : "Status"}: ${getStatusLabel(status)}`,
-    "",
-    `${lang === "ru" ? "Адрес" : "Address"}: ${NYCMapCommon.getPlaceAddress(p, lang)}`,
-    `${lang === "ru" ? "Время" : "Time"}: ${getTimeLabel(p.time)}`,
-    `${lang === "ru" ? "Цена" : "Cost"}: ${getCostLabel(p.cost, p.price)}`,
-    "",
-    p.summary[lang] || p.summary.en || ""
-  ].join("\n");
-
-  const copied = await NYCMapCommon.copyText(text);
-  if (!copied) {
-    alert(lang === "ru" ? "Не удалось скопировать" : "Could not copy to clipboard");
-  }
-}
-
-async function copySummary() {
-  const grouped = {
-    want: [],
-    visited: [],
-    skip: []
-  };
-
-  places.forEach(p => {
-    const status = checklist[p.id];
-    if (status && grouped[status]) {
-      grouped[status].push(p.title[lang] || p.title.en);
-    }
-  });
-
-  const labels = {
-    en: {
-      title: "NYC Map by Vlad and Katya",
-      want: "Want to visit",
-      visited: "Visited",
-      skip: "Skip"
-    },
-    ru: {
-      title: "Карта Нью-Йорка от Влада и Кати",
-      want: "Хочу посетить",
-      visited: "Посетил",
-      skip: "Пропустить"
-    }
-  };
-
-  const t = labels[lang];
-  let out = `${t.title}\n\n`;
-
-  ["want", "visited", "skip"].forEach(key => {
-    if (!grouped[key].length) return;
-
-    out += `${t[key]}:\n`;
-    grouped[key].forEach(item => {
-      out += `- ${item}\n`;
-    });
-    out += "\n";
-  });
-
-  const copied = await NYCMapCommon.copyText(out.trim());
-  if (!copied) {
-    alert(lang === "ru" ? "Не удалось скопировать" : "Could not copy to clipboard");
-  }
-}
-
-function getFilteredPlaces() {
-  const category = document.getElementById("categoryFilter")?.value || "";
-  const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
-  const status = currentStatusFilter;
-  const personal = currentPersonalFilter;
-
-  return filterPlaces(category, search, status, personal);
-}
-
-function getPlacesForStats() {
-  const category = document.getElementById("categoryFilter")?.value || "";
-  const search = (document.getElementById("searchFilter")?.value || "").trim().toLowerCase();
-
-  return filterPlaces(category, search, "", "");
-}
-
-function filterPlaces(category, search, status, personal) {
-  return places.filter(p => {
-    const categoryOk = !category || (Array.isArray(p.category) && p.category.includes(category));
-    const statusOk = !status || checklist[p.id] === status;
-    const personalOk = !personal || p.personal === personal;
-    if (!categoryOk || !statusOk || !personalOk) return false;
-    if (!search) return true;
-
-    const title = `${p.title?.en || ""} ${p.title?.ru || ""}`.toLowerCase();
-    const summary = `${p.summary?.en || ""} ${p.summary?.ru || ""}`.toLowerCase();
-    const address = `${p.address?.en || ""} ${p.address?.ru || ""}`.toLowerCase();
-    const categories = (p.category || []).join(" ").toLowerCase();
-    return title.includes(search) || summary.includes(search) || address.includes(search) || categories.includes(search);
-  });
-}
-
-function onFiltersChanged() {
-  currentPage = 1;
-  syncFiltersToUrl();
-  render();
-}
-
-function setStatusFilter(status) {
-  currentStatusFilter = status;
-
-  const tabs = document.querySelectorAll(".status-filter-tab");
-  tabs.forEach(tab => {
-    const isActive = tab.dataset.status === status;
-    tab.classList.toggle("active", isActive);
-    tab.setAttribute("aria-selected", String(isActive));
-  });
-
-  onFiltersChanged();
-}
-
-function setPersonalFilter(personal) {
-  currentPersonalFilter = personal;
-
-  const tabs = document.querySelectorAll(".personal-filter-tab");
-  tabs.forEach(tab => {
-    const isActive = tab.dataset.personal === personal;
-    tab.classList.toggle("active", isActive);
-    tab.setAttribute("aria-selected", String(isActive));
-  });
-
-  onFiltersChanged();
-}
-
-function syncFiltersToUrl() {
-  const url = new URL(window.location.href);
-  const category = document.getElementById("categoryFilter")?.value || "";
-
-  if (category) url.searchParams.set("category", category);
-  else url.searchParams.delete("category");
-
-  if (currentPersonalFilter) url.searchParams.set("personal", currentPersonalFilter);
-  else url.searchParams.delete("personal");
-
-  if (currentStatusFilter) url.searchParams.set("status", currentStatusFilter);
-  else url.searchParams.delete("status");
-
-  const search = (document.getElementById("searchFilter")?.value || "").trim();
-  if (search) url.searchParams.set("search", search);
-  else url.searchParams.delete("search");
-
-  window.history.pushState({}, "", url);
-}
-
-function applyFiltersFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const category = params.get("category") || "";
-  const personal = params.get("personal") || "";
-  const status = params.get("status") || "";
-  const search = params.get("search") || "";
-
-  const categoryFilter = document.getElementById("categoryFilter");
-  if (categoryFilter) {
-    const validCategory = Array.from(categoryFilter.options).some(option => option.value === category);
-    categoryFilter.value = validCategory ? category : "";
+  function render() {
+    listView.render(state, filters);
   }
 
-  currentPersonalFilter = ["", "want-to-go", "been-not-impressed", "highly-recommend"].includes(personal)
-    ? personal
-    : "";
-  currentStatusFilter = ["", "want", "skip", "visited"].includes(status) ? status : "";
-
-  const searchFilter = document.getElementById("searchFilter");
-  if (searchFilter) searchFilter.value = search;
-}
-
-function goToPage(page) {
-  const totalPages = Math.max(1, Math.ceil(getFilteredPlaces().length / pageSize));
-  currentPage = Math.min(Math.max(page, 1), totalPages);
-  render();
-}
-
-function renderPagination(totalItems, totalPages) {
-  const paginations = [
-    document.getElementById("paginationTop"),
-    document.getElementById("pagination")
-  ].filter(Boolean);
-
-  if (!paginations.length) return;
-
-  if (totalItems <= pageSize) {
-    paginations.forEach(pagination => {
-      pagination.innerHTML = "";
-      pagination.classList.add("hidden");
-    });
-    return;
-  }
-
-  const prevDisabled = currentPage === 1 ? "disabled" : "";
-  const nextDisabled = currentPage === totalPages ? "disabled" : "";
-  const html = `
-    <button class="page-btn" onclick="goToPage(${currentPage - 1})" ${prevDisabled} aria-label="Previous page">${lang === "ru" ? "←" : "←"}</button>
-    <span class="page-info">${currentPage} / ${totalPages}</span>
-    <button class="page-btn" onclick="goToPage(${currentPage + 1})" ${nextDisabled} aria-label="Next page">${lang === "ru" ? "→" : "→"}</button>
-  `;
-
-  paginations.forEach(pagination => {
-    pagination.classList.remove("hidden");
-    pagination.innerHTML = html;
-  });
-}
-
-function render() {
-  const container = document.getElementById("list");
-  const tabList = document.getElementById("tabList");
-  const tabMap = document.getElementById("tabMap");
-  const locateBtn = document.getElementById("locateBtn");
-  const searchFilter = document.getElementById("searchFilter");
-  const shareLabel = document.querySelector(".header-buttons button[onclick='copySummary()'] .btn-label");
-  const langLabel = document.querySelector(".header-buttons button[onclick='toggleLang()'] .btn-label");
-  const statWantLabel = document.getElementById("statWantLabel");
-  const statSkipLabel = document.getElementById("statSkipLabel");
-  const statVisitedLabel = document.getElementById("statVisitedLabel");
-  const personalAllLabel = document.getElementById("personalAllLabel");
-  const personalWantLabel = document.getElementById("personalWantLabel");
-  const personalNotImpressedLabel = document.getElementById("personalNotImpressedLabel");
-  const personalRecommendLabel = document.getElementById("personalRecommendLabel");
-  const filtered = getFilteredPlaces();
-  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
-
-  if (currentPage > totalPages) currentPage = totalPages;
-  const pageStart = (currentPage - 1) * pageSize;
-  const paginatedPlaces = filtered.slice(pageStart, pageStart + pageSize);
-
-  if (!container) return;
-
-  updateStats(getPlacesForStats());
-
-  if (tabList) tabList.textContent = lang === "ru" ? "Список" : "List";
-  if (tabMap) tabMap.textContent = lang === "ru" ? "Карта" : "Map";
-  if (locateBtn) {
-    locateBtn.setAttribute("aria-label", lang === "ru" ? "Показать мое местоположение" : "Show my location");
-    const locateLabel = locateBtn.querySelector(".btn-label");
-    if (locateLabel) locateLabel.textContent = lang === "ru" ? "Где я" : "Locate me";
-  }
-  if (searchFilter) {
-    searchFilter.placeholder = lang === "ru" ? "Поиск" : "Search";
-  }
-  if (shareLabel) shareLabel.textContent = lang === "ru" ? "Поделиться" : "Share";
-  if (langLabel) langLabel.textContent = lang === "ru" ? "Язык" : "Language";
-  const statusFilterTabs = document.querySelectorAll(".status-filter-tab");
-  const statusTabLabels = lang === "ru"
-    ? { "": "Все", want: "Хочу", skip: "Пропустить", visited: "Был" }
-    : { "": "All", want: "Want", skip: "Skip", visited: "Visited" };
-  statusFilterTabs.forEach(tab => {
-    const statusKey = tab.dataset.status || "";
-    const label = tab.querySelector(".stat-filter-label");
-    if (label) {
-      label.textContent = statusTabLabels[statusKey] || "";
-    } else {
-      tab.textContent = statusTabLabels[statusKey] || tab.textContent;
-    }
-    const isActive = statusKey === currentStatusFilter;
-    tab.classList.toggle("active", isActive);
-    tab.setAttribute("aria-selected", String(isActive));
-  });
-  if (statWantLabel) statWantLabel.textContent = lang === "ru" ? "Хочу" : "Want";
-  if (statSkipLabel) statSkipLabel.textContent = lang === "ru" ? "Пропустить" : "Skip";
-  if (statVisitedLabel) statVisitedLabel.textContent = lang === "ru" ? "Был" : "Visited";
-  if (personalAllLabel) personalAllLabel.textContent = lang === "ru" ? "Личное: все" : "Personal: all";
-  if (personalWantLabel) personalWantLabel.textContent = lang === "ru" ? "Хочу сходить" : "Want to go";
-  if (personalNotImpressedLabel) personalNotImpressedLabel.textContent = lang === "ru" ? "Не впечатлило" : "Not impressed";
-  if (personalRecommendLabel) personalRecommendLabel.textContent = lang === "ru" ? "Советую" : "Highly recommend";
-  const personalTabs = document.querySelectorAll(".personal-filter-tab");
-  personalTabs.forEach(tab => {
-    const personalKey = tab.dataset.personal || "";
-    const isActive = personalKey === currentPersonalFilter;
-    tab.classList.toggle("active", isActive);
-    tab.setAttribute("aria-selected", String(isActive));
-  });
-
-  container.innerHTML = "";
-
-  paginatedPlaces.forEach(p => {
-    const status = checklist[p.id] || "none";
-    const title = NYCMapCommon.getLocalizedText(lang, p.title, "");
-    const personalEmoji = getPersonalEmoji(p.personal);
-    const fullTitle = personalEmoji ? `${personalEmoji} ${title}` : title;
-    const summary = truncate(NYCMapCommon.getLocalizedText(lang, p.summary, ""), 180);
-    const address = NYCMapCommon.getPlaceAddress(p, lang);
-    const category = Array.isArray(p.category) && p.category.length ? getCategoryLabel(p.category[0]) : "";
-    const detailsUrl = `place.html?id=${encodeURIComponent(p.id)}`;
-    const imageBlock = p.image
-      ? `
-      <a class="card-image-wrap card-image-link" href="${detailsUrl}" aria-label="${lang === "ru" ? "Открыть карточку места" : "Open place details"}">
-        <img src="${p.image}" alt="${title}" loading="lazy" onerror="this.closest('.card-image-wrap')?.remove();">
-      </a>
-      `
-      : "";
-
-    const el = document.createElement("article");
-    el.className = "card";
-    el.id = `card-${p.id}`;
-
-    el.innerHTML = `
-      ${imageBlock}
-
-      <div class="card-body">
-        <div class="card-topline">
-          <div class="card-title-wrap">
-            <h3 class="card-title">
-              <a class="card-title-link" href="${detailsUrl}">${fullTitle}</a>
-            </h3>
-            <button class="copy-btn card-copy-btn" onclick="copyPlace('${p.id}')" aria-label="${lang === "ru" ? "Скопировать карточку" : "Copy place details"}" title="${lang === "ru" ? "Скопировать" : "Copy"}">
-              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
-                <path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"></path>
-              </svg>
-              <span class="sr-only">${lang === "ru" ? "Копировать" : "Copy"}</span>
-            </button>
-          </div>
-          <div class="card-category">${category}</div>
-        </div>
-
-        <div class="transit-row">
-          <a class="address-btn" href="${NYCMapCommon.getMapsUrl(p, lang)}" target="_blank" rel="noopener noreferrer">
-            <span aria-hidden="true">📍</span>
-            <span>${address}</span>
-          </a>
-        </div>
-
-        <p class="summary">${summary}</p>
-
-        <div class="meta-row">
-          <span class="chip ${p.time === "short" ? "is-muted" : ""}">${getTimeLabel(p.time)}</span>
-          <span class="chip ${p.cost === "free" ? "is-muted" : ""}">${getCostLabel(p.cost, p.price)}</span>
-        </div>
-
-        <div class="status-row">
-          <div class="status-toggle-wrap">
-            <button class="status-btn ${status === "want" ? "active" : ""} ${status !== "none" && status !== "want" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'want')">${lang === "ru" ? "Хочу" : "Want"}</button>
-            <button class="status-btn ${status === "visited" ? "active" : ""} ${status !== "none" && status !== "visited" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'visited')">${lang === "ru" ? "Был" : "Visited"}</button>
-            <button class="status-btn ${status === "skip" ? "active" : ""} ${status !== "none" && status !== "skip" ? "is-dimmed" : ""}" onclick="setStatus('${p.id}', 'skip')">${lang === "ru" ? "Пропустить" : "Skip"}</button>
-          </div>
-        </div>
-
-      </div>
-    `;
-
-    container.appendChild(el);
-  });
-
-  if (typeof refreshMap === "function") {
-    refreshMap(filtered);
-  }
-
-  renderPagination(filtered.length, totalPages);
-
-  applyMobileTabState();
-}
-
-async function loadData() {
-  try {
-    const res = await fetch("build/places.json");
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-    places = await res.json();
+  function onFiltersChanged() {
+    state.setCurrentPage(1);
+    urlState.syncFiltersToUrl(state, filters);
     render();
-    initMap(places);
-  } catch (error) {
-    console.error("Failed to load places.json", error);
-    const list = document.getElementById("list");
-    if (list) {
-      list.innerHTML = `<p>${lang === "ru" ? "Ошибка загрузки" : "Failed to load data"}</p>`;
-    }
-  }
-}
-
-function toggleMap() {
-  const wrap = document.getElementById("mapWrap");
-  if (!wrap) return;
-
-  wrap.classList.toggle("hidden");
-  setTimeout(() => {
-    if (window.map) {
-      window.map.invalidateSize();
-    }
-  }, 50);
-}
-
-function switchMobileView(view) {
-  mobileView = view === "map" ? "map" : "list";
-  applyMobileTabState();
-}
-
-function applyMobileTabState() {
-  const listSection = document.getElementById("listSection");
-  const mapSection = document.getElementById("mapSection");
-  const tabList = document.getElementById("tabList");
-  const tabMap = document.getElementById("tabMap");
-  const mobile = window.matchMedia("(max-width: 760px)").matches;
-
-  if (!listSection || !mapSection || !tabList || !tabMap) return;
-
-  if (!mobile) {
-    listSection.classList.remove("mobile-hidden");
-    mapSection.classList.remove("mobile-hidden");
-  } else {
-    listSection.classList.toggle("mobile-hidden", mobileView === "map");
-    mapSection.classList.toggle("mobile-hidden", mobileView !== "map");
   }
 
-  tabList.classList.toggle("active", mobileView === "list");
-  tabMap.classList.toggle("active", mobileView === "map");
-  tabList.setAttribute("aria-selected", String(mobileView === "list"));
-  tabMap.setAttribute("aria-selected", String(mobileView === "map"));
-}
+  function setStatus(id, status) {
+    state.setChecklistStatus(id, status);
+    render();
+  }
 
-function updateStats(filtered) {
-  const counts = {
-    total: filtered.length,
-    want: 0,
-    skip: 0,
-    visited: 0
-  };
+  function setStatusFilter(status) {
+    state.setCurrentStatusFilter(status);
+    onFiltersChanged();
+  }
 
-  filtered.forEach(p => {
-    const status = checklist[p.id];
-    if (status === "want") counts.want += 1;
-    if (status === "skip") counts.skip += 1;
-    if (status === "visited") counts.visited += 1;
+  function setPersonalFilter(personal) {
+    state.setCurrentPersonalFilter(personal);
+    onFiltersChanged();
+  }
+
+  function goToPage(page) {
+    const totalPages = Math.max(1, Math.ceil(filters.getFilteredPlaces(state).length / state.pageSize));
+    state.setCurrentPage(Math.min(Math.max(page, 1), totalPages));
+    render();
+  }
+
+  function toggleLang() {
+    state.toggleLang();
+    render();
+  }
+
+  async function loadData() {
+    try {
+      const res = await fetch("build/places.json");
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const places = await res.json();
+      state.setPlaces(places);
+      render();
+      if (typeof initMap === "function") initMap(places);
+    } catch (error) {
+      console.error("Failed to load places.json", error);
+      const list = document.getElementById("list");
+      if (list) {
+        list.innerHTML = `<p>${NYCMapUIText.getUIText(state.getLang()).copy.loadFailed}</p>`;
+      }
+    }
+  }
+
+  function switchMobileView(view) {
+    state.setMobileView(view);
+    listView.applyMobileTabState(state);
+  }
+
+  function toggleMap() {
+    const wrap = document.getElementById("mapWrap");
+    if (!wrap) return;
+    wrap.classList.toggle("hidden");
+    setTimeout(() => {
+      if (window.map) window.map.invalidateSize();
+    }, 50);
+  }
+
+  window.toggleLang = toggleLang;
+  window.copySummary = () => listView.copySummary(state);
+  window.copyPlace = (id) => listView.copyPlace(state, id);
+  window.setStatus = setStatus;
+  window.onFiltersChanged = onFiltersChanged;
+  window.setStatusFilter = setStatusFilter;
+  window.setPersonalFilter = setPersonalFilter;
+  window.goToPage = goToPage;
+  window.switchMobileView = switchMobileView;
+  window.toggleMap = toggleMap;
+
+  loadData();
+  urlState.applyFiltersFromUrl(state, filters);
+  listView.applyMobileTabState(state);
+
+  window.addEventListener("popstate", () => {
+    urlState.applyFiltersFromUrl(state, filters);
+    state.setCurrentPage(1);
+    render();
   });
 
-  const total = document.getElementById("statTotal");
-  const want = document.getElementById("statWant");
-  const skip = document.getElementById("statSkip");
-  const visited = document.getElementById("statVisited");
+  window.addEventListener("resize", () => listView.applyMobileTabState(state));
 
-  if (total) total.textContent = counts.total;
-  if (want) want.textContent = counts.want;
-  if (skip) skip.textContent = counts.skip;
-  if (visited) visited.textContent = counts.visited;
-}
-loadData();
-applyFiltersFromUrl();
-applyMobileTabState();
-window.addEventListener("popstate", () => {
-  applyFiltersFromUrl();
-  currentPage = 1;
-  render();
-});
-window.addEventListener("resize", applyMobileTabState);
-const yearEl = document.getElementById("footerYear");
-if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  const yearEl = document.getElementById("footerYear");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
