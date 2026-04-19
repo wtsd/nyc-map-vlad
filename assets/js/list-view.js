@@ -7,7 +7,6 @@
   function getStatusLabel(lang, status) { return NYCMapCommon.getStatusLabel(lang, status); }
   function getCategoryLabel(lang, category) { return NYCMapCommon.getCategoryLabel(lang, category); }
   function getTimeLabel(lang, time) { return NYCMapCommon.getTimeLabel(lang, time); }
-  function getPersonalLabel(lang, personal) { return NYCMapCommon.getPersonalLabel(lang, personal); }
   function getCostLabel(lang, cost, price) { return NYCMapCommon.getCostLabel(lang, cost, price); }
 
   function updateStats(state, filtered) {
@@ -208,7 +207,6 @@
           </div>
           <p class="summary">${summary}</p>
           <div class="status-row">
-            <span class="status-row-title">${text.card.personalLabel}: ${getPersonalLabel(lang, p.personal) || "—"}</span>
             <select id="status-select-${p.id}" class="card-status-select" onchange="setStatus('${p.id}', this.value)">
               <option value="none" ${status === "none" ? "selected" : ""}>${text.card.statusPlaceholder}</option>
               <option value="want" ${status === "want" ? "selected" : ""}>${text.card.statusWant}</option>

@@ -1,6 +1,10 @@
 (() => {
-  const VALID_PERSONAL = ["want-to-go", "highly-recommend"];
+  const VALID_PERSONAL = ["want-to-go", "highly-recommend", "highly-recommended"];
   const VALID_STATUS = ["", "want", "skip", "visited"];
+
+  function normalizePersonal(personal) {
+    return personal === "highly-recommended" ? "highly-recommend" : personal;
+  }
 
   function readFilterInputs() {
     const categories = Array.from(document.querySelectorAll("#categoryFilterGroup input:checked")).map((input) => input.value);
@@ -9,10 +13,11 @@
   }
 
   function filterPlaces(places, checklist, getSearchText, { categories, search, status, personal }) {
+    const normalizedPersonal = personal.map(normalizePersonal);
     return places.filter((p) => {
       const categoryOk = !categories.length || (Array.isArray(p.category) && categories.some((category) => p.category.includes(category)));
       const statusOk = !status || checklist[p.id] === status;
-      const personalOk = !personal.length || personal.includes(p.personal);
+      const personalOk = !normalizedPersonal.length || normalizedPersonal.includes(normalizePersonal(p.personal));
       if (!categoryOk || !statusOk || !personalOk) return false;
       if (!search) return true;
       return String(getSearchText(p.id)).includes(search);
