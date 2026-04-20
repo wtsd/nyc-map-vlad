@@ -16,6 +16,27 @@
     render();
   }
 
+  function resetAllFilters() {
+    const searchInput = document.getElementById("searchFilter");
+    if (searchInput) searchInput.value = "";
+
+    Array.from(document.querySelectorAll("#categoryFilterGroup input")).forEach((input) => {
+      input.checked = false;
+    });
+    Array.from(document.querySelectorAll(".personal-toggle-chip input")).forEach((input) => {
+      input.checked = false;
+    });
+
+    state.setCurrentStatusFilter("");
+    state.setCurrentPersonalFilter([]);
+    onFiltersChanged();
+  }
+
+  function applyMobileFilters() {
+    onFiltersChanged();
+    uiShell.closeFiltersPanel();
+  }
+
   function setStatus(id, status) {
     const nextStatus = state.getChecklist()[id] === status ? null : status;
     state.setChecklistStatus(id, nextStatus);
@@ -56,6 +77,9 @@
     window.switchMobileView = (view) => uiShell.switchMobileView(state, listView, view);
     window.toggleMap = uiShell.toggleMap;
     window.toggleFiltersPanel = uiShell.toggleFiltersPanel;
+    window.closeFiltersPanel = uiShell.closeFiltersPanel;
+    window.resetAllFilters = resetAllFilters;
+    window.applyMobileFilters = applyMobileFilters;
   }
 
   function setupEventListeners() {

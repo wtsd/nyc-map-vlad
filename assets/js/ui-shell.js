@@ -1,4 +1,6 @@
 (() => {
+  let activeTrap = null;
+
   function isMobile() {
     return window.matchMedia("(max-width: 760px)").matches;
   }
@@ -22,11 +24,15 @@
       controls.classList.toggle("is-open", expanded);
       backdrop?.classList.toggle("is-open", expanded);
       document.body.classList.toggle("filters-panel-open", expanded);
+      controls.setAttribute("aria-hidden", String(!expanded));
+      trapFocusInFiltersSheet(expanded);
     } else {
       controls.classList.remove("is-open");
       backdrop?.classList.remove("is-open");
       document.body.classList.remove("filters-panel-open");
       controls.classList.toggle("is-collapsed", !expanded);
+      controls.setAttribute("aria-hidden", "false");
+      trapFocusInFiltersSheet(false);
     }
 
     toggle.setAttribute("aria-expanded", String(expanded));
@@ -39,6 +45,64 @@
       ? !controls.classList.contains("is-open")
       : controls.classList.contains("is-collapsed");
     setFiltersPanelExpanded(expanded);
+  }
+
+  function closeFiltersPanel() {
+    setFiltersPanelExpanded(false);
+  }
+
+  function getFocusableElements(container) {
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+      .filter((el) => !el.hasAttribute("hidden") && el.offsetParent !== null);
+  }
+
+  function trapFocusInFiltersSheet(enabled) {
+    const controls = document.getElementById("secondaryControls");
+    if (!controls) return;
+
+    if (!enabled) {
+      if (activeTrap) {
+        document.removeEventListener("keydown", activeTrap.handleKeydown);
+        if (activeTrap.restoreFocusEl && typeof activeTrap.restoreFocusEl.focus === "function") {
+          activeTrap.restoreFocusEl.focus();
+        }
+      }
+      activeTrap = null;
+      return;
+    }
+
+    const restoreFocusEl = document.activeElement;
+    const focusables = getFocusableElements(controls);
+    if (focusables.length) focusables[0].focus();
+
+    function handleKeydown(event) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeFiltersPanel();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const items = getFocusableElements(controls);
+      if (!items.length) return;
+
+      const first = items[0];
+      const last = items[items.length - 1];
+      const isShift = event.shiftKey;
+      const active = document.activeElement;
+
+      if (!isShift && active === last) {
+        event.preventDefault();
+        first.focus();
+      } else if (isShift && active === first) {
+        event.preventDefault();
+        last.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeydown);
+    activeTrap = { handleKeydown, restoreFocusEl };
   }
 
   function switchMobileView(state, listView, view) {
@@ -70,6 +134,7 @@
     syncViewportOffsets,
     setFiltersPanelExpanded,
     toggleFiltersPanel,
+    closeFiltersPanel,
     switchMobileView,
     toggleMap,
     setupViewportObservers
