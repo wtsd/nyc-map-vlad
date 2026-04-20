@@ -799,6 +799,13 @@ input[type="search"] {
   background: #fff;
 }
 
+
+.map-legend-note {
+  margin: 10px 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 .map-legend-dot {
   width: 10px;
   height: 10px;
