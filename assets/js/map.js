@@ -84,8 +84,11 @@ function renderLegend(mode, note = "") {
 
 function isValidMapCoords(coords) {
   if (!Array.isArray(coords) || coords.length < 2) return false;
-  const lat = Number(coords[0]);
-  const lng = Number(coords[1]);
+  const rawLat = coords[0];
+  const rawLng = coords[1];
+  if (typeof rawLat !== "number" || typeof rawLng !== "number") return false;
+  const lat = Number(rawLat);
+  const lng = Number(rawLng);
   if (!Number.isFinite(lat) || !Number.isFinite(lng)) return false;
   if (Math.abs(lat) > 90 || Math.abs(lng) > 180) return false;
   if (Math.abs(lat) < 0.000001 && Math.abs(lng) < 0.000001) return false;
@@ -212,6 +215,7 @@ function refreshMap(currentPlaces, options = {}) {
 
   const markerMode = getMarkerMode();
   const validPlaces = getValidPlaces(lastRenderedPlaces);
+  const excludedCount = Math.max(0, lastRenderedPlaces.length - validPlaces.length);
 
   validPlaces.forEach((p) => {
     const lang = NYCMapState.getLang();
@@ -243,6 +247,13 @@ function refreshMap(currentPlaces, options = {}) {
     note = getMapStatusText("noMatchingPlaces");
   } else if (!validPlaces.length) {
     note = getMapStatusText("noValidCoordinates");
+  }
+
+  if (excludedCount > 0) {
+    const excludedMessage = NYCMapState.getLang() === "ru"
+      ? `Исключено из карты из-за невалидных координат: ${excludedCount}.`
+      : `Excluded from map due to invalid coordinates: ${excludedCount}.`;
+    note = note ? `${note} ${excludedMessage}` : excludedMessage;
   }
 
   if (validPlaces.length) {
