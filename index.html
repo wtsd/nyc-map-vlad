@@ -106,6 +106,16 @@
         </button>
       </div>
       <div class="mobile-filters-actions" role="group" aria-label="Filters actions">
+        <button class="secondary-btn mobile-sheet-btn" type="button" onclick="copySummary()">
+          <span class="btn-icon" aria-hidden="true">↗</span>
+          <span class="btn-label">Share</span>
+        </button>
+        <button class="secondary-btn mobile-sheet-btn" type="button" onclick="toggleLang()">
+          <span class="btn-icon" aria-hidden="true">🌎</span>
+          <span class="btn-label">Language</span>
+        </button>
+      </div>
+      <div class="mobile-filters-actions mobile-filters-actions--cta" role="group" aria-label="Filters actions">
         <button class="secondary-btn" type="button" onclick="closeFiltersPanel()">Close</button>
         <button class="secondary-btn" type="button" onclick="resetAllFilters()">Reset</button>
         <button class="secondary-btn mobile-apply-btn" type="button" onclick="applyMobileFilters()">Apply</button>
@@ -117,6 +127,7 @@
       <button id="tabList" class="mobile-tab active" onclick="switchMobileView('list')" role="tab" aria-selected="true">List</button>
       <button id="tabMap" class="mobile-tab" onclick="switchMobileView('map')" role="tab" aria-selected="false">Map</button>
     </div>
+    <div id="mobileFilterSummary" class="mobile-filter-summary" aria-live="polite">All places</div>
   </header>
 
   <main class="layout">

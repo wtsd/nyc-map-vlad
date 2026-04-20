@@ -879,6 +879,10 @@ input[type="search"] {
   display: none;
 }
 
+.mobile-filter-summary {
+  display: none;
+}
+
 .empty-state-card {
   border: 1px dashed #cfd8e5;
   background: #f9fbff;
@@ -996,10 +1000,14 @@ input[type="search"] {
 
 @media (max-width: 760px) {
   .topbar-inner {
-    padding: 12px 14px;
+    padding: 12px 14px 10px;
     align-items: center;
     gap: 10px;
-    flex-direction: column;
+    flex-direction: row;
+  }
+
+  .brand {
+    display: none;
   }
 
   .brand h1 {
@@ -1015,13 +1023,14 @@ input[type="search"] {
 
   .topbar-actions {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
+    gap: 8px;
   }
 
   .primary-filters {
-    width: 100%;
+    flex: 1;
     display: flex;
     gap: 6px;
   }
@@ -1035,6 +1044,11 @@ input[type="search"] {
     min-height: 34px;
     min-width: 34px;
     padding: 0 10px;
+  }
+
+  .header-buttons button[onclick='copySummary()'],
+  .header-buttons button[onclick='toggleLang()'] {
+    display: none;
   }
 
   .primary-filters input[type="search"] {
@@ -1137,12 +1151,16 @@ input[type="search"] {
 
   .mobile-filters-actions {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
+    margin-top: 12px;
+  }
+
+  .mobile-filters-actions--cta {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     position: sticky;
     bottom: 0;
     padding: 10px 0 0;
-    margin-top: 12px;
     background: linear-gradient(to top, #fff 80%, rgba(255, 255, 255, 0));
   }
 
@@ -1164,6 +1182,21 @@ input[type="search"] {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     padding: 0 14px 10px;
+  }
+
+  .mobile-filter-summary {
+    display: block;
+    margin: 0 14px 10px;
+    border: 1px solid #dce3ef;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #fbfcfe 0%, #f3f6fb 100%);
+    color: #374151;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 7px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .mobile-tab {

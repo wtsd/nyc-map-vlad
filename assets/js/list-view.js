@@ -93,9 +93,12 @@
     const tabMap = document.getElementById("tabMap");
     const locateBtn = document.getElementById("locateBtn");
     const searchFilter = document.getElementById("searchFilter");
-    const shareLabel = document.querySelector(".header-buttons button[onclick='copySummary()'] .btn-label");
-    const langLabel = document.querySelector(".header-buttons button[onclick='toggleLang()'] .btn-label");
+    const shareLabels = document.querySelectorAll("button[onclick='copySummary()'] .btn-label");
+    const langLabels = document.querySelectorAll("button[onclick='toggleLang()'] .btn-label");
     const filtersLabel = document.querySelector("#filtersToggle .btn-label");
+    const closeLabel = document.querySelector("button[onclick='closeFiltersPanel()']");
+    const resetLabel = document.querySelector("button[onclick='resetAllFilters()']");
+    const applyLabel = document.querySelector("button[onclick='applyMobileFilters()']");
 
     if (tabList) tabList.textContent = text.listTab;
     if (tabMap) tabMap.textContent = text.mapTab;
@@ -105,9 +108,12 @@
       if (locateLabel) locateLabel.textContent = text.locateMe;
     }
     if (searchFilter) searchFilter.placeholder = text.searchPlaceholder;
-    if (shareLabel) shareLabel.textContent = text.share;
-    if (langLabel) langLabel.textContent = text.language;
+    shareLabels.forEach((label) => { label.textContent = text.share; });
+    langLabels.forEach((label) => { label.textContent = text.language; });
     if (filtersLabel) filtersLabel.textContent = text.filters;
+    if (closeLabel) closeLabel.textContent = text.close;
+    if (resetLabel) resetLabel.textContent = text.reset;
+    if (applyLabel) applyLabel.textContent = text.apply;
 
     const statusFilterTabs = document.querySelectorAll(".status-filter-tab");
     statusFilterTabs.forEach((tab) => {
@@ -135,6 +141,37 @@
       input.checked = selectedPersonal.includes(input.value);
       input.parentElement?.classList.toggle("active", input.checked);
     });
+  }
+
+  function updateMobileFilterSummary(state, totalVisible) {
+    const summaryEl = document.getElementById("mobileFilterSummary");
+    if (!summaryEl) return;
+
+    const lang = state.getLang();
+    const text = NYCMapUIText.getUIText(lang);
+    const selectedCategories = Array.from(document.querySelectorAll("#categoryFilterGroup input:checked"));
+    const selectedPersonal = state.getCurrentPersonalFilter();
+    const statusFilter = state.getCurrentStatusFilter();
+
+    const tokens = [];
+    if (selectedCategories.length === 1) {
+      tokens.push(NYCMapCommon.getCategoryLabel(lang, selectedCategories[0].value));
+    } else if (selectedCategories.length > 1) {
+      tokens.push(`${selectedCategories.length} ${text.categoriesLabel}`);
+    }
+
+    if (selectedPersonal.length === 1) {
+      tokens.push(selectedPersonal[0] === "visited" ? text.card.personalVisited : text.card.personalTodo);
+    } else if (selectedPersonal.length > 1) {
+      tokens.push(text.card.personalLabel);
+    }
+
+    if (statusFilter) {
+      tokens.push(text.statusTabs[statusFilter] || statusFilter);
+    }
+
+    const countToken = `${totalVisible} ${text.placesLabel}`;
+    summaryEl.textContent = tokens.length ? `${tokens.join(" • ")} • ${countToken}` : `${text.allPlaces} • ${countToken}`;
   }
 
   function renderCards(state, places) {
@@ -298,6 +335,7 @@
     updateStats(state, statsSet);
     renderUIChrome(state);
     renderCards(state, paginatedPlaces);
+    updateMobileFilterSummary(state, filtered.length);
 
     if (typeof refreshMap === "function") {
       const mapRenderKey = getMapRenderKey(state, filtered);
