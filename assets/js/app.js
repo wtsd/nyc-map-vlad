@@ -67,7 +67,7 @@
 
   function setupGlobalActions() {
     window.toggleLang = toggleLang;
-    window.copySummary = () => listView.copySummary(state);
+    window.copySummary = () => listView.copySummary(state, filters);
     window.copyPlace = (id) => listView.copyPlace(state, id);
     window.setStatus = setStatus;
     window.onFiltersChanged = onFiltersChanged;
