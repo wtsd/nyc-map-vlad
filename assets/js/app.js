@@ -99,6 +99,7 @@
   async function boot() {
     setupGlobalActions();
     setupEventListeners();
+    if (typeof filters.runFilterAssertions === "function") filters.runFilterAssertions();
     uiShell.setupViewportObservers();
     dataBootstrap.registerServiceWorker();
 

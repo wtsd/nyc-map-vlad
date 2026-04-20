@@ -14,6 +14,15 @@
     return { categories, search };
   }
 
+  function getBaseFilters(state) {
+    const { categories, search } = readFilterInputs();
+    return {
+      categories,
+      search,
+      personal: state.getCurrentPersonalFilter()
+    };
+  }
+
   function filterPlaces(places, checklist, getSearchText, { categories, search, status, personal }) {
     const normalizedPersonal = personal.map(normalizePersonal);
     return places.filter((p) => {
@@ -27,23 +36,52 @@
   }
 
   function getFilteredPlaces(state) {
-    const { categories, search } = readFilterInputs();
+    const baseFilters = getBaseFilters(state);
     return filterPlaces(state.getPlaces(), state.getChecklist(), state.getSearchText, {
-      categories,
-      search,
+      ...baseFilters,
       status: state.getCurrentStatusFilter(),
-      personal: state.getCurrentPersonalFilter()
     });
   }
 
   function getPlacesForStats(state) {
-    const { categories, search } = readFilterInputs();
+    const baseFilters = getBaseFilters(state);
     return filterPlaces(state.getPlaces(), state.getChecklist(), state.getSearchText, {
-      categories,
-      search,
+      ...baseFilters,
       status: "",
+    });
+  }
+
+  function runFilterAssertions() {
+    if (typeof console === "undefined" || typeof console.assert !== "function") return;
+    const places = [
+      { id: "1", category: ["food"], personal: "to-do" },
+      { id: "2", category: ["food"], personal: "visited" },
+      { id: "3", category: ["parks"], personal: "to-do" }
+    ];
+    const checklist = { "1": "want", "2": "visited", "3": "skip" };
+    const getSearchText = (id) => ({ "1": "pizza", "2": "museum", "3": "park" }[id] || "");
+
+    const personalScoped = filterPlaces(places, checklist, getSearchText, {
+      categories: ["food"],
+      search: "",
+      status: "",
+      personal: ["to-do"]
+    });
+    console.assert(
+      personalScoped.length === 1 && personalScoped[0].id === "1",
+      "[filters] Personal + category filter should scope stats dataset correctly"
+    );
+
+    const statusScoped = filterPlaces(places, checklist, getSearchText, {
+      categories: [],
+      search: "park",
+      status: "skip",
       personal: []
     });
+    console.assert(
+      statusScoped.length === 1 && statusScoped[0].id === "3",
+      "[filters] Search + status filter should still isolate visible-list dataset correctly"
+    );
   }
 
   function applyFiltersFromParams(state, params) {
@@ -82,6 +120,7 @@
     filterPlaces,
     getFilteredPlaces,
     getPlacesForStats,
-    applyFiltersFromParams
+    applyFiltersFromParams,
+    runFilterAssertions
   };
 })();
