@@ -7,11 +7,8 @@
 
   function syncViewportOffsets() {
     const topbar = document.querySelector(".topbar");
-    const footer = document.querySelector(".site-footer");
     const topbarHeight = topbar ? Math.ceil(topbar.getBoundingClientRect().height) : 0;
-    const footerHeight = footer ? Math.ceil(footer.getBoundingClientRect().height) : 0;
     document.documentElement.style.setProperty("--topbar-height", `${topbarHeight}px`);
-    document.documentElement.style.setProperty("--footer-height", `${footerHeight}px`);
   }
 
   function setFiltersPanelExpanded(expanded) {
@@ -134,12 +131,10 @@
 
   function setupViewportObservers() {
     const topbar = document.querySelector(".topbar");
-    const footer = document.querySelector(".site-footer");
     if (typeof ResizeObserver === "undefined") return;
 
     const observer = new ResizeObserver(() => syncViewportOffsets());
     if (topbar) observer.observe(topbar);
-    if (footer) observer.observe(footer);
   }
 
   window.NYCMapUIShell = {

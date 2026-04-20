@@ -108,8 +108,6 @@
     uiShell.setFiltersPanelExpanded(!uiShell.isMobile());
     uiShell.syncViewportOffsets();
 
-    const yearEl = document.getElementById("footerYear");
-    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
     try {
       const places = await dataBootstrap.loadData(state);
