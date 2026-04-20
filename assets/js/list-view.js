@@ -93,7 +93,8 @@
     const tabMap = document.getElementById("tabMap");
     const locateBtn = document.getElementById("locateBtn");
     const searchFilter = document.getElementById("searchFilter");
-    const shareLabels = document.querySelectorAll("button[onclick='copySummary()'] .btn-label");
+    const copyButtons = document.querySelectorAll("button[onclick='copySummary()']");
+    const copyLabels = document.querySelectorAll("button[onclick='copySummary()'] .btn-label");
     const langLabels = document.querySelectorAll("button[onclick='toggleLang()'] .btn-label");
     const filtersLabel = document.querySelector("#filtersToggle .btn-label");
     const closeLabel = document.querySelector("button[onclick='closeFiltersPanel()']");
@@ -108,7 +109,8 @@
       if (locateLabel) locateLabel.textContent = text.locateMe;
     }
     if (searchFilter) searchFilter.placeholder = text.searchPlaceholder;
-    shareLabels.forEach((label) => { label.textContent = text.share; });
+    copyButtons.forEach((button) => { button.setAttribute("aria-label", text.copyToClipboard); });
+    copyLabels.forEach((label) => { label.textContent = text.copyToClipboard; });
     langLabels.forEach((label) => { label.textContent = text.language; });
     if (filtersLabel) filtersLabel.textContent = text.filters;
     if (closeLabel) closeLabel.textContent = text.close;
@@ -264,6 +266,26 @@
     container.appendChild(fragment);
   }
 
+  function getVisiblePlaces(state, filters) {
+    const filtered = filters.getFilteredPlaces(state);
+    const totalPages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
+
+    if (state.getCurrentPage() > totalPages) state.setCurrentPage(totalPages);
+
+    const pageStart = (state.getCurrentPage() - 1) * state.pageSize;
+    const paginatedPlaces = filtered.slice(pageStart, pageStart + state.pageSize);
+
+    return { filtered, paginatedPlaces, totalPages };
+  }
+
+  function getPlacesForClipboardExport(visiblePlaces, checklist) {
+    if (!Array.isArray(visiblePlaces) || !visiblePlaces.length) return [];
+
+    const visibleWantPlaces = visiblePlaces.filter((place) => checklist[place.id] === "want");
+    return visibleWantPlaces.length ? visibleWantPlaces : visiblePlaces;
+  }
+
+
   async function copyPlace(state, id) {
     const p = state.getPlaces().find((x) => x.id === id);
     if (!p) return;
@@ -287,25 +309,22 @@
     if (!copied) alert(text.copy.failed);
   }
 
-  async function copySummary(state) {
+  async function copySummary(state, filters) {
     const lang = state.getLang();
     const labels = NYCMapUIText.getUIText(lang).summary;
-    const grouped = { want: [], visited: [], skip: [] };
+    const checklist = state.getChecklist();
+    const visiblePlaces = getVisiblePlaces(state, filters).paginatedPlaces;
+    const placesToExport = getPlacesForClipboardExport(visiblePlaces, checklist);
 
-    state.getPlaces().forEach((p) => {
-      const status = state.getChecklist()[p.id];
-      if (status && grouped[status]) grouped[status].push(p.title[lang] || p.title.en);
+    if (!placesToExport.length) return;
+
+    const out = [labels.title, ""];
+    placesToExport.forEach((place) => {
+      const title = NYCMapCommon.getLocalizedText(lang, place.title, "");
+      out.push(`- ${title}`);
     });
 
-    let out = `${labels.title}\n\n`;
-    ["want", "visited", "skip"].forEach((key) => {
-      if (!grouped[key].length) return;
-      out += `${labels[key]}:\n`;
-      grouped[key].forEach((item) => { out += `- ${item}\n`; });
-      out += "\n";
-    });
-
-    const copied = await NYCMapCommon.copyText(out.trim());
+    const copied = await NYCMapCommon.copyText(out.join("\n").trim());
     if (!copied) alert(NYCMapUIText.getUIText(lang).copy.failed);
   }
 
@@ -324,13 +343,8 @@
     const container = document.getElementById("list");
     if (!container) return;
 
-    const filtered = filters.getFilteredPlaces(state);
     const statsSet = filters.getPlacesForStats(state);
-    const totalPages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
-
-    if (state.getCurrentPage() > totalPages) state.setCurrentPage(totalPages);
-    const pageStart = (state.getCurrentPage() - 1) * state.pageSize;
-    const paginatedPlaces = filtered.slice(pageStart, pageStart + state.pageSize);
+    const { filtered, paginatedPlaces, totalPages } = getVisiblePlaces(state, filters);
 
     updateStats(state, statsSet);
     renderUIChrome(state);
