@@ -5,6 +5,7 @@ let activeMarkerId = "";
 let activeCardId = "";
 let userLocationMarker;
 let userLocationAccuracyCircle;
+let lastRenderedPlaces = [];
 const CATEGORY_COLORS = {
   landmarks: "#3b82f6",
   parks: "#22c55e",
@@ -32,7 +33,18 @@ function getColorByMode(place, mode) {
   return CATEGORY_COLORS[primaryCategory] || "#64748b";
 }
 
-function renderLegend(mode) {
+function getMapStatusText(key) {
+  const isRu = NYCMapState.getLang() === "ru";
+  const dictionary = {
+    noMatchingPlaces: isRu ? "Нет мест по текущим фильтрам." : "No places match the current filters.",
+    noValidCoordinates: isRu ? "У выбранных мест нет валидных координат для карты." : "Selected places have no valid coordinates for the map.",
+    pointsOutsideViewport: isRu ? "Точки вне текущего окна карты — выполнено автоцентрирование." : "Points were outside the current viewport — auto-fit applied.",
+    pointsOutsideViewportManual: isRu ? "Точки вне текущего окна карты — переключитесь на карту для автоцентрирования." : "Points are outside the current viewport — switch to Map tab to auto-fit."
+  };
+  return dictionary[key] || "";
+}
+
+function renderLegend(mode, note = "") {
   const legendEl = document.getElementById("mapLegend");
   if (!legendEl) return;
 
@@ -66,8 +78,24 @@ function renderLegend(mode) {
   legendEl.innerHTML = `
     <div class="map-legend-title">${title}</div>
     <ul class="map-legend-list">${allItem}${items}</ul>
+    ${note ? `<p class="map-legend-note">${note}</p>` : ""}
   `;
 }
+
+function isValidMapCoords(coords) {
+  if (!Array.isArray(coords) || coords.length < 2) return false;
+  const lat = Number(coords[0]);
+  const lng = Number(coords[1]);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return false;
+  if (Math.abs(lat) > 90 || Math.abs(lng) > 180) return false;
+  if (Math.abs(lat) < 0.000001 && Math.abs(lng) < 0.000001) return false;
+  return true;
+}
+
+function getValidPlaces(places) {
+  return places.filter((place) => isValidMapCoords(place.coords));
+}
+
 
 function toggleLegendCategoryFilter(category) {
   const input = document.querySelector(`#categoryFilterGroup input[value='${category}']`);
@@ -166,15 +194,26 @@ function setActiveMarker(id, { openPopup = false, panTo = false } = {}) {
   if (openPopup) marker.openPopup();
 }
 
-function refreshMap(currentPlaces) {
+function fitBoundsToPlaces(validPlaces) {
+  if (!validPlaces.length) return false;
+  map.fitBounds(validPlaces.map((p) => p.coords), {
+    padding: [24, 24],
+    maxZoom: window.matchMedia("(max-width: 760px)").matches ? 12 : 13
+  });
+  return true;
+}
+
+function refreshMap(currentPlaces, options = {}) {
   if (!map || !markersLayer) return;
 
+  const { shouldFitBounds = false } = options;
+  lastRenderedPlaces = Array.isArray(currentPlaces) ? currentPlaces : [];
   markersLayer.clearLayers();
-  const markerMode = getMarkerMode();
-  renderLegend(markerMode);
-  const bounds = [];
 
-  currentPlaces.forEach(p => {
+  const markerMode = getMarkerMode();
+  const validPlaces = getValidPlaces(lastRenderedPlaces);
+
+  validPlaces.forEach((p) => {
     const lang = NYCMapState.getLang();
     const title = p.title?.[lang] || p.title?.en || p.id;
     let marker = markersById[p.id];
@@ -193,20 +232,42 @@ function refreshMap(currentPlaces) {
     marker.bindPopup(renderPopupContent(p, lang, title));
     setMarkerActiveState(p.id, activeMarkerId === p.id);
     marker.addTo(markersLayer);
-    bounds.push(p.coords);
   });
 
-  if (activeMarkerId && !currentPlaces.find((p) => p.id === activeMarkerId)) {
+  if (activeMarkerId && !validPlaces.find((p) => p.id === activeMarkerId)) {
     activeMarkerId = "";
   }
 
-  if (!map.__hasAutoFit && bounds.length) {
-    map.fitBounds(bounds, {
-      padding: [24, 24],
-      maxZoom: window.matchMedia("(max-width: 760px)").matches ? 12 : 13
-    });
-    map.__hasAutoFit = true;
+  let note = "";
+  if (!lastRenderedPlaces.length) {
+    note = getMapStatusText("noMatchingPlaces");
+  } else if (!validPlaces.length) {
+    note = getMapStatusText("noValidCoordinates");
   }
+
+  if (validPlaces.length) {
+    const mapBounds = map.getBounds();
+    const pointsInViewport = validPlaces.filter((place) => mapBounds.contains(place.coords)).length;
+    if (shouldFitBounds || (!map.__hasAutoFit && validPlaces.length)) {
+      fitBoundsToPlaces(validPlaces);
+      map.__hasAutoFit = true;
+      if (pointsInViewport === 0 && !shouldFitBounds) note = getMapStatusText("pointsOutsideViewport");
+    } else if (pointsInViewport === 0) {
+      note = getMapStatusText("pointsOutsideViewportManual");
+    }
+  }
+
+  renderLegend(markerMode, note);
+}
+
+function handleMapBecameVisible() {
+  if (!map) return;
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      map.invalidateSize({ pan: false });
+      refreshMap(lastRenderedPlaces, { shouldFitBounds: true });
+    });
+  });
 }
 
 function scrollToCard(id, shouldOpenPopup = false) {
@@ -287,3 +348,5 @@ function locateUser() {
 
 window.focusMarkerFromCard = focusMarkerFromCard;
 window.toggleLegendCategoryFilter = toggleLegendCategoryFilter;
+
+window.handleMapBecameVisible = handleMapBecameVisible;

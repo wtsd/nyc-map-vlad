@@ -302,7 +302,9 @@
     if (typeof refreshMap === "function") {
       const mapRenderKey = getMapRenderKey(state, filtered);
       if (mapRenderKey !== lastMapRenderKey) {
-        refreshMap(filtered);
+        const isMobile = window.matchMedia("(max-width: 760px)").matches;
+        const shouldFitBounds = !isMobile || state.getMobileView() === "map";
+        refreshMap(filtered, { shouldFitBounds });
         lastMapRenderKey = mapRenderKey;
       }
     }

@@ -106,14 +106,27 @@
   }
 
   function switchMobileView(state, listView, view) {
+    const previousView = state.getMobileView();
     state.setMobileView(view);
     listView.applyMobileTabState(state);
+
+    if (view === "map" && previousView !== "map" && typeof window.handleMapBecameVisible === "function") {
+      window.handleMapBecameVisible();
+    }
   }
 
   function toggleMap() {
     const wrap = document.getElementById("mapWrap");
     if (!wrap) return;
+
+    const willShow = wrap.classList.contains("hidden");
     wrap.classList.toggle("hidden");
+
+    if (willShow && typeof window.handleMapBecameVisible === "function") {
+      window.handleMapBecameVisible();
+      return;
+    }
+
     setTimeout(() => {
       if (window.map) window.map.invalidateSize();
     }, 50);
