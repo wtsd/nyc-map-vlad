@@ -26,8 +26,8 @@ html, body {
 }
 
 body {
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 100dvh;
+  height: 100dvh;
   display: block;
   overflow: hidden;
 }
@@ -350,16 +350,17 @@ input[type="search"] {
   display: grid;
   grid-template-columns: minmax(420px, 1.05fr) minmax(360px, 0.95fr);
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
   width: 100%;
-  min-height: calc(100vh - var(--topbar-height));
-  max-height: calc(100vh - var(--topbar-height));
-  overflow-y: auto;
+  height: calc(100dvh - var(--topbar-height));
+  min-height: 0;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 
 .sidebar-section {
-  max-height: calc(100vh - var(--topbar-height) - 24px);
+  min-height: 0;
+  max-height: none;
   overflow-y: auto;
   padding-right: 6px;
 }
@@ -728,12 +729,20 @@ input[type="search"] {
 
 .map-card {
   position: sticky;
-  top: 138px;
+  top: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: var(--shadow);
   padding: 16px;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-section {
+  min-height: 0;
 }
 
 .map-wrap {
@@ -741,6 +750,9 @@ input[type="search"] {
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--border);
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .map-locate-btn {
@@ -815,7 +827,8 @@ input[type="search"] {
 
 #map {
   width: 100%;
-  height: clamp(320px, calc(100vh - var(--topbar-height) - 140px), 820px);
+  height: 100%;
+  flex: 1 1 auto;
   min-height: 320px;
   filter: saturate(1.03) contrast(1.01);
 }
@@ -947,13 +960,14 @@ input[type="search"] {
 
 @media (max-width: 1100px) {
   body {
-    height: 100vh;
-    min-height: 100vh;
+    height: 100dvh;
+    min-height: 100dvh;
     overflow: hidden;
   }
 
   .layout {
     grid-template-columns: 1fr;
+    height: calc(100dvh - var(--topbar-height));
     overflow-y: auto;
   }
 
@@ -965,6 +979,7 @@ input[type="search"] {
 
   .map-card {
     position: static;
+    height: auto;
   }
 
   #map {
