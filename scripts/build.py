@@ -68,6 +68,22 @@ def validate_coords(coords):
     return None
 
 
+def is_invalid_map_coords(coords):
+    if not isinstance(coords, dict):
+        return True
+
+    lat = coords.get("lat")
+    lng = coords.get("lng")
+
+    if not isinstance(lat, (int, float)) or not isinstance(lng, (int, float)):
+        return True
+
+    if not (-90 <= lat <= 90) or not (-180 <= lng <= 180):
+        return True
+
+    return abs(lat) < 0.000001 and abs(lng) < 0.000001
+
+
 def validate_address(address):
     if isinstance(address, str):
         return None
@@ -260,8 +276,10 @@ def build_manifest(asset_version: str, places_hashed: str, search_hashed: str, p
 def main():
     places = []
     errors = []
+    warnings = []
     seen_ids = {}
     validated_count = 0
+    invalid_map_coords_count = 0
 
     places_root = Path(PLACES_DIR)
 
@@ -306,6 +324,11 @@ def main():
         coords_error = validate_coords(meta.get("coords"))
         if coords_error:
             errors.append(f"{meta_path}: coords {coords_error}")
+        elif is_invalid_map_coords(meta.get("coords")):
+            warnings.append(
+                f"{meta_path}: coords {meta.get('coords')} will be excluded from map rendering"
+            )
+            invalid_map_coords_count += 1
 
         enum_error = validate_enum("personal", meta.get("personal"), VALID_PERSONAL)
         if enum_error:
@@ -322,12 +345,19 @@ def main():
     print(f"- Files checked: {validated_count}")
     print(f"- Unique ids: {len(seen_ids)}")
     print(f"- Errors: {len(errors)}")
+    print(f"- Map coordinate warnings: {len(warnings)}")
+    print(f"- Excluded from map rendering: {invalid_map_coords_count}")
 
     if errors:
         print("\nBuild failed due to metadata validation errors:\n", file=sys.stderr)
         for idx, err in enumerate(errors, start=1):
             print(f"{idx}. {err}", file=sys.stderr)
         raise SystemExit(1)
+
+    if warnings:
+        print("\nMap coordinate warnings:\n", file=sys.stderr)
+        for idx, warning in enumerate(warnings, start=1):
+            print(f"{idx}. {warning}", file=sys.stderr)
 
     BUILD_DIR.mkdir(parents=True, exist_ok=True)
     places_payload = []
