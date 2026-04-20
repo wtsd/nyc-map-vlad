@@ -15,20 +15,7 @@ const CATEGORY_COLORS = {
   "hidden-gems": "#14b8a6",
   other: "#64748b"
 };
-const PERSONAL_COLORS = {
-  "want-to-go": "#3b82f6",
-  "highly-recommend": "#22c55e"
-};
-
-function getMarkerMode() {
-  const selectedCategoryCount = document.querySelectorAll("#categoryFilterGroup input:checked").length;
-  return selectedCategoryCount > 0 ? "personal" : "category";
-}
-
-function getColorByMode(place, mode) {
-  if (mode === "personal") {
-    return PERSONAL_COLORS[place.personal] || "#64748b";
-  }
+function getCategoryColor(place) {
   const primaryCategory = Array.isArray(place.category) ? place.category[0] : "";
   return CATEGORY_COLORS[primaryCategory] || "#64748b";
 }
@@ -44,11 +31,11 @@ function getMapStatusText(key) {
   return dictionary[key] || "";
 }
 
-function renderLegend(mode, note = "") {
+function renderLegend(note = "") {
   const legendEl = document.getElementById("mapLegend");
   if (!legendEl) return;
 
-  const source = mode === "personal" ? PERSONAL_COLORS : CATEGORY_COLORS;
+  const source = CATEGORY_COLORS;
   const selectedCategories = new Set(
     Array.from(document.querySelectorAll("#categoryFilterGroup input:checked")).map((input) => input.value)
   );
@@ -60,9 +47,7 @@ function renderLegend(mode, note = "") {
     </button>
   </li>`;
   const items = Object.entries(source).map(([key, color]) => {
-    const label = mode === "personal"
-      ? NYCMapCommon.getPersonalLabel(NYCMapState.getLang(), key)
-      : NYCMapCommon.getCategoryLabel(NYCMapState.getLang(), key);
+    const label = NYCMapCommon.getCategoryLabel(NYCMapState.getLang(), key);
     const activeClass = selectedCategories.has(key) ? "active" : "";
     return `<li class="map-legend-item ${activeClass}">
       <button type="button" class="map-legend-btn" onclick="toggleLegendCategoryFilter('${key}')">
@@ -71,9 +56,7 @@ function renderLegend(mode, note = "") {
     </li>`;
   }).join("");
 
-  const title = mode === "personal"
-    ? (NYCMapState.getLang() === "ru" ? "Легенда: оценка" : "Legend: ratings")
-    : (NYCMapState.getLang() === "ru" ? "Легенда: категории" : "Legend: categories");
+  const title = NYCMapState.getLang() === "ru" ? "Легенда: категории" : "Legend: categories";
 
   legendEl.innerHTML = `
     <div class="map-legend-title">${title}</div>
@@ -157,9 +140,8 @@ function setMarkerActiveState(id, isActive) {
   const marker = markersById[id];
   if (!marker) return;
 
-  const markerMode = getMarkerMode();
   const place = marker.__placeData;
-  const markerColor = getColorByMode(place, markerMode);
+  const markerColor = getCategoryColor(place);
   marker.setStyle({
     radius: isActive ? 10 : 8,
     weight: isActive ? 3 : 2,
@@ -213,7 +195,6 @@ function refreshMap(currentPlaces, options = {}) {
   lastRenderedPlaces = Array.isArray(currentPlaces) ? currentPlaces : [];
   markersLayer.clearLayers();
 
-  const markerMode = getMarkerMode();
   const validPlaces = getValidPlaces(lastRenderedPlaces);
   const excludedCount = Math.max(0, lastRenderedPlaces.length - validPlaces.length);
 
@@ -268,7 +249,7 @@ function refreshMap(currentPlaces, options = {}) {
     }
   }
 
-  renderLegend(markerMode, note);
+  renderLegend(note);
 }
 
 function handleMapBecameVisible() {
