@@ -14,30 +14,30 @@ updates:
       - "dependencies"
       - "github-actions"
 
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:15"
-      timezone: "UTC"
-    open-pull-requests-limit: 10
-    commit-message:
-      prefix: "chore(deps-py)"
-    labels:
-      - "dependencies"
-      - "python"
+  # - package-ecosystem: "pip"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #     day: "monday"
+  #     time: "06:15"
+  #     timezone: "UTC"
+  #   open-pull-requests-limit: 10
+  #   commit-message:
+  #     prefix: "chore(deps-py)"
+  #   labels:
+  #     - "dependencies"
+  #     - "python"
 
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "06:30"
-      timezone: "UTC"
-    open-pull-requests-limit: 10
-    commit-message:
-      prefix: "chore(deps-js)"
-    labels:
-      - "dependencies"
-      - "javascript"
+  # - package-ecosystem: "npm"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #     day: "monday"
+  #     time: "06:30"
+  #     timezone: "UTC"
+  #   open-pull-requests-limit: 10
+  #   commit-message:
+  #     prefix: "chore(deps-js)"
+  #   labels:
+  #     - "dependencies"
+  #     - "javascript"
