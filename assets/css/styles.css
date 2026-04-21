@@ -10,16 +10,17 @@
   --radius-sm: 12px;
   --accent: #111827;
   --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.25);
-  --topbar-height: 180px;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
+  height: 100%;
   background: var(--bg);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -27,8 +28,8 @@ html, body {
 
 body {
   min-height: 100dvh;
-  height: 100dvh;
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -58,10 +59,8 @@ select:focus-visible {
 }
 
 .topbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 2000;
   background: rgba(246, 247, 249, 0.95);
   backdrop-filter: blur(14px);
@@ -345,17 +344,16 @@ input[type="search"] {
 
 .layout {
   max-width: 1480px;
-  margin: var(--topbar-height) auto 0;
+  margin: 0 auto;
   padding: 24px;
   display: grid;
   grid-template-columns: minmax(420px, 1.05fr) minmax(360px, 0.95fr);
   gap: 24px;
   align-items: stretch;
   width: 100%;
-  height: calc(100dvh - var(--topbar-height));
+  flex: 1 1 auto;
   min-height: 0;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .sidebar-section {
@@ -728,8 +726,7 @@ input[type="search"] {
 }
 
 .map-card {
-  position: sticky;
-  top: 0;
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -742,6 +739,7 @@ input[type="search"] {
 }
 
 .map-section {
+  display: flex;
   min-height: 0;
 }
 
@@ -829,7 +827,7 @@ input[type="search"] {
   width: 100%;
   height: 100%;
   flex: 1 1 auto;
-  min-height: 320px;
+  min-height: 0;
   filter: saturate(1.03) contrast(1.01);
 }
 
@@ -960,15 +958,14 @@ input[type="search"] {
 
 @media (max-width: 1100px) {
   body {
-    height: 100dvh;
     min-height: 100dvh;
-    overflow: hidden;
+    height: auto;
+    overflow: auto;
   }
 
   .layout {
     grid-template-columns: 1fr;
-    height: calc(100dvh - var(--topbar-height));
-    overflow-y: auto;
+    overflow: visible;
   }
 
   .sidebar-section {
