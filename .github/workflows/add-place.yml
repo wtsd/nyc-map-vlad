@@ -178,6 +178,9 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v7
         with:
+          # If repository setting "Allow GitHub Actions to create and approve pull requests"
+          # is disabled, provide a PAT in PR_CREATOR_TOKEN to allow PR creation.
+          token: ${{ secrets.PR_CREATOR_TOKEN || github.token }}
           commit-message: "Add place: ${{ steps.prepare.outputs.slug }}"
           branch: "automation/add-place-${{ steps.prepare.outputs.slug }}"
           delete-branch: true

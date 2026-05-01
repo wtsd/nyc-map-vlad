@@ -130,3 +130,5 @@ Implemented in `assets/js/map.js`:
 ### GitHub manual Add Place workflow
 
 Run the **Add Place** workflow from GitHub Actions using **Run workflow** (workflow_dispatch). It collects inputs and opens a PR with new place files after build validation.
+
+If your repo has **Settings → Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests** disabled, set a `PR_CREATOR_TOKEN` secret (PAT with repo access). The workflow will use that token to create the PR without requiring approval automation.
