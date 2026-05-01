@@ -15,10 +15,6 @@ on:
           - other
           - parks
           - viewpoints
-      slug:
-        description: "Place slug (must become meta.yml id)"
-        required: true
-        type: string
       title_en:
         description: "English title"
         required: true
@@ -27,14 +23,6 @@ on:
         description: "Russian title"
         required: false
         default: ""
-        type: string
-      lat:
-        description: "Latitude (number)"
-        required: true
-        type: string
-      lng:
-        description: "Longitude (number)"
-        required: true
         type: string
       address:
         description: "Address"
@@ -56,7 +44,7 @@ on:
       price:
         description: "Optional price (e.g. $$)"
         required: false
-        default: ""
+        default: "$"
         type: string
       external_link:
         description: "Optional external link"
@@ -91,31 +79,65 @@ jobs:
         uses: actions/checkout@v6.0.2
 
       - name: Validate inputs
+        id: prepare
         run: |
           set -euo pipefail
-          slug='${{ inputs.slug }}'
           category='${{ inputs.category }}'
-          [[ "$slug" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]] || {
-            echo "Invalid slug: $slug"
-            echo "Use lowercase letters, numbers, and dashes only."
-            exit 1
-          }
           [[ "$category" =~ ^[a-z0-9-]+$ ]] || {
             echo "Invalid category: $category"
             echo "Use lowercase letters, numbers, and dashes only."
             exit 1
           }
-          python - <<'PY'
-          lat = float("${{ inputs.lat }}")
-          lng = float("${{ inputs.lng }}")
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import re
+          import urllib.parse
+          import urllib.request
+          import json
+
+          title = "${{ inputs.title_en }}".strip()
+          address = "${{ inputs.address }}".strip()
+
+          if not title:
+              raise SystemExit("title_en cannot be empty")
+          if not address:
+              raise SystemExit("address cannot be empty")
+
+          slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+          slug = re.sub(r"-{2,}", "-", slug)
+          if not slug:
+              raise SystemExit("Could not derive a valid slug from title_en")
+
+          params = urllib.parse.urlencode({
+              "q": address,
+              "format": "jsonv2",
+              "limit": 1,
+              "addressdetails": 0,
+          })
+          req = urllib.request.Request(
+              f"https://nominatim.openstreetmap.org/search?{params}",
+              headers={"User-Agent": "nyc-map-add-place-workflow/1.0"},
+          )
+          with urllib.request.urlopen(req, timeout=20) as resp:
+              data = json.loads(resp.read().decode("utf-8"))
+
+          if not data:
+              raise SystemExit(f"No geocoding results for address: {address}")
+
+          lat = float(data[0]["lat"])
+          lng = float(data[0]["lon"])
+
           if not (-90 <= lat <= 90 and -180 <= lng <= 180):
-              raise SystemExit("lat/lng are out of valid range")
+              raise SystemExit("Resolved lat/lng are out of valid range")
+
+          print(f"slug={slug}")
+          print(f"lat={lat:.7f}")
+          print(f"lng={lng:.7f}")
           PY
 
       - name: Create place files
         run: |
           set -euo pipefail
-          place_dir="places/${{ inputs.category }}/${{ inputs.slug }}"
+          place_dir="places/${{ inputs.category }}/${{ steps.prepare.outputs.slug }}"
           if [[ -d "$place_dir" ]]; then
             echo "Place already exists: $place_dir"
             exit 1
@@ -124,13 +146,13 @@ jobs:
           mkdir -p "$place_dir"
 
           printf '%s\n' \
-            'id: ${{ inputs.slug }}' \
+            'id: ${{ steps.prepare.outputs.slug }}' \
             'title:' \
             '  en: "${{ inputs.title_en }}"' \
             '  ru: "${{ inputs.title_ru }}"' \
             'coords:' \
-            '  lat: ${{ inputs.lat }}' \
-            '  lng: ${{ inputs.lng }}' \
+            '  lat: ${{ steps.prepare.outputs.lat }}' \
+            '  lng: ${{ steps.prepare.outputs.lng }}' \
             'category:' \
             '  - ${{ inputs.category }}' \
             'address: "${{ inputs.address }}"' \
@@ -156,8 +178,8 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v7
         with:
-          commit-message: "Add place: ${{ inputs.slug }}"
-          branch: "automation/add-place-${{ inputs.slug }}"
+          commit-message: "Add place: ${{ steps.prepare.outputs.slug }}"
+          branch: "automation/add-place-${{ steps.prepare.outputs.slug }}"
           delete-branch: true
           title: "Add place: ${{ inputs.title_en }}"
           body: |
@@ -165,7 +187,7 @@ jobs:
 
             ## Inputs
             - Category: `${{ inputs.category }}`
-            - Slug: `${{ inputs.slug }}`
+            - Slug (auto-generated): `${{ steps.prepare.outputs.slug }}`
             - Title (EN): `${{ inputs.title_en }}`
-            - Coordinates: `${{ inputs.lat }}, ${{ inputs.lng }}`
+            - Coordinates (auto-geocoded): `${{ steps.prepare.outputs.lat }}, ${{ steps.prepare.outputs.lng }}`
             - Address: `${{ inputs.address }}`
