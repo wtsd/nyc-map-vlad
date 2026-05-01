@@ -1,0 +1,13 @@
+id: chela
+title:
+  en: "Chela"
+  ru: ""
+coords:
+  lat: 40.6702985
+  lng: -73.9856539
+category:
+  - food
+address: "408 5th Ave, Brooklyn, NY 11215"
+personal: "to-do"
+price: "$"
+external_link: "chelaparkslope.com"

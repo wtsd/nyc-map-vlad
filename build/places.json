@@ -63,7 +63,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "230 Park Ave South, New York, NY 10003",
     "external_link": "",
@@ -175,6 +175,31 @@
     }
   },
   {
+    "id": "chela",
+    "route": "food/chela",
+    "title": {
+      "en": "Chela",
+      "ru": ""
+    },
+    "coords": [
+      40.6702985,
+      -73.9856539
+    ],
+    "category": [
+      "food"
+    ],
+    "personal": "to-do",
+    "price": "$",
+    "address": "408 5th Ave, Brooklyn, NY 11215",
+    "external_link": "chelaparkslope.com",
+    "image": "",
+    "thumbnail": null,
+    "summary": {
+      "en": "Nice Mexican restaurant",
+      "ru": "Хороший мексиканский ресторан"
+    }
+  },
+  {
     "id": "chelsea-market",
     "route": "food/chelsea-market",
     "title": {
@@ -188,7 +213,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "75 9th Ave, New York, NY 10011",
     "external_link": "",
@@ -238,7 +263,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "6 Hanover St, New York, NY 10005",
     "external_link": "",
@@ -613,7 +638,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "24 W 56th St, New York, NY 10019",
     "external_link": "",
@@ -663,7 +688,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "1601 Broadway, New York, NY 10019",
     "external_link": "",
@@ -738,7 +763,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "387 Myrtle Ave, Brooklyn, NY 11205",
     "external_link": "https://www.tiktok.com/t/ZP8gHKMEW",
@@ -763,7 +788,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "260 W 35th St, New York, NY 10001",
     "external_link": "",
@@ -913,7 +938,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "54 Bayard St, New York, NY 10013",
     "external_link": "",
@@ -963,7 +988,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "1310 Surf Ave, Brooklyn, NY 11224",
     "external_link": "",
@@ -1038,7 +1063,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "27 Hyatt St, Staten Island, NY 10301",
     "external_link": "",
@@ -1063,7 +1088,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "80 W 40th St, New York, NY 10018",
     "external_link": "",
@@ -1163,7 +1188,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "230 5th Ave, New York, NY 10001",
     "external_link": "",
@@ -1263,7 +1288,7 @@
     "category": [
       "food"
     ],
-    "personal": "visited",
+    "personal": "to-do",
     "price": "$$",
     "address": "835 6th Ave, New York, NY 10001",
     "external_link": "https://www.tiktok.com/t/ZP8gHkxCm",
@@ -1388,7 +1413,7 @@
     "category": [
       "food"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "378 6th Ave, New York, NY 10011",
     "external_link": "",
@@ -1563,7 +1588,7 @@
     "category": [
       "hidden-gems"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "180 W 58th St, New York, NY 10019",
     "external_link": "",
@@ -1588,7 +1613,7 @@
     "category": [
       "hidden-gems"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "55 Water St, New York, NY 10041",
     "external_link": "",
@@ -1613,7 +1638,7 @@
     "category": [
       "hidden-gems"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "14 N Moore St, New York, NY 10013",
     "external_link": "",
@@ -1663,7 +1688,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Brooklyn Bridge Pedestrian Entrance, New York, NY 10038",
     "external_link": "",
@@ -1688,7 +1713,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "1047 Amsterdam Ave, New York, NY 10025",
     "external_link": "",
@@ -1713,7 +1738,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Canal St & Mott St, New York, NY 10013",
     "external_link": "",
@@ -1738,7 +1763,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "405 Lexington Ave, New York, NY 10174",
     "external_link": "",
@@ -1763,7 +1788,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Surf Ave & Stillwell Ave, Brooklyn, NY 11224",
     "external_link": "",
@@ -1788,7 +1813,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Washington St & Water St, Brooklyn, NY 11201",
     "external_link": "",
@@ -1813,7 +1838,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "20 W 34th St, New York, NY 10001",
     "external_link": "",
@@ -1838,7 +1863,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "33 Liberty St, New York, NY 10045",
     "external_link": "",
@@ -1863,7 +1888,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "175 5th Ave, New York, NY 10010",
     "external_link": "",
@@ -1888,7 +1913,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "89 E 42nd St, New York, NY 10017",
     "external_link": "",
@@ -1913,7 +1938,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "20 Hudson Yards, New York, NY 10001",
     "external_link": "",
@@ -1938,7 +1963,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Lincoln Center Plaza, New York, NY 10023",
     "external_link": "",
@@ -1963,7 +1988,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Mulberry St & Grand St, New York, NY 10013",
     "external_link": "",
@@ -2038,7 +2063,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "481 8th Ave, New York, NY 10001",
     "external_link": "",
@@ -2063,7 +2088,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "476 5th Ave, New York, NY 10018",
     "external_link": "",
@@ -2113,7 +2138,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "185 Greenwich St, New York, NY 10007",
     "external_link": "",
@@ -2138,7 +2163,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "285 Fulton St, New York, NY 10007",
     "external_link": "",
@@ -2188,7 +2213,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "254 E 60th St, New York, NY 10022",
     "external_link": "",
@@ -2213,7 +2238,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Broadway & Prince St, New York, NY 10012",
     "external_link": "",
@@ -2238,7 +2263,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "5th Ave & E 51st St, New York, NY 10022",
     "external_link": "",
@@ -2263,7 +2288,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Liberty Island, New York, NY 10004",
     "external_link": "",
@@ -2288,7 +2313,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "20 Hudson Yards, New York, NY 10001",
     "external_link": "",
@@ -2313,7 +2338,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Times Square, New York, NY 10036",
     "external_link": "",
@@ -2338,7 +2363,7 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "89 Broadway, New York, NY 10006",
     "external_link": "",
@@ -2413,12 +2438,12 @@
     "category": [
       "landmarks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Bowling Green, New York, NY 10004",
     "external_link": "",
     "image": "places/landmarks/wall-street-bull/cover.jpg",
-    "thumbnail": null,
+    "thumbnail": "build/thumbs/wall-street-bull.webp",
     "summary": {
       "en": "Famous charging bull statue.",
       "ru": "Знаменитая статуя быка."
@@ -2438,7 +2463,7 @@
     "category": [
       "museums"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "200 Central Park W, New York, NY 10024",
     "external_link": "",
@@ -2513,7 +2538,7 @@
     "category": [
       "museums"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Ellis Island, New York, NY 10004",
     "external_link": "",
@@ -2613,7 +2638,7 @@
     "category": [
       "museums"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "1000 5th Ave, New York, NY 10028",
     "external_link": "",
@@ -2688,7 +2713,7 @@
     "category": [
       "museums"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "99 Gansevoort St, New York, NY 10014",
     "external_link": "",
@@ -2738,7 +2763,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Brighton Beach Ave & Boardwalk, Brooklyn, NY 11235",
     "external_link": "",
@@ -2788,7 +2813,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "935 Broadway, New York, NY 10010",
     "external_link": "",
@@ -2813,7 +2838,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "1 Old Dock St, Brooklyn, NY 11201",
     "external_link": "",
@@ -2838,7 +2863,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "636 5th Ave, New York, NY 10020",
     "external_link": "",
@@ -2888,7 +2913,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "1000 Surf Ave, Brooklyn, NY 11224",
     "external_link": "",
@@ -2913,12 +2938,12 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "1600 Broadway, New York, NY 10019",
     "external_link": "",
     "image": "places/other/mms-store/cover.jpg",
-    "thumbnail": null,
+    "thumbnail": "build/thumbs/mms-store.webp",
     "summary": {
       "en": "Big colorful candy store. Fun stop if you’re already in Times Square.",
       "ru": "Яркий магазин конфет. Можно зайти, если рядом."
@@ -2938,7 +2963,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Washington Square Park area, New York, NY 10012",
     "external_link": "",
@@ -2963,7 +2988,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "8th Ave & W 31st St, New York, NY 10001",
     "external_link": "",
@@ -3013,7 +3038,7 @@
     "category": [
       "other"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "State St & Battery Pl, New York, NY 10004",
     "external_link": "",
@@ -3038,12 +3063,12 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Central Park, Terrace Dr, New York, NY 10021",
     "external_link": "",
     "image": "places/parks/bethesda-fountain/cover.jpg",
-    "thumbnail": null,
+    "thumbnail": "build/thumbs/bethesda-fountain.webp",
     "summary": {
       "en": "Iconic fountain in Central Park.",
       "ru": "Знаменитый фонтан в Центральном парке."
@@ -3113,7 +3138,7 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Bryant Park, New York, NY 10018",
     "external_link": "",
@@ -3138,7 +3163,7 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "The Mall, Central Park, New York, NY 10022",
     "external_link": "",
@@ -3188,7 +3213,7 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Governors Island Ferry Terminal, New York, NY 10004",
     "external_link": "",
@@ -3213,7 +3238,7 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Gansevoort St Entrance, New York, NY 10014",
     "external_link": "",
@@ -3238,7 +3263,7 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Pier 55, Hudson River Greenway, New York, NY 10014",
     "external_link": "",
@@ -3263,7 +3288,7 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Morningside Ave & W 114th St, New York, NY 10027",
     "external_link": "",
@@ -3313,12 +3338,12 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Roosevelt Island, New York, NY 10044",
     "external_link": "",
     "image": "places/parks/roosevelt-island/cover.jpg",
-    "thumbnail": null,
+    "thumbnail": "build/thumbs/roosevelt-island.webp",
     "summary": {
       "en": "Quiet island with nice river views and a very different pace from Manhattan.",
       "ru": "Спокойный остров с хорошими видами на реку и совсем другим ритмом по сравнению с Манхэттеном."
@@ -3338,7 +3363,7 @@
     "category": [
       "parks"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Washington Square, New York, NY 10012",
     "external_link": "",
@@ -3363,7 +3388,7 @@
     "category": [
       "viewpoints"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "Washington St & Front St, Brooklyn, NY 11201",
     "external_link": "",
@@ -3388,7 +3413,7 @@
     "category": [
       "viewpoints"
     ],
-    "personal": "to-do",
+    "personal": "visited",
     "price": "$$",
     "address": "30 Hudson Yards, New York, NY 10001",
     "external_link": "",
