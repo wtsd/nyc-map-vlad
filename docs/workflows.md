@@ -126,3 +126,7 @@ Implemented in `assets/js/map.js`:
 - **Forgot to rebuild:** frontend reads generated JSON, not raw markdown/YAML.
 - **Unexpected ingestion overwrite behavior:** descriptions are protected unless `--overwrite-descriptions` is used.
 - **Category mismatch:** category chip labels in UI are hardcoded in HTML; new categories require UI updates in `index.html` and labels in `common.js`/`ui-text.js`.
+
+### GitHub manual Add Place workflow
+
+Run the **Add Place** workflow from GitHub Actions using **Run workflow** (workflow_dispatch). It collects inputs and opens a PR with new place files after build validation.

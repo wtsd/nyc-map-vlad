@@ -4,9 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       category:
-        description: "Category folder under places/ (e.g., food, landmarks)"
+        description: "Category folder under places/"
         required: true
-        type: string
+        type: choice
+        options:
+          - food
+          - hidden-gems
+          - landmarks
+          - museums
+          - other
+          - parks
+          - viewpoints
       slug:
         description: "Place slug (must become meta.yml id)"
         required: true
@@ -153,7 +161,7 @@ EOF
           delete-branch: true
           title: "Add place: ${{ inputs.title_en }}"
           body: |
-            Adds a new place via workflow_dispatch.
+            Adds a new place via manual workflow_dispatch.
 
             ## Inputs
             - Category: `${{ inputs.category }}`
