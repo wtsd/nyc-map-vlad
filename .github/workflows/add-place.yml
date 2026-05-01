@@ -1,0 +1,171 @@
+name: Add Place
+
+on:
+  workflow_dispatch:
+    inputs:
+      category:
+        description: "Category folder under places/"
+        required: true
+        type: choice
+        options:
+          - food
+          - hidden-gems
+          - landmarks
+          - museums
+          - other
+          - parks
+          - viewpoints
+      slug:
+        description: "Place slug (must become meta.yml id)"
+        required: true
+        type: string
+      title_en:
+        description: "English title"
+        required: true
+        type: string
+      title_ru:
+        description: "Russian title"
+        required: false
+        default: ""
+        type: string
+      lat:
+        description: "Latitude (number)"
+        required: true
+        type: string
+      lng:
+        description: "Longitude (number)"
+        required: true
+        type: string
+      address:
+        description: "Address"
+        required: true
+        type: string
+      personal:
+        description: "Personal status"
+        required: false
+        default: "to-do"
+        type: choice
+        options:
+          - ""
+          - to-do
+          - visited
+          - want-to-go
+          - been-not-impressed
+          - highly-recommend
+          - highly-recommended
+      price:
+        description: "Optional price (e.g. $$)"
+        required: false
+        default: ""
+        type: string
+      external_link:
+        description: "Optional external link"
+        required: false
+        default: ""
+        type: string
+      summary_en:
+        description: "EN summary markdown"
+        required: false
+        default: ""
+        type: string
+      summary_ru:
+        description: "RU summary markdown"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  add-place:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6.0.2
+
+      - name: Validate inputs
+        run: |
+          set -euo pipefail
+          slug='${{ inputs.slug }}'
+          category='${{ inputs.category }}'
+          [[ "$slug" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]] || {
+            echo "Invalid slug: $slug"
+            echo "Use lowercase letters, numbers, and dashes only."
+            exit 1
+          }
+          [[ "$category" =~ ^[a-z0-9-]+$ ]] || {
+            echo "Invalid category: $category"
+            echo "Use lowercase letters, numbers, and dashes only."
+            exit 1
+          }
+          python - <<'PY'
+          lat = float("${{ inputs.lat }}")
+          lng = float("${{ inputs.lng }}")
+          if not (-90 <= lat <= 90 and -180 <= lng <= 180):
+              raise SystemExit("lat/lng are out of valid range")
+          PY
+
+      - name: Create place files
+        run: |
+          set -euo pipefail
+          place_dir="places/${{ inputs.category }}/${{ inputs.slug }}"
+          if [[ -d "$place_dir" ]]; then
+            echo "Place already exists: $place_dir"
+            exit 1
+          fi
+
+          mkdir -p "$place_dir"
+
+          cat > "$place_dir/meta.yml" <<EOF
+id: ${{ inputs.slug }}
+title:
+  en: "${{ inputs.title_en }}"
+  ru: "${{ inputs.title_ru }}"
+coords:
+  lat: ${{ inputs.lat }}
+  lng: ${{ inputs.lng }}
+category:
+  - ${{ inputs.category }}
+address: "${{ inputs.address }}"
+personal: "${{ inputs.personal }}"
+price: "${{ inputs.price }}"
+external_link: "${{ inputs.external_link }}"
+EOF
+
+          printf '%s\n' '${{ inputs.summary_en }}' > "$place_dir/en.md"
+          printf '%s\n' '${{ inputs.summary_ru }}' > "$place_dir/ru.md"
+
+      - name: Setup Python
+        uses: actions/setup-python@v6.2.0
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install pyyaml pillow
+
+      - name: Validate by building
+        run: python scripts/build.py
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "Add place: ${{ inputs.slug }}"
+          branch: "automation/add-place-${{ inputs.slug }}"
+          delete-branch: true
+          title: "Add place: ${{ inputs.title_en }}"
+          body: |
+            Adds a new place via manual workflow_dispatch.
+
+            ## Inputs
+            - Category: `${{ inputs.category }}`
+            - Slug: `${{ inputs.slug }}`
+            - Title (EN): `${{ inputs.title_en }}`
+            - Coordinates: `${{ inputs.lat }}, ${{ inputs.lng }}`
+            - Address: `${{ inputs.address }}`
