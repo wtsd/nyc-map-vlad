@@ -123,21 +123,21 @@ jobs:
 
           mkdir -p "$place_dir"
 
-          cat > "$place_dir/meta.yml" <<EOF
-id: ${{ inputs.slug }}
-title:
-  en: "${{ inputs.title_en }}"
-  ru: "${{ inputs.title_ru }}"
-coords:
-  lat: ${{ inputs.lat }}
-  lng: ${{ inputs.lng }}
-category:
-  - ${{ inputs.category }}
-address: "${{ inputs.address }}"
-personal: "${{ inputs.personal }}"
-price: "${{ inputs.price }}"
-external_link: "${{ inputs.external_link }}"
-EOF
+          printf '%s\n' \
+            'id: ${{ inputs.slug }}' \
+            'title:' \
+            '  en: "${{ inputs.title_en }}"' \
+            '  ru: "${{ inputs.title_ru }}"' \
+            'coords:' \
+            '  lat: ${{ inputs.lat }}' \
+            '  lng: ${{ inputs.lng }}' \
+            'category:' \
+            '  - ${{ inputs.category }}' \
+            'address: "${{ inputs.address }}"' \
+            'personal: "${{ inputs.personal }}"' \
+            'price: "${{ inputs.price }}"' \
+            'external_link: "${{ inputs.external_link }}"' \
+            > "$place_dir/meta.yml"
 
           printf '%s\n' '${{ inputs.summary_en }}' > "$place_dir/en.md"
           printf '%s\n' '${{ inputs.summary_ru }}' > "$place_dir/ru.md"
