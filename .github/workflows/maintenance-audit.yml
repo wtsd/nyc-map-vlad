@@ -1,0 +1,39 @@
+name: Maintenance Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+  pull_request:
+    paths:
+      - 'places/**'
+      - 'scripts/audit_places.py'
+      - '.github/workflows/maintenance-audit.yml'
+
+jobs:
+  maintenance-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pyyaml
+
+      - name: Run maintenance audit
+        run: |
+          mkdir -p build/reports
+          python scripts/audit_places.py . > build/reports/maintenance-audit-report.json
+
+      - name: Upload maintenance report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: maintenance-audit-report
+          path: build/reports/maintenance-audit-report.json
+          if-no-files-found: error
