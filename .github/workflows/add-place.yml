@@ -176,11 +176,11 @@ jobs:
         run: python scripts/build.py
 
       - name: Create pull request
+        if: ${{ secrets.PR_CREATOR_TOKEN != '' }}
         uses: peter-evans/create-pull-request@v7
         with:
-          # If repository setting "Allow GitHub Actions to create and approve pull requests"
-          # is disabled, provide a PAT in PR_CREATOR_TOKEN to allow PR creation.
-          token: ${{ secrets.PR_CREATOR_TOKEN || github.token }}
+          # Use a PAT because some repos/orgs disable PR creation via GITHUB_TOKEN.
+          token: ${{ secrets.PR_CREATOR_TOKEN }}
           commit-message: "Add place: ${{ steps.prepare.outputs.slug }}"
           branch: "automation/add-place-${{ steps.prepare.outputs.slug }}"
           delete-branch: true
@@ -194,3 +194,11 @@ jobs:
             - Title (EN): `${{ inputs.title_en }}`
             - Coordinates (auto-geocoded): `${{ steps.prepare.outputs.lat }}, ${{ steps.prepare.outputs.lng }}`
             - Address: `${{ inputs.address }}`
+
+      - name: Fail when PR token is missing
+        if: ${{ secrets.PR_CREATOR_TOKEN == '' }}
+        run: |
+          echo "Missing repository secret PR_CREATOR_TOKEN."
+          echo "Create a fine-grained PAT with Contents: Read/Write and Pull requests: Read/Write"
+          echo "and save it as PR_CREATOR_TOKEN in repository secrets."
+          exit 1
