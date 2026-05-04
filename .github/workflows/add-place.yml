@@ -165,7 +165,7 @@ jobs:
           printf '%s\n' '${{ inputs.summary_ru }}' > "$place_dir/ru.md"
 
       - name: Setup Python
-        uses: actions/setup-python@v6.2.0
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
