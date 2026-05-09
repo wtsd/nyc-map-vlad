@@ -93,6 +93,8 @@
     const tabMap = document.getElementById("tabMap");
     const locateBtn = document.getElementById("locateBtn");
     const searchFilter = document.getElementById("searchFilter");
+    const addressSearchInput = document.getElementById("addressSearchInput");
+    const addressSearchButtonLabel = document.querySelector("#addressSearchButton .btn-label");
     const copyButtons = document.querySelectorAll("button[onclick='copySummary()']");
     const copyLabels = document.querySelectorAll("button[onclick='copySummary()'] .btn-label");
     const langLabels = document.querySelectorAll("button[onclick='toggleLang()'] .btn-label");
@@ -109,6 +111,8 @@
       if (locateLabel) locateLabel.textContent = text.locateMe;
     }
     if (searchFilter) searchFilter.placeholder = text.searchPlaceholder;
+    if (addressSearchInput) addressSearchInput.placeholder = text.addressPlaceholder;
+    if (addressSearchButtonLabel) addressSearchButtonLabel.textContent = text.addressPin;
     copyButtons.forEach((button) => { button.setAttribute("aria-label", text.copyToClipboard); });
     copyLabels.forEach((label) => { label.textContent = text.copyToClipboard; });
     langLabels.forEach((label) => { label.textContent = text.language; });
