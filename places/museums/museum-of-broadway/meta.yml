@@ -1,0 +1,13 @@
+id: museum-of-broadway
+title:
+  en: Museum of Broadway
+  ru: Музей Бродвея
+coords:
+  lat: 40.75814
+  lng: -73.98558
+category:
+- museums
+address: 145 W 45th St, New York, NY 10036
+external_link: ''
+personal: to-do
+price: $$

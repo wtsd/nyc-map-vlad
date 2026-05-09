@@ -1,0 +1,13 @@
+id: new-museum
+title:
+  en: New Museum
+  ru: Новый музей
+coords:
+  lat: 40.72235
+  lng: -73.99302
+category:
+- museums
+address: 235 Bowery, New York, NY 10002
+external_link: ''
+personal: to-do
+price: $$

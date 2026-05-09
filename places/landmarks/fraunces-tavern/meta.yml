@@ -1,0 +1,13 @@
+id: fraunces-tavern
+title:
+  en: Fraunces Tavern
+  ru: Таверна Фраунсес
+coords:
+  lat: 40.70339
+  lng: -74.01132
+category:
+- landmarks
+address: 54 Pearl St, New York, NY 10004
+external_link: ''
+personal: to-do
+price: $$

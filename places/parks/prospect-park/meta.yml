@@ -1,0 +1,13 @@
+id: prospect-park
+title:
+  en: Prospect Park
+  ru: Проспект-парк
+coords:
+  lat: 40.6602
+  lng: -73.969
+category:
+- parks
+address: 95 Prospect Park W, Brooklyn, NY 11215
+external_link: ''
+personal: to-do
+price: free
