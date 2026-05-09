@@ -1,0 +1,13 @@
+id: battery-park
+title:
+  en: The Battery
+  ru: Бэттери-парк
+coords:
+  lat: 40.70328
+  lng: -74.01703
+category:
+- parks
+address: Battery Pl, New York, NY 10004
+external_link: ''
+personal: to-do
+price: free

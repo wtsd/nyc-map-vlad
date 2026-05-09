@@ -1,0 +1,13 @@
+id: morgan-library-museum
+title:
+  en: Morgan Library & Museum
+  ru: Библиотека и музей Моргана
+coords:
+  lat: 40.74921
+  lng: -73.98159
+category:
+- museums
+address: 225 Madison Ave, New York, NY 10016
+external_link: ''
+personal: to-do
+price: $$

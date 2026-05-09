@@ -1,0 +1,13 @@
+id: brooklyn-bridge-park
+title:
+  en: Brooklyn Bridge Park
+  ru: Бруклин-Бридж-парк
+coords:
+  lat: 40.70029
+  lng: -73.9967
+category:
+- parks
+address: 334 Furman St, Brooklyn, NY 11201
+external_link: ''
+personal: to-do
+price: free

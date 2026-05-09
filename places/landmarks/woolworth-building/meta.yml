@@ -1,0 +1,13 @@
+id: woolworth-building
+title:
+  en: Woolworth Building
+  ru: Вулворт-билдинг
+coords:
+  lat: 40.71228
+  lng: -74.00833
+category:
+- landmarks
+address: 233 Broadway, New York, NY 10007
+external_link: ''
+personal: to-do
+price: $$

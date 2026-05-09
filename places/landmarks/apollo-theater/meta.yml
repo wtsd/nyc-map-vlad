@@ -1,0 +1,13 @@
+id: apollo-theater
+title:
+  en: Apollo Theater
+  ru: Театр Apollo
+coords:
+  lat: 40.81003
+  lng: -73.95004
+category:
+- landmarks
+address: 253 W 125th St, New York, NY 10027
+external_link: ''
+personal: to-do
+price: $$

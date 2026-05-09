@@ -1,0 +1,13 @@
+id: staten-island-ferry
+title:
+  en: Staten Island Ferry
+  ru: Паром на Статен-Айленд
+coords:
+  lat: 40.70141
+  lng: -74.01325
+category:
+- other
+address: 4 South St, New York, NY 10004
+external_link: ''
+personal: to-do
+price: free
