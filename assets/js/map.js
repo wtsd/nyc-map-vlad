@@ -5,6 +5,7 @@ let activeMarkerId = "";
 let activeCardId = "";
 let userLocationMarker;
 let userLocationAccuracyCircle;
+let addressSearchMarker;
 let lastRenderedPlaces = [];
 const CATEGORY_COLORS = {
   landmarks: "#3b82f6",
@@ -18,6 +19,24 @@ const CATEGORY_COLORS = {
 function getCategoryColor(place) {
   const primaryCategory = Array.isArray(place.category) ? place.category[0] : "";
   return CATEGORY_COLORS[primaryCategory] || "#64748b";
+}
+
+function getUIText() {
+  return NYCMapUIText.getUIText(NYCMapState.getLang());
+}
+
+function setAddressSearchStatus(message, type = "") {
+  const statusEl = document.getElementById("addressSearchStatus");
+  if (!statusEl) return;
+  statusEl.textContent = message || "";
+  statusEl.dataset.status = type;
+}
+
+function setAddressSearchBusy(isBusy) {
+  const input = document.getElementById("addressSearchInput");
+  const button = document.getElementById("addressSearchButton");
+  if (input) input.disabled = isBusy;
+  if (button) button.disabled = isBusy;
 }
 
 function getMapStatusText(key) {
@@ -80,6 +99,146 @@ function isValidMapCoords(coords) {
 
 function getValidPlaces(places) {
   return places.filter((place) => isValidMapCoords(place.coords));
+}
+
+function buildAddressSearchUrl(address) {
+  const params = new URLSearchParams({
+    format: "jsonv2",
+    limit: "1",
+    addressdetails: "1",
+    countrycodes: "us",
+    viewbox: "-74.25909,40.477399,-73.700181,40.917577",
+    bounded: "1",
+    q: address
+  });
+  return `https://nominatim.openstreetmap.org/search?${params.toString()}`;
+}
+
+function buildCensusAddressSearchUrl(address) {
+  const params = new URLSearchParams({
+    address,
+    benchmark: "Public_AR_Current",
+    format: "json"
+  });
+  return `https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?${params.toString()}`;
+}
+
+function normalizeGeocodeResult(provider, payload) {
+  if (provider === "nominatim") {
+    const firstResult = Array.isArray(payload) ? payload[0] : null;
+    if (!firstResult) return null;
+    return {
+      lat: Number(firstResult.lat),
+      lng: Number(firstResult.lon),
+      displayName: firstResult.display_name || ""
+    };
+  }
+
+  const match = payload?.result?.addressMatches?.[0];
+  if (!match) return null;
+  return {
+    lat: Number(match.coordinates?.y),
+    lng: Number(match.coordinates?.x),
+    displayName: match.matchedAddress || ""
+  };
+}
+
+async function fetchAddressResult(address) {
+  const providers = [
+    { name: "nominatim", url: buildAddressSearchUrl(`${address}, New York City`) },
+    { name: "census", url: buildCensusAddressSearchUrl(`${address}, New York, NY`) }
+  ];
+
+  let lastError = null;
+  let anyProviderResponded = false;
+  for (const provider of providers) {
+    try {
+      const response = await fetch(provider.url, { headers: { Accept: "application/json" } });
+      if (!response.ok) throw new Error(`${provider.name} failed with ${response.status}`);
+      anyProviderResponded = true;
+      const result = normalizeGeocodeResult(provider.name, await response.json());
+      if (result && Number.isFinite(result.lat) && Number.isFinite(result.lng)) return result;
+    } catch (error) {
+      lastError = error;
+      console.warn("Address provider failed", provider.name, error);
+    }
+  }
+
+  if (lastError && !anyProviderResponded) throw lastError;
+  return null;
+}
+
+function renderAddressPopup(address, result) {
+  const displayName = result.displayName || address;
+  return `
+    <div class="map-popup address-popup">
+      <strong class="map-popup-title">${NYCMapCommon.escapeHtml(address)}</strong>
+      <span class="map-popup-subtitle">${NYCMapCommon.escapeHtml(displayName)}</span>
+    </div>
+  `;
+}
+
+function pinAddressOnMap(address, result) {
+  if (!map) return;
+
+  const lat = Number(result.lat);
+  const lng = Number(result.lng);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+
+  const latLng = [lat, lng];
+  const icon = L.divIcon({
+    className: "address-search-pin",
+    html: '<span aria-hidden="true">📍</span>',
+    iconSize: [34, 34],
+    iconAnchor: [17, 32],
+    popupAnchor: [0, -30]
+  });
+
+  if (addressSearchMarker) {
+    addressSearchMarker.setLatLng(latLng);
+    addressSearchMarker.setIcon(icon);
+  } else {
+    addressSearchMarker = L.marker(latLng, { icon, keyboard: true }).addTo(map);
+  }
+
+  addressSearchMarker.bindPopup(renderAddressPopup(address, result));
+  addressSearchMarker.openPopup();
+  map.setView(latLng, Math.max(map.getZoom(), 15), { animate: true });
+}
+
+async function searchAddressOnMap(event) {
+  if (event) event.preventDefault();
+  if (!map) return;
+
+  const text = getUIText();
+  const input = document.getElementById("addressSearchInput");
+  const rawAddress = input?.value || "";
+  const address = rawAddress.trim();
+
+  if (!address) {
+    setAddressSearchStatus(text.addressEmpty, "error");
+    input?.focus();
+    return;
+  }
+
+  setAddressSearchBusy(true);
+  setAddressSearchStatus(text.addressSearching, "loading");
+
+  try {
+    const result = await fetchAddressResult(address);
+    if (!result) {
+      setAddressSearchStatus(text.addressNotFound, "error");
+      return;
+    }
+
+    pinAddressOnMap(address, result);
+    setAddressSearchStatus(text.addressFound, "success");
+  } catch (error) {
+    console.error("Address search failed", error);
+    setAddressSearchStatus(text.addressSearchError, "error");
+  } finally {
+    setAddressSearchBusy(false);
+  }
 }
 
 
@@ -339,6 +498,8 @@ function locateUser() {
 }
 
 window.focusMarkerFromCard = focusMarkerFromCard;
+window.searchAddressOnMap = searchAddressOnMap;
 window.toggleLegendCategoryFilter = toggleLegendCategoryFilter;
+window.clearLegendCategoryFilters = clearLegendCategoryFilters;
 
 window.handleMapBecameVisible = handleMapBecameVisible;

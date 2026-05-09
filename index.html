@@ -141,11 +141,20 @@
     <aside id="mapSection" class="map-section">
       <div class="map-card">
         <div class="map-card-header">
+          <form id="addressSearchForm" class="address-search-form" onsubmit="searchAddressOnMap(event)">
+            <label class="sr-only" for="addressSearchInput">Address to pin on map</label>
+            <input id="addressSearchInput" class="address-search-input" type="search" placeholder="Enter an address" autocomplete="street-address" aria-describedby="addressSearchStatus" />
+            <button id="addressSearchButton" class="secondary-btn icon-btn address-search-btn" type="submit">
+              <span class="btn-icon" aria-hidden="true">📍</span>
+              <span class="btn-label">Pin address</span>
+            </button>
+          </form>
           <button class="secondary-btn mobile-map-toggle icon-btn" onclick="toggleMap()" aria-label="Toggle map">
             <span class="btn-icon" aria-hidden="true">🗺️</span>
             <span class="btn-label">Show / hide</span>
           </button>
         </div>
+        <p id="addressSearchStatus" class="address-search-status" aria-live="polite"></p>
         <div id="mapWrap" class="map-wrap">
           <button id="locateBtn" class="secondary-btn icon-btn map-locate-btn" onclick="locateUser()" aria-label="Show my location">
             <span class="btn-icon" aria-hidden="true">📍</span>

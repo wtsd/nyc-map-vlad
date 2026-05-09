@@ -83,6 +83,16 @@
     return value[normalizeLang(lang)] || value.en || fallback;
   }
 
+  function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    }[char]));
+  }
+
   function getPlaceAddress(place, lang) {
     if (!place) return "";
     return getLocalizedText(lang, place.address, getLocalizedText(lang, place.title, place.id || ""));
@@ -138,6 +148,7 @@
     getTimeLabel,
     getCostLabel,
     getLocalizedText,
+    escapeHtml,
     getPlaceAddress,
     getMapsUrl,
     getPlaceRoute,
